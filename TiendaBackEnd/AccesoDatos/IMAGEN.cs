@@ -18,6 +18,6 @@ namespace AccesoDatos
         public decimal PRD_COD { get; set; }
         public string IMG_URL { get; set; }
 
-        public virtual PRODUCTO PRODUCTO { get; set; }
+        public PRODUCTO PRODUCTO { get; set; }
     }
 }

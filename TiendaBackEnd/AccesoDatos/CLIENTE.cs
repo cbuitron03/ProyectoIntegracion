@@ -14,11 +14,11 @@ namespace AccesoDatos
     
     public partial class CLIENTE
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public CLIENTE()
-        {
-            this.FACTURA = new HashSet<FACTURA>();
-        }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        //public CLIENTE()
+        //{
+        //    this.FACTURA = new HashSet<FACTURA>();
+        //}
 
         public decimal ID_CLIENTE { get; set; }
         public decimal US_COD { get; set; }
@@ -28,8 +28,8 @@ namespace AccesoDatos
         public string CLI_CORREO { get; set; }
         public string CLI_DIRECCION { get; set; }
 
-        public virtual USUARIO USUARIO { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FACTURA> FACTURA { get; set; }
+        public USUARIO USUARIO { get; set; }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public List<FACTURA> FACTURA { get; set; }
     }
 }

@@ -20,7 +20,7 @@ namespace AccesoDatos
         public Nullable<decimal> DTF_CANTIDAD { get; set; }
         public Nullable<decimal> DTF_PRECIO { get; set; }
 
-        public virtual FACTURA FACTURA { get; set; }
-        public virtual PRODUCTO PRODUCTO { get; set; }
+        public FACTURA FACTURA { get; set; }
+        public PRODUCTO PRODUCTO { get; set; }
     }
 }

@@ -14,21 +14,21 @@ namespace AccesoDatos
     
     public partial class PRODUCTO
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public PRODUCTO()
-        {
-            this.DETALLE_FACTURA = new HashSet<DETALLE_FACTURA>();
-            this.IMAGEN = new HashSet<IMAGEN>();
-        }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        //public PRODUCTO()
+        //{
+        //    this.DETALLE_FACTURA = new HashSet<DETALLE_FACTURA>();
+        //    this.IMAGEN = new HashSet<IMAGEN>();
+        //}
 
         public decimal PRD_COD { get; set; }
         public string PRD_DESCRIPCION { get; set; }
         public Nullable<decimal> PRD_PRECIO { get; set; }
         public Nullable<decimal> PRD_STOCK { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DETALLE_FACTURA> DETALLE_FACTURA { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<IMAGEN> IMAGEN { get; set; }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public  List<DETALLE_FACTURA> DETALLE_FACTURA { get; set; }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public  List<IMAGEN> IMAGEN { get; set; }
     }
 }

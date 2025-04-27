@@ -80,9 +80,9 @@
     <Content Include="APIDTOFacturas.asmx" />
     <Content Include="APIDTOProductos.asmx" />
     <Content Include="APIDTOUsuarios.asmx" />
+    <Content Include="APIGestionarClientes.asmx" />
     <Content Include="APIGestionarDetalleFactura.asmx" />
     <Content Include="APIGestionarFacturas.asmx" />
-    <Content Include="APIGestionarClientes.asmx" />
     <Content Include="APIGestionarProductos.asmx" />
     <Content Include="APIGestionarUsuarios.asmx" />
     <Content Include="Web.config" />
@@ -112,16 +112,16 @@
       <DependentUpon>APIDTOUsuarios.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="APIGestionarClientes.asmx.cs">
+      <DependentUpon>APIGestionarClientes.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="APIGestionarDetalleFactura.asmx.cs">
       <DependentUpon>APIGestionarDetalleFactura.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="APIGestionarFacturas.asmx.cs">
       <DependentUpon>APIGestionarFacturas.asmx</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="APIGestionarClientes.asmx.cs">
-      <DependentUpon>APIGestionarClientes.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="APIGestionarProductos.asmx.cs">

@@ -9,7 +9,7 @@ using System.Web.Services;
 namespace WebServices
 {
     /// <summary>
-    /// Descripción breve de APIGestionarCLientes
+    /// Descripción breve de APIGestionarClientes
     /// </summary>
     [WebService(Namespace = "http://tempuri.org/")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
@@ -18,7 +18,6 @@ namespace WebServices
     // [System.Web.Script.Services.ScriptService]
     public class APIGestionarClientes : System.Web.Services.WebService
     {
-
         logica_clientes op = new logica_clientes();
 
         [WebMethod]

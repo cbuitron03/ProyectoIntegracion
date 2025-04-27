@@ -14,11 +14,11 @@ namespace AccesoDatos
     
     public partial class FACTURA
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public FACTURA()
-        {
-            this.DETALLE_FACTURA = new HashSet<DETALLE_FACTURA>();
-        }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        //public FACTURA()
+        //{
+        //    this.DETALLE_FACTURA = new HashSet<DETALLE_FACTURA>();
+        //}
 
         public decimal FAC_COD { get; set; }
         public decimal ID_EMP { get; set; }
@@ -29,9 +29,9 @@ namespace AccesoDatos
         public Nullable<decimal> FAC_SUBTOTAL { get; set; }
         public Nullable<decimal> FAC_TOTAL { get; set; }
 
-        public virtual CLIENTE CLIENTE { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DETALLE_FACTURA> DETALLE_FACTURA { get; set; }
-        public virtual EMPRESA EMPRESA { get; set; }
+        public CLIENTE CLIENTE { get; set; }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public List<DETALLE_FACTURA> DETALLE_FACTURA { get; set; }
+        public  EMPRESA EMPRESA { get; set; }
     }
 }

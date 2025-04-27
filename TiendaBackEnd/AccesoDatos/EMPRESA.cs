@@ -14,11 +14,11 @@ namespace AccesoDatos
     
     public partial class EMPRESA
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public EMPRESA()
-        {
-            this.FACTURA = new HashSet<FACTURA>();
-        }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        //public EMPRESA()
+        //{
+        //    this.FACTURA = new HashSet<FACTURA>();
+        //}
 
         public decimal ID_EMP { get; set; }
         public string EMP_RUC { get; set; }
@@ -27,7 +27,7 @@ namespace AccesoDatos
         public string EMP_VISION { get; set; }
         public string EMP_TELF { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FACTURA> FACTURA { get; set; }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public List<FACTURA> FACTURA { get; set; }
     }
 }

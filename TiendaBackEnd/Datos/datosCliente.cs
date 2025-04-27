@@ -48,7 +48,7 @@ namespace Datos
 
         public bool eliminarCliente(string cedula)
         {
-            CLIENTE cli = seleccionarClientePorId(cedula);
+            CLIENTE cli = _context.CLIENTE.Where(a => a.CLI_CEDULA == cedula).SingleOrDefault();
             if (cli != null)
             {
                 _context.CLIENTE.Remove(cli);

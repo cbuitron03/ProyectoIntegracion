@@ -1,1 +1,1 @@
-﻿<%@ WebService Language="C#" CodeBehind="APIGestionarClientes.asmx.cs" Class="WebServices.APIGestionarCLientes" %>
+﻿<%@ WebService Language="C#" CodeBehind="APIGestionarClientes.asmx.cs" Class="WebServices.APIGestionarClientes" %>
