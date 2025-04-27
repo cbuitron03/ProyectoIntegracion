@@ -1,0 +1,630 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ProyectoIntegracion\\TiendaBackEnd\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4B1F0650-066D-41CF-87FC-2688F578085A}|WebServices\\WebServices.csproj|D:\\ProyectoIntegracion\\TiendaBackEnd\\webservices\\apidtousuarios.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B1F0650-066D-41CF-87FC-2688F578085A}|WebServices\\WebServices.csproj|solutionrelative:webservices\\apidtousuarios.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|d:\\proyectointegracion\\tiendabackend\\accesodatos\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B1F0650-066D-41CF-87FC-2688F578085A}|WebServices\\WebServices.csproj|D:\\ProyectoIntegracion\\TiendaBackEnd\\webservices\\apigestionarusuarios.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B1F0650-066D-41CF-87FC-2688F578085A}|WebServices\\WebServices.csproj|solutionrelative:webservices\\apigestionarusuarios.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|D:\\ProyectoIntegracion\\TiendaBackEnd\\datos\\datosusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|solutionrelative:datos\\datosusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|D:\\ProyectoIntegracion\\TiendaBackEnd\\datos\\datosdtousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|solutionrelative:datos\\datosdtousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|D:\\ProyectoIntegracion\\TiendaBackEnd\\accesodatos\\dto\\dto_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\dto\\dto_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|D:\\ProyectoIntegracion\\TiendaBackEnd\\logica\\logica-dtousuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|solutionrelative:logica\\logica-dtousuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|D:\\ProyectoIntegracion\\TiendaBackEnd\\logica\\logica-usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|solutionrelative:logica\\logica-usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|d:\\proyectointegracion\\tiendabackend\\logica\\logica-clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|solutionrelative:logica\\logica-clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B1F0650-066D-41CF-87FC-2688F578085A}|WebServices\\WebServices.csproj|d:\\proyectointegracion\\tiendabackend\\webservices\\apidtoclientes.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B1F0650-066D-41CF-87FC-2688F578085A}|WebServices\\WebServices.csproj|solutionrelative:webservices\\apidtoclientes.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B1F0650-066D-41CF-87FC-2688F578085A}|WebServices\\WebServices.csproj|D:\\ProyectoIntegracion\\TiendaBackEnd\\webservices\\apigestionarproductos.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B1F0650-066D-41CF-87FC-2688F578085A}|WebServices\\WebServices.csproj|solutionrelative:webservices\\apigestionarproductos.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|D:\\ProyectoIntegracion\\TiendaBackEnd\\accesodatos\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|d:\\proyectointegracion\\tiendabackend\\accesodatos\\imagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\imagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|d:\\proyectointegracion\\tiendabackend\\accesodatos\\factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|d:\\proyectointegracion\\tiendabackend\\accesodatos\\empresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\empresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|d:\\proyectointegracion\\tiendabackend\\accesodatos\\detalle_factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\detalle_factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|d:\\proyectointegracion\\tiendabackend\\accesodatos\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B1F0650-066D-41CF-87FC-2688F578085A}|WebServices\\WebServices.csproj|d:\\proyectointegracion\\tiendabackend\\webservices\\apigestionarclientes.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B1F0650-066D-41CF-87FC-2688F578085A}|WebServices\\WebServices.csproj|solutionrelative:webservices\\apigestionarclientes.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|D:\\ProyectoIntegracion\\TiendaBackEnd\\datos\\datosproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|solutionrelative:datos\\datosproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|D:\\ProyectoIntegracion\\TiendaBackEnd\\accesodatos\\dto\\dto_producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\dto\\dto_producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|D:\\ProyectoIntegracion\\TiendaBackEnd\\datos\\datosdtoproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|solutionrelative:datos\\datosdtoproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|D:\\ProyectoIntegracion\\TiendaBackEnd\\accesodatos\\dto\\dto_cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\dto\\dto_cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|d:\\proyectointegracion\\tiendabackend\\datos\\datoscliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|solutionrelative:datos\\datoscliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|d:\\proyectointegracion\\tiendabackend\\logica\\logica-dtoclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|solutionrelative:logica\\logica-dtoclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|D:\\ProyectoIntegracion\\TiendaBackEnd\\logica\\logica-dtoproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|solutionrelative:logica\\logica-dtoproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|D:\\ProyectoIntegracion\\TiendaBackEnd\\logica\\logica-productos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|solutionrelative:logica\\logica-productos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|d:\\proyectointegracion\\tiendabackend\\datos\\datosdtocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|solutionrelative:datos\\datosdtocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B1F0650-066D-41CF-87FC-2688F578085A}|WebServices\\WebServices.csproj|d:\\proyectointegracion\\tiendabackend\\webservices\\apidtoproductos.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B1F0650-066D-41CF-87FC-2688F578085A}|WebServices\\WebServices.csproj|solutionrelative:webservices\\apidtoproductos.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|D:\\ProyectoIntegracion\\TiendaBackEnd\\accesodatos\\dto\\dto_factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\dto\\dto_factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|D:\\ProyectoIntegracion\\TiendaBackEnd\\accesodatos\\dto\\dto_empresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\dto\\dto_empresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|D:\\ProyectoIntegracion\\TiendaBackEnd\\accesodatos\\dto\\dto_detalle_factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\dto\\dto_detalle_factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|D:\\ProyectoIntegracion\\TiendaBackEnd\\accesodatos\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B1F0650-066D-41CF-87FC-2688F578085A}|WebServices\\WebServices.csproj|D:\\ProyectoIntegracion\\TiendaBackEnd\\webservices\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{4B1F0650-066D-41CF-87FC-2688F578085A}|WebServices\\WebServices.csproj|solutionrelative:webservices\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|D:\\ProyectoIntegracion\\TiendaBackEnd\\accesodatos\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|AccesoDatos||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B1F0650-066D-41CF-87FC-2688F578085A}|WebServices\\WebServices.csproj|D:\\ProyectoIntegracion\\TiendaBackEnd\\webservices\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{4B1F0650-066D-41CF-87FC-2688F578085A}|WebServices\\WebServices.csproj|solutionrelative:webservices\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "APIDTOUsuarios.asmx.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\WebServices\\APIDTOUsuarios.asmx.cs",
+              "RelativeDocumentMoniker": "WebServices\\APIDTOUsuarios.asmx.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\WebServices\\APIDTOUsuarios.asmx.cs",
+              "RelativeToolTip": "WebServices\\APIDTOUsuarios.asmx.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAwBsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T05:42:01.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DTO_Usuario.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Usuario.cs",
+              "RelativeDocumentMoniker": "AccesoDatos\\DTO\\DTO_Usuario.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Usuario.cs",
+              "RelativeToolTip": "AccesoDatos\\DTO\\DTO_Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T05:14:04.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "datosDTOUsuario.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosDTOUsuario.cs",
+              "RelativeDocumentMoniker": "Datos\\datosDTOUsuario.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosDTOUsuario.cs",
+              "RelativeToolTip": "Datos\\datosDTOUsuario.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAABkAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T05:19:37.344Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "datosUsuario.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosUsuario.cs",
+              "RelativeDocumentMoniker": "Datos\\datosUsuario.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosUsuario.cs",
+              "RelativeToolTip": "Datos\\datosUsuario.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAQwEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T05:20:17.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "APIGestionarUsuarios.asmx.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\WebServices\\APIGestionarUsuarios.asmx.cs",
+              "RelativeDocumentMoniker": "WebServices\\APIGestionarUsuarios.asmx.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\WebServices\\APIGestionarUsuarios.asmx.cs",
+              "RelativeToolTip": "WebServices\\APIGestionarUsuarios.asmx.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwCUAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T05:32:34.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "USUARIO.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\USUARIO.cs",
+              "RelativeDocumentMoniker": "AccesoDatos\\USUARIO.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\USUARIO.cs",
+              "RelativeToolTip": "AccesoDatos\\USUARIO.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAkwBQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T18:15:09.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "logica-DTOUsuarios.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-DTOUsuarios.cs",
+              "RelativeDocumentMoniker": "Logica\\logica-DTOUsuarios.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-DTOUsuarios.cs",
+              "RelativeToolTip": "Logica\\logica-DTOUsuarios.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T05:37:58.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "logica-usuarios.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-usuarios.cs",
+              "RelativeDocumentMoniker": "Logica\\logica-usuarios.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-usuarios.cs",
+              "RelativeToolTip": "Logica\\logica-usuarios.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwCkAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T05:33:27.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "logica-clientes.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-clientes.cs",
+              "RelativeDocumentMoniker": "Logica\\logica-clientes.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-clientes.cs",
+              "RelativeToolTip": "Logica\\logica-clientes.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAA6wBoAAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T17:22:12.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "APIDTOClientes.asmx.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\WebServices\\APIDTOClientes.asmx.cs",
+              "RelativeDocumentMoniker": "WebServices\\APIDTOClientes.asmx.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\WebServices\\APIDTOClientes.asmx.cs",
+              "RelativeToolTip": "WebServices\\APIDTOClientes.asmx.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAACMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T17:32:29.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "APIGestionarProductos.asmx.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\WebServices\\APIGestionarProductos.asmx.cs",
+              "RelativeDocumentMoniker": "WebServices\\APIGestionarProductos.asmx.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\WebServices\\APIGestionarProductos.asmx.cs",
+              "RelativeToolTip": "WebServices\\APIGestionarProductos.asmx.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAqwBYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T15:24:11.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PRODUCTO.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\PRODUCTO.cs",
+              "RelativeDocumentMoniker": "AccesoDatos\\PRODUCTO.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\PRODUCTO.cs",
+              "RelativeToolTip": "AccesoDatos\\PRODUCTO.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAxwB8AAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T04:52:12.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IMAGEN.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\IMAGEN.cs",
+              "RelativeDocumentMoniker": "AccesoDatos\\IMAGEN.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\IMAGEN.cs",
+              "RelativeToolTip": "AccesoDatos\\IMAGEN.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T18:14:03.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FACTURA.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\FACTURA.cs",
+              "RelativeDocumentMoniker": "AccesoDatos\\FACTURA.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\FACTURA.cs",
+              "RelativeToolTip": "AccesoDatos\\FACTURA.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T18:14:51.129Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "EMPRESA.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\EMPRESA.cs",
+              "RelativeDocumentMoniker": "AccesoDatos\\EMPRESA.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\EMPRESA.cs",
+              "RelativeToolTip": "AccesoDatos\\EMPRESA.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T18:14:12.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DETALLE_FACTURA.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\DETALLE_FACTURA.cs",
+              "RelativeDocumentMoniker": "AccesoDatos\\DETALLE_FACTURA.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\DETALLE_FACTURA.cs",
+              "RelativeToolTip": "AccesoDatos\\DETALLE_FACTURA.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T18:13:44.014Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CLIENTE.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\CLIENTE.cs",
+              "RelativeDocumentMoniker": "AccesoDatos\\CLIENTE.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\CLIENTE.cs",
+              "RelativeToolTip": "AccesoDatos\\CLIENTE.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T18:14:31.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "APIGestionarClientes.asmx.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\WebServices\\APIGestionarClientes.asmx.cs",
+              "RelativeDocumentMoniker": "WebServices\\APIGestionarClientes.asmx.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\WebServices\\APIGestionarClientes.asmx.cs",
+              "RelativeToolTip": "WebServices\\APIGestionarClientes.asmx.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAYwEEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T17:32:13.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "datosProductos.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosProductos.cs",
+              "RelativeDocumentMoniker": "Datos\\datosProductos.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosProductos.cs",
+              "RelativeToolTip": "Datos\\datosProductos.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T15:16:31.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "DTO_Cliente.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Cliente.cs",
+              "RelativeDocumentMoniker": "AccesoDatos\\DTO\\DTO_Cliente.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Cliente.cs",
+              "RelativeToolTip": "AccesoDatos\\DTO\\DTO_Cliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T05:13:31.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "datosDTOProducto.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosDTOProducto.cs",
+              "RelativeDocumentMoniker": "Datos\\datosDTOProducto.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosDTOProducto.cs",
+              "RelativeToolTip": "Datos\\datosDTOProducto.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAwA8AAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T12:37:40.165Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "DTO_Producto.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Producto.cs",
+              "RelativeDocumentMoniker": "AccesoDatos\\DTO\\DTO_Producto.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Producto.cs",
+              "RelativeToolTip": "AccesoDatos\\DTO\\DTO_Producto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA4AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T12:29:35.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "logica-DTOClientes.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-DTOClientes.cs",
+              "RelativeDocumentMoniker": "Logica\\logica-DTOClientes.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-DTOClientes.cs",
+              "RelativeToolTip": "Logica\\logica-DTOClientes.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T17:22:34.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "datosCliente.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosCliente.cs",
+              "RelativeDocumentMoniker": "Datos\\datosCliente.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosCliente.cs",
+              "RelativeToolTip": "Datos\\datosCliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T17:04:21.282Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "logica-DTOProductos.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-DTOProductos.cs",
+              "RelativeDocumentMoniker": "Logica\\logica-DTOProductos.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-DTOProductos.cs",
+              "RelativeToolTip": "Logica\\logica-DTOProductos.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T12:46:03.417Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "logica-productos.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-productos.cs",
+              "RelativeDocumentMoniker": "Logica\\logica-productos.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-productos.cs",
+              "RelativeToolTip": "Logica\\logica-productos.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAuwA4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T15:13:24.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "datosDTOCliente.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosDTOCliente.cs",
+              "RelativeDocumentMoniker": "Datos\\datosDTOCliente.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosDTOCliente.cs",
+              "RelativeToolTip": "Datos\\datosDTOCliente.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwA0AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T17:04:39.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "APIDTOProductos.asmx.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\WebServices\\APIDTOProductos.asmx.cs",
+              "RelativeDocumentMoniker": "WebServices\\APIDTOProductos.asmx.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\WebServices\\APIDTOProductos.asmx.cs",
+              "RelativeToolTip": "WebServices\\APIDTOProductos.asmx.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T12:49:53.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "DTO_Factura.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Factura.cs",
+              "RelativeDocumentMoniker": "AccesoDatos\\DTO\\DTO_Factura.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Factura.cs",
+              "RelativeToolTip": "AccesoDatos\\DTO\\DTO_Factura.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T05:14:54.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "DTO_Empresa.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Empresa.cs",
+              "RelativeDocumentMoniker": "AccesoDatos\\DTO\\DTO_Empresa.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Empresa.cs",
+              "RelativeToolTip": "AccesoDatos\\DTO\\DTO_Empresa.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T05:10:47.258Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "DTO_Detalle_Factura.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Detalle_Factura.cs",
+              "RelativeDocumentMoniker": "AccesoDatos\\DTO\\DTO_Detalle_Factura.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Detalle_Factura.cs",
+              "RelativeToolTip": "AccesoDatos\\DTO\\DTO_Detalle_Factura.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T05:17:18.864Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "App.Config",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\App.Config",
+              "RelativeDocumentMoniker": "AccesoDatos\\App.Config",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\App.Config",
+              "RelativeToolTip": "AccesoDatos\\App.Config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-04-22T15:25:02.793Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Web.config",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\WebServices\\Web.config",
+              "RelativeDocumentMoniker": "WebServices\\Web.config",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\WebServices\\Web.config",
+              "RelativeToolTip": "WebServices\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-04-22T15:25:12.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Model1.edmx [Diagram1]",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\Model1.edmx",
+              "RelativeDocumentMoniker": "AccesoDatos\\Model1.edmx",
+              "ToolTip": "D:\\proyectos\\TiendaBackEnd\\AccesoDatos\\Model1.edmx [Diagram1]",
+              "RelativeToolTip": "..\\..\\proyectos\\TiendaBackEnd\\AccesoDatos\\Model1.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2025-04-27T04:40:04.796Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "AccesoDatos",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\AccesoDatos.csproj",
+              "RelativeDocumentMoniker": "AccesoDatos\\AccesoDatos.csproj",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\AccesoDatos.csproj",
+              "RelativeToolTip": "AccesoDatos\\AccesoDatos.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-04-26T02:20:38.894Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "packages.config",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\WebServices\\packages.config",
+              "RelativeDocumentMoniker": "WebServices\\packages.config",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\WebServices\\packages.config",
+              "RelativeToolTip": "WebServices\\packages.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-04-27T03:46:45.402Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

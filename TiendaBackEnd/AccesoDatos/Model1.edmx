@@ -1,0 +1,619 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="db17842Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CLIENTE">
+          <Key>
+            <PropertyRef Name="ID_CLIENTE" />
+          </Key>
+          <Property Name="ID_CLIENTE" Type="numeric" Precision="4" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="US_COD" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="CLI_CEDULA" Type="varchar" MaxLength="10" />
+          <Property Name="CLI_NOMBRE" Type="varchar" MaxLength="60" />
+          <Property Name="CLI_TELEFONO" Type="varchar" MaxLength="60" />
+          <Property Name="CLI_CORREO" Type="varchar" MaxLength="60" />
+          <Property Name="CLI_DIRECCION" Type="varchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="DETALLE_FACTURA">
+          <Key>
+            <PropertyRef Name="ID_DET_FAC" />
+          </Key>
+          <Property Name="ID_DET_FAC" Type="numeric" Precision="5" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FAC_COD" Type="numeric" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="PRD_COD" Type="numeric" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="DTF_CANTIDAD" Type="numeric" Precision="2" Scale="0" />
+          <Property Name="DTF_PRECIO" Type="numeric" Precision="12" Scale="2" />
+        </EntityType>
+        <EntityType Name="EMPRESA">
+          <Key>
+            <PropertyRef Name="ID_EMP" />
+          </Key>
+          <Property Name="ID_EMP" Type="numeric" Precision="2" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EMP_RUC" Type="varchar" MaxLength="13" />
+          <Property Name="EMP_NOMBRE" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="EMP_MISION" Type="varchar" MaxLength="1024" />
+          <Property Name="EMP_VISION" Type="varchar" MaxLength="1024" />
+          <Property Name="EMP_TELF" Type="varchar" MaxLength="12" />
+        </EntityType>
+        <EntityType Name="FACTURA">
+          <Key>
+            <PropertyRef Name="FAC_COD" />
+          </Key>
+          <Property Name="FAC_COD" Type="numeric" Precision="4" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_EMP" Type="numeric" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="ID_CLIENTE" Type="numeric" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="FAC_FECHA" Type="datetime" />
+          <Property Name="FAC_ESTADO" Type="varchar" MaxLength="1" />
+          <Property Name="FAC_IVA" Type="numeric" Precision="12" Scale="2" />
+          <Property Name="FAC_SUBTOTAL" Type="numeric" Precision="12" Scale="2" />
+          <Property Name="FAC_TOTAL" Type="numeric" Precision="12" Scale="2" />
+        </EntityType>
+        <EntityType Name="IMAGEN">
+          <Key>
+            <PropertyRef Name="IMG_ID" />
+          </Key>
+          <Property Name="IMG_ID" Type="numeric" Precision="2" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PRD_COD" Type="numeric" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="IMG_URL" Type="varchar" MaxLength="600" />
+        </EntityType>
+        <EntityType Name="PRODUCTO">
+          <Key>
+            <PropertyRef Name="PRD_COD" />
+          </Key>
+          <Property Name="PRD_COD" Type="numeric" Precision="2" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PRD_DESCRIPCION" Type="varchar" MaxLength="100" />
+          <Property Name="PRD_PRECIO" Type="numeric" Precision="12" Scale="2" />
+          <Property Name="PRD_STOCK" Type="numeric" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="USUARIO">
+          <Key>
+            <PropertyRef Name="US_COD" />
+          </Key>
+          <Property Name="US_COD" Type="numeric" Precision="3" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="US_USUARIO" Type="varchar" MaxLength="30" />
+          <Property Name="US_PASS" Type="varchar" MaxLength="8" />
+          <Property Name="US_ROL" Type="varchar" MaxLength="60" />
+        </EntityType>
+        <Association Name="FK_CLIENTE_RELATIONS_USUARIO">
+          <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="1" />
+          <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USUARIO">
+              <PropertyRef Name="US_COD" />
+            </Principal>
+            <Dependent Role="CLIENTE">
+              <PropertyRef Name="US_COD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DETALLE__RELATIONS_FACTURA">
+          <End Role="FACTURA" Type="Self.FACTURA" Multiplicity="1" />
+          <End Role="DETALLE_FACTURA" Type="Self.DETALLE_FACTURA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FACTURA">
+              <PropertyRef Name="FAC_COD" />
+            </Principal>
+            <Dependent Role="DETALLE_FACTURA">
+              <PropertyRef Name="FAC_COD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DETALLE__RELATIONS_PRODUCTO">
+          <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="1" />
+          <End Role="DETALLE_FACTURA" Type="Self.DETALLE_FACTURA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRODUCTO">
+              <PropertyRef Name="PRD_COD" />
+            </Principal>
+            <Dependent Role="DETALLE_FACTURA">
+              <PropertyRef Name="PRD_COD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FACTURA_RELATIONS_CLIENTE">
+          <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="1" />
+          <End Role="FACTURA" Type="Self.FACTURA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLIENTE">
+              <PropertyRef Name="ID_CLIENTE" />
+            </Principal>
+            <Dependent Role="FACTURA">
+              <PropertyRef Name="ID_CLIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FACTURA_RELATIONS_EMPRESA">
+          <End Role="EMPRESA" Type="Self.EMPRESA" Multiplicity="1" />
+          <End Role="FACTURA" Type="Self.FACTURA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPRESA">
+              <PropertyRef Name="ID_EMP" />
+            </Principal>
+            <Dependent Role="FACTURA">
+              <PropertyRef Name="ID_EMP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IMAGEN_RELATIONS_PRODUCTO">
+          <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="1" />
+          <End Role="IMAGEN" Type="Self.IMAGEN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRODUCTO">
+              <PropertyRef Name="PRD_COD" />
+            </Principal>
+            <Dependent Role="IMAGEN">
+              <PropertyRef Name="PRD_COD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="seleccionarClientesSP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="seleccionarEmpresaSP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="seleccionarFacturaDetalleSP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="seleccionarFacturaEncabezadoSP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="seleccionarProductosSP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="seleccionarUsuariosSP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="db17842ModelStoreContainer">
+          <EntitySet Name="CLIENTE" EntityType="Self.CLIENTE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DETALLE_FACTURA" EntityType="Self.DETALLE_FACTURA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EMPRESA" EntityType="Self.EMPRESA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FACTURA" EntityType="Self.FACTURA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IMAGEN" EntityType="Self.IMAGEN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PRODUCTO" EntityType="Self.PRODUCTO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="USUARIO" EntityType="Self.USUARIO" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_CLIENTE_RELATIONS_USUARIO" Association="Self.FK_CLIENTE_RELATIONS_USUARIO">
+            <End Role="USUARIO" EntitySet="USUARIO" />
+            <End Role="CLIENTE" EntitySet="CLIENTE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DETALLE__RELATIONS_FACTURA" Association="Self.FK_DETALLE__RELATIONS_FACTURA">
+            <End Role="FACTURA" EntitySet="FACTURA" />
+            <End Role="DETALLE_FACTURA" EntitySet="DETALLE_FACTURA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DETALLE__RELATIONS_PRODUCTO" Association="Self.FK_DETALLE__RELATIONS_PRODUCTO">
+            <End Role="PRODUCTO" EntitySet="PRODUCTO" />
+            <End Role="DETALLE_FACTURA" EntitySet="DETALLE_FACTURA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FACTURA_RELATIONS_CLIENTE" Association="Self.FK_FACTURA_RELATIONS_CLIENTE">
+            <End Role="CLIENTE" EntitySet="CLIENTE" />
+            <End Role="FACTURA" EntitySet="FACTURA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FACTURA_RELATIONS_EMPRESA" Association="Self.FK_FACTURA_RELATIONS_EMPRESA">
+            <End Role="EMPRESA" EntitySet="EMPRESA" />
+            <End Role="FACTURA" EntitySet="FACTURA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IMAGEN_RELATIONS_PRODUCTO" Association="Self.FK_IMAGEN_RELATIONS_PRODUCTO">
+            <End Role="PRODUCTO" EntitySet="PRODUCTO" />
+            <End Role="IMAGEN" EntitySet="IMAGEN" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="db17842Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CLIENTE">
+          <Key>
+            <PropertyRef Name="ID_CLIENTE" />
+          </Key>
+          <Property Name="ID_CLIENTE" Type="Decimal" Precision="4" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="US_COD" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="CLI_CEDULA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="CLI_NOMBRE" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="CLI_TELEFONO" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="CLI_CORREO" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="CLI_DIRECCION" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="USUARIO" Relationship="Self.FK_CLIENTE_RELATIONS_USUARIO" FromRole="CLIENTE" ToRole="USUARIO" />
+          <NavigationProperty Name="FACTURA" Relationship="Self.FK_FACTURA_RELATIONS_CLIENTE" FromRole="CLIENTE" ToRole="FACTURA" />
+        </EntityType>
+        <EntityType Name="DETALLE_FACTURA">
+          <Key>
+            <PropertyRef Name="ID_DET_FAC" />
+          </Key>
+          <Property Name="ID_DET_FAC" Type="Decimal" Precision="5" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FAC_COD" Type="Decimal" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="PRD_COD" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="DTF_CANTIDAD" Type="Decimal" Precision="2" Scale="0" />
+          <Property Name="DTF_PRECIO" Type="Decimal" Precision="12" Scale="2" />
+          <NavigationProperty Name="FACTURA" Relationship="Self.FK_DETALLE__RELATIONS_FACTURA" FromRole="DETALLE_FACTURA" ToRole="FACTURA" />
+          <NavigationProperty Name="PRODUCTO" Relationship="Self.FK_DETALLE__RELATIONS_PRODUCTO" FromRole="DETALLE_FACTURA" ToRole="PRODUCTO" />
+        </EntityType>
+        <EntityType Name="EMPRESA">
+          <Key>
+            <PropertyRef Name="ID_EMP" />
+          </Key>
+          <Property Name="ID_EMP" Type="Decimal" Precision="2" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EMP_RUC" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="EMP_NOMBRE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EMP_MISION" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+          <Property Name="EMP_VISION" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+          <Property Name="EMP_TELF" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="FACTURA" Relationship="Self.FK_FACTURA_RELATIONS_EMPRESA" FromRole="EMPRESA" ToRole="FACTURA" />
+        </EntityType>
+        <EntityType Name="FACTURA">
+          <Key>
+            <PropertyRef Name="FAC_COD" />
+          </Key>
+          <Property Name="FAC_COD" Type="Decimal" Precision="4" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_EMP" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="ID_CLIENTE" Type="Decimal" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="FAC_FECHA" Type="DateTime" Precision="3" />
+          <Property Name="FAC_ESTADO" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="FAC_IVA" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="FAC_SUBTOTAL" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="FAC_TOTAL" Type="Decimal" Precision="12" Scale="2" />
+          <NavigationProperty Name="CLIENTE" Relationship="Self.FK_FACTURA_RELATIONS_CLIENTE" FromRole="FACTURA" ToRole="CLIENTE" />
+          <NavigationProperty Name="DETALLE_FACTURA" Relationship="Self.FK_DETALLE__RELATIONS_FACTURA" FromRole="FACTURA" ToRole="DETALLE_FACTURA" />
+          <NavigationProperty Name="EMPRESA" Relationship="Self.FK_FACTURA_RELATIONS_EMPRESA" FromRole="FACTURA" ToRole="EMPRESA" />
+        </EntityType>
+        <EntityType Name="IMAGEN">
+          <Key>
+            <PropertyRef Name="IMG_ID" />
+          </Key>
+          <Property Name="IMG_ID" Type="Decimal" Precision="2" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PRD_COD" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="IMG_URL" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PRODUCTO" Relationship="Self.FK_IMAGEN_RELATIONS_PRODUCTO" FromRole="IMAGEN" ToRole="PRODUCTO" />
+        </EntityType>
+        <EntityType Name="PRODUCTO">
+          <Key>
+            <PropertyRef Name="PRD_COD" />
+          </Key>
+          <Property Name="PRD_COD" Type="Decimal" Precision="2" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PRD_DESCRIPCION" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PRD_PRECIO" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="PRD_STOCK" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="DETALLE_FACTURA" Relationship="Self.FK_DETALLE__RELATIONS_PRODUCTO" FromRole="PRODUCTO" ToRole="DETALLE_FACTURA" />
+          <NavigationProperty Name="IMAGEN" Relationship="Self.FK_IMAGEN_RELATIONS_PRODUCTO" FromRole="PRODUCTO" ToRole="IMAGEN" />
+        </EntityType>
+        <EntityType Name="USUARIO">
+          <Key>
+            <PropertyRef Name="US_COD" />
+          </Key>
+          <Property Name="US_COD" Type="Decimal" Precision="3" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="US_USUARIO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="US_PASS" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="US_ROL" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="CLIENTE" Relationship="Self.FK_CLIENTE_RELATIONS_USUARIO" FromRole="USUARIO" ToRole="CLIENTE" />
+        </EntityType>
+        <Association Name="FK_CLIENTE_RELATIONS_USUARIO">
+          <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="1" />
+          <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="USUARIO">
+              <PropertyRef Name="US_COD" />
+            </Principal>
+            <Dependent Role="CLIENTE">
+              <PropertyRef Name="US_COD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FACTURA_RELATIONS_CLIENTE">
+          <End Role="CLIENTE" Type="Self.CLIENTE" Multiplicity="1" />
+          <End Role="FACTURA" Type="Self.FACTURA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CLIENTE">
+              <PropertyRef Name="ID_CLIENTE" />
+            </Principal>
+            <Dependent Role="FACTURA">
+              <PropertyRef Name="ID_CLIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DETALLE__RELATIONS_FACTURA">
+          <End Role="FACTURA" Type="Self.FACTURA" Multiplicity="1" />
+          <End Role="DETALLE_FACTURA" Type="Self.DETALLE_FACTURA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FACTURA">
+              <PropertyRef Name="FAC_COD" />
+            </Principal>
+            <Dependent Role="DETALLE_FACTURA">
+              <PropertyRef Name="FAC_COD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DETALLE__RELATIONS_PRODUCTO">
+          <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="1" />
+          <End Role="DETALLE_FACTURA" Type="Self.DETALLE_FACTURA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRODUCTO">
+              <PropertyRef Name="PRD_COD" />
+            </Principal>
+            <Dependent Role="DETALLE_FACTURA">
+              <PropertyRef Name="PRD_COD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FACTURA_RELATIONS_EMPRESA">
+          <End Role="EMPRESA" Type="Self.EMPRESA" Multiplicity="1" />
+          <End Role="FACTURA" Type="Self.FACTURA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EMPRESA">
+              <PropertyRef Name="ID_EMP" />
+            </Principal>
+            <Dependent Role="FACTURA">
+              <PropertyRef Name="ID_EMP" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IMAGEN_RELATIONS_PRODUCTO">
+          <End Role="PRODUCTO" Type="Self.PRODUCTO" Multiplicity="1" />
+          <End Role="IMAGEN" Type="Self.IMAGEN" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PRODUCTO">
+              <PropertyRef Name="PRD_COD" />
+            </Principal>
+            <Dependent Role="IMAGEN">
+              <PropertyRef Name="PRD_COD" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="db17842Entities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CLIENTE" EntityType="Self.CLIENTE" />
+          <EntitySet Name="DETALLE_FACTURA" EntityType="Self.DETALLE_FACTURA" />
+          <EntitySet Name="EMPRESA" EntityType="Self.EMPRESA" />
+          <EntitySet Name="FACTURA" EntityType="Self.FACTURA" />
+          <EntitySet Name="IMAGEN" EntityType="Self.IMAGEN" />
+          <EntitySet Name="PRODUCTO" EntityType="Self.PRODUCTO" />
+          <EntitySet Name="USUARIO" EntityType="Self.USUARIO" />
+          <AssociationSet Name="FK_CLIENTE_RELATIONS_USUARIO" Association="Self.FK_CLIENTE_RELATIONS_USUARIO">
+            <End Role="USUARIO" EntitySet="USUARIO" />
+            <End Role="CLIENTE" EntitySet="CLIENTE" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FACTURA_RELATIONS_CLIENTE" Association="Self.FK_FACTURA_RELATIONS_CLIENTE">
+            <End Role="CLIENTE" EntitySet="CLIENTE" />
+            <End Role="FACTURA" EntitySet="FACTURA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DETALLE__RELATIONS_FACTURA" Association="Self.FK_DETALLE__RELATIONS_FACTURA">
+            <End Role="FACTURA" EntitySet="FACTURA" />
+            <End Role="DETALLE_FACTURA" EntitySet="DETALLE_FACTURA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DETALLE__RELATIONS_PRODUCTO" Association="Self.FK_DETALLE__RELATIONS_PRODUCTO">
+            <End Role="PRODUCTO" EntitySet="PRODUCTO" />
+            <End Role="DETALLE_FACTURA" EntitySet="DETALLE_FACTURA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FACTURA_RELATIONS_EMPRESA" Association="Self.FK_FACTURA_RELATIONS_EMPRESA">
+            <End Role="EMPRESA" EntitySet="EMPRESA" />
+            <End Role="FACTURA" EntitySet="FACTURA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IMAGEN_RELATIONS_PRODUCTO" Association="Self.FK_IMAGEN_RELATIONS_PRODUCTO">
+            <End Role="PRODUCTO" EntitySet="PRODUCTO" />
+            <End Role="IMAGEN" EntitySet="IMAGEN" />
+          </AssociationSet>
+          <FunctionImport Name="seleccionarClientesSP" ReturnType="Collection(db17842Model.seleccionarClientesSP_Result)" />
+          <FunctionImport Name="seleccionarEmpresaSP" ReturnType="Collection(db17842Model.seleccionarEmpresaSP_Result)" />
+          <FunctionImport Name="seleccionarFacturaDetalleSP" ReturnType="Collection(db17842Model.seleccionarFacturaDetalleSP_Result)" />
+          <FunctionImport Name="seleccionarFacturaEncabezadoSP" ReturnType="Collection(db17842Model.seleccionarFacturaEncabezadoSP_Result)" />
+          <FunctionImport Name="seleccionarProductosSP" ReturnType="Collection(db17842Model.seleccionarProductosSP_Result)" />
+          <FunctionImport Name="seleccionarUsuariosSP" ReturnType="Collection(db17842Model.seleccionarUsuariosSP_Result)" />
+        </EntityContainer>
+        <ComplexType Name="seleccionarClientesSP_Result">
+          <Property Type="Decimal" Name="ID_CLIENTE" Nullable="false" Precision="4" Scale="0" />
+          <Property Type="String" Name="CLI_CEDULA" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="CLI_NOMBRE" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="CLI_TELEFONO" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="CLI_CORREO" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="CLI_DIRECCION" Nullable="true" MaxLength="300" />
+        </ComplexType>
+        <ComplexType Name="seleccionarEmpresaSP_Result">
+          <Property Type="Decimal" Name="ID_EMP" Nullable="false" Precision="2" Scale="0" />
+          <Property Type="String" Name="EMP_RUC" Nullable="true" MaxLength="13" />
+          <Property Type="String" Name="EMP_NOMBRE" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="EMP_MISION" Nullable="true" MaxLength="1024" />
+          <Property Type="String" Name="EMP_VISION" Nullable="true" MaxLength="1024" />
+          <Property Type="String" Name="EMP_TELF" Nullable="true" MaxLength="12" />
+        </ComplexType>
+        <ComplexType Name="seleccionarFacturaDetalleSP_Result">
+          <Property Type="Decimal" Name="FAC_COD" Nullable="false" Precision="4" Scale="0" />
+          <Property Type="String" Name="PRD_DESCRIPCION" Nullable="true" MaxLength="100" />
+          <Property Type="Decimal" Name="PRD_PRECIO" Nullable="true" Precision="12" Scale="2" />
+          <Property Type="Decimal" Name="DTF_CANTIDAD" Nullable="true" Precision="2" Scale="0" />
+          <Property Type="Decimal" Name="DTF_PRECIO" Nullable="true" Precision="12" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="seleccionarFacturaEncabezadoSP_Result">
+          <Property Type="Decimal" Name="FAC_COD" Nullable="false" Precision="4" Scale="0" />
+          <Property Type="String" Name="EMP_RUC" Nullable="true" MaxLength="13" />
+          <Property Type="String" Name="EMP_NOMBRE" Nullable="false" MaxLength="20" />
+          <Property Type="String" Name="CLI_CEDULA" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="CLI_NOMBRE" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="CLI_CORREO" Nullable="true" MaxLength="60" />
+          <Property Type="String" Name="CLI_DIRECCION" Nullable="true" MaxLength="300" />
+          <Property Type="Decimal" Name="FAC_SUBTOTAL" Nullable="true" Precision="12" Scale="2" />
+          <Property Type="Decimal" Name="FAC_IVA" Nullable="true" Precision="12" Scale="2" />
+          <Property Type="Decimal" Name="FAC_TOTAL" Nullable="true" Precision="12" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="seleccionarProductosSP_Result">
+          <Property Type="Decimal" Name="PRD_COD" Nullable="false" Precision="2" Scale="0" />
+          <Property Type="String" Name="PRD_DESCRIPCION" Nullable="true" MaxLength="100" />
+          <Property Type="Decimal" Name="PRD_PRECIO" Nullable="true" Precision="12" Scale="2" />
+          <Property Type="Decimal" Name="PRD_STOCK" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="String" Name="IMG_URL" Nullable="true" MaxLength="600" />
+        </ComplexType>
+        <ComplexType Name="seleccionarUsuariosSP_Result">
+          <Property Type="Decimal" Name="US_COD" Nullable="false" Precision="3" Scale="0" />
+          <Property Type="String" Name="US_USUARIO" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="US_PASS" Nullable="true" MaxLength="8" />
+          <Property Type="String" Name="US_ROL" Nullable="true" MaxLength="60" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="db17842ModelStoreContainer" CdmEntityContainer="db17842Entities2">
+          <EntitySetMapping Name="CLIENTE">
+            <EntityTypeMapping TypeName="db17842Model.CLIENTE">
+              <MappingFragment StoreEntitySet="CLIENTE">
+                <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+                <ScalarProperty Name="US_COD" ColumnName="US_COD" />
+                <ScalarProperty Name="CLI_CEDULA" ColumnName="CLI_CEDULA" />
+                <ScalarProperty Name="CLI_NOMBRE" ColumnName="CLI_NOMBRE" />
+                <ScalarProperty Name="CLI_TELEFONO" ColumnName="CLI_TELEFONO" />
+                <ScalarProperty Name="CLI_CORREO" ColumnName="CLI_CORREO" />
+                <ScalarProperty Name="CLI_DIRECCION" ColumnName="CLI_DIRECCION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DETALLE_FACTURA">
+            <EntityTypeMapping TypeName="db17842Model.DETALLE_FACTURA">
+              <MappingFragment StoreEntitySet="DETALLE_FACTURA">
+                <ScalarProperty Name="ID_DET_FAC" ColumnName="ID_DET_FAC" />
+                <ScalarProperty Name="FAC_COD" ColumnName="FAC_COD" />
+                <ScalarProperty Name="PRD_COD" ColumnName="PRD_COD" />
+                <ScalarProperty Name="DTF_CANTIDAD" ColumnName="DTF_CANTIDAD" />
+                <ScalarProperty Name="DTF_PRECIO" ColumnName="DTF_PRECIO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EMPRESA">
+            <EntityTypeMapping TypeName="db17842Model.EMPRESA">
+              <MappingFragment StoreEntitySet="EMPRESA">
+                <ScalarProperty Name="ID_EMP" ColumnName="ID_EMP" />
+                <ScalarProperty Name="EMP_RUC" ColumnName="EMP_RUC" />
+                <ScalarProperty Name="EMP_NOMBRE" ColumnName="EMP_NOMBRE" />
+                <ScalarProperty Name="EMP_MISION" ColumnName="EMP_MISION" />
+                <ScalarProperty Name="EMP_VISION" ColumnName="EMP_VISION" />
+                <ScalarProperty Name="EMP_TELF" ColumnName="EMP_TELF" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FACTURA">
+            <EntityTypeMapping TypeName="db17842Model.FACTURA">
+              <MappingFragment StoreEntitySet="FACTURA">
+                <ScalarProperty Name="FAC_COD" ColumnName="FAC_COD" />
+                <ScalarProperty Name="ID_EMP" ColumnName="ID_EMP" />
+                <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+                <ScalarProperty Name="FAC_FECHA" ColumnName="FAC_FECHA" />
+                <ScalarProperty Name="FAC_ESTADO" ColumnName="FAC_ESTADO" />
+                <ScalarProperty Name="FAC_IVA" ColumnName="FAC_IVA" />
+                <ScalarProperty Name="FAC_SUBTOTAL" ColumnName="FAC_SUBTOTAL" />
+                <ScalarProperty Name="FAC_TOTAL" ColumnName="FAC_TOTAL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IMAGEN">
+            <EntityTypeMapping TypeName="db17842Model.IMAGEN">
+              <MappingFragment StoreEntitySet="IMAGEN">
+                <ScalarProperty Name="IMG_ID" ColumnName="IMG_ID" />
+                <ScalarProperty Name="PRD_COD" ColumnName="PRD_COD" />
+                <ScalarProperty Name="IMG_URL" ColumnName="IMG_URL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PRODUCTO">
+            <EntityTypeMapping TypeName="db17842Model.PRODUCTO">
+              <MappingFragment StoreEntitySet="PRODUCTO">
+                <ScalarProperty Name="PRD_COD" ColumnName="PRD_COD" />
+                <ScalarProperty Name="PRD_DESCRIPCION" ColumnName="PRD_DESCRIPCION" />
+                <ScalarProperty Name="PRD_PRECIO" ColumnName="PRD_PRECIO" />
+                <ScalarProperty Name="PRD_STOCK" ColumnName="PRD_STOCK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USUARIO">
+            <EntityTypeMapping TypeName="db17842Model.USUARIO">
+              <MappingFragment StoreEntitySet="USUARIO">
+                <ScalarProperty Name="US_COD" ColumnName="US_COD" />
+                <ScalarProperty Name="US_USUARIO" ColumnName="US_USUARIO" />
+                <ScalarProperty Name="US_PASS" ColumnName="US_PASS" />
+                <ScalarProperty Name="US_ROL" ColumnName="US_ROL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="seleccionarClientesSP" FunctionName="db17842Model.Store.seleccionarClientesSP">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db17842Model.seleccionarClientesSP_Result">
+                <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+                <ScalarProperty Name="CLI_CEDULA" ColumnName="CLI_CEDULA" />
+                <ScalarProperty Name="CLI_NOMBRE" ColumnName="CLI_NOMBRE" />
+                <ScalarProperty Name="CLI_TELEFONO" ColumnName="CLI_TELEFONO" />
+                <ScalarProperty Name="CLI_CORREO" ColumnName="CLI_CORREO" />
+                <ScalarProperty Name="CLI_DIRECCION" ColumnName="CLI_DIRECCION" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="seleccionarEmpresaSP" FunctionName="db17842Model.Store.seleccionarEmpresaSP">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db17842Model.seleccionarEmpresaSP_Result">
+                <ScalarProperty Name="ID_EMP" ColumnName="ID_EMP" />
+                <ScalarProperty Name="EMP_RUC" ColumnName="EMP_RUC" />
+                <ScalarProperty Name="EMP_NOMBRE" ColumnName="EMP_NOMBRE" />
+                <ScalarProperty Name="EMP_MISION" ColumnName="EMP_MISION" />
+                <ScalarProperty Name="EMP_VISION" ColumnName="EMP_VISION" />
+                <ScalarProperty Name="EMP_TELF" ColumnName="EMP_TELF" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="seleccionarFacturaDetalleSP" FunctionName="db17842Model.Store.seleccionarFacturaDetalleSP">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db17842Model.seleccionarFacturaDetalleSP_Result">
+                <ScalarProperty Name="FAC_COD" ColumnName="FAC_COD" />
+                <ScalarProperty Name="PRD_DESCRIPCION" ColumnName="PRD_DESCRIPCION" />
+                <ScalarProperty Name="PRD_PRECIO" ColumnName="PRD_PRECIO" />
+                <ScalarProperty Name="DTF_CANTIDAD" ColumnName="DTF_CANTIDAD" />
+                <ScalarProperty Name="DTF_PRECIO" ColumnName="DTF_PRECIO" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="seleccionarFacturaEncabezadoSP" FunctionName="db17842Model.Store.seleccionarFacturaEncabezadoSP">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db17842Model.seleccionarFacturaEncabezadoSP_Result">
+                <ScalarProperty Name="FAC_COD" ColumnName="FAC_COD" />
+                <ScalarProperty Name="EMP_RUC" ColumnName="EMP_RUC" />
+                <ScalarProperty Name="EMP_NOMBRE" ColumnName="EMP_NOMBRE" />
+                <ScalarProperty Name="CLI_CEDULA" ColumnName="CLI_CEDULA" />
+                <ScalarProperty Name="CLI_NOMBRE" ColumnName="CLI_NOMBRE" />
+                <ScalarProperty Name="CLI_CORREO" ColumnName="CLI_CORREO" />
+                <ScalarProperty Name="CLI_DIRECCION" ColumnName="CLI_DIRECCION" />
+                <ScalarProperty Name="FAC_SUBTOTAL" ColumnName="FAC_SUBTOTAL" />
+                <ScalarProperty Name="FAC_IVA" ColumnName="FAC_IVA" />
+                <ScalarProperty Name="FAC_TOTAL" ColumnName="FAC_TOTAL" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="seleccionarProductosSP" FunctionName="db17842Model.Store.seleccionarProductosSP">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db17842Model.seleccionarProductosSP_Result">
+                <ScalarProperty Name="PRD_COD" ColumnName="PRD_COD" />
+                <ScalarProperty Name="PRD_DESCRIPCION" ColumnName="PRD_DESCRIPCION" />
+                <ScalarProperty Name="PRD_PRECIO" ColumnName="PRD_PRECIO" />
+                <ScalarProperty Name="PRD_STOCK" ColumnName="PRD_STOCK" />
+                <ScalarProperty Name="IMG_URL" ColumnName="IMG_URL" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="seleccionarUsuariosSP" FunctionName="db17842Model.Store.seleccionarUsuariosSP">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="db17842Model.seleccionarUsuariosSP_Result">
+                <ScalarProperty Name="US_COD" ColumnName="US_COD" />
+                <ScalarProperty Name="US_USUARIO" ColumnName="US_USUARIO" />
+                <ScalarProperty Name="US_PASS" ColumnName="US_PASS" />
+                <ScalarProperty Name="US_ROL" ColumnName="US_ROL" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="db17842ModelStoreContainer" CdmEntityContainer="db17842Entities2">
+    <EntitySetMapping Name="CLIENTE">
+      <EntityTypeMapping TypeName="db17842Model.CLIENTE">
+        <MappingFragment StoreEntitySet="CLIENTE">
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+          <ScalarProperty Name="US_COD" ColumnName="US_COD" />
+          <ScalarProperty Name="CLI_CEDULA" ColumnName="CLI_CEDULA" />
+          <ScalarProperty Name="CLI_NOMBRE" ColumnName="CLI_NOMBRE" />
+          <ScalarProperty Name="CLI_TELEFONO" ColumnName="CLI_TELEFONO" />
+          <ScalarProperty Name="CLI_CORREO" ColumnName="CLI_CORREO" />
+          <ScalarProperty Name="CLI_DIRECCION" ColumnName="CLI_DIRECCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DETALLE_FACTURA">
+      <EntityTypeMapping TypeName="db17842Model.DETALLE_FACTURA">
+        <MappingFragment StoreEntitySet="DETALLE_FACTURA">
+          <ScalarProperty Name="ID_DET_FAC" ColumnName="ID_DET_FAC" />
+          <ScalarProperty Name="FAC_COD" ColumnName="FAC_COD" />
+          <ScalarProperty Name="PRD_COD" ColumnName="PRD_COD" />
+          <ScalarProperty Name="DTF_CANTIDAD" ColumnName="DTF_CANTIDAD" />
+          <ScalarProperty Name="DTF_PRECIO" ColumnName="DTF_PRECIO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMPRESA">
+      <EntityTypeMapping TypeName="db17842Model.EMPRESA">
+        <MappingFragment StoreEntitySet="EMPRESA">
+          <ScalarProperty Name="ID_EMP" ColumnName="ID_EMP" />
+          <ScalarProperty Name="EMP_RUC" ColumnName="EMP_RUC" />
+          <ScalarProperty Name="EMP_NOMBRE" ColumnName="EMP_NOMBRE" />
+          <ScalarProperty Name="EMP_MISION" ColumnName="EMP_MISION" />
+          <ScalarProperty Name="EMP_VISION" ColumnName="EMP_VISION" />
+          <ScalarProperty Name="EMP_TELF" ColumnName="EMP_TELF" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FACTURA">
+      <EntityTypeMapping TypeName="db17842Model.FACTURA">
+        <MappingFragment StoreEntitySet="FACTURA">
+          <ScalarProperty Name="FAC_COD" ColumnName="FAC_COD" />
+          <ScalarProperty Name="ID_EMP" ColumnName="ID_EMP" />
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+          <ScalarProperty Name="FAC_FECHA" ColumnName="FAC_FECHA" />
+          <ScalarProperty Name="FAC_ESTADO" ColumnName="FAC_ESTADO" />
+          <ScalarProperty Name="FAC_IVA" ColumnName="FAC_IVA" />
+          <ScalarProperty Name="FAC_SUBTOTAL" ColumnName="FAC_SUBTOTAL" />
+          <ScalarProperty Name="FAC_TOTAL" ColumnName="FAC_TOTAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IMAGEN">
+      <EntityTypeMapping TypeName="db17842Model.IMAGEN">
+        <MappingFragment StoreEntitySet="IMAGEN">
+          <ScalarProperty Name="IMG_ID" ColumnName="IMG_ID" />
+          <ScalarProperty Name="PRD_COD" ColumnName="PRD_COD" />
+          <ScalarProperty Name="IMG_URL" ColumnName="IMG_URL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRODUCTO">
+      <EntityTypeMapping TypeName="db17842Model.PRODUCTO">
+        <MappingFragment StoreEntitySet="PRODUCTO">
+          <ScalarProperty Name="PRD_COD" ColumnName="PRD_COD" />
+          <ScalarProperty Name="PRD_DESCRIPCION" ColumnName="PRD_DESCRIPCION" />
+          <ScalarProperty Name="PRD_PRECIO" ColumnName="PRD_PRECIO" />
+          <ScalarProperty Name="PRD_STOCK" ColumnName="PRD_STOCK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIO">
+      <EntityTypeMapping TypeName="db17842Model.USUARIO">
+        <MappingFragment StoreEntitySet="USUARIO">
+          <ScalarProperty Name="US_COD" ColumnName="US_COD" />
+          <ScalarProperty Name="US_USUARIO" ColumnName="US_USUARIO" />
+          <ScalarProperty Name="US_PASS" ColumnName="US_PASS" />
+          <ScalarProperty Name="US_ROL" ColumnName="US_ROL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="seleccionarClientesSP" FunctionName="db17842Model.Store.seleccionarClientesSP">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="db17842Model.seleccionarClientesSP_Result">
+          <ScalarProperty Name="ID_CLIENTE" ColumnName="ID_CLIENTE" />
+          <ScalarProperty Name="CLI_CEDULA" ColumnName="CLI_CEDULA" />
+          <ScalarProperty Name="CLI_NOMBRE" ColumnName="CLI_NOMBRE" />
+          <ScalarProperty Name="CLI_TELEFONO" ColumnName="CLI_TELEFONO" />
+          <ScalarProperty Name="CLI_CORREO" ColumnName="CLI_CORREO" />
+          <ScalarProperty Name="CLI_DIRECCION" ColumnName="CLI_DIRECCION" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="seleccionarEmpresaSP" FunctionName="db17842Model.Store.seleccionarEmpresaSP">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="db17842Model.seleccionarEmpresaSP_Result">
+          <ScalarProperty Name="ID_EMP" ColumnName="ID_EMP" />
+          <ScalarProperty Name="EMP_RUC" ColumnName="EMP_RUC" />
+          <ScalarProperty Name="EMP_NOMBRE" ColumnName="EMP_NOMBRE" />
+          <ScalarProperty Name="EMP_MISION" ColumnName="EMP_MISION" />
+          <ScalarProperty Name="EMP_VISION" ColumnName="EMP_VISION" />
+          <ScalarProperty Name="EMP_TELF" ColumnName="EMP_TELF" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="seleccionarFacturaDetalleSP" FunctionName="db17842Model.Store.seleccionarFacturaDetalleSP">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="db17842Model.seleccionarFacturaDetalleSP_Result">
+          <ScalarProperty Name="FAC_COD" ColumnName="FAC_COD" />
+          <ScalarProperty Name="PRD_DESCRIPCION" ColumnName="PRD_DESCRIPCION" />
+          <ScalarProperty Name="PRD_PRECIO" ColumnName="PRD_PRECIO" />
+          <ScalarProperty Name="DTF_CANTIDAD" ColumnName="DTF_CANTIDAD" />
+          <ScalarProperty Name="DTF_PRECIO" ColumnName="DTF_PRECIO" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="seleccionarFacturaEncabezadoSP" FunctionName="db17842Model.Store.seleccionarFacturaEncabezadoSP">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="db17842Model.seleccionarFacturaEncabezadoSP_Result">
+          <ScalarProperty Name="FAC_COD" ColumnName="FAC_COD" />
+          <ScalarProperty Name="EMP_RUC" ColumnName="EMP_RUC" />
+          <ScalarProperty Name="EMP_NOMBRE" ColumnName="EMP_NOMBRE" />
+          <ScalarProperty Name="CLI_CEDULA" ColumnName="CLI_CEDULA" />
+          <ScalarProperty Name="CLI_NOMBRE" ColumnName="CLI_NOMBRE" />
+          <ScalarProperty Name="CLI_CORREO" ColumnName="CLI_CORREO" />
+          <ScalarProperty Name="CLI_DIRECCION" ColumnName="CLI_DIRECCION" />
+          <ScalarProperty Name="FAC_SUBTOTAL" ColumnName="FAC_SUBTOTAL" />
+          <ScalarProperty Name="FAC_IVA" ColumnName="FAC_IVA" />
+          <ScalarProperty Name="FAC_TOTAL" ColumnName="FAC_TOTAL" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="seleccionarProductosSP" FunctionName="db17842Model.Store.seleccionarProductosSP">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="db17842Model.seleccionarProductosSP_Result">
+          <ScalarProperty Name="PRD_COD" ColumnName="PRD_COD" />
+          <ScalarProperty Name="PRD_DESCRIPCION" ColumnName="PRD_DESCRIPCION" />
+          <ScalarProperty Name="PRD_PRECIO" ColumnName="PRD_PRECIO" />
+          <ScalarProperty Name="PRD_STOCK" ColumnName="PRD_STOCK" />
+          <ScalarProperty Name="IMG_URL" ColumnName="IMG_URL" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="seleccionarUsuariosSP" FunctionName="db17842Model.Store.seleccionarUsuariosSP">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="db17842Model.seleccionarUsuariosSP_Result">
+          <ScalarProperty Name="US_COD" ColumnName="US_COD" />
+          <ScalarProperty Name="US_USUARIO" ColumnName="US_USUARIO" />
+          <ScalarProperty Name="US_PASS" ColumnName="US_PASS" />
+          <ScalarProperty Name="US_ROL" ColumnName="US_ROL" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>
