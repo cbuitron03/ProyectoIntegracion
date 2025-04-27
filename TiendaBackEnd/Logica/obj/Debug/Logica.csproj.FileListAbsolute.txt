@@ -46,3 +46,19 @@ D:\ProyectoIntegracion\TiendaBackEnd\Logica\obj\Debug\Logica.csproj.CoreCompileI
 D:\ProyectoIntegracion\TiendaBackEnd\Logica\obj\Debug\Logica.csproj.Up2Date
 D:\ProyectoIntegracion\TiendaBackEnd\Logica\obj\Debug\Logica.dll
 D:\ProyectoIntegracion\TiendaBackEnd\Logica\obj\Debug\Logica.pdb
+C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Debug\Logica.dll.config
+C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Debug\Logica.dll
+C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Debug\Logica.pdb
+C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Debug\AccesoDatos.dll
+C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Debug\Datos.dll
+C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Debug\EntityFramework.dll
+C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Debug\AccesoDatos.pdb
+C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Debug\AccesoDatos.dll.config
+C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Debug\Datos.pdb
+C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Debug\Datos.dll.config
+C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Debug\EntityFramework.xml
+C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Logica\obj\Debug\Logica.csproj.AssemblyReference.cache
+C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Logica\obj\Debug\Logica.csproj.CoreCompileInputs.cache
+C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Logica\obj\Debug\Logica.csproj.Up2Date
+C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Logica\obj\Debug\Logica.dll
+C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Logica\obj\Debug\Logica.pdb

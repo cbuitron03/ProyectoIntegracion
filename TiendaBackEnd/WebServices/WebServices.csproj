@@ -75,8 +75,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="APIDTOClientes.asmx" />
+    <Content Include="APIDTODetalleFactura.asmx" />
+    <Content Include="APIDTOEmpresa.asmx" />
+    <Content Include="APIDTOFacturas.asmx" />
     <Content Include="APIDTOProductos.asmx" />
     <Content Include="APIDTOUsuarios.asmx" />
+    <Content Include="APIGestionarDetalleFactura.asmx" />
+    <Content Include="APIGestionarFacturas.asmx" />
     <Content Include="APIGestionarClientes.asmx" />
     <Content Include="APIGestionarProductos.asmx" />
     <Content Include="APIGestionarUsuarios.asmx" />
@@ -87,12 +92,32 @@
       <DependentUpon>APIDTOClientes.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="APIDTODetalleFactura.asmx.cs">
+      <DependentUpon>APIDTODetalleFactura.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="APIDTOEmpresa.asmx.cs">
+      <DependentUpon>APIDTOEmpresa.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="APIDTOFacturas.asmx.cs">
+      <DependentUpon>APIDTOFacturas.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="APIDTOProductos.asmx.cs">
       <DependentUpon>APIDTOProductos.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="APIDTOUsuarios.asmx.cs">
       <DependentUpon>APIDTOUsuarios.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="APIGestionarDetalleFactura.asmx.cs">
+      <DependentUpon>APIGestionarDetalleFactura.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="APIGestionarFacturas.asmx.cs">
+      <DependentUpon>APIGestionarFacturas.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="APIGestionarClientes.asmx.cs">

@@ -8,6 +8,7 @@ namespace AccesoDatos.DTO
 {
     public class DTO_Detalle_Factura
     {
+        public decimal ID_DET_FAC { get; set; }
         public decimal FAC_COD { get; set; }
         public string PRD_DESCRIPCION { get; set; }
         public Nullable<decimal> PRD_PRECIO { get; set; }

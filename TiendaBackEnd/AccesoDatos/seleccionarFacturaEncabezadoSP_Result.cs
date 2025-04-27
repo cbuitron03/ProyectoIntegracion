@@ -16,6 +16,8 @@ namespace AccesoDatos
         public decimal FAC_COD { get; set; }
         public string EMP_RUC { get; set; }
         public string EMP_NOMBRE { get; set; }
+        public Nullable<System.DateTime> FAC_FECHA { get; set; }
+        public string FAC_ESTADO { get; set; }
         public string CLI_CEDULA { get; set; }
         public string CLI_NOMBRE { get; set; }
         public string CLI_CORREO { get; set; }

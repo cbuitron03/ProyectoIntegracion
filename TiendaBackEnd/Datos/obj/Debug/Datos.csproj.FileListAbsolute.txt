@@ -43,3 +43,18 @@ D:\ProyectoIntegracion\TiendaBackEnd\Datos\obj\Debug\Datos.csproj.CoreCompileInp
 D:\ProyectoIntegracion\TiendaBackEnd\Datos\obj\Debug\Datos.csproj.Up2Date
 D:\ProyectoIntegracion\TiendaBackEnd\Datos\obj\Debug\Datos.dll
 D:\ProyectoIntegracion\TiendaBackEnd\Datos\obj\Debug\Datos.pdb
+C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Datos\bin\Debug\Datos.dll.config
+C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Datos\bin\Debug\Datos.dll
+C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Datos\bin\Debug\Datos.pdb
+C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Datos\bin\Debug\AccesoDatos.dll
+C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Datos\bin\Debug\EntityFramework.dll
+C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Datos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Datos\bin\Debug\AccesoDatos.pdb
+C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Datos\bin\Debug\AccesoDatos.dll.config
+C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Datos\bin\Debug\EntityFramework.xml
+C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Datos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Datos\obj\Debug\Datos.csproj.Up2Date
+C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Datos\obj\Debug\Datos.dll
+C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Datos\obj\Debug\Datos.pdb

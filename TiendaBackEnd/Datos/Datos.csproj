@@ -52,9 +52,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="datosCliente.cs" />
+    <Compile Include="datosDetalleFactura.cs" />
     <Compile Include="datosDTOCliente.cs" />
+    <Compile Include="datosDTODetalleFactura.cs" />
+    <Compile Include="datosDTOEmpresa.cs" />
+    <Compile Include="datosDTOFactura.cs" />
     <Compile Include="datosDTOProducto.cs" />
     <Compile Include="datosDTOUsuario.cs" />
+    <Compile Include="datosEmpresa.cs" />
+    <Compile Include="datosFactura.cs" />
     <Compile Include="datosProductos.cs" />
     <Compile Include="datosUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
