@@ -75,7 +75,7 @@
       "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\dto\\dto_detalle_factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|d:\\proyectointegracion\\tiendabackend\\logica\\logica-dtodetallefactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|D:\\ProyectoIntegracion\\TiendaBackEnd\\logica\\logica-dtodetallefactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|solutionrelative:logica\\logica-dtodetallefactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -230,73 +230,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FACTURA.cs",
-              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\FACTURA.cs",
-              "RelativeDocumentMoniker": "AccesoDatos\\FACTURA.cs",
-              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\FACTURA.cs",
-              "RelativeToolTip": "AccesoDatos\\FACTURA.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwCIAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T18:14:51.129Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "EMPRESA.cs",
-              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\EMPRESA.cs",
-              "RelativeDocumentMoniker": "AccesoDatos\\EMPRESA.cs",
-              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\EMPRESA.cs",
-              "RelativeToolTip": "AccesoDatos\\EMPRESA.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwB4AAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T18:14:12.029Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IMAGEN.cs",
-              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\IMAGEN.cs",
-              "RelativeDocumentMoniker": "AccesoDatos\\IMAGEN.cs",
-              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\IMAGEN.cs",
-              "RelativeToolTip": "AccesoDatos\\IMAGEN.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T18:14:03.844Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PRODUCTO.cs",
-              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\PRODUCTO.cs",
-              "RelativeDocumentMoniker": "AccesoDatos\\PRODUCTO.cs",
-              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\PRODUCTO.cs",
-              "RelativeToolTip": "AccesoDatos\\PRODUCTO.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAABUAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T04:52:12.881Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "USUARIO.cs",
-              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\USUARIO.cs",
-              "RelativeDocumentMoniker": "AccesoDatos\\USUARIO.cs",
-              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\USUARIO.cs",
-              "RelativeToolTip": "AccesoDatos\\USUARIO.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAuwBQAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T18:15:09.826Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -312,6 +247,66 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FACTURA.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\FACTURA.cs",
+              "RelativeDocumentMoniker": "AccesoDatos\\FACTURA.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\FACTURA.cs",
+              "RelativeToolTip": "AccesoDatos\\FACTURA.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T18:14:51.129Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EMPRESA.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\EMPRESA.cs",
+              "RelativeDocumentMoniker": "AccesoDatos\\EMPRESA.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\EMPRESA.cs",
+              "RelativeToolTip": "AccesoDatos\\EMPRESA.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwB4AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T18:14:12.029Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IMAGEN.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\IMAGEN.cs",
+              "RelativeDocumentMoniker": "AccesoDatos\\IMAGEN.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\IMAGEN.cs",
+              "RelativeToolTip": "AccesoDatos\\IMAGEN.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T18:14:03.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PRODUCTO.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\PRODUCTO.cs",
+              "RelativeDocumentMoniker": "AccesoDatos\\PRODUCTO.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\PRODUCTO.cs",
+              "RelativeToolTip": "AccesoDatos\\PRODUCTO.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABUAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T04:52:12.881Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "USUARIO.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\USUARIO.cs",
+              "RelativeDocumentMoniker": "AccesoDatos\\USUARIO.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\USUARIO.cs",
+              "RelativeToolTip": "AccesoDatos\\USUARIO.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAuwBQAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T18:15:09.826Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "logica-clientes.cs",
               "DocumentMoniker": "D:\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-clientes.cs",
@@ -320,8 +315,7 @@
               "RelativeToolTip": "Logica\\logica-clientes.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAiwCsAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T17:22:12.394Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T17:22:12.394Z"
             },
             {
               "$type": "Document",
@@ -333,8 +327,7 @@
               "RelativeToolTip": "Datos\\datosCliente.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T17:04:21.282Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T17:04:21.282Z"
             },
             {
               "$type": "Document",
@@ -346,8 +339,7 @@
               "RelativeToolTip": "AccesoDatos\\CLIENTE.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAQwB4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T18:14:31.529Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T18:14:31.529Z"
             },
             {
               "$type": "Document",
@@ -359,8 +351,7 @@
               "RelativeToolTip": "AccesoDatos\\DETALLE_FACTURA.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T18:13:44.014Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T18:13:44.014Z"
             },
             {
               "$type": "Document",
@@ -372,8 +363,7 @@
               "RelativeToolTip": "AccesoDatos\\seleccionarFacturaEncabezadoSP_Result.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T19:52:15.675Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T19:52:15.675Z"
             },
             {
               "$type": "Document",
@@ -385,8 +375,7 @@
               "RelativeToolTip": "WebServices\\APIDTOClientes.asmx.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T17:32:29.072Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T17:32:29.072Z"
             },
             {
               "$type": "Document",
@@ -398,8 +387,7 @@
               "RelativeToolTip": "AccesoDatos\\DTO\\DTO_Cliente.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T05:13:31.48Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T05:13:31.48Z"
             },
             {
               "$type": "Document",
@@ -411,8 +399,7 @@
               "RelativeToolTip": "Datos\\datosDTOCliente.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T17:04:39.829Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T17:04:39.829Z"
             },
             {
               "$type": "Document",
@@ -424,8 +411,7 @@
               "RelativeToolTip": "Datos\\datosDTODetalleFactura.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAwwAoAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T20:34:55.026Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T20:34:55.026Z"
             },
             {
               "$type": "Document",
@@ -437,8 +423,7 @@
               "RelativeToolTip": "AccesoDatos\\DTO\\DTO_Usuario.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T05:14:04.402Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T05:14:04.402Z"
             },
             {
               "$type": "Document",
@@ -450,8 +435,7 @@
               "RelativeToolTip": "AccesoDatos\\DTO\\DTO_Factura.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAuwA4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T05:14:54.018Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T05:14:54.018Z"
             },
             {
               "$type": "Document",
@@ -463,8 +447,7 @@
               "RelativeToolTip": "AccesoDatos\\DTO\\DTO_Detalle_Factura.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T05:17:18.864Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T05:17:18.864Z"
             },
             {
               "$type": "Document",
@@ -476,8 +459,7 @@
               "RelativeToolTip": "Logica\\logica-DTODetalleFactura.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAswBoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T20:48:58.057Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T20:48:58.057Z"
             },
             {
               "$type": "Document",
@@ -748,8 +730,7 @@
               "ToolTip": "D:\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\Model1.edmx [Diagram1]",
               "RelativeToolTip": "AccesoDatos\\Model1.edmx [Diagram1]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
-              "WhenOpened": "2025-04-27T04:40:04.796Z",
-              "EditorCaption": " [Diagram1]"
+              "WhenOpened": "2025-04-27T04:40:04.796Z"
             },
             {
               "$type": "Document",
@@ -761,8 +742,7 @@
               "RelativeToolTip": "AccesoDatos\\Model1.Context.tt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-04-27T20:01:34.206Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T20:01:34.206Z"
             },
             {
               "$type": "Document",

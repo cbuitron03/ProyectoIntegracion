@@ -1,0 +1,43 @@
+﻿@model MVC_Tienda.PRODUCTO
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PRODUCTO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PRD_DESCRIPCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRD_DESCRIPCION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRD_PRECIO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRD_PRECIO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRD_STOCK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRD_STOCK)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PRD_COD }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

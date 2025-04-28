@@ -1,0 +1,35 @@
+﻿@model MVC_Tienda.IMAGEN
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>IMAGEN</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IMG_URL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IMG_URL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRODUCTO.PRD_DESCRIPCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRODUCTO.PRD_DESCRIPCION)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IMG_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,70 @@
+﻿@model IEnumerable<MVC_Tienda.FACTURA>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FAC_FECHA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FAC_ESTADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FAC_IVA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FAC_SUBTOTAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FAC_TOTAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CLIENTE.CLI_CEDULA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMPRESA.EMP_RUC)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FAC_FECHA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FAC_ESTADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FAC_IVA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FAC_SUBTOTAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FAC_TOTAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CLIENTE.CLI_CEDULA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMPRESA.EMP_RUC)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.FAC_COD }) |
+            @Html.ActionLink("Details", "Details", new { id=item.FAC_COD }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.FAC_COD })
+        </td>
+    </tr>
+}
+
+</table>

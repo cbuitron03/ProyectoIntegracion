@@ -1,0 +1,64 @@
+﻿@model IEnumerable<MVC_Tienda.CLIENTE>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CLI_CEDULA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CLI_NOMBRE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CLI_TELEFONO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CLI_CORREO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CLI_DIRECCION)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USUARIO.US_USUARIO)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CLI_CEDULA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CLI_NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CLI_TELEFONO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CLI_CORREO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CLI_DIRECCION)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USUARIO.US_USUARIO)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_CLIENTE }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_CLIENTE }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_CLIENTE })
+        </td>
+    </tr>
+}
+
+</table>

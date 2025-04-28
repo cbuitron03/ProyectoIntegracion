@@ -1,0 +1,67 @@
+﻿@model MVC_Tienda.CLIENTE
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CLIENTE</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CLI_CEDULA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CLI_CEDULA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CLI_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CLI_NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CLI_TELEFONO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CLI_TELEFONO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CLI_CORREO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CLI_CORREO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CLI_DIRECCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CLI_DIRECCION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USUARIO.US_USUARIO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USUARIO.US_USUARIO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_CLIENTE }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

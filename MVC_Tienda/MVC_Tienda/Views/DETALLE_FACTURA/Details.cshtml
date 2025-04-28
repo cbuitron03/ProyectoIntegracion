@@ -1,0 +1,51 @@
+﻿@model MVC_Tienda.DETALLE_FACTURA
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DETALLE_FACTURA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DTF_CANTIDAD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DTF_CANTIDAD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DTF_PRECIO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DTF_PRECIO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FACTURA.FAC_ESTADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FACTURA.FAC_ESTADO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRODUCTO.PRD_DESCRIPCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRODUCTO.PRD_DESCRIPCION)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_DET_FAC }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

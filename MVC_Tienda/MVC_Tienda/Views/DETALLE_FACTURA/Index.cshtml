@@ -1,0 +1,52 @@
+﻿@model IEnumerable<MVC_Tienda.DETALLE_FACTURA>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DTF_CANTIDAD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DTF_PRECIO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FACTURA.FAC_ESTADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRODUCTO.PRD_DESCRIPCION)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DTF_CANTIDAD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DTF_PRECIO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FACTURA.FAC_ESTADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRODUCTO.PRD_DESCRIPCION)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_DET_FAC }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_DET_FAC }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_DET_FAC })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,75 @@
+﻿@model MVC_Tienda.FACTURA
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>FACTURA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FAC_FECHA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FAC_FECHA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FAC_ESTADO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FAC_ESTADO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FAC_IVA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FAC_IVA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FAC_SUBTOTAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FAC_SUBTOTAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FAC_TOTAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FAC_TOTAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CLIENTE.CLI_CEDULA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CLIENTE.CLI_CEDULA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EMPRESA.EMP_RUC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMPRESA.EMP_RUC)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.FAC_COD }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

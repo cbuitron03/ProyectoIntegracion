@@ -1,0 +1,214 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ProyectoIntegracion\\MVC_Tienda\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F26D3EAB-2F7A-43ED-91C7-730AF9553FDD}|MVC_Tienda\\MVC_Tienda.csproj|d:\\proyectointegracion\\mvc_tienda\\mvc_tienda\\views\\productoes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F26D3EAB-2F7A-43ED-91C7-730AF9553FDD}|MVC_Tienda\\MVC_Tienda.csproj|solutionrelative:mvc_tienda\\views\\productoes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F26D3EAB-2F7A-43ED-91C7-730AF9553FDD}|MVC_Tienda\\MVC_Tienda.csproj|d:\\proyectointegracion\\mvc_tienda\\mvc_tienda\\tienda.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{F26D3EAB-2F7A-43ED-91C7-730AF9553FDD}|MVC_Tienda\\MVC_Tienda.csproj|solutionrelative:mvc_tienda\\tienda.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F26D3EAB-2F7A-43ED-91C7-730AF9553FDD}|MVC_Tienda\\MVC_Tienda.csproj|d:\\proyectointegracion\\mvc_tienda\\mvc_tienda\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F26D3EAB-2F7A-43ED-91C7-730AF9553FDD}|MVC_Tienda\\MVC_Tienda.csproj|solutionrelative:mvc_tienda\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F26D3EAB-2F7A-43ED-91C7-730AF9553FDD}|MVC_Tienda\\MVC_Tienda.csproj|d:\\proyectointegracion\\mvc_tienda\\mvc_tienda\\views\\clientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F26D3EAB-2F7A-43ED-91C7-730AF9553FDD}|MVC_Tienda\\MVC_Tienda.csproj|solutionrelative:mvc_tienda\\views\\clientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F26D3EAB-2F7A-43ED-91C7-730AF9553FDD}|MVC_Tienda\\MVC_Tienda.csproj|d:\\proyectointegracion\\mvc_tienda\\mvc_tienda\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F26D3EAB-2F7A-43ED-91C7-730AF9553FDD}|MVC_Tienda\\MVC_Tienda.csproj|solutionrelative:mvc_tienda\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F26D3EAB-2F7A-43ED-91C7-730AF9553FDD}|MVC_Tienda\\MVC_Tienda.csproj|d:\\proyectointegracion\\mvc_tienda\\mvc_tienda\\controllers\\productoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F26D3EAB-2F7A-43ED-91C7-730AF9553FDD}|MVC_Tienda\\MVC_Tienda.csproj|solutionrelative:mvc_tienda\\controllers\\productoescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F26D3EAB-2F7A-43ED-91C7-730AF9553FDD}|MVC_Tienda\\MVC_Tienda.csproj|d:\\proyectointegracion\\mvc_tienda\\mvc_tienda\\controllers\\imagenscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F26D3EAB-2F7A-43ED-91C7-730AF9553FDD}|MVC_Tienda\\MVC_Tienda.csproj|solutionrelative:mvc_tienda\\controllers\\imagenscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F26D3EAB-2F7A-43ED-91C7-730AF9553FDD}|MVC_Tienda\\MVC_Tienda.csproj|d:\\proyectointegracion\\mvc_tienda\\mvc_tienda\\controllers\\facturascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F26D3EAB-2F7A-43ED-91C7-730AF9553FDD}|MVC_Tienda\\MVC_Tienda.csproj|solutionrelative:mvc_tienda\\controllers\\facturascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F26D3EAB-2F7A-43ED-91C7-730AF9553FDD}|MVC_Tienda\\MVC_Tienda.csproj|d:\\proyectointegracion\\mvc_tienda\\mvc_tienda\\controllers\\empresascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F26D3EAB-2F7A-43ED-91C7-730AF9553FDD}|MVC_Tienda\\MVC_Tienda.csproj|solutionrelative:mvc_tienda\\controllers\\empresascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F26D3EAB-2F7A-43ED-91C7-730AF9553FDD}|MVC_Tienda\\MVC_Tienda.csproj|d:\\proyectointegracion\\mvc_tienda\\mvc_tienda\\controllers\\detalle_facturacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F26D3EAB-2F7A-43ED-91C7-730AF9553FDD}|MVC_Tienda\\MVC_Tienda.csproj|solutionrelative:mvc_tienda\\controllers\\detalle_facturacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F26D3EAB-2F7A-43ED-91C7-730AF9553FDD}|MVC_Tienda\\MVC_Tienda.csproj|d:\\proyectointegracion\\mvc_tienda\\mvc_tienda\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F26D3EAB-2F7A-43ED-91C7-730AF9553FDD}|MVC_Tienda\\MVC_Tienda.csproj|solutionrelative:mvc_tienda\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\MVC_Tienda\\MVC_Tienda\\Views\\PRODUCTOes\\Index.cshtml",
+              "RelativeDocumentMoniker": "MVC_Tienda\\Views\\PRODUCTOes\\Index.cshtml",
+              "ToolTip": "D:\\ProyectoIntegracion\\MVC_Tienda\\MVC_Tienda\\Views\\PRODUCTOes\\Index.cshtml",
+              "RelativeToolTip": "MVC_Tienda\\Views\\PRODUCTOes\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-28T21:35:11.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EMPRESAsController.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\MVC_Tienda\\MVC_Tienda\\Controllers\\EMPRESAsController.cs",
+              "RelativeDocumentMoniker": "MVC_Tienda\\Controllers\\EMPRESAsController.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\MVC_Tienda\\MVC_Tienda\\Controllers\\EMPRESAsController.cs",
+              "RelativeToolTip": "MVC_Tienda\\Controllers\\EMPRESAsController.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAjwF4AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T21:24:06.636Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PRODUCTOesController.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\MVC_Tienda\\MVC_Tienda\\Controllers\\PRODUCTOesController.cs",
+              "RelativeDocumentMoniker": "MVC_Tienda\\Controllers\\PRODUCTOesController.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\MVC_Tienda\\MVC_Tienda\\Controllers\\PRODUCTOesController.cs",
+              "RelativeToolTip": "MVC_Tienda\\Controllers\\PRODUCTOesController.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAjwF4AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T21:25:25.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "USUARIOsController.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\MVC_Tienda\\MVC_Tienda\\Controllers\\USUARIOsController.cs",
+              "RelativeDocumentMoniker": "MVC_Tienda\\Controllers\\USUARIOsController.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\MVC_Tienda\\MVC_Tienda\\Controllers\\USUARIOsController.cs",
+              "RelativeToolTip": "MVC_Tienda\\Controllers\\USUARIOsController.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAA+wF4AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T21:25:47.131Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\MVC_Tienda\\MVC_Tienda\\Views\\CLIENTEs\\Index.cshtml",
+              "RelativeDocumentMoniker": "MVC_Tienda\\Views\\CLIENTEs\\Index.cshtml",
+              "ToolTip": "D:\\ProyectoIntegracion\\MVC_Tienda\\MVC_Tienda\\Views\\CLIENTEs\\Index.cshtml",
+              "RelativeToolTip": "MVC_Tienda\\Views\\CLIENTEs\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-28T21:26:31.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CLIENTEsController.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\MVC_Tienda\\MVC_Tienda\\Controllers\\CLIENTEsController.cs",
+              "RelativeDocumentMoniker": "MVC_Tienda\\Controllers\\CLIENTEsController.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\MVC_Tienda\\MVC_Tienda\\Controllers\\CLIENTEsController.cs",
+              "RelativeToolTip": "MVC_Tienda\\Controllers\\CLIENTEsController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAewBQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T21:23:17.928Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Tienda.edmx [Diagram1]",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\MVC_Tienda\\MVC_Tienda\\Tienda.edmx",
+              "RelativeDocumentMoniker": "MVC_Tienda\\Tienda.edmx",
+              "ToolTip": "D:\\ProyectoIntegracion\\MVC_Tienda\\MVC_Tienda\\Tienda.edmx [Diagram1]",
+              "RelativeToolTip": "MVC_Tienda\\Tienda.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2025-04-28T21:17:48.338Z",
+              "EditorCaption": " [Diagram1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FACTURAsController.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\MVC_Tienda\\MVC_Tienda\\Controllers\\FACTURAsController.cs",
+              "RelativeDocumentMoniker": "MVC_Tienda\\Controllers\\FACTURAsController.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\MVC_Tienda\\MVC_Tienda\\Controllers\\FACTURAsController.cs",
+              "RelativeToolTip": "MVC_Tienda\\Controllers\\FACTURAsController.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAjwGcAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T21:24:49.565Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IMAGENsController.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\MVC_Tienda\\MVC_Tienda\\Controllers\\IMAGENsController.cs",
+              "RelativeDocumentMoniker": "MVC_Tienda\\Controllers\\IMAGENsController.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\MVC_Tienda\\MVC_Tienda\\Controllers\\IMAGENsController.cs",
+              "RelativeToolTip": "MVC_Tienda\\Controllers\\IMAGENsController.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAjwGMAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T21:25:08.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DETALLE_FACTURAController.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\MVC_Tienda\\MVC_Tienda\\Controllers\\DETALLE_FACTURAController.cs",
+              "RelativeDocumentMoniker": "MVC_Tienda\\Controllers\\DETALLE_FACTURAController.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\MVC_Tienda\\MVC_Tienda\\Controllers\\DETALLE_FACTURAController.cs",
+              "RelativeToolTip": "MVC_Tienda\\Controllers\\DETALLE_FACTURAController.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAjwGcAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T21:23:50.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PRODUCTO.cs",
+              "DocumentMoniker": "D:\\ProyectoIntegracion\\MVC_Tienda\\MVC_Tienda\\PRODUCTO.cs",
+              "RelativeDocumentMoniker": "MVC_Tienda\\PRODUCTO.cs",
+              "ToolTip": "D:\\ProyectoIntegracion\\MVC_Tienda\\MVC_Tienda\\PRODUCTO.cs",
+              "RelativeToolTip": "MVC_Tienda\\PRODUCTO.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T21:19:15.499Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
