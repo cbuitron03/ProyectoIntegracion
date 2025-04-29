@@ -24,14 +24,14 @@ namespace Logica
             return SeleccionarProductos().Where(pro=>pro.PRD_DESCRIPCION.Contains(nombre)).ToList();
         }
 
-        public PRODUCTO seleccionarProductoPorID(decimal id)
+        public PRODUCTO seleccionarProductoPorID(int id)
         {
             return SeleccionarProductos().Where(pro => pro.PRD_COD == id).SingleOrDefault();
         }
 
         #region metodos de accion 
 
-        public decimal insertarProducto(PRODUCTO proInsertado)
+        public int insertarProducto(PRODUCTO proInsertado)
         {
            return op.insertarProducto(proInsertado);
         }
@@ -41,7 +41,7 @@ namespace Logica
             return op.actualizarProducto(proActualizado);
         }
 
-        public bool eliminarProducto(decimal id)
+        public bool eliminarProducto(int id)
         {
             return op.eliminarProducto(id);
         }

@@ -1,0 +1,2 @@
+D:\ProyectoIntegracion\FrontEnd\FrontEnd\obj\Debug\FrontEnd.csproj.AssemblyReference.cache
+D:\ProyectoIntegracion\FrontEnd\FrontEnd\obj\Debug\FrontEnd.csproj.CoreCompileInputs.cache

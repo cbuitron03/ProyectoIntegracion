@@ -28,7 +28,7 @@ namespace WebServices
         }
 
         [WebMethod]
-        public FACTURA seleccionarFacturaPorID(decimal codigo)
+        public FACTURA seleccionarFacturaPorID(int codigo)
         {
             return SeleccionarFacturas().Where(pro => pro.FAC_COD == codigo).SingleOrDefault();
         }
@@ -36,7 +36,7 @@ namespace WebServices
         #region metodos de accion 
 
         [WebMethod]
-        public decimal insertarFactura(FACTURA proInsertado)
+        public int insertarFactura(FACTURA proInsertado)
         {
             return op.insertarFactura(proInsertado);
         }
@@ -48,7 +48,7 @@ namespace WebServices
         }
 
         [WebMethod]
-        public bool eliminarFactura(decimal id)
+        public bool eliminarFactura(int id)
         {
             return op.eliminarFactura(id);
         }

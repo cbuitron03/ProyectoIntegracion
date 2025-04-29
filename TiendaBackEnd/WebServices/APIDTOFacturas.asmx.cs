@@ -29,7 +29,7 @@ namespace WebServices
         }
 
         [WebMethod]
-        public DTO_Factura MostrarFacturaPorId(decimal codigo)
+        public DTO_Factura MostrarFacturaPorId(int codigo)
         {
             return MostrarFacturas().Where(pro => pro.FAC_COD == codigo).SingleOrDefault();
         }

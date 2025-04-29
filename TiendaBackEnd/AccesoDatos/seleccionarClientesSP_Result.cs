@@ -13,7 +13,6 @@ namespace AccesoDatos
     
     public partial class seleccionarClientesSP_Result
     {
-        public decimal ID_CLIENTE { get; set; }
         public string CLI_CEDULA { get; set; }
         public string CLI_NOMBRE { get; set; }
         public string CLI_TELEFONO { get; set; }

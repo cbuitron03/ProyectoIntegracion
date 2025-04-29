@@ -4,20 +4,20 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d3397f3e3a76467eb0d1f32d87531f05" Name="Diagram1">
+      <Diagram DiagramId="eae79c56a37242b9ad4d87c43aa1aeea" Name="Diagram1">
         <EntityTypeShape EntityType="db17842Model.CLIENTE" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="db17842Model.DETALLE_FACTURA" Width="1.5" PointX="7.5" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db17842Model.DETALLE_FACTURA" Width="1.5" PointX="7.5" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="db17842Model.EMPRESA" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
         <EntityTypeShape EntityType="db17842Model.FACTURA" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="db17842Model.IMAGEN" Width="1.5" PointX="7.5" PointY="5.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="db17842Model.PRODUCTO" Width="1.5" PointX="5.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="db17842Model.IMAGEN" Width="1.5" PointX="7.5" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="db17842Model.PRODUCTO" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
         <EntityTypeShape EntityType="db17842Model.USUARIO" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
-        <AssociationConnector Association="db17842Model.FK_CLIENTE_RELATIONS_USUARIO" ManuallyRouted="false" />
-        <AssociationConnector Association="db17842Model.FK_FACTURA_RELATIONS_CLIENTE" ManuallyRouted="false" />
-        <AssociationConnector Association="db17842Model.FK_DETALLE__RELATIONS_FACTURA" ManuallyRouted="false" />
-        <AssociationConnector Association="db17842Model.FK_DETALLE__RELATIONS_PRODUCTO" ManuallyRouted="false" />
-        <AssociationConnector Association="db17842Model.FK_FACTURA_RELATIONS_EMPRESA" ManuallyRouted="false" />
-        <AssociationConnector Association="db17842Model.FK_IMAGEN_RELATIONS_PRODUCTO" ManuallyRouted="false" />
+        <AssociationConnector Association="db17842Model.FK_CLIENTE_USUARIO" ManuallyRouted="false" />
+        <AssociationConnector Association="db17842Model.FK_FACTURA_CLIENTE" ManuallyRouted="false" />
+        <AssociationConnector Association="db17842Model.FK_DETALLE_FACTURA_FACTURA" ManuallyRouted="false" />
+        <AssociationConnector Association="db17842Model.FK_DETALLE_FACTURA_PRODUCTO" ManuallyRouted="false" />
+        <AssociationConnector Association="db17842Model.FK_FACTURA_EMPRESA" ManuallyRouted="false" />
+        <AssociationConnector Association="db17842Model.FK_IMAGEN_PRODUCTO" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

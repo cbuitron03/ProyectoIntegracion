@@ -34,7 +34,7 @@ namespace WebServices
         }
 
         [WebMethod]
-        public PRODUCTO seleccionarProductoPorID(decimal id)
+        public PRODUCTO seleccionarProductoPorID(int id)
         {
             return SeleccionarProductos().Where(pro => pro.PRD_COD == id).SingleOrDefault();
         }
@@ -42,7 +42,7 @@ namespace WebServices
         #region metodos de accion 
 
         [WebMethod]
-        public decimal insertarProducto(PRODUCTO proInsertado)
+        public int insertarProducto(PRODUCTO proInsertado)
         {
             return op.insertarProducto(proInsertado);
         }
@@ -54,7 +54,7 @@ namespace WebServices
         }
 
         [WebMethod]
-        public bool eliminarProducto(decimal id)
+        public bool eliminarProducto(int id)
         {
             return op.eliminarProducto(id);
         }

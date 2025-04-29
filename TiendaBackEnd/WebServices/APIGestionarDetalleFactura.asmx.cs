@@ -29,7 +29,7 @@ namespace WebServices
 
 
         [WebMethod]
-        public DETALLE_FACTURA seleccionarDetallesPorID(decimal id)
+        public DETALLE_FACTURA seleccionarDetallesPorID(int id)
         {
             return SeleccionarDetalles().Where(pro => pro.FAC_COD == id).SingleOrDefault();
         }
@@ -37,7 +37,7 @@ namespace WebServices
         #region metodos de accion 
 
         [WebMethod]
-        public decimal insertarDetalleFac(DETALLE_FACTURA proInsertado)
+        public int insertarDetalleFac(DETALLE_FACTURA proInsertado)
         {
             return op.insertarDetalle(proInsertado);
         }
@@ -49,7 +49,7 @@ namespace WebServices
         }
 
         [WebMethod]
-        public bool eliminarDetalleFac(decimal id)
+        public bool eliminarDetalleFac(int id)
         {
             return op.eliminarDetalleFac(id);
         }

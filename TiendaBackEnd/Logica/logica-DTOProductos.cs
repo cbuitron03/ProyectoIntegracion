@@ -17,7 +17,7 @@ namespace Logica
             return op.seleccionarProductosDTO();
         }
 
-        public DTO_Producto MostrarProductoPorId(decimal id)
+        public DTO_Producto MostrarProductoPorId(int id)
         {
             return MostrarProductos().Where(pro=>pro.PRD_COD==id).SingleOrDefault();    
         }

@@ -22,8 +22,9 @@ namespace Datos
                 DTO_Detalle_Factura dto = new DTO_Detalle_Factura()
                 {
                     ID_DET_FAC = p.ID_DET_FAC,
-                    DTF_CANTIDAD = (decimal)p.DTF_CANTIDAD,
+                    DTF_CANTIDAD = (int)p.DTF_CANTIDAD,
                     DTF_PRECIO = (decimal)p.DTF_PRECIO,
+                    DTF_ESTADO = p.DTF_ESTADO
                 };
                 res.Add(dto);
 

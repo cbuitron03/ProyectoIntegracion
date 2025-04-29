@@ -78,11 +78,13 @@
     <Content Include="APIDTODetalleFactura.asmx" />
     <Content Include="APIDTOEmpresa.asmx" />
     <Content Include="APIDTOFacturas.asmx" />
+    <Content Include="APIDTOImagenes.asmx" />
     <Content Include="APIDTOProductos.asmx" />
     <Content Include="APIDTOUsuarios.asmx" />
     <Content Include="APIGestionarClientes.asmx" />
     <Content Include="APIGestionarDetalleFactura.asmx" />
     <Content Include="APIGestionarFacturas.asmx" />
+    <Content Include="APIGestionarImagenes.asmx" />
     <Content Include="APIGestionarProductos.asmx" />
     <Content Include="APIGestionarUsuarios.asmx" />
     <Content Include="Web.config" />
@@ -102,6 +104,10 @@
     </Compile>
     <Compile Include="APIDTOFacturas.asmx.cs">
       <DependentUpon>APIDTOFacturas.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="APIDTOImagenes.asmx.cs">
+      <DependentUpon>APIDTOImagenes.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="APIDTOProductos.asmx.cs">
@@ -124,6 +130,10 @@
       <DependentUpon>APIGestionarFacturas.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="APIGestionarImagenes.asmx.cs">
+      <DependentUpon>APIGestionarImagenes.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="APIGestionarProductos.asmx.cs">
       <DependentUpon>APIGestionarProductos.asmx</DependentUpon>
       <SubType>Component</SubType>
@@ -136,6 +146,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\site24119-WebDeploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

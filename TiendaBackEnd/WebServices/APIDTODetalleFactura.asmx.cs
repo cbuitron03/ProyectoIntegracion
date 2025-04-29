@@ -29,7 +29,7 @@ namespace WebServices
         }
 
         [WebMethod]
-        public DTO_Detalle_Factura MostrarDetallesPorId(decimal id)
+        public DTO_Detalle_Factura MostrarDetallesPorId(int id)
         {
             return op.MostrarDetallesPorId(id);
         }

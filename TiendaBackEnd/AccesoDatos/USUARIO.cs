@@ -14,18 +14,18 @@ namespace AccesoDatos
     
     public partial class USUARIO
     {
-        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        //public USUARIO()
-        //{
-        //    this.CLIENTE = new HashSet<CLIENTE>();
-        //}
-
-        public decimal US_COD { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public USUARIO()
+        {
+            this.CLIENTE = new List<CLIENTE>();
+        }
+    
+        public int US_COD { get; set; }
         public string US_USUARIO { get; set; }
         public string US_PASS { get; set; }
         public string US_ROL { get; set; }
-
-        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public List<CLIENTE> CLIENTE { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual List<CLIENTE> CLIENTE { get; set; }
     }
 }

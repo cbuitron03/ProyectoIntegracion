@@ -13,10 +13,10 @@ namespace AccesoDatos
     
     public partial class seleccionarProductosSP_Result
     {
-        public decimal PRD_COD { get; set; }
+        public int PRD_COD { get; set; }
         public string PRD_DESCRIPCION { get; set; }
         public Nullable<decimal> PRD_PRECIO { get; set; }
-        public Nullable<decimal> PRD_STOCK { get; set; }
+        public Nullable<int> PRD_STOCK { get; set; }
         public string IMG_URL { get; set; }
     }
 }

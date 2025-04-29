@@ -26,7 +26,7 @@ namespace WebServices
         }
        
         [WebMethod]
-        public decimal insertarUsuario(USUARIO usuarioInsertado)
+        public int insertarUsuario(USUARIO usuarioInsertado)
         {
             return op.insertarUsuario(usuarioInsertado);
         }
@@ -36,7 +36,7 @@ namespace WebServices
             return op.actualizarUsuario(usuarioActualizado);
         }
         [WebMethod]
-        public bool eliminarUsuario(decimal id)
+        public bool eliminarUsuario(int id)
         {
             return op.eliminarUsuario(id);
         }

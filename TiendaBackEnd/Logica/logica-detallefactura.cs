@@ -18,7 +18,7 @@ namespace Logica
             return op.SeleccionarDetalles();
         }
 
-        public DETALLE_FACTURA seleccionarDetallePorId(decimal id)
+        public DETALLE_FACTURA seleccionarDetallePorId(int id)
         {
             return SeleccionarDetalles().Where(pro => pro.FAC_COD == id).SingleOrDefault();
         }
@@ -26,7 +26,7 @@ namespace Logica
 
         #region metodos de accion 
 
-        public decimal insertarDetalle(DETALLE_FACTURA proInsertado)
+        public int insertarDetalle(DETALLE_FACTURA proInsertado)
         {
             return op.insertarDetalleFac(proInsertado);
         }
@@ -36,7 +36,7 @@ namespace Logica
             return op.actualizarDetalleFac(proActualizado);
         }
 
-        public bool eliminarDetalleFac(decimal id)
+        public bool eliminarDetalleFac(int id)
         {
             return op.eliminarDetalleFac(id);
         }

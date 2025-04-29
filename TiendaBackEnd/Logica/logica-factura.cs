@@ -17,14 +17,14 @@ namespace Logica
             return op.SeleccionarFacturas();
         }
 
-        public FACTURA seleccionarFacturaPorID(decimal codigo)
+        public FACTURA seleccionarFacturaPorID(int codigo)
         {
             return SeleccionarFactura().Where(pro => pro.FAC_COD == codigo).SingleOrDefault();
         }
 
         #region metodos de accion 
 
-        public decimal insertarFactura(FACTURA proInsertado)
+        public int insertarFactura(FACTURA proInsertado)
         {
             return op.insertarFactura(proInsertado);
         }
@@ -34,7 +34,7 @@ namespace Logica
             return op.actualizarFactura(proActualizado);
         }
 
-        public bool eliminarFactura(decimal id)
+        public bool eliminarFactura(int id)
         {
             return op.eliminarFactura(id);
         }

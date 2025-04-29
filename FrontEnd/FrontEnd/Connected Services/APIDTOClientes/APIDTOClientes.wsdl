@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="MostrarClientes">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostrarClientesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MostrarClientesResult" type="tns:ArrayOfDTO_Cliente" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDTO_Cliente">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DTO_Cliente" nillable="true" type="tns:DTO_Cliente" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DTO_Cliente">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID_CLIENTE" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="CLI_CEDULA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CLI_NOMBRE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CLI_TELEFONO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CLI_CORREO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CLI_DIRECCION" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MostrarClientePorCedula">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cedula" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MostrarClientePorCedulaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MostrarClientePorCedulaResult" type="tns:DTO_Cliente" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="MostrarClientesSoapIn">
+    <wsdl:part name="parameters" element="tns:MostrarClientes" />
+  </wsdl:message>
+  <wsdl:message name="MostrarClientesSoapOut">
+    <wsdl:part name="parameters" element="tns:MostrarClientesResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostrarClientePorCedulaSoapIn">
+    <wsdl:part name="parameters" element="tns:MostrarClientePorCedula" />
+  </wsdl:message>
+  <wsdl:message name="MostrarClientePorCedulaSoapOut">
+    <wsdl:part name="parameters" element="tns:MostrarClientePorCedulaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="APIDTOClientesSoap">
+    <wsdl:operation name="MostrarClientes">
+      <wsdl:input message="tns:MostrarClientesSoapIn" />
+      <wsdl:output message="tns:MostrarClientesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostrarClientePorCedula">
+      <wsdl:input message="tns:MostrarClientePorCedulaSoapIn" />
+      <wsdl:output message="tns:MostrarClientePorCedulaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="APIDTOClientesSoap" type="tns:APIDTOClientesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="MostrarClientes">
+      <soap:operation soapAction="http://tempuri.org/MostrarClientes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarClientePorCedula">
+      <soap:operation soapAction="http://tempuri.org/MostrarClientePorCedula" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="APIDTOClientesSoap12" type="tns:APIDTOClientesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="MostrarClientes">
+      <soap12:operation soapAction="http://tempuri.org/MostrarClientes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarClientePorCedula">
+      <soap12:operation soapAction="http://tempuri.org/MostrarClientePorCedula" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="APIDTOClientes">
+    <wsdl:port name="APIDTOClientesSoap" binding="tns:APIDTOClientesSoap">
+      <soap:address location="http://backendternurainfinita.runasp.net/APIDTOClientes.asmx" />
+    </wsdl:port>
+    <wsdl:port name="APIDTOClientesSoap12" binding="tns:APIDTOClientesSoap12">
+      <soap12:address location="http://backendternurainfinita.runasp.net/APIDTOClientes.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

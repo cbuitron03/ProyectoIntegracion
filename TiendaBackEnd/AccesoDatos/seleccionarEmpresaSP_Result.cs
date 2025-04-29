@@ -13,7 +13,7 @@ namespace AccesoDatos
     
     public partial class seleccionarEmpresaSP_Result
     {
-        public decimal ID_EMP { get; set; }
+        public int ID_EMP { get; set; }
         public string EMP_RUC { get; set; }
         public string EMP_NOMBRE { get; set; }
         public string EMP_MISION { get; set; }

@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="SeleccionarDetalles">
+        <s:complexType />
+      </s:element>
+      <s:element name="SeleccionarDetallesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SeleccionarDetallesResult" type="tns:ArrayOfDETALLE_FACTURA" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDETALLE_FACTURA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DETALLE_FACTURA" nillable="true" type="tns:DETALLE_FACTURA" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DETALLE_FACTURA">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID_DET_FAC" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FAC_COD" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PRD_COD" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="DTF_CANTIDAD" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="DTF_PRECIO" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="FACTURA" type="tns:FACTURA" />
+          <s:element minOccurs="0" maxOccurs="1" name="PRODUCTO" type="tns:PRODUCTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FACTURA">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="FAC_COD" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID_EMP" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID_CLIENTE" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FAC_FECHA" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="FAC_ESTADO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FAC_IVA" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FAC_SUBTOTAL" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FAC_TOTAL" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="CLIENTE" type="tns:CLIENTE" />
+          <s:element minOccurs="0" maxOccurs="1" name="DETALLE_FACTURA" type="tns:ArrayOfDETALLE_FACTURA" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMPRESA" type="tns:EMPRESA" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CLIENTE">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID_CLIENTE" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="US_COD" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="CLI_CEDULA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CLI_NOMBRE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CLI_TELEFONO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CLI_CORREO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CLI_DIRECCION" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="USUARIO" type="tns:USUARIO" />
+          <s:element minOccurs="0" maxOccurs="1" name="FACTURA" type="tns:ArrayOfFACTURA" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="USUARIO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="US_COD" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="US_USUARIO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="US_PASS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="US_ROL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CLIENTE" type="tns:ArrayOfCLIENTE" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCLIENTE">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CLIENTE" nillable="true" type="tns:CLIENTE" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfFACTURA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FACTURA" nillable="true" type="tns:FACTURA" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EMPRESA">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID_EMP" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMP_RUC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMP_NOMBRE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMP_MISION" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMP_VISION" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMP_TELF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FACTURA" type="tns:ArrayOfFACTURA" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PRODUCTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="PRD_COD" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="PRD_DESCRIPCION" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PRD_PRECIO" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PRD_STOCK" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="DETALLE_FACTURA" type="tns:ArrayOfDETALLE_FACTURA" />
+          <s:element minOccurs="0" maxOccurs="1" name="IMAGEN" type="tns:ArrayOfIMAGEN" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfIMAGEN">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="IMAGEN" nillable="true" type="tns:IMAGEN" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IMAGEN">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IMG_ID" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PRD_COD" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="IMG_URL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PRODUCTO" type="tns:PRODUCTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="seleccionarDetallesPorID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="seleccionarDetallesPorIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="seleccionarDetallesPorIDResult" type="tns:DETALLE_FACTURA" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertarDetalleFac">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="proInsertado" type="tns:DETALLE_FACTURA" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertarDetalleFacResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertarDetalleFacResult" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizarDetalleFac">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="proActualizado" type="tns:DETALLE_FACTURA" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizarDetalleFacResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="actualizarDetalleFacResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminarDetalleFac">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminarDetalleFacResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="eliminarDetalleFacResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SeleccionarDetallesSoapIn">
+    <wsdl:part name="parameters" element="tns:SeleccionarDetalles" />
+  </wsdl:message>
+  <wsdl:message name="SeleccionarDetallesSoapOut">
+    <wsdl:part name="parameters" element="tns:SeleccionarDetallesResponse" />
+  </wsdl:message>
+  <wsdl:message name="seleccionarDetallesPorIDSoapIn">
+    <wsdl:part name="parameters" element="tns:seleccionarDetallesPorID" />
+  </wsdl:message>
+  <wsdl:message name="seleccionarDetallesPorIDSoapOut">
+    <wsdl:part name="parameters" element="tns:seleccionarDetallesPorIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertarDetalleFacSoapIn">
+    <wsdl:part name="parameters" element="tns:insertarDetalleFac" />
+  </wsdl:message>
+  <wsdl:message name="insertarDetalleFacSoapOut">
+    <wsdl:part name="parameters" element="tns:insertarDetalleFacResponse" />
+  </wsdl:message>
+  <wsdl:message name="actualizarDetalleFacSoapIn">
+    <wsdl:part name="parameters" element="tns:actualizarDetalleFac" />
+  </wsdl:message>
+  <wsdl:message name="actualizarDetalleFacSoapOut">
+    <wsdl:part name="parameters" element="tns:actualizarDetalleFacResponse" />
+  </wsdl:message>
+  <wsdl:message name="eliminarDetalleFacSoapIn">
+    <wsdl:part name="parameters" element="tns:eliminarDetalleFac" />
+  </wsdl:message>
+  <wsdl:message name="eliminarDetalleFacSoapOut">
+    <wsdl:part name="parameters" element="tns:eliminarDetalleFacResponse" />
+  </wsdl:message>
+  <wsdl:portType name="APIGestionarDetalleFacturaSoap">
+    <wsdl:operation name="SeleccionarDetalles">
+      <wsdl:input message="tns:SeleccionarDetallesSoapIn" />
+      <wsdl:output message="tns:SeleccionarDetallesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="seleccionarDetallesPorID">
+      <wsdl:input message="tns:seleccionarDetallesPorIDSoapIn" />
+      <wsdl:output message="tns:seleccionarDetallesPorIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertarDetalleFac">
+      <wsdl:input message="tns:insertarDetalleFacSoapIn" />
+      <wsdl:output message="tns:insertarDetalleFacSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarDetalleFac">
+      <wsdl:input message="tns:actualizarDetalleFacSoapIn" />
+      <wsdl:output message="tns:actualizarDetalleFacSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminarDetalleFac">
+      <wsdl:input message="tns:eliminarDetalleFacSoapIn" />
+      <wsdl:output message="tns:eliminarDetalleFacSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="APIGestionarDetalleFacturaSoap" type="tns:APIGestionarDetalleFacturaSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SeleccionarDetalles">
+      <soap:operation soapAction="http://tempuri.org/SeleccionarDetalles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="seleccionarDetallesPorID">
+      <soap:operation soapAction="http://tempuri.org/seleccionarDetallesPorID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarDetalleFac">
+      <soap:operation soapAction="http://tempuri.org/insertarDetalleFac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarDetalleFac">
+      <soap:operation soapAction="http://tempuri.org/actualizarDetalleFac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarDetalleFac">
+      <soap:operation soapAction="http://tempuri.org/eliminarDetalleFac" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="APIGestionarDetalleFacturaSoap12" type="tns:APIGestionarDetalleFacturaSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SeleccionarDetalles">
+      <soap12:operation soapAction="http://tempuri.org/SeleccionarDetalles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="seleccionarDetallesPorID">
+      <soap12:operation soapAction="http://tempuri.org/seleccionarDetallesPorID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarDetalleFac">
+      <soap12:operation soapAction="http://tempuri.org/insertarDetalleFac" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarDetalleFac">
+      <soap12:operation soapAction="http://tempuri.org/actualizarDetalleFac" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarDetalleFac">
+      <soap12:operation soapAction="http://tempuri.org/eliminarDetalleFac" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="APIGestionarDetalleFactura">
+    <wsdl:port name="APIGestionarDetalleFacturaSoap" binding="tns:APIGestionarDetalleFacturaSoap">
+      <soap:address location="http://backendternurainfinita.runasp.net/APIGestionarDetalleFactura.asmx" />
+    </wsdl:port>
+    <wsdl:port name="APIGestionarDetalleFacturaSoap12" binding="tns:APIGestionarDetalleFacturaSoap12">
+      <soap12:address location="http://backendternurainfinita.runasp.net/APIGestionarDetalleFactura.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

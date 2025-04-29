@@ -23,7 +23,8 @@ namespace Datos
                     PRD_COD = p.PRD_COD,
                     PRD_DESCRIPCION = p.PRD_DESCRIPCION,
                     PRD_PRECIO = (decimal)p.PRD_PRECIO,
-                    PRD_STOCK = (decimal)p.PRD_STOCK
+                    PRD_STOCK = (int)p.PRD_STOCK,
+                    PRD_ESTADO = p.PRD_ESTADO
                 };
                 res.Add(dto);
 

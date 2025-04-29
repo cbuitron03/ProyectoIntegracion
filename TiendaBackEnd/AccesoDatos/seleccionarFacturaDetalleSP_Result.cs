@@ -13,10 +13,10 @@ namespace AccesoDatos
     
     public partial class seleccionarFacturaDetalleSP_Result
     {
-        public decimal FAC_COD { get; set; }
+        public int FAC_COD { get; set; }
         public string PRD_DESCRIPCION { get; set; }
         public Nullable<decimal> PRD_PRECIO { get; set; }
-        public Nullable<decimal> DTF_CANTIDAD { get; set; }
+        public Nullable<int> DTF_CANTIDAD { get; set; }
         public Nullable<decimal> DTF_PRECIO { get; set; }
     }
 }

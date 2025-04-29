@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace AccesoDatos.DTO
 {
+    [Serializable]
     public class DTO_Detalle_Factura
     {
-        public decimal ID_DET_FAC { get; set; }
-        public decimal FAC_COD { get; set; }
-        public string PRD_DESCRIPCION { get; set; }
-        public Nullable<decimal> PRD_PRECIO { get; set; }
-        public Nullable<decimal> DTF_CANTIDAD { get; set; }
+        public int ID_DET_FAC { get; set; }
+        public int FAC_COD { get; set; }
+        public int PRD_COD { get; set; }
+        public Nullable<int> DTF_CANTIDAD { get; set; }
         public Nullable<decimal> DTF_PRECIO { get; set; }
+        public string DTF_ESTADO { get; set; }
+
     }
 }

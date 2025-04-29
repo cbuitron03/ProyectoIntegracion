@@ -9,10 +9,11 @@ namespace Datos
 {
     public class datosDetalleFactura
     {
-        db17842Entities2 _context;
+        db17842Entities _context;
         public datosDetalleFactura()
         {
-            _context = new db17842Entities2();
+            _context = new db17842Entities();
+            _context.Configuration.ProxyCreationEnabled = false;
         }
 
         public List<DETALLE_FACTURA> SeleccionarDetalles()
@@ -22,7 +23,7 @@ namespace Datos
 
         #region metodos de accion 
 
-        public decimal insertarDetalleFac(DETALLE_FACTURA proInsertado)
+        public int insertarDetalleFac(DETALLE_FACTURA proInsertado)
         {
             _context.DETALLE_FACTURA.Add(proInsertado);
             _context.SaveChanges();
@@ -35,7 +36,8 @@ namespace Datos
             if (pro != null)
             {
                 pro.DTF_CANTIDAD = proActualizado.DTF_CANTIDAD;
-                pro.DTF_CANTIDAD = proActualizado.DTF_CANTIDAD;
+                pro.DTF_PRECIO = proActualizado.DTF_PRECIO;
+                pro.DTF_ESTADO = proActualizado.DTF_ESTADO;
                 _context.SaveChanges();
                 return true;
 
@@ -44,7 +46,7 @@ namespace Datos
                 return false;
         }
 
-        public bool eliminarDetalleFac(decimal id)
+        public bool eliminarDetalleFac(int id)
         {
             DETALLE_FACTURA pro = seleccionarDetallePorId(id);
             if (pro != null)
@@ -59,7 +61,7 @@ namespace Datos
         }
 
         # endregion
-        private DETALLE_FACTURA seleccionarDetallePorId(decimal id)
+        private DETALLE_FACTURA seleccionarDetallePorId(int id)
         {
             return _context.DETALLE_FACTURA.Where(pro => pro.ID_DET_FAC == id).SingleOrDefault();
         }

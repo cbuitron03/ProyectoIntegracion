@@ -48,7 +48,7 @@ foreach (var entity in typeMapper.GetItemsToGenerate<EntityType>(itemCollection)
         foreach (var navigationProperty in collectionNavigationProperties)
         {
 #>
-        this.<#=code.Escape(navigationProperty)#> = new HashSet<<#=typeMapper.GetTypeName(navigationProperty.ToEndMember.GetEntityType())#>>();
+        this.<#=code.Escape(navigationProperty)#> = new List<<#=typeMapper.GetTypeName(navigationProperty.ToEndMember.GetEntityType())#>>();
 <#
         }
 
@@ -603,7 +603,7 @@ public class TypeMapper
         ArgumentNotNull(types, "types");
         ArgumentNotNull(sourceFile, "sourceFile");
         
-        var hash = new HashSet<string>(StringComparer.InvariantCultureIgnoreCase);
+        var hash = new List<string>(StringComparer.InvariantCultureIgnoreCase);
         if (types.Any(item => !hash.Add(item)))
         {
             _errors.Add(

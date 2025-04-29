@@ -13,7 +13,7 @@ namespace AccesoDatos
     
     public partial class seleccionarFacturaEncabezadoSP_Result
     {
-        public decimal FAC_COD { get; set; }
+        public int FAC_COD { get; set; }
         public string EMP_RUC { get; set; }
         public string EMP_NOMBRE { get; set; }
         public Nullable<System.DateTime> FAC_FECHA { get; set; }

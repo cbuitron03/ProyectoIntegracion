@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,10 +10,11 @@ namespace Datos
 {
     public class datosCliente
     {
-        db17842Entities2 _context;
+        db17842Entities _context;
         public datosCliente()
         {
-            _context = new db17842Entities2();
+            _context = new db17842Entities();
+            _context.Configuration.ProxyCreationEnabled = false;
         }
 
         public List<CLIENTE> SeleccionarClientes()
@@ -22,11 +24,11 @@ namespace Datos
 
         #region metodos de accion 
 
-        public decimal insertarCliente(CLIENTE cliInsertado)
+        public string insertarCliente(CLIENTE cliInsertado)
         {
             _context.CLIENTE.Add(cliInsertado);
             _context.SaveChanges();
-            return cliInsertado.ID_CLIENTE;
+            return cliInsertado.CLI_CEDULA;
         }
 
         public bool actualizarCliente(CLIENTE cliActualizado)
@@ -34,10 +36,12 @@ namespace Datos
             CLIENTE cli = seleccionarClientePorId(cliActualizado.CLI_CEDULA);
             if (cli != null)
             {
+                cli.CLI_CEDULA = cliActualizado.CLI_CEDULA;
                 cli.CLI_NOMBRE = cliActualizado.CLI_NOMBRE;
                 cli.CLI_TELEFONO= cliActualizado.CLI_TELEFONO;
                 cli.CLI_CORREO = cliActualizado.CLI_CORREO;
                 cli.CLI_DIRECCION = cliActualizado.CLI_DIRECCION;
+                cli.CLI_ESTADO = cliActualizado.CLI_ESTADO;
                 _context.SaveChanges();
                 return true;
 

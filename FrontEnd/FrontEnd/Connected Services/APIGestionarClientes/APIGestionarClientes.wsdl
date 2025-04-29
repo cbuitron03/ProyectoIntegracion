@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="SeleccionarClientes">
+        <s:complexType />
+      </s:element>
+      <s:element name="SeleccionarClientesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SeleccionarClientesResult" type="tns:ArrayOfCLIENTE" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCLIENTE">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CLIENTE" nillable="true" type="tns:CLIENTE" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CLIENTE">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID_CLIENTE" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="US_COD" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="CLI_CEDULA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CLI_NOMBRE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CLI_TELEFONO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CLI_CORREO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CLI_DIRECCION" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="USUARIO" type="tns:USUARIO" />
+          <s:element minOccurs="0" maxOccurs="1" name="FACTURA" type="tns:ArrayOfFACTURA" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="USUARIO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="US_COD" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="US_USUARIO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="US_PASS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="US_ROL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CLIENTE" type="tns:ArrayOfCLIENTE" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfFACTURA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FACTURA" nillable="true" type="tns:FACTURA" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FACTURA">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="FAC_COD" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID_EMP" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID_CLIENTE" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FAC_FECHA" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="FAC_ESTADO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FAC_IVA" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FAC_SUBTOTAL" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FAC_TOTAL" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="CLIENTE" type="tns:CLIENTE" />
+          <s:element minOccurs="0" maxOccurs="1" name="DETALLE_FACTURA" type="tns:ArrayOfDETALLE_FACTURA" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMPRESA" type="tns:EMPRESA" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDETALLE_FACTURA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DETALLE_FACTURA" nillable="true" type="tns:DETALLE_FACTURA" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DETALLE_FACTURA">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID_DET_FAC" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FAC_COD" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PRD_COD" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="DTF_CANTIDAD" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="DTF_PRECIO" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="FACTURA" type="tns:FACTURA" />
+          <s:element minOccurs="0" maxOccurs="1" name="PRODUCTO" type="tns:PRODUCTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PRODUCTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="PRD_COD" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="PRD_DESCRIPCION" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PRD_PRECIO" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PRD_STOCK" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="DETALLE_FACTURA" type="tns:ArrayOfDETALLE_FACTURA" />
+          <s:element minOccurs="0" maxOccurs="1" name="IMAGEN" type="tns:ArrayOfIMAGEN" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfIMAGEN">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="IMAGEN" nillable="true" type="tns:IMAGEN" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IMAGEN">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IMG_ID" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PRD_COD" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="IMG_URL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PRODUCTO" type="tns:PRODUCTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EMPRESA">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID_EMP" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMP_RUC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMP_NOMBRE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMP_MISION" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMP_VISION" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMP_TELF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FACTURA" type="tns:ArrayOfFACTURA" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="seleccionarClientesPorNombre">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="seleccionarClientesPorNombreResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="seleccionarClientesPorNombreResult" type="tns:ArrayOfCLIENTE" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="seleccionarClientePorCedula">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cedula" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="seleccionarClientePorCedulaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="seleccionarClientePorCedulaResult" type="tns:ArrayOfCLIENTE" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertarCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cliInsertado" type="tns:CLIENTE" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertarClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="insertarClienteResult" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizarCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cliActualizado" type="tns:CLIENTE" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="actualizarClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="actualizarClienteResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminarCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cliente" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="eliminarClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="eliminarClienteResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SeleccionarClientesSoapIn">
+    <wsdl:part name="parameters" element="tns:SeleccionarClientes" />
+  </wsdl:message>
+  <wsdl:message name="SeleccionarClientesSoapOut">
+    <wsdl:part name="parameters" element="tns:SeleccionarClientesResponse" />
+  </wsdl:message>
+  <wsdl:message name="seleccionarClientesPorNombreSoapIn">
+    <wsdl:part name="parameters" element="tns:seleccionarClientesPorNombre" />
+  </wsdl:message>
+  <wsdl:message name="seleccionarClientesPorNombreSoapOut">
+    <wsdl:part name="parameters" element="tns:seleccionarClientesPorNombreResponse" />
+  </wsdl:message>
+  <wsdl:message name="seleccionarClientePorCedulaSoapIn">
+    <wsdl:part name="parameters" element="tns:seleccionarClientePorCedula" />
+  </wsdl:message>
+  <wsdl:message name="seleccionarClientePorCedulaSoapOut">
+    <wsdl:part name="parameters" element="tns:seleccionarClientePorCedulaResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertarClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:insertarCliente" />
+  </wsdl:message>
+  <wsdl:message name="insertarClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:insertarClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="actualizarClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:actualizarCliente" />
+  </wsdl:message>
+  <wsdl:message name="actualizarClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:actualizarClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="eliminarClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:eliminarCliente" />
+  </wsdl:message>
+  <wsdl:message name="eliminarClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:eliminarClienteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="APIGestionarClientesSoap">
+    <wsdl:operation name="SeleccionarClientes">
+      <wsdl:input message="tns:SeleccionarClientesSoapIn" />
+      <wsdl:output message="tns:SeleccionarClientesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="seleccionarClientesPorNombre">
+      <wsdl:input message="tns:seleccionarClientesPorNombreSoapIn" />
+      <wsdl:output message="tns:seleccionarClientesPorNombreSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="seleccionarClientePorCedula">
+      <wsdl:input message="tns:seleccionarClientePorCedulaSoapIn" />
+      <wsdl:output message="tns:seleccionarClientePorCedulaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertarCliente">
+      <wsdl:input message="tns:insertarClienteSoapIn" />
+      <wsdl:output message="tns:insertarClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="actualizarCliente">
+      <wsdl:input message="tns:actualizarClienteSoapIn" />
+      <wsdl:output message="tns:actualizarClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminarCliente">
+      <wsdl:input message="tns:eliminarClienteSoapIn" />
+      <wsdl:output message="tns:eliminarClienteSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="APIGestionarClientesSoap" type="tns:APIGestionarClientesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SeleccionarClientes">
+      <soap:operation soapAction="http://tempuri.org/SeleccionarClientes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="seleccionarClientesPorNombre">
+      <soap:operation soapAction="http://tempuri.org/seleccionarClientesPorNombre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="seleccionarClientePorCedula">
+      <soap:operation soapAction="http://tempuri.org/seleccionarClientePorCedula" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarCliente">
+      <soap:operation soapAction="http://tempuri.org/insertarCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarCliente">
+      <soap:operation soapAction="http://tempuri.org/actualizarCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarCliente">
+      <soap:operation soapAction="http://tempuri.org/eliminarCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="APIGestionarClientesSoap12" type="tns:APIGestionarClientesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SeleccionarClientes">
+      <soap12:operation soapAction="http://tempuri.org/SeleccionarClientes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="seleccionarClientesPorNombre">
+      <soap12:operation soapAction="http://tempuri.org/seleccionarClientesPorNombre" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="seleccionarClientePorCedula">
+      <soap12:operation soapAction="http://tempuri.org/seleccionarClientePorCedula" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertarCliente">
+      <soap12:operation soapAction="http://tempuri.org/insertarCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="actualizarCliente">
+      <soap12:operation soapAction="http://tempuri.org/actualizarCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarCliente">
+      <soap12:operation soapAction="http://tempuri.org/eliminarCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="APIGestionarClientes">
+    <wsdl:port name="APIGestionarClientesSoap" binding="tns:APIGestionarClientesSoap">
+      <soap:address location="http://backendternurainfinita.runasp.net/APIGestionarClientes.asmx" />
+    </wsdl:port>
+    <wsdl:port name="APIGestionarClientesSoap12" binding="tns:APIGestionarClientesSoap12">
+      <soap12:address location="http://backendternurainfinita.runasp.net/APIGestionarClientes.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

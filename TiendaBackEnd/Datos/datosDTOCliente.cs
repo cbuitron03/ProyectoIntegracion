@@ -21,12 +21,12 @@ namespace Datos
 
                 DTO_Cliente dto = new DTO_Cliente()
                 {
-                    ID_CLIENTE = c.ID_CLIENTE,
                     CLI_CEDULA = c.CLI_CEDULA,
                     CLI_NOMBRE = c.CLI_NOMBRE,
                     CLI_TELEFONO = c.CLI_TELEFONO,
                     CLI_CORREO = c.CLI_CORREO,
-                    CLI_DIRECCION = c.CLI_DIRECCION
+                    CLI_DIRECCION = c.CLI_DIRECCION,
+                    CLI_ESTADO = c.CLI_ESTADO
                 };
                 res.Add(dto);
 

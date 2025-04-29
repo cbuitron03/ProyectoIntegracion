@@ -29,7 +29,7 @@ namespace Logica
 
         #region metodos de accion 
 
-        public decimal insertarCliente(CLIENTE cliInsertado)
+        public string insertarCliente(CLIENTE cliInsertado)
         {
             return op.insertarCliente(cliInsertado);
         }

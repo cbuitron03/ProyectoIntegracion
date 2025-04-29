@@ -42,7 +42,7 @@ namespace WebServices
         #region metodos de accion 
 
         [WebMethod]
-        public decimal insertarCliente(CLIENTE cliInsertado)
+        public string insertarCliente(CLIENTE cliInsertado)
         {
             return op.insertarCliente(cliInsertado);
         }

@@ -18,7 +18,7 @@ namespace Logica
             return op.seleccionarDetalleFacDTO();
         }
 
-        public DTO_Detalle_Factura MostrarDetallesPorId(decimal id)
+        public DTO_Detalle_Factura MostrarDetallesPorId(int id)
         {
             return MostrarDetalles().Where(pro => pro.FAC_COD == id).SingleOrDefault();
         }

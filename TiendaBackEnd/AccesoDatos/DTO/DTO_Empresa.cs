@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace AccesoDatos.DTO
 {
+    [Serializable]
     public class DTO_Empresa
     {
-        public decimal ID_EMP { get; set; }
+        public int ID_EMP { get; set; }
         public string EMP_RUC { get; set; }
         public string EMP_NOMBRE { get; set; }
         public string EMP_MISION { get; set; }

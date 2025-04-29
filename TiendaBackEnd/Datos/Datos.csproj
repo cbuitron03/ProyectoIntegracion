@@ -57,10 +57,12 @@
     <Compile Include="datosDTODetalleFactura.cs" />
     <Compile Include="datosDTOEmpresa.cs" />
     <Compile Include="datosDTOFactura.cs" />
+    <Compile Include="datosDTOImagen.cs" />
     <Compile Include="datosDTOProducto.cs" />
     <Compile Include="datosDTOUsuario.cs" />
     <Compile Include="datosEmpresa.cs" />
     <Compile Include="datosFactura.cs" />
+    <Compile Include="datosImagen.cs" />
     <Compile Include="datosProductos.cs" />
     <Compile Include="datosUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -24,7 +24,7 @@ namespace Logica
 
         #region metodos de accion 
 
-        public decimal insertarUsuario(USUARIO usuInsertado)
+        public int insertarUsuario(USUARIO usuInsertado)
         {
             return op.insertarUsuario(usuInsertado);
         }
@@ -34,7 +34,7 @@ namespace Logica
             return op.actualizarUsuario(usuActualizado);
         }
 
-        public bool eliminarUsuario(decimal id)
+        public bool eliminarUsuario(int id)
         {
             return op.eliminarUsuario(id);
         }

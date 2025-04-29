@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="MostrarDetalles">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostrarDetallesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MostrarDetallesResult" type="tns:ArrayOfDTO_Detalle_Factura" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDTO_Detalle_Factura">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DTO_Detalle_Factura" nillable="true" type="tns:DTO_Detalle_Factura" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DTO_Detalle_Factura">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID_DET_FAC" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FAC_COD" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="PRD_DESCRIPCION" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PRD_PRECIO" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="DTF_CANTIDAD" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="DTF_PRECIO" nillable="true" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MostrarDetallesPorId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MostrarDetallesPorIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MostrarDetallesPorIdResult" type="tns:DTO_Detalle_Factura" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="MostrarDetallesSoapIn">
+    <wsdl:part name="parameters" element="tns:MostrarDetalles" />
+  </wsdl:message>
+  <wsdl:message name="MostrarDetallesSoapOut">
+    <wsdl:part name="parameters" element="tns:MostrarDetallesResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostrarDetallesPorIdSoapIn">
+    <wsdl:part name="parameters" element="tns:MostrarDetallesPorId" />
+  </wsdl:message>
+  <wsdl:message name="MostrarDetallesPorIdSoapOut">
+    <wsdl:part name="parameters" element="tns:MostrarDetallesPorIdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="APIDTODetalleFacturaSoap">
+    <wsdl:operation name="MostrarDetalles">
+      <wsdl:input message="tns:MostrarDetallesSoapIn" />
+      <wsdl:output message="tns:MostrarDetallesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostrarDetallesPorId">
+      <wsdl:input message="tns:MostrarDetallesPorIdSoapIn" />
+      <wsdl:output message="tns:MostrarDetallesPorIdSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="APIDTODetalleFacturaSoap" type="tns:APIDTODetalleFacturaSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="MostrarDetalles">
+      <soap:operation soapAction="http://tempuri.org/MostrarDetalles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarDetallesPorId">
+      <soap:operation soapAction="http://tempuri.org/MostrarDetallesPorId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="APIDTODetalleFacturaSoap12" type="tns:APIDTODetalleFacturaSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="MostrarDetalles">
+      <soap12:operation soapAction="http://tempuri.org/MostrarDetalles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarDetallesPorId">
+      <soap12:operation soapAction="http://tempuri.org/MostrarDetallesPorId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="APIDTODetalleFactura">
+    <wsdl:port name="APIDTODetalleFacturaSoap" binding="tns:APIDTODetalleFacturaSoap">
+      <soap:address location="http://backendternurainfinita.runasp.net/APIDTODetalleFactura.asmx" />
+    </wsdl:port>
+    <wsdl:port name="APIDTODetalleFacturaSoap12" binding="tns:APIDTODetalleFacturaSoap12">
+      <soap12:address location="http://backendternurainfinita.runasp.net/APIDTODetalleFactura.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

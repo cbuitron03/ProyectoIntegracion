@@ -29,7 +29,7 @@ namespace WebServices
         }
 
         [WebMethod]
-        public DTO_Producto MostrarProductoPorId(decimal id)
+        public DTO_Producto MostrarProductoPorId(int id)
         {
             return op.MostrarProductoPorId(id);
         }

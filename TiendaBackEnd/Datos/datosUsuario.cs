@@ -9,10 +9,11 @@ namespace Datos
 {
     public class datosUsuario
     {
-        db17842Entities2 _context;
+        db17842Entities _context;
         public datosUsuario()
         {
-            _context = new db17842Entities2();
+            _context = new db17842Entities();
+            _context.Configuration.ProxyCreationEnabled = false;
         }
 
         public List<USUARIO> SeleccionarUsuarios()
@@ -22,7 +23,7 @@ namespace Datos
 
         #region metodos de accion 
 
-        public decimal insertarUsuario(USUARIO usuInsertado)
+        public int insertarUsuario(USUARIO usuInsertado)
         {
             _context.USUARIO.Add(usuInsertado);
             _context.SaveChanges();
@@ -45,7 +46,7 @@ namespace Datos
                 return false;
         }
 
-        public bool eliminarUsuario(decimal id)
+        public bool eliminarUsuario(int id)
         {
             USUARIO usu = seleccionarUsuarioPorId(id);
             if (usu != null)
@@ -60,7 +61,7 @@ namespace Datos
         }
 
         # endregion
-        private USUARIO seleccionarUsuarioPorId(decimal id)
+        private USUARIO seleccionarUsuarioPorId(int id)
         {
             return _context.USUARIO.Where(usu => usu.US_COD == id).SingleOrDefault();
         }

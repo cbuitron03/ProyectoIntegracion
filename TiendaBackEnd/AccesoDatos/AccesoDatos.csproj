@@ -59,6 +59,7 @@
     <Compile Include="DETALLE_FACTURA.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="DTO\DTO_Imagen.cs" />
     <Compile Include="DTO\DTO_Cliente.cs" />
     <Compile Include="DTO\DTO_Detalle_Factura.cs" />
     <Compile Include="DTO\DTO_Empresa.cs" />

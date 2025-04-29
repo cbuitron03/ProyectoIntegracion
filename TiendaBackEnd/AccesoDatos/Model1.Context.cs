@@ -15,10 +15,10 @@ namespace AccesoDatos
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class db17842Entities2 : DbContext
+    public partial class db17842Entities : DbContext
     {
-        public db17842Entities2()
-            : base("name=db17842Entities2")
+        public db17842Entities()
+            : base("name=db17842Entities")
         {
         }
     

@@ -14,10 +14,11 @@ namespace AccesoDatos
     
     public partial class IMAGEN
     {
-        public decimal IMG_ID { get; set; }
-        public decimal PRD_COD { get; set; }
+        public int IMG_ID { get; set; }
+        public int PRD_COD { get; set; }
         public string IMG_URL { get; set; }
-
-        public PRODUCTO PRODUCTO { get; set; }
+        public string IMG_TIPO { get; set; }
+    
+        public virtual PRODUCTO PRODUCTO { get; set; }
     }
 }

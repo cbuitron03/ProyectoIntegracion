@@ -9,10 +9,11 @@ namespace Datos
 {
     public class datosEmpresa
     {
-        db17842Entities2 _context;
+        db17842Entities _context;
         public datosEmpresa()
         {
-            _context = new db17842Entities2();
+            _context = new db17842Entities();
+            _context.Configuration.ProxyCreationEnabled = false;
         }
 
         public List<EMPRESA> SeleccionarEmpresa()

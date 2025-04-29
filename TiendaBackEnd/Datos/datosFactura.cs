@@ -9,10 +9,11 @@ namespace Datos
 {
     public class datosFactura
     {
-        db17842Entities2 _context;
+        db17842Entities _context;
         public datosFactura()
         {
-            _context = new db17842Entities2();
+            _context = new db17842Entities();
+            _context.Configuration.ProxyCreationEnabled = false;
         }
 
         public List<FACTURA> SeleccionarFacturas()
@@ -22,7 +23,7 @@ namespace Datos
 
         #region metodos de accion 
 
-        public decimal insertarFactura(FACTURA proInsertado)
+        public int insertarFactura(FACTURA proInsertado)
         {
             _context.FACTURA.Add(proInsertado);
             _context.SaveChanges();
@@ -47,7 +48,7 @@ namespace Datos
                 return false;
         }
 
-        public bool eliminarFactura(decimal codigo)
+        public bool eliminarFactura(int codigo)
         {
             FACTURA pro = seleccionarFacturaPorId(codigo);
             if (pro != null)
@@ -62,7 +63,7 @@ namespace Datos
         }
 
         # endregion
-        private FACTURA seleccionarFacturaPorId(decimal codigo)
+        private FACTURA seleccionarFacturaPorId(int codigo)
         {
             return _context.FACTURA.Where(pro => pro.FAC_COD == codigo).SingleOrDefault();
         }

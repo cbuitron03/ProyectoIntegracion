@@ -50,10 +50,12 @@
     <Compile Include="logica-DTOClientes.cs" />
     <Compile Include="logica-DTODetalleFactura.cs" />
     <Compile Include="logica-DTOFactura.cs" />
+    <Compile Include="logica-DTOImagenes.cs" />
     <Compile Include="logica-DTOProductos.cs" />
     <Compile Include="logica-DTOUsuarios.cs" />
     <Compile Include="logica-empresa.cs" />
     <Compile Include="logica-factura.cs" />
+    <Compile Include="logica-imagenes.cs" />
     <Compile Include="logica-productos.cs" />
     <Compile Include="logica-usuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

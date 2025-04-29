@@ -14,13 +14,14 @@ namespace AccesoDatos
     
     public partial class DETALLE_FACTURA
     {
-        public decimal ID_DET_FAC { get; set; }
-        public decimal FAC_COD { get; set; }
-        public decimal PRD_COD { get; set; }
-        public Nullable<decimal> DTF_CANTIDAD { get; set; }
+        public int ID_DET_FAC { get; set; }
+        public int FAC_COD { get; set; }
+        public int PRD_COD { get; set; }
+        public Nullable<int> DTF_CANTIDAD { get; set; }
         public Nullable<decimal> DTF_PRECIO { get; set; }
-
-        public FACTURA FACTURA { get; set; }
-        public PRODUCTO PRODUCTO { get; set; }
+        public string DTF_ESTADO { get; set; }
+    
+        public virtual FACTURA FACTURA { get; set; }
+        public virtual PRODUCTO PRODUCTO { get; set; }
     }
 }

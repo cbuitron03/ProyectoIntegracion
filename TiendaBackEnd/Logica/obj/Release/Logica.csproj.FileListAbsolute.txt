@@ -1,0 +1,16 @@
+D:\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Release\Logica.dll.config
+D:\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Release\Logica.dll
+D:\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Release\Logica.pdb
+D:\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Release\AccesoDatos.dll
+D:\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Release\Datos.dll
+D:\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Release\EntityFramework.dll
+D:\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Release\AccesoDatos.pdb
+D:\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Release\AccesoDatos.dll.config
+D:\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Release\Datos.pdb
+D:\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Release\Datos.dll.config
+D:\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Release\EntityFramework.xml
+D:\ProyectoIntegracion\TiendaBackEnd\Logica\obj\Release\Logica.csproj.AssemblyReference.cache
+D:\ProyectoIntegracion\TiendaBackEnd\Logica\obj\Release\Logica.csproj.CoreCompileInputs.cache
+D:\ProyectoIntegracion\TiendaBackEnd\Logica\obj\Release\Logica.csproj.Up2Date
+D:\ProyectoIntegracion\TiendaBackEnd\Logica\obj\Release\Logica.dll
+D:\ProyectoIntegracion\TiendaBackEnd\Logica\obj\Release\Logica.pdb

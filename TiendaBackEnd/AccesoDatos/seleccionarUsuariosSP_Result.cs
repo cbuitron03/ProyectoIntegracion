@@ -13,7 +13,7 @@ namespace AccesoDatos
     
     public partial class seleccionarUsuariosSP_Result
     {
-        public decimal US_COD { get; set; }
+        public int US_COD { get; set; }
         public string US_USUARIO { get; set; }
         public string US_PASS { get; set; }
         public string US_ROL { get; set; }

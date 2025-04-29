@@ -9,10 +9,11 @@ namespace Datos
 {
     public class datosProductos
     {
-        db17842Entities2 _context;
+        db17842Entities _context;
         public datosProductos()
         {
-            _context = new db17842Entities2();
+            _context = new db17842Entities();
+            _context.Configuration.ProxyCreationEnabled = false;
         }
 
         public List<PRODUCTO> SeleccionarProductos()
@@ -22,7 +23,7 @@ namespace Datos
 
         #region metodos de accion 
 
-        public decimal insertarProducto(PRODUCTO proInsertado)
+        public int insertarProducto(PRODUCTO proInsertado)
         {
             _context.PRODUCTO.Add(proInsertado);
             _context.SaveChanges();
@@ -37,6 +38,7 @@ namespace Datos
                 pro.PRD_DESCRIPCION = proActualizado.PRD_DESCRIPCION;
                 pro.PRD_PRECIO = proActualizado.PRD_PRECIO;
                 pro.PRD_STOCK = proActualizado.PRD_STOCK;
+                pro.PRD_ESTADO = proActualizado.PRD_ESTADO;
                 _context.SaveChanges();
                 return true;
 
@@ -45,7 +47,7 @@ namespace Datos
                 return false;
         }
 
-        public bool eliminarProducto(decimal id)
+        public bool eliminarProducto(int id)
         {
             PRODUCTO pro = seleccionarProductoPorId(id);
             if (pro != null)
@@ -60,7 +62,7 @@ namespace Datos
         }
 
         # endregion
-        private PRODUCTO seleccionarProductoPorId(decimal id)
+        private PRODUCTO seleccionarProductoPorId(int id)
         {
             return _context.PRODUCTO.Where(pro => pro.PRD_COD == id).SingleOrDefault();
         }

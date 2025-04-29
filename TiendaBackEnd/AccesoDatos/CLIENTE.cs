@@ -14,22 +14,22 @@ namespace AccesoDatos
     
     public partial class CLIENTE
     {
-        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        //public CLIENTE()
-        //{
-        //    this.FACTURA = new HashSet<FACTURA>();
-        //}
-
-        public decimal ID_CLIENTE { get; set; }
-        public decimal US_COD { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public CLIENTE()
+        {
+            this.FACTURA = new List<FACTURA>();
+        }
+    
         public string CLI_CEDULA { get; set; }
+        public int US_COD { get; set; }
         public string CLI_NOMBRE { get; set; }
         public string CLI_TELEFONO { get; set; }
         public string CLI_CORREO { get; set; }
         public string CLI_DIRECCION { get; set; }
-
-        public USUARIO USUARIO { get; set; }
-        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public List<FACTURA> FACTURA { get; set; }
+        public string CLI_ESTADO { get; set; }
+    
+        public virtual USUARIO USUARIO { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual List<FACTURA> FACTURA { get; set; }
     }
 }
