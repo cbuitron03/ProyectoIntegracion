@@ -22,6 +22,8 @@ namespace Datos
                 DTO_Detalle_Factura dto = new DTO_Detalle_Factura()
                 {
                     ID_DET_FAC = p.ID_DET_FAC,
+                    FAC_COD = p.FAC_COD,
+                    PRD_COD = p.PRD_COD,
                     DTF_CANTIDAD = (int)p.DTF_CANTIDAD,
                     DTF_PRECIO = (decimal)p.DTF_PRECIO,
                     DTF_ESTADO = p.DTF_ESTADO

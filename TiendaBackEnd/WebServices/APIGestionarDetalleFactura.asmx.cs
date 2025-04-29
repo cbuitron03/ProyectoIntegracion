@@ -31,7 +31,12 @@ namespace WebServices
         [WebMethod]
         public DETALLE_FACTURA seleccionarDetallesPorID(int id)
         {
-            return SeleccionarDetalles().Where(pro => pro.FAC_COD == id).SingleOrDefault();
+            return SeleccionarDetalles().Where(pro => pro.ID_DET_FAC == id).SingleOrDefault();
+        }
+        [WebMethod]
+        public List<DETALLE_FACTURA> seleccionarDetallesPorFactura(int id)
+        {
+            return SeleccionarDetalles().Where(pro => pro.FAC_COD == id).ToList();
         }
 
         #region metodos de accion 

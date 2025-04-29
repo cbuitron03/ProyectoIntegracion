@@ -20,9 +20,12 @@ namespace Logica
 
         public DETALLE_FACTURA seleccionarDetallePorId(int id)
         {
-            return SeleccionarDetalles().Where(pro => pro.FAC_COD == id).SingleOrDefault();
+            return SeleccionarDetalles().Where(pro => pro.ID_DET_FAC == id).SingleOrDefault();
         }
-
+        public List<DETALLE_FACTURA> seleccionarDetallePorFactura(int id)
+        {
+            return SeleccionarDetalles().Where(pro => pro.FAC_COD == id).ToList();
+        }
 
         #region metodos de accion 
 

@@ -17,15 +17,15 @@ namespace Logica
             return op.SeleccionarImagenes();
         }
 
+        public IMAGEN seleccionarImagenPorID(int id)
+        {
+            return SeleccionarImagenes().Where(pro => pro.IMG_ID == id).SingleOrDefault();
+        }
         public List<IMAGEN> seleccionarImagenPorIdProducto(int id)
         {
             return SeleccionarImagenes().Where(pro => pro.PRD_COD == id ).ToList();
         }
 
-        public IMAGEN seleccionarImagenPorID(int id)
-        {
-            return SeleccionarImagenes().Where(pro => pro.IMG_ID == id).SingleOrDefault();
-        }
 
         #region metodos de accion 
 

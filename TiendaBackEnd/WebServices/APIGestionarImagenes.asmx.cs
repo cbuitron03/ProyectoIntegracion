@@ -34,7 +34,7 @@ namespace WebServices
         }
 
         [WebMethod]
-        public IMAGEN seleccionarProductoPorID(int id)
+        public IMAGEN seleccionarImagenPorID(int id)
         {
             return SeleccionarImagenes().Where(pro => pro.IMG_ID == id).SingleOrDefault();
         }

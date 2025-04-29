@@ -142,6 +142,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Connected Services\APIDTOImagenes\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\APIDTOProductos\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -163,6 +168,11 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\APIGestionarFacturas\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\APIGestionarImagenes\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -247,8 +257,24 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\APIDTOImagenes\APIDTOImagenes.wsdl" />
+    <Content Include="Connected Services\APIDTOImagenes\FrontEnd.APIDTOImagenes.DTO_Imagen.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\APIDTOImagenes\FrontEnd.APIDTOImagenes.MostrarImagenesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\APIDTOImagenes\FrontEnd.APIDTOImagenes.MostrarImagenPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\APIDTOProductos\configuration91.svcinfo" />
     <None Include="Connected Services\APIDTOProductos\configuration.svcinfo" />
+    <None Include="Connected Services\APIDTOImagenes\configuration91.svcinfo" />
+    <None Include="Connected Services\APIDTOImagenes\configuration.svcinfo" />
+    <None Include="Connected Services\APIDTOImagenes\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Connected Services\APIDTOProductos\FrontEnd.APIDTOProductos.DTO_Producto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -343,8 +369,36 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Connected Services\APIGestionarImagenes\APIGestionarImagenes.wsdl" />
+    <Content Include="Connected Services\APIGestionarImagenes\FrontEnd.APIGestionarImagenes.actualizarImagenPorIdProductoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\APIGestionarImagenes\FrontEnd.APIGestionarImagenes.actualizarImagenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\APIGestionarImagenes\FrontEnd.APIGestionarImagenes.IMAGEN.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\APIGestionarImagenes\FrontEnd.APIGestionarImagenes.insertarProductoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\APIGestionarImagenes\FrontEnd.APIGestionarImagenes.SeleccionarImagenesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\APIGestionarImagenes\FrontEnd.APIGestionarImagenes.seleccionarImagenPorIdProductoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\APIGestionarImagenes\FrontEnd.APIGestionarImagenes.seleccionarProductoPorIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\APIGestionarProductos\configuration91.svcinfo" />
     <None Include="Connected Services\APIGestionarProductos\configuration.svcinfo" />
+    <None Include="Connected Services\APIGestionarImagenes\configuration91.svcinfo" />
+    <None Include="Connected Services\APIGestionarImagenes\configuration.svcinfo" />
+    <None Include="Connected Services\APIGestionarImagenes\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Connected Services\APIGestionarProductos\FrontEnd.APIGestionarProductos.actualizarProductoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -490,11 +544,13 @@
     <WCFMetadataStorage Include="Connected Services\APIDTODetalleFactura\" />
     <WCFMetadataStorage Include="Connected Services\APIDTOEmpresa\" />
     <WCFMetadataStorage Include="Connected Services\APIDTOFacturas\" />
+    <WCFMetadataStorage Include="Connected Services\APIDTOImagenes\" />
     <WCFMetadataStorage Include="Connected Services\APIDTOProductos\" />
     <WCFMetadataStorage Include="Connected Services\APIDTOUsuarios\" />
     <WCFMetadataStorage Include="Connected Services\APIGestionarClientes\" />
     <WCFMetadataStorage Include="Connected Services\APIGestionarDetalleFactura\" />
     <WCFMetadataStorage Include="Connected Services\APIGestionarFacturas\" />
+    <WCFMetadataStorage Include="Connected Services\APIGestionarImagenes\" />
     <WCFMetadataStorage Include="Connected Services\APIGestionarProductos\" />
     <WCFMetadataStorage Include="Connected Services\APIGestionarUsuarios\" />
   </ItemGroup>

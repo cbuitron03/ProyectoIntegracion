@@ -20,7 +20,7 @@ namespace Logica
 
         public DTO_Detalle_Factura MostrarDetallesPorId(int id)
         {
-            return MostrarDetalles().Where(pro => pro.FAC_COD == id).SingleOrDefault();
+            return MostrarDetalles().Where(pro => pro.ID_DET_FAC == id).SingleOrDefault();
         }
     }
 }

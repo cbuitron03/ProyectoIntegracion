@@ -65,5 +65,9 @@ namespace Datos
         {
             return _context.DETALLE_FACTURA.Where(pro => pro.ID_DET_FAC == id).SingleOrDefault();
         }
+        private DETALLE_FACTURA seleccionarDetallePorFactura(int id)
+        {
+            return _context.DETALLE_FACTURA.Where(pro => pro.FAC_COD == id).SingleOrDefault();
+        }
     }
 }
