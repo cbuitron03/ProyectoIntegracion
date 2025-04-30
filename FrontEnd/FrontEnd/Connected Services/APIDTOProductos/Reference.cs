@@ -22,14 +22,17 @@ namespace FrontEnd.APIDTOProductos {
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
-        private decimal PRD_CODField;
+        private int PRD_CODField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string PRD_DESCRIPCIONField;
         
-        private decimal PRD_PRECIOField;
+        private System.Nullable<decimal> PRD_PRECIOField;
         
-        private decimal PRD_STOCKField;
+        private System.Nullable<int> PRD_STOCKField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PRD_ESTADOField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string IMG_URLField;
@@ -45,7 +48,7 @@ namespace FrontEnd.APIDTOProductos {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public decimal PRD_COD {
+        public int PRD_COD {
             get {
                 return this.PRD_CODField;
             }
@@ -71,7 +74,7 @@ namespace FrontEnd.APIDTOProductos {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public decimal PRD_PRECIO {
+        public System.Nullable<decimal> PRD_PRECIO {
             get {
                 return this.PRD_PRECIOField;
             }
@@ -84,7 +87,7 @@ namespace FrontEnd.APIDTOProductos {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public decimal PRD_STOCK {
+        public System.Nullable<int> PRD_STOCK {
             get {
                 return this.PRD_STOCKField;
             }
@@ -97,6 +100,19 @@ namespace FrontEnd.APIDTOProductos {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+        public string PRD_ESTADO {
+            get {
+                return this.PRD_ESTADOField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PRD_ESTADOField, value) != true)) {
+                    this.PRD_ESTADOField = value;
+                    this.RaisePropertyChanged("PRD_ESTADO");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
         public string IMG_URL {
             get {
                 return this.IMG_URLField;
@@ -223,12 +239,12 @@ namespace FrontEnd.APIDTOProductos {
     public partial class MostrarProductoPorIdRequestBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public decimal id;
+        public int id;
         
         public MostrarProductoPorIdRequestBody() {
         }
         
-        public MostrarProductoPorIdRequestBody(decimal id) {
+        public MostrarProductoPorIdRequestBody(int id) {
             this.id = id;
         }
     }
@@ -322,7 +338,7 @@ namespace FrontEnd.APIDTOProductos {
             return base.Channel.MostrarProductoPorId(request);
         }
         
-        public FrontEnd.APIDTOProductos.DTO_Producto MostrarProductoPorId(decimal id) {
+        public FrontEnd.APIDTOProductos.DTO_Producto MostrarProductoPorId(int id) {
             FrontEnd.APIDTOProductos.MostrarProductoPorIdRequest inValue = new FrontEnd.APIDTOProductos.MostrarProductoPorIdRequest();
             inValue.Body = new FrontEnd.APIDTOProductos.MostrarProductoPorIdRequestBody();
             inValue.Body.id = id;
@@ -335,7 +351,7 @@ namespace FrontEnd.APIDTOProductos {
             return base.Channel.MostrarProductoPorIdAsync(request);
         }
         
-        public System.Threading.Tasks.Task<FrontEnd.APIDTOProductos.MostrarProductoPorIdResponse> MostrarProductoPorIdAsync(decimal id) {
+        public System.Threading.Tasks.Task<FrontEnd.APIDTOProductos.MostrarProductoPorIdResponse> MostrarProductoPorIdAsync(int id) {
             FrontEnd.APIDTOProductos.MostrarProductoPorIdRequest inValue = new FrontEnd.APIDTOProductos.MostrarProductoPorIdRequest();
             inValue.Body = new FrontEnd.APIDTOProductos.MostrarProductoPorIdRequestBody();
             inValue.Body.id = id;

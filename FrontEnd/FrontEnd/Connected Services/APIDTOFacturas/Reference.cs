@@ -22,18 +22,9 @@ namespace FrontEnd.APIDTOFacturas {
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
-        private decimal FAC_CODField;
+        private int FAC_CODField;
         
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EMP_RUCField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string EMP_NOMBREField;
-        
-        private System.Nullable<System.DateTime> FAC_FECHAField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string FAC_ESTADOField;
+        private int ID_EMPField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CLI_CEDULAField;
@@ -46,6 +37,11 @@ namespace FrontEnd.APIDTOFacturas {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CLI_DIRECCIONField;
+        
+        private System.Nullable<System.DateTime> FAC_FECHAField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FAC_ESTADOField;
         
         private System.Nullable<decimal> FAC_SUBTOTALField;
         
@@ -64,7 +60,7 @@ namespace FrontEnd.APIDTOFacturas {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public decimal FAC_COD {
+        public int FAC_COD {
             get {
                 return this.FAC_CODField;
             }
@@ -76,59 +72,20 @@ namespace FrontEnd.APIDTOFacturas {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string EMP_RUC {
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int ID_EMP {
             get {
-                return this.EMP_RUCField;
+                return this.ID_EMPField;
             }
             set {
-                if ((object.ReferenceEquals(this.EMP_RUCField, value) != true)) {
-                    this.EMP_RUCField = value;
-                    this.RaisePropertyChanged("EMP_RUC");
+                if ((this.ID_EMPField.Equals(value) != true)) {
+                    this.ID_EMPField = value;
+                    this.RaisePropertyChanged("ID_EMP");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string EMP_NOMBRE {
-            get {
-                return this.EMP_NOMBREField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.EMP_NOMBREField, value) != true)) {
-                    this.EMP_NOMBREField = value;
-                    this.RaisePropertyChanged("EMP_NOMBRE");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
-        public System.Nullable<System.DateTime> FAC_FECHA {
-            get {
-                return this.FAC_FECHAField;
-            }
-            set {
-                if ((this.FAC_FECHAField.Equals(value) != true)) {
-                    this.FAC_FECHAField = value;
-                    this.RaisePropertyChanged("FAC_FECHA");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
-        public string FAC_ESTADO {
-            get {
-                return this.FAC_ESTADOField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.FAC_ESTADOField, value) != true)) {
-                    this.FAC_ESTADOField = value;
-                    this.RaisePropertyChanged("FAC_ESTADO");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
         public string CLI_CEDULA {
             get {
                 return this.CLI_CEDULAField;
@@ -141,7 +98,7 @@ namespace FrontEnd.APIDTOFacturas {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
         public string CLI_NOMBRE {
             get {
                 return this.CLI_NOMBREField;
@@ -154,7 +111,7 @@ namespace FrontEnd.APIDTOFacturas {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=7)]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
         public string CLI_CORREO {
             get {
                 return this.CLI_CORREOField;
@@ -167,7 +124,7 @@ namespace FrontEnd.APIDTOFacturas {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=8)]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
         public string CLI_DIRECCION {
             get {
                 return this.CLI_DIRECCIONField;
@@ -180,7 +137,33 @@ namespace FrontEnd.APIDTOFacturas {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=9)]
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=6)]
+        public System.Nullable<System.DateTime> FAC_FECHA {
+            get {
+                return this.FAC_FECHAField;
+            }
+            set {
+                if ((this.FAC_FECHAField.Equals(value) != true)) {
+                    this.FAC_FECHAField = value;
+                    this.RaisePropertyChanged("FAC_FECHA");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=7)]
+        public string FAC_ESTADO {
+            get {
+                return this.FAC_ESTADOField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FAC_ESTADOField, value) != true)) {
+                    this.FAC_ESTADOField = value;
+                    this.RaisePropertyChanged("FAC_ESTADO");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=8)]
         public System.Nullable<decimal> FAC_SUBTOTAL {
             get {
                 return this.FAC_SUBTOTALField;
@@ -193,7 +176,7 @@ namespace FrontEnd.APIDTOFacturas {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=10)]
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=9)]
         public System.Nullable<decimal> FAC_IVA {
             get {
                 return this.FAC_IVAField;
@@ -206,7 +189,7 @@ namespace FrontEnd.APIDTOFacturas {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=11)]
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=10)]
         public System.Nullable<decimal> FAC_TOTAL {
             get {
                 return this.FAC_TOTALField;
@@ -333,12 +316,12 @@ namespace FrontEnd.APIDTOFacturas {
     public partial class MostrarFacturaPorIdRequestBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public decimal codigo;
+        public int codigo;
         
         public MostrarFacturaPorIdRequestBody() {
         }
         
-        public MostrarFacturaPorIdRequestBody(decimal codigo) {
+        public MostrarFacturaPorIdRequestBody(int codigo) {
             this.codigo = codigo;
         }
     }
@@ -432,7 +415,7 @@ namespace FrontEnd.APIDTOFacturas {
             return base.Channel.MostrarFacturaPorId(request);
         }
         
-        public FrontEnd.APIDTOFacturas.DTO_Factura MostrarFacturaPorId(decimal codigo) {
+        public FrontEnd.APIDTOFacturas.DTO_Factura MostrarFacturaPorId(int codigo) {
             FrontEnd.APIDTOFacturas.MostrarFacturaPorIdRequest inValue = new FrontEnd.APIDTOFacturas.MostrarFacturaPorIdRequest();
             inValue.Body = new FrontEnd.APIDTOFacturas.MostrarFacturaPorIdRequestBody();
             inValue.Body.codigo = codigo;
@@ -445,7 +428,7 @@ namespace FrontEnd.APIDTOFacturas {
             return base.Channel.MostrarFacturaPorIdAsync(request);
         }
         
-        public System.Threading.Tasks.Task<FrontEnd.APIDTOFacturas.MostrarFacturaPorIdResponse> MostrarFacturaPorIdAsync(decimal codigo) {
+        public System.Threading.Tasks.Task<FrontEnd.APIDTOFacturas.MostrarFacturaPorIdResponse> MostrarFacturaPorIdAsync(int codigo) {
             FrontEnd.APIDTOFacturas.MostrarFacturaPorIdRequest inValue = new FrontEnd.APIDTOFacturas.MostrarFacturaPorIdRequest();
             inValue.Body = new FrontEnd.APIDTOFacturas.MostrarFacturaPorIdRequestBody();
             inValue.Body.codigo = codigo;

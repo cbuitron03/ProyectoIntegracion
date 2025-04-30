@@ -19,24 +19,25 @@
       </s:complexType>
       <s:complexType name="DETALLE_FACTURA">
         <s:sequence>
-          <s:element minOccurs="1" maxOccurs="1" name="ID_DET_FAC" type="s:decimal" />
-          <s:element minOccurs="1" maxOccurs="1" name="FAC_COD" type="s:decimal" />
-          <s:element minOccurs="1" maxOccurs="1" name="PRD_COD" type="s:decimal" />
-          <s:element minOccurs="1" maxOccurs="1" name="DTF_CANTIDAD" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID_DET_FAC" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FAC_COD" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PRD_COD" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DTF_CANTIDAD" nillable="true" type="s:int" />
           <s:element minOccurs="1" maxOccurs="1" name="DTF_PRECIO" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="DTF_ESTADO" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="FACTURA" type="tns:FACTURA" />
           <s:element minOccurs="0" maxOccurs="1" name="PRODUCTO" type="tns:PRODUCTO" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="FACTURA">
         <s:sequence>
-          <s:element minOccurs="1" maxOccurs="1" name="FAC_COD" type="s:decimal" />
-          <s:element minOccurs="1" maxOccurs="1" name="ID_EMP" type="s:decimal" />
-          <s:element minOccurs="1" maxOccurs="1" name="ID_CLIENTE" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FAC_COD" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID_EMP" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CLI_CEDULA" type="s:string" />
           <s:element minOccurs="1" maxOccurs="1" name="FAC_FECHA" nillable="true" type="s:dateTime" />
           <s:element minOccurs="0" maxOccurs="1" name="FAC_ESTADO" type="s:string" />
-          <s:element minOccurs="1" maxOccurs="1" name="FAC_IVA" nillable="true" type="s:decimal" />
           <s:element minOccurs="1" maxOccurs="1" name="FAC_SUBTOTAL" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FAC_IVA" nillable="true" type="s:decimal" />
           <s:element minOccurs="1" maxOccurs="1" name="FAC_TOTAL" nillable="true" type="s:decimal" />
           <s:element minOccurs="0" maxOccurs="1" name="CLIENTE" type="tns:CLIENTE" />
           <s:element minOccurs="0" maxOccurs="1" name="DETALLE_FACTURA" type="tns:ArrayOfDETALLE_FACTURA" />
@@ -45,20 +46,20 @@
       </s:complexType>
       <s:complexType name="CLIENTE">
         <s:sequence>
-          <s:element minOccurs="1" maxOccurs="1" name="ID_CLIENTE" type="s:decimal" />
-          <s:element minOccurs="1" maxOccurs="1" name="US_COD" type="s:decimal" />
           <s:element minOccurs="0" maxOccurs="1" name="CLI_CEDULA" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="US_COD" type="s:int" />
           <s:element minOccurs="0" maxOccurs="1" name="CLI_NOMBRE" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="CLI_TELEFONO" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="CLI_CORREO" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="CLI_DIRECCION" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CLI_ESTADO" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="USUARIO" type="tns:USUARIO" />
           <s:element minOccurs="0" maxOccurs="1" name="FACTURA" type="tns:ArrayOfFACTURA" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="USUARIO">
         <s:sequence>
-          <s:element minOccurs="1" maxOccurs="1" name="US_COD" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="US_COD" type="s:int" />
           <s:element minOccurs="0" maxOccurs="1" name="US_USUARIO" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="US_PASS" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="US_ROL" type="s:string" />
@@ -77,7 +78,7 @@
       </s:complexType>
       <s:complexType name="EMPRESA">
         <s:sequence>
-          <s:element minOccurs="1" maxOccurs="1" name="ID_EMP" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID_EMP" type="s:int" />
           <s:element minOccurs="0" maxOccurs="1" name="EMP_RUC" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="EMP_NOMBRE" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="EMP_MISION" type="s:string" />
@@ -88,10 +89,11 @@
       </s:complexType>
       <s:complexType name="PRODUCTO">
         <s:sequence>
-          <s:element minOccurs="1" maxOccurs="1" name="PRD_COD" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PRD_COD" type="s:int" />
           <s:element minOccurs="0" maxOccurs="1" name="PRD_DESCRIPCION" type="s:string" />
           <s:element minOccurs="1" maxOccurs="1" name="PRD_PRECIO" nillable="true" type="s:decimal" />
-          <s:element minOccurs="1" maxOccurs="1" name="PRD_STOCK" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PRD_STOCK" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PRD_ESTADO" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="DETALLE_FACTURA" type="tns:ArrayOfDETALLE_FACTURA" />
           <s:element minOccurs="0" maxOccurs="1" name="IMAGEN" type="tns:ArrayOfIMAGEN" />
         </s:sequence>
@@ -103,16 +105,17 @@
       </s:complexType>
       <s:complexType name="IMAGEN">
         <s:sequence>
-          <s:element minOccurs="1" maxOccurs="1" name="IMG_ID" type="s:decimal" />
-          <s:element minOccurs="1" maxOccurs="1" name="PRD_COD" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="IMG_ID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PRD_COD" type="s:int" />
           <s:element minOccurs="0" maxOccurs="1" name="IMG_URL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IMG_TIPO" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="PRODUCTO" type="tns:PRODUCTO" />
         </s:sequence>
       </s:complexType>
       <s:element name="seleccionarDetallesPorID">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -133,7 +136,7 @@
       <s:element name="insertarDetalleFacResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="insertarDetalleFacResult" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="insertarDetalleFacResult" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -154,7 +157,7 @@
       <s:element name="eliminarDetalleFac">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>

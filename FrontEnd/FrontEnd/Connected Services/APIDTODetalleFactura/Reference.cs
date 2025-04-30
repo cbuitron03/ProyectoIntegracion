@@ -22,18 +22,18 @@ namespace FrontEnd.APIDTODetalleFactura {
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
-        private decimal ID_DET_FACField;
+        private int ID_DET_FACField;
         
-        private decimal FAC_CODField;
+        private int FAC_CODField;
         
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string PRD_DESCRIPCIONField;
+        private int PRD_CODField;
         
-        private System.Nullable<decimal> PRD_PRECIOField;
-        
-        private System.Nullable<decimal> DTF_CANTIDADField;
+        private System.Nullable<int> DTF_CANTIDADField;
         
         private System.Nullable<decimal> DTF_PRECIOField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DTF_ESTADOField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -46,7 +46,7 @@ namespace FrontEnd.APIDTODetalleFactura {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public decimal ID_DET_FAC {
+        public int ID_DET_FAC {
             get {
                 return this.ID_DET_FACField;
             }
@@ -59,7 +59,7 @@ namespace FrontEnd.APIDTODetalleFactura {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=1)]
-        public decimal FAC_COD {
+        public int FAC_COD {
             get {
                 return this.FAC_CODField;
             }
@@ -71,34 +71,21 @@ namespace FrontEnd.APIDTODetalleFactura {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string PRD_DESCRIPCION {
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
+        public int PRD_COD {
             get {
-                return this.PRD_DESCRIPCIONField;
+                return this.PRD_CODField;
             }
             set {
-                if ((object.ReferenceEquals(this.PRD_DESCRIPCIONField, value) != true)) {
-                    this.PRD_DESCRIPCIONField = value;
-                    this.RaisePropertyChanged("PRD_DESCRIPCION");
+                if ((this.PRD_CODField.Equals(value) != true)) {
+                    this.PRD_CODField = value;
+                    this.RaisePropertyChanged("PRD_COD");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
-        public System.Nullable<decimal> PRD_PRECIO {
-            get {
-                return this.PRD_PRECIOField;
-            }
-            set {
-                if ((this.PRD_PRECIOField.Equals(value) != true)) {
-                    this.PRD_PRECIOField = value;
-                    this.RaisePropertyChanged("PRD_PRECIO");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=4)]
-        public System.Nullable<decimal> DTF_CANTIDAD {
+        public System.Nullable<int> DTF_CANTIDAD {
             get {
                 return this.DTF_CANTIDADField;
             }
@@ -110,7 +97,7 @@ namespace FrontEnd.APIDTODetalleFactura {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=5)]
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=4)]
         public System.Nullable<decimal> DTF_PRECIO {
             get {
                 return this.DTF_PRECIOField;
@@ -119,6 +106,19 @@ namespace FrontEnd.APIDTODetalleFactura {
                 if ((this.DTF_PRECIOField.Equals(value) != true)) {
                     this.DTF_PRECIOField = value;
                     this.RaisePropertyChanged("DTF_PRECIO");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        public string DTF_ESTADO {
+            get {
+                return this.DTF_ESTADOField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DTF_ESTADOField, value) != true)) {
+                    this.DTF_ESTADOField = value;
+                    this.RaisePropertyChanged("DTF_ESTADO");
                 }
             }
         }
@@ -237,12 +237,12 @@ namespace FrontEnd.APIDTODetalleFactura {
     public partial class MostrarDetallesPorIdRequestBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public decimal id;
+        public int id;
         
         public MostrarDetallesPorIdRequestBody() {
         }
         
-        public MostrarDetallesPorIdRequestBody(decimal id) {
+        public MostrarDetallesPorIdRequestBody(int id) {
             this.id = id;
         }
     }
@@ -336,7 +336,7 @@ namespace FrontEnd.APIDTODetalleFactura {
             return base.Channel.MostrarDetallesPorId(request);
         }
         
-        public FrontEnd.APIDTODetalleFactura.DTO_Detalle_Factura MostrarDetallesPorId(decimal id) {
+        public FrontEnd.APIDTODetalleFactura.DTO_Detalle_Factura MostrarDetallesPorId(int id) {
             FrontEnd.APIDTODetalleFactura.MostrarDetallesPorIdRequest inValue = new FrontEnd.APIDTODetalleFactura.MostrarDetallesPorIdRequest();
             inValue.Body = new FrontEnd.APIDTODetalleFactura.MostrarDetallesPorIdRequestBody();
             inValue.Body.id = id;
@@ -349,7 +349,7 @@ namespace FrontEnd.APIDTODetalleFactura {
             return base.Channel.MostrarDetallesPorIdAsync(request);
         }
         
-        public System.Threading.Tasks.Task<FrontEnd.APIDTODetalleFactura.MostrarDetallesPorIdResponse> MostrarDetallesPorIdAsync(decimal id) {
+        public System.Threading.Tasks.Task<FrontEnd.APIDTODetalleFactura.MostrarDetallesPorIdResponse> MostrarDetallesPorIdAsync(int id) {
             FrontEnd.APIDTODetalleFactura.MostrarDetallesPorIdRequest inValue = new FrontEnd.APIDTODetalleFactura.MostrarDetallesPorIdRequest();
             inValue.Body = new FrontEnd.APIDTODetalleFactura.MostrarDetallesPorIdRequestBody();
             inValue.Body.id = id;

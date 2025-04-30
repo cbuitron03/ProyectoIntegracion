@@ -22,7 +22,7 @@ namespace FrontEnd.APIDTOUsuarios {
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
-        private decimal US_CODField;
+        private int US_CODField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string US_USUARIOField;
@@ -44,7 +44,7 @@ namespace FrontEnd.APIDTOUsuarios {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public decimal US_COD {
+        public int US_COD {
             get {
                 return this.US_CODField;
             }

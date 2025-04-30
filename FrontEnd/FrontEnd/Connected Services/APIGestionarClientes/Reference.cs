@@ -22,12 +22,10 @@ namespace FrontEnd.APIGestionarClientes {
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
-        private decimal ID_CLIENTEField;
-        
-        private decimal US_CODField;
-        
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CLI_CEDULAField;
+        
+        private int US_CODField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CLI_NOMBREField;
@@ -40,6 +38,9 @@ namespace FrontEnd.APIGestionarClientes {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CLI_DIRECCIONField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CLI_ESTADOField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private FrontEnd.APIGestionarClientes.USUARIO USUARIOField;
@@ -57,33 +58,7 @@ namespace FrontEnd.APIGestionarClientes {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public decimal ID_CLIENTE {
-            get {
-                return this.ID_CLIENTEField;
-            }
-            set {
-                if ((this.ID_CLIENTEField.Equals(value) != true)) {
-                    this.ID_CLIENTEField = value;
-                    this.RaisePropertyChanged("ID_CLIENTE");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public decimal US_COD {
-            get {
-                return this.US_CODField;
-            }
-            set {
-                if ((this.US_CODField.Equals(value) != true)) {
-                    this.US_CODField = value;
-                    this.RaisePropertyChanged("US_COD");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
         public string CLI_CEDULA {
             get {
                 return this.CLI_CEDULAField;
@@ -96,7 +71,20 @@ namespace FrontEnd.APIGestionarClientes {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int US_COD {
+            get {
+                return this.US_CODField;
+            }
+            set {
+                if ((this.US_CODField.Equals(value) != true)) {
+                    this.US_CODField = value;
+                    this.RaisePropertyChanged("US_COD");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
         public string CLI_NOMBRE {
             get {
                 return this.CLI_NOMBREField;
@@ -109,7 +97,7 @@ namespace FrontEnd.APIGestionarClientes {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
         public string CLI_TELEFONO {
             get {
                 return this.CLI_TELEFONOField;
@@ -122,7 +110,7 @@ namespace FrontEnd.APIGestionarClientes {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
         public string CLI_CORREO {
             get {
                 return this.CLI_CORREOField;
@@ -135,7 +123,7 @@ namespace FrontEnd.APIGestionarClientes {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
         public string CLI_DIRECCION {
             get {
                 return this.CLI_DIRECCIONField;
@@ -144,6 +132,19 @@ namespace FrontEnd.APIGestionarClientes {
                 if ((object.ReferenceEquals(this.CLI_DIRECCIONField, value) != true)) {
                     this.CLI_DIRECCIONField = value;
                     this.RaisePropertyChanged("CLI_DIRECCION");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
+        public string CLI_ESTADO {
+            get {
+                return this.CLI_ESTADOField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CLI_ESTADOField, value) != true)) {
+                    this.CLI_ESTADOField = value;
+                    this.RaisePropertyChanged("CLI_ESTADO");
                 }
             }
         }
@@ -193,7 +194,7 @@ namespace FrontEnd.APIGestionarClientes {
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
-        private decimal US_CODField;
+        private int US_CODField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string US_USUARIOField;
@@ -218,7 +219,7 @@ namespace FrontEnd.APIGestionarClientes {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public decimal US_COD {
+        public int US_COD {
             get {
                 return this.US_CODField;
             }
@@ -301,20 +302,21 @@ namespace FrontEnd.APIGestionarClientes {
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
-        private decimal FAC_CODField;
+        private int FAC_CODField;
         
-        private decimal ID_EMPField;
+        private int ID_EMPField;
         
-        private decimal ID_CLIENTEField;
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CLI_CEDULAField;
         
         private System.Nullable<System.DateTime> FAC_FECHAField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string FAC_ESTADOField;
         
-        private System.Nullable<decimal> FAC_IVAField;
-        
         private System.Nullable<decimal> FAC_SUBTOTALField;
+        
+        private System.Nullable<decimal> FAC_IVAField;
         
         private System.Nullable<decimal> FAC_TOTALField;
         
@@ -338,7 +340,7 @@ namespace FrontEnd.APIGestionarClientes {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public decimal FAC_COD {
+        public int FAC_COD {
             get {
                 return this.FAC_CODField;
             }
@@ -351,7 +353,7 @@ namespace FrontEnd.APIGestionarClientes {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public decimal ID_EMP {
+        public int ID_EMP {
             get {
                 return this.ID_EMPField;
             }
@@ -363,15 +365,15 @@ namespace FrontEnd.APIGestionarClientes {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
-        public decimal ID_CLIENTE {
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string CLI_CEDULA {
             get {
-                return this.ID_CLIENTEField;
+                return this.CLI_CEDULAField;
             }
             set {
-                if ((this.ID_CLIENTEField.Equals(value) != true)) {
-                    this.ID_CLIENTEField = value;
-                    this.RaisePropertyChanged("ID_CLIENTE");
+                if ((object.ReferenceEquals(this.CLI_CEDULAField, value) != true)) {
+                    this.CLI_CEDULAField = value;
+                    this.RaisePropertyChanged("CLI_CEDULA");
                 }
             }
         }
@@ -403,19 +405,6 @@ namespace FrontEnd.APIGestionarClientes {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=5)]
-        public System.Nullable<decimal> FAC_IVA {
-            get {
-                return this.FAC_IVAField;
-            }
-            set {
-                if ((this.FAC_IVAField.Equals(value) != true)) {
-                    this.FAC_IVAField = value;
-                    this.RaisePropertyChanged("FAC_IVA");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=6)]
         public System.Nullable<decimal> FAC_SUBTOTAL {
             get {
                 return this.FAC_SUBTOTALField;
@@ -424,6 +413,19 @@ namespace FrontEnd.APIGestionarClientes {
                 if ((this.FAC_SUBTOTALField.Equals(value) != true)) {
                     this.FAC_SUBTOTALField = value;
                     this.RaisePropertyChanged("FAC_SUBTOTAL");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=6)]
+        public System.Nullable<decimal> FAC_IVA {
+            get {
+                return this.FAC_IVAField;
+            }
+            set {
+                if ((this.FAC_IVAField.Equals(value) != true)) {
+                    this.FAC_IVAField = value;
+                    this.RaisePropertyChanged("FAC_IVA");
                 }
             }
         }
@@ -499,7 +501,7 @@ namespace FrontEnd.APIGestionarClientes {
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
-        private decimal ID_EMPField;
+        private int ID_EMPField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string EMP_RUCField;
@@ -530,7 +532,7 @@ namespace FrontEnd.APIGestionarClientes {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public decimal ID_EMP {
+        public int ID_EMP {
             get {
                 return this.ID_EMPField;
             }
@@ -639,15 +641,18 @@ namespace FrontEnd.APIGestionarClientes {
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
-        private decimal ID_DET_FACField;
+        private int ID_DET_FACField;
         
-        private decimal FAC_CODField;
+        private int FAC_CODField;
         
-        private decimal PRD_CODField;
+        private int PRD_CODField;
         
-        private System.Nullable<decimal> DTF_CANTIDADField;
+        private System.Nullable<int> DTF_CANTIDADField;
         
         private System.Nullable<decimal> DTF_PRECIOField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DTF_ESTADOField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private FrontEnd.APIGestionarClientes.FACTURA FACTURAField;
@@ -666,7 +671,7 @@ namespace FrontEnd.APIGestionarClientes {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public decimal ID_DET_FAC {
+        public int ID_DET_FAC {
             get {
                 return this.ID_DET_FACField;
             }
@@ -679,7 +684,7 @@ namespace FrontEnd.APIGestionarClientes {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=1)]
-        public decimal FAC_COD {
+        public int FAC_COD {
             get {
                 return this.FAC_CODField;
             }
@@ -692,7 +697,7 @@ namespace FrontEnd.APIGestionarClientes {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
-        public decimal PRD_COD {
+        public int PRD_COD {
             get {
                 return this.PRD_CODField;
             }
@@ -705,7 +710,7 @@ namespace FrontEnd.APIGestionarClientes {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
-        public System.Nullable<decimal> DTF_CANTIDAD {
+        public System.Nullable<int> DTF_CANTIDAD {
             get {
                 return this.DTF_CANTIDADField;
             }
@@ -731,6 +736,19 @@ namespace FrontEnd.APIGestionarClientes {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        public string DTF_ESTADO {
+            get {
+                return this.DTF_ESTADOField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DTF_ESTADOField, value) != true)) {
+                    this.DTF_ESTADOField = value;
+                    this.RaisePropertyChanged("DTF_ESTADO");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
         public FrontEnd.APIGestionarClientes.FACTURA FACTURA {
             get {
                 return this.FACTURAField;
@@ -743,7 +761,7 @@ namespace FrontEnd.APIGestionarClientes {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=7)]
         public FrontEnd.APIGestionarClientes.PRODUCTO PRODUCTO {
             get {
                 return this.PRODUCTOField;
@@ -775,14 +793,17 @@ namespace FrontEnd.APIGestionarClientes {
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
-        private decimal PRD_CODField;
+        private int PRD_CODField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string PRD_DESCRIPCIONField;
         
         private System.Nullable<decimal> PRD_PRECIOField;
         
-        private System.Nullable<decimal> PRD_STOCKField;
+        private System.Nullable<int> PRD_STOCKField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PRD_ESTADOField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private FrontEnd.APIGestionarClientes.DETALLE_FACTURA[] DETALLE_FACTURAField;
@@ -801,7 +822,7 @@ namespace FrontEnd.APIGestionarClientes {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public decimal PRD_COD {
+        public int PRD_COD {
             get {
                 return this.PRD_CODField;
             }
@@ -840,7 +861,7 @@ namespace FrontEnd.APIGestionarClientes {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public System.Nullable<decimal> PRD_STOCK {
+        public System.Nullable<int> PRD_STOCK {
             get {
                 return this.PRD_STOCKField;
             }
@@ -853,6 +874,19 @@ namespace FrontEnd.APIGestionarClientes {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+        public string PRD_ESTADO {
+            get {
+                return this.PRD_ESTADOField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PRD_ESTADOField, value) != true)) {
+                    this.PRD_ESTADOField = value;
+                    this.RaisePropertyChanged("PRD_ESTADO");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
         public FrontEnd.APIGestionarClientes.DETALLE_FACTURA[] DETALLE_FACTURA {
             get {
                 return this.DETALLE_FACTURAField;
@@ -865,7 +899,7 @@ namespace FrontEnd.APIGestionarClientes {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
         public FrontEnd.APIGestionarClientes.IMAGEN[] IMAGEN {
             get {
                 return this.IMAGENField;
@@ -897,12 +931,15 @@ namespace FrontEnd.APIGestionarClientes {
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
-        private decimal IMG_IDField;
+        private int IMG_IDField;
         
-        private decimal PRD_CODField;
+        private int PRD_CODField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string IMG_URLField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string IMG_TIPOField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private FrontEnd.APIGestionarClientes.PRODUCTO PRODUCTOField;
@@ -918,7 +955,7 @@ namespace FrontEnd.APIGestionarClientes {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public decimal IMG_ID {
+        public int IMG_ID {
             get {
                 return this.IMG_IDField;
             }
@@ -931,7 +968,7 @@ namespace FrontEnd.APIGestionarClientes {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public decimal PRD_COD {
+        public int PRD_COD {
             get {
                 return this.PRD_CODField;
             }
@@ -957,6 +994,19 @@ namespace FrontEnd.APIGestionarClientes {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        public string IMG_TIPO {
+            get {
+                return this.IMG_TIPOField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.IMG_TIPOField, value) != true)) {
+                    this.IMG_TIPOField = value;
+                    this.RaisePropertyChanged("IMG_TIPO");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
         public FrontEnd.APIGestionarClientes.PRODUCTO PRODUCTO {
             get {
                 return this.PRODUCTOField;
@@ -1280,13 +1330,13 @@ namespace FrontEnd.APIGestionarClientes {
     [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
     public partial class insertarClienteResponseBody {
         
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public decimal insertarClienteResult;
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string insertarClienteResult;
         
         public insertarClienteResponseBody() {
         }
         
-        public insertarClienteResponseBody(decimal insertarClienteResult) {
+        public insertarClienteResponseBody(string insertarClienteResult) {
             this.insertarClienteResult = insertarClienteResult;
         }
     }
@@ -1532,7 +1582,7 @@ namespace FrontEnd.APIGestionarClientes {
             return base.Channel.insertarCliente(request);
         }
         
-        public decimal insertarCliente(FrontEnd.APIGestionarClientes.CLIENTE cliInsertado) {
+        public string insertarCliente(FrontEnd.APIGestionarClientes.CLIENTE cliInsertado) {
             FrontEnd.APIGestionarClientes.insertarClienteRequest inValue = new FrontEnd.APIGestionarClientes.insertarClienteRequest();
             inValue.Body = new FrontEnd.APIGestionarClientes.insertarClienteRequestBody();
             inValue.Body.cliInsertado = cliInsertado;

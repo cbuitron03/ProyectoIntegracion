@@ -1,0 +1,104 @@
+﻿@model IEnumerable<FrontEnd.Models.Producto>
+
+<style>
+    .productos-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        padding: 2rem;
+    }
+
+    .producto-card {
+        width: 300px;
+        background: #fffafc;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        overflow: hidden;
+        padding: 1rem;
+        text-align: center;
+    }
+
+        .producto-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+    .carousel-inner {
+        border-radius: 10px;
+    }
+
+    .cart-controls {
+        margin-top: 1rem;
+    }
+
+    .qty-input {
+        width: 60px;
+        text-align: center;
+        margin-left: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        margin-top: 0.8rem;
+        color: #d63384;
+    }
+
+    .precio {
+        font-weight: bold;
+        font-size: 1.1rem;
+        color: #28a745;
+    }
+</style>
+
+<div class="productos-container">
+    @foreach (var producto in Model)
+    {
+        var idCarrusel = $"carousel-{producto.PRD_COD}";
+        var imagenes = producto.IMAGEN.Any() ? producto.IMAGEN : new List<FrontEnd.Models.ImagenProducto> {
+            new FrontEnd.Models.ImagenProducto { IMG_URL = Url.Content("~/images/default-placeholder.png"), IMG_TIPO = "default" }
+        };
+
+<div class="producto-card">
+    <div id="@idCarrusel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            @for (int i = 0; i < imagenes.Count; i++)
+            {
+                var img = imagenes[i];
+                <div class="carousel-item @(i == 0 ? "active" : "")">
+                    <img src="@img.IMG_URL" class="d-block w-100" alt="Imagen de @producto.PRD_DESCRIPCION">
+                </div>
+            }
+        </div>
+        @if (imagenes.Count > 1)
+        {
+            <button class="carousel-control-prev" type="button" data-bs-target="#@idCarrusel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#@idCarrusel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        }
+    </div>
+
+    <h3>@producto.PRD_DESCRIPCION</h3>
+    <p class="precio">$@producto.PRD_PRECIO</p>
+
+    <div class="cart-controls">
+        <label for="qty-@producto.PRD_COD">Cantidad:</label>
+        <input type="number" id="qty-@producto.PRD_COD" min="1" value="1" class="qty-input" />
+
+        <button class="btn btn-outline-pink mt-2"
+                onclick="addToCart(@producto.PRD_COD, '@producto.PRD_DESCRIPCION', @producto.PRD_PRECIO)">
+            🧸 Agregar al carrito
+        </button>
+    </div>
+</div>
+}
+</div>

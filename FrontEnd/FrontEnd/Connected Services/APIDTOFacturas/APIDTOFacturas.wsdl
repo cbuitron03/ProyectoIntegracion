@@ -19,15 +19,14 @@
       </s:complexType>
       <s:complexType name="DTO_Factura">
         <s:sequence>
-          <s:element minOccurs="1" maxOccurs="1" name="FAC_COD" type="s:decimal" />
-          <s:element minOccurs="0" maxOccurs="1" name="EMP_RUC" type="s:string" />
-          <s:element minOccurs="0" maxOccurs="1" name="EMP_NOMBRE" type="s:string" />
-          <s:element minOccurs="1" maxOccurs="1" name="FAC_FECHA" nillable="true" type="s:dateTime" />
-          <s:element minOccurs="0" maxOccurs="1" name="FAC_ESTADO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FAC_COD" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID_EMP" type="s:int" />
           <s:element minOccurs="0" maxOccurs="1" name="CLI_CEDULA" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="CLI_NOMBRE" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="CLI_CORREO" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="CLI_DIRECCION" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FAC_FECHA" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="FAC_ESTADO" type="s:string" />
           <s:element minOccurs="1" maxOccurs="1" name="FAC_SUBTOTAL" nillable="true" type="s:decimal" />
           <s:element minOccurs="1" maxOccurs="1" name="FAC_IVA" nillable="true" type="s:decimal" />
           <s:element minOccurs="1" maxOccurs="1" name="FAC_TOTAL" nillable="true" type="s:decimal" />
@@ -36,7 +35,7 @@
       <s:element name="MostrarFacturaPorId">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="codigo" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="codigo" type="s:int" />
           </s:sequence>
         </s:complexType>
       </s:element>

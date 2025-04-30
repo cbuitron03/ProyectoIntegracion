@@ -22,8 +22,6 @@ namespace FrontEnd.APIDTOClientes {
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
-        private decimal ID_CLIENTEField;
-        
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CLI_CEDULAField;
         
@@ -39,6 +37,9 @@ namespace FrontEnd.APIDTOClientes {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string CLI_DIRECCIONField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CLI_ESTADOField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -49,20 +50,7 @@ namespace FrontEnd.APIDTOClientes {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public decimal ID_CLIENTE {
-            get {
-                return this.ID_CLIENTEField;
-            }
-            set {
-                if ((this.ID_CLIENTEField.Equals(value) != true)) {
-                    this.ID_CLIENTEField = value;
-                    this.RaisePropertyChanged("ID_CLIENTE");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
         public string CLI_CEDULA {
             get {
                 return this.CLI_CEDULAField;
@@ -75,7 +63,7 @@ namespace FrontEnd.APIDTOClientes {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
         public string CLI_NOMBRE {
             get {
                 return this.CLI_NOMBREField;
@@ -88,7 +76,7 @@ namespace FrontEnd.APIDTOClientes {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
         public string CLI_TELEFONO {
             get {
                 return this.CLI_TELEFONOField;
@@ -101,7 +89,7 @@ namespace FrontEnd.APIDTOClientes {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
         public string CLI_CORREO {
             get {
                 return this.CLI_CORREOField;
@@ -114,7 +102,7 @@ namespace FrontEnd.APIDTOClientes {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
         public string CLI_DIRECCION {
             get {
                 return this.CLI_DIRECCIONField;
@@ -123,6 +111,19 @@ namespace FrontEnd.APIDTOClientes {
                 if ((object.ReferenceEquals(this.CLI_DIRECCIONField, value) != true)) {
                     this.CLI_DIRECCIONField = value;
                     this.RaisePropertyChanged("CLI_DIRECCION");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        public string CLI_ESTADO {
+            get {
+                return this.CLI_ESTADOField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CLI_ESTADOField, value) != true)) {
+                    this.CLI_ESTADOField = value;
+                    this.RaisePropertyChanged("CLI_ESTADO");
                 }
             }
         }
