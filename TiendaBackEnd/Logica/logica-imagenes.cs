@@ -1,10 +1,10 @@
-﻿using AccesoDatos;
-using Datos;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AccesoDatos;
+using Datos;
 
 namespace Logica
 {
@@ -23,15 +23,22 @@ namespace Logica
         }
         public List<IMAGEN> seleccionarImagenPorIdProducto(int id)
         {
-            return SeleccionarImagenes().Where(pro => pro.PRD_COD == id ).ToList();
+            return SeleccionarImagenes().Where(pro => pro.PRD_COD == id).ToList();
         }
 
 
         #region metodos de accion 
 
-        public int insertarImagen(IMAGEN proInsertado)
+        public int insertarImagen(int PRD_COD, string IMG_URL, string IMG_TIPO)
         {
-            return op.insertarImagen(proInsertado);
+            IMAGEN imagen = new IMAGEN();
+            imagen.PRD_COD = PRD_COD;
+            imagen.IMG_URL = IMG_URL;
+            imagen.IMG_TIPO = IMG_TIPO;
+
+            int IMG_ID = op.insertarImagen(imagen);
+
+            return IMG_ID;
         }
 
         public bool actualizarImagen(IMAGEN proActualizado)

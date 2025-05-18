@@ -67,5 +67,22 @@ namespace Datos
         {
             return _context.FACTURA.Where(pro => pro.FAC_COD == codigo).SingleOrDefault();
         }
+        public bool actualizarEstadoFactura(int FAC_COD, string FAC_ESTADO)
+        {
+            FACTURA factura = _context.FACTURA
+                .Where(f => f.FAC_COD == FAC_COD)
+                .SingleOrDefault();
+
+            if (factura != null)
+            {
+                factura.FAC_ESTADO = FAC_ESTADO;
+                _context.SaveChanges();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

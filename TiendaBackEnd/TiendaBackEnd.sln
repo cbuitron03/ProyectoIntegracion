@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35919.96 d17.13
+VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccesoDatos", "AccesoDatos\AccesoDatos.csproj", "{006AFBF6-DC4B-4997-9ADD-3452E51980A5}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logica", "Logica\Logica.csproj", "{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServices", "WebServices\WebServices.csproj", "{4B1F0650-066D-41CF-87FC-2688F578085A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIRest", "APIRest\APIRest.csproj", "{817A29D1-FF2A-404B-89C8-63DFF506D063}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{4B1F0650-066D-41CF-87FC-2688F578085A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B1F0650-066D-41CF-87FC-2688F578085A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B1F0650-066D-41CF-87FC-2688F578085A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{817A29D1-FF2A-404B-89C8-63DFF506D063}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{817A29D1-FF2A-404B-89C8-63DFF506D063}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{817A29D1-FF2A-404B-89C8-63DFF506D063}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{817A29D1-FF2A-404B-89C8-63DFF506D063}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

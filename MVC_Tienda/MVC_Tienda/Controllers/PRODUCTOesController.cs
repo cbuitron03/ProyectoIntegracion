@@ -12,7 +12,7 @@ namespace MVC_Tienda.Controllers
 {
     public class PRODUCTOesController : Controller
     {
-        private db17842Entities db = new db17842Entities();
+        private db17842Entities1 db = new db17842Entities1();
 
         // GET: PRODUCTOes
         public ActionResult Index()
@@ -21,9 +21,9 @@ namespace MVC_Tienda.Controllers
         }
 
         // GET: PRODUCTOes/Details/5
-        public ActionResult Details(decimal id)
+        public ActionResult Details(int? id)
         {
-            if (id == 0)
+            if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
@@ -42,11 +42,11 @@ namespace MVC_Tienda.Controllers
         }
 
         // POST: PRODUCTOes/Create
-        // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
-        // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "PRD_COD,PRD_DESCRIPCION,PRD_PRECIO,PRD_STOCK")] PRODUCTO pRODUCTO)
+        public ActionResult Create([Bind(Include = "PRD_COD,PRD_DESCRIPCION,PRD_PRECIO,PRD_STOCK,PRD_ESTADO")] PRODUCTO pRODUCTO)
         {
             if (ModelState.IsValid)
             {
@@ -59,9 +59,9 @@ namespace MVC_Tienda.Controllers
         }
 
         // GET: PRODUCTOes/Edit/5
-        public ActionResult Edit(decimal id)
+        public ActionResult Edit(int? id)
         {
-            if (id == 0)
+            if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
@@ -74,11 +74,11 @@ namespace MVC_Tienda.Controllers
         }
 
         // POST: PRODUCTOes/Edit/5
-        // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
-        // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "PRD_COD,PRD_DESCRIPCION,PRD_PRECIO,PRD_STOCK")] PRODUCTO pRODUCTO)
+        public ActionResult Edit([Bind(Include = "PRD_COD,PRD_DESCRIPCION,PRD_PRECIO,PRD_STOCK,PRD_ESTADO")] PRODUCTO pRODUCTO)
         {
             if (ModelState.IsValid)
             {
@@ -90,9 +90,9 @@ namespace MVC_Tienda.Controllers
         }
 
         // GET: PRODUCTOes/Delete/5
-        public ActionResult Delete(decimal id)
+        public ActionResult Delete(int? id)
         {
-            if (id == 0)
+            if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
@@ -107,7 +107,7 @@ namespace MVC_Tienda.Controllers
         // POST: PRODUCTOes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(decimal id)
+        public ActionResult DeleteConfirmed(int id)
         {
             PRODUCTO pRODUCTO = db.PRODUCTO.Find(id);
             db.PRODUCTO.Remove(pRODUCTO);

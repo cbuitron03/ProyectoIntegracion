@@ -12,7 +12,7 @@ namespace MVC_Tienda.Controllers
 {
     public class FACTURAsController : Controller
     {
-        private db17842Entities db = new db17842Entities();
+        private db17842Entities1 db = new db17842Entities1();
 
         // GET: FACTURAs
         public ActionResult Index()
@@ -22,9 +22,9 @@ namespace MVC_Tienda.Controllers
         }
 
         // GET: FACTURAs/Details/5
-        public ActionResult Details(decimal id)
+        public ActionResult Details(int? id)
         {
-            if (id == 0)
+            if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
@@ -39,17 +39,17 @@ namespace MVC_Tienda.Controllers
         // GET: FACTURAs/Create
         public ActionResult Create()
         {
-            ViewBag.ID_CLIENTE = new SelectList(db.CLIENTE, "ID_CLIENTE", "CLI_CEDULA");
+            ViewBag.CLI_CEDULA = new SelectList(db.CLIENTE, "CLI_CEDULA", "CLI_NOMBRE");
             ViewBag.ID_EMP = new SelectList(db.EMPRESA, "ID_EMP", "EMP_RUC");
             return View();
         }
 
         // POST: FACTURAs/Create
-        // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
-        // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "FAC_COD,ID_EMP,ID_CLIENTE,FAC_FECHA,FAC_ESTADO,FAC_IVA,FAC_SUBTOTAL,FAC_TOTAL")] FACTURA fACTURA)
+        public ActionResult Create([Bind(Include = "FAC_COD,ID_EMP,CLI_CEDULA,FAC_FECHA,FAC_ESTADO,FAC_SUBTOTAL,FAC_IVA,FAC_TOTAL")] FACTURA fACTURA)
         {
             if (ModelState.IsValid)
             {
@@ -58,15 +58,15 @@ namespace MVC_Tienda.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ID_CLIENTE = new SelectList(db.CLIENTE, "ID_CLIENTE", "CLI_CEDULA", fACTURA.ID_CLIENTE);
+            ViewBag.CLI_CEDULA = new SelectList(db.CLIENTE, "CLI_CEDULA", "CLI_NOMBRE", fACTURA.CLI_CEDULA);
             ViewBag.ID_EMP = new SelectList(db.EMPRESA, "ID_EMP", "EMP_RUC", fACTURA.ID_EMP);
             return View(fACTURA);
         }
 
         // GET: FACTURAs/Edit/5
-        public ActionResult Edit(decimal id)
+        public ActionResult Edit(int? id)
         {
-            if (id == 0)
+            if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
@@ -75,17 +75,17 @@ namespace MVC_Tienda.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.ID_CLIENTE = new SelectList(db.CLIENTE, "ID_CLIENTE", "CLI_CEDULA", fACTURA.ID_CLIENTE);
+            ViewBag.CLI_CEDULA = new SelectList(db.CLIENTE, "CLI_CEDULA", "CLI_NOMBRE", fACTURA.CLI_CEDULA);
             ViewBag.ID_EMP = new SelectList(db.EMPRESA, "ID_EMP", "EMP_RUC", fACTURA.ID_EMP);
             return View(fACTURA);
         }
 
         // POST: FACTURAs/Edit/5
-        // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
-        // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "FAC_COD,ID_EMP,ID_CLIENTE,FAC_FECHA,FAC_ESTADO,FAC_IVA,FAC_SUBTOTAL,FAC_TOTAL")] FACTURA fACTURA)
+        public ActionResult Edit([Bind(Include = "FAC_COD,ID_EMP,CLI_CEDULA,FAC_FECHA,FAC_ESTADO,FAC_SUBTOTAL,FAC_IVA,FAC_TOTAL")] FACTURA fACTURA)
         {
             if (ModelState.IsValid)
             {
@@ -93,15 +93,15 @@ namespace MVC_Tienda.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.ID_CLIENTE = new SelectList(db.CLIENTE, "ID_CLIENTE", "CLI_CEDULA", fACTURA.ID_CLIENTE);
+            ViewBag.CLI_CEDULA = new SelectList(db.CLIENTE, "CLI_CEDULA", "CLI_NOMBRE", fACTURA.CLI_CEDULA);
             ViewBag.ID_EMP = new SelectList(db.EMPRESA, "ID_EMP", "EMP_RUC", fACTURA.ID_EMP);
             return View(fACTURA);
         }
 
         // GET: FACTURAs/Delete/5
-        public ActionResult Delete(decimal id)
+        public ActionResult Delete(int? id)
         {
-            if (id == 0)
+            if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
@@ -116,7 +116,7 @@ namespace MVC_Tienda.Controllers
         // POST: FACTURAs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(decimal id)
+        public ActionResult DeleteConfirmed(int id)
         {
             FACTURA fACTURA = db.FACTURA.Find(id);
             db.FACTURA.Remove(fACTURA);

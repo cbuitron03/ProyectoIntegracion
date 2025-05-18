@@ -1,0 +1,43 @@
+﻿@model MVC_Tienda.USUARIO
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>USUARIO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.US_USUARIO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.US_USUARIO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.US_PASS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.US_PASS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.US_ROL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.US_ROL)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.US_COD }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="db17842Entities-Web.config Connection String" description="db17842Entities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Model1.csdl|res://*/Model1.ssdl|res://*/Model1.msl;provider=System.Data.SqlClient;provider connection string='data source=db17842.public.databaseasp.net;initial catalog=db17842;user id=db17842;password=12345678CP-;MultipleActiveResultSets=True;App=EntityFramework'" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\rest\\TiendaBackEnd\\APIRest\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='db17842Entities']/@connectionString" />
+  </parameter>
+</parameters>

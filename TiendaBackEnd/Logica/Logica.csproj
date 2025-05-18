@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTO\realizarCompraDTO.cs" />
     <Compile Include="logica-clientes.cs" />
     <Compile Include="logica-detallefactura.cs" />
     <Compile Include="logica-DTOClientes.cs" />
@@ -74,6 +75,7 @@
       <Name>Datos</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

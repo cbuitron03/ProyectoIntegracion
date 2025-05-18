@@ -14,51 +14,19 @@ D:\IS\TiendaBackEnd\Logica\obj\Debug\Logica.csproj.Up2Date
 D:\IS\TiendaBackEnd\Logica\bin\Debug\Datos.dll
 D:\IS\TiendaBackEnd\Logica\bin\Debug\Datos.pdb
 D:\IS\TiendaBackEnd\Logica\bin\Debug\Datos.dll.config
-D:\proyectos\TiendaBackEnd\Logica\obj\Debug\Logica.csproj.AssemblyReference.cache
-D:\proyectos\TiendaBackEnd\Logica\obj\Debug\Logica.csproj.CoreCompileInputs.cache
-D:\proyectos\TiendaBackEnd\Logica\obj\Debug\Logica.dll
-D:\proyectos\TiendaBackEnd\Logica\obj\Debug\Logica.pdb
-D:\proyectos\TiendaBackEnd\Logica\bin\Debug\Logica.dll.config
-D:\proyectos\TiendaBackEnd\Logica\bin\Debug\Logica.dll
-D:\proyectos\TiendaBackEnd\Logica\bin\Debug\Logica.pdb
-D:\proyectos\TiendaBackEnd\Logica\bin\Debug\AccesoDatos.dll
-D:\proyectos\TiendaBackEnd\Logica\bin\Debug\Datos.dll
-D:\proyectos\TiendaBackEnd\Logica\bin\Debug\EntityFramework.dll
-D:\proyectos\TiendaBackEnd\Logica\bin\Debug\AccesoDatos.pdb
-D:\proyectos\TiendaBackEnd\Logica\bin\Debug\AccesoDatos.dll.config
-D:\proyectos\TiendaBackEnd\Logica\bin\Debug\Datos.pdb
-D:\proyectos\TiendaBackEnd\Logica\bin\Debug\Datos.dll.config
-D:\proyectos\TiendaBackEnd\Logica\bin\Debug\EntityFramework.xml
-D:\proyectos\TiendaBackEnd\Logica\obj\Debug\Logica.csproj.Up2Date
-D:\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Debug\Logica.dll.config
-D:\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Debug\Logica.dll
-D:\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Debug\Logica.pdb
-D:\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Debug\AccesoDatos.dll
-D:\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Debug\Datos.dll
-D:\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Debug\EntityFramework.dll
-D:\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Debug\AccesoDatos.pdb
-D:\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Debug\AccesoDatos.dll.config
-D:\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Debug\Datos.pdb
-D:\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Debug\Datos.dll.config
-D:\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Debug\EntityFramework.xml
-D:\ProyectoIntegracion\TiendaBackEnd\Logica\obj\Debug\Logica.csproj.AssemblyReference.cache
-D:\ProyectoIntegracion\TiendaBackEnd\Logica\obj\Debug\Logica.csproj.CoreCompileInputs.cache
-D:\ProyectoIntegracion\TiendaBackEnd\Logica\obj\Debug\Logica.csproj.Up2Date
-D:\ProyectoIntegracion\TiendaBackEnd\Logica\obj\Debug\Logica.dll
-D:\ProyectoIntegracion\TiendaBackEnd\Logica\obj\Debug\Logica.pdb
-C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Debug\Logica.dll.config
-C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Debug\Logica.dll
-C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Debug\Logica.pdb
-C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Debug\AccesoDatos.dll
-C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Debug\Datos.dll
-C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Debug\EntityFramework.dll
-C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Debug\AccesoDatos.pdb
-C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Debug\AccesoDatos.dll.config
-C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Debug\Datos.pdb
-C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Debug\Datos.dll.config
-C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Logica\bin\Debug\EntityFramework.xml
-C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Logica\obj\Debug\Logica.csproj.AssemblyReference.cache
-C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Logica\obj\Debug\Logica.csproj.CoreCompileInputs.cache
-C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Logica\obj\Debug\Logica.csproj.Up2Date
-C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Logica\obj\Debug\Logica.dll
-C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\TiendaBackEnd\Logica\obj\Debug\Logica.pdb
+D:\rest\TiendaBackEnd\Logica\bin\Debug\Logica.dll.config
+D:\rest\TiendaBackEnd\Logica\bin\Debug\Logica.dll
+D:\rest\TiendaBackEnd\Logica\bin\Debug\Logica.pdb
+D:\rest\TiendaBackEnd\Logica\bin\Debug\AccesoDatos.dll
+D:\rest\TiendaBackEnd\Logica\bin\Debug\Datos.dll
+D:\rest\TiendaBackEnd\Logica\bin\Debug\EntityFramework.dll
+D:\rest\TiendaBackEnd\Logica\bin\Debug\AccesoDatos.pdb
+D:\rest\TiendaBackEnd\Logica\bin\Debug\AccesoDatos.dll.config
+D:\rest\TiendaBackEnd\Logica\bin\Debug\Datos.pdb
+D:\rest\TiendaBackEnd\Logica\bin\Debug\Datos.dll.config
+D:\rest\TiendaBackEnd\Logica\bin\Debug\EntityFramework.xml
+D:\rest\TiendaBackEnd\Logica\obj\Debug\Logica.csproj.AssemblyReference.cache
+D:\rest\TiendaBackEnd\Logica\obj\Debug\Logica.csproj.CoreCompileInputs.cache
+D:\rest\TiendaBackEnd\Logica\obj\Debug\Logica.csproj.Up2Date
+D:\rest\TiendaBackEnd\Logica\obj\Debug\Logica.dll
+D:\rest\TiendaBackEnd\Logica\obj\Debug\Logica.pdb

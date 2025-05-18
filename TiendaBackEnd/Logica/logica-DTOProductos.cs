@@ -13,14 +13,17 @@ namespace Logica
         datosDTOProducto op = new datosDTOProducto();
 
         public List<DTO_Producto> MostrarProductos()
-        { 
+        {
             return op.seleccionarProductosDTO();
         }
 
-        public DTO_Producto MostrarProductoPorId(int id)
+        public DTO_Producto MostrarProductosPorId(int id)
         {
-            return MostrarProductos().Where(pro=>pro.PRD_COD==id).SingleOrDefault();    
+            return MostrarProductos().Where(pro => pro.PRD_COD == id).SingleOrDefault();
         }
-
+        public bool verificarStock(int idProducto, int cantidadSolicitada)
+        {
+            return op.verificarStock(idProducto, cantidadSolicitada);
+        }
     }
 }

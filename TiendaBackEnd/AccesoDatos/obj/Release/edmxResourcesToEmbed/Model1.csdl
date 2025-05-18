@@ -31,7 +31,7 @@
     <Key>
       <PropertyRef Name="ID_EMP" />
     </Key>
-    <Property Name="ID_EMP" Type="Int32" Nullable="false" />
+    <Property Name="ID_EMP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="EMP_RUC" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
     <Property Name="EMP_NOMBRE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="EMP_MISION" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
@@ -44,7 +44,7 @@
       <PropertyRef Name="FAC_COD" />
     </Key>
     <Property Name="FAC_COD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="ID_EMP" Type="Int32" Nullable="false" />
+    <Property Name="ID_EMP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="CLI_CEDULA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="FAC_FECHA" Type="DateTime" Precision="3" />
     <Property Name="FAC_ESTADO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
@@ -74,6 +74,9 @@
     <Property Name="PRD_PRECIO" Type="Decimal" Precision="12" Scale="2" />
     <Property Name="PRD_STOCK" Type="Int32" />
     <Property Name="PRD_ESTADO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="PRD_CATEGORIA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PRD_NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PRD_PROVEEDOR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="DETALLE_FACTURA" Relationship="Self.FK_DETALLE_FACTURA_PRODUCTO" FromRole="PRODUCTO" ToRole="DETALLE_FACTURA" />
     <NavigationProperty Name="IMAGEN" Relationship="Self.FK_IMAGEN_PRODUCTO" FromRole="PRODUCTO" ToRole="IMAGEN" />
   </EntityType>
@@ -85,6 +88,7 @@
     <Property Name="US_USUARIO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
     <Property Name="US_PASS" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
     <Property Name="US_ROL" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="US_ESTADO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="CLIENTE" Relationship="Self.FK_CLIENTE_USUARIO" FromRole="USUARIO" ToRole="CLIENTE" />
   </EntityType>
   <Association Name="FK_CLIENTE_USUARIO">
@@ -206,7 +210,7 @@
     <Property Type="String" Name="CLI_DIRECCION" Nullable="true" MaxLength="300" />
   </ComplexType>
   <ComplexType Name="seleccionarEmpresaSP_Result">
-    <Property Type="Int32" Name="ID_EMP" Nullable="false" />
+    <Property Type="String" Name="ID_EMP" Nullable="false" MaxLength="10" />
     <Property Type="String" Name="EMP_RUC" Nullable="true" MaxLength="13" />
     <Property Type="String" Name="EMP_NOMBRE" Nullable="true" MaxLength="20" />
     <Property Type="String" Name="EMP_MISION" Nullable="true" MaxLength="1024" />

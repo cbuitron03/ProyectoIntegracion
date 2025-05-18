@@ -32,7 +32,7 @@
           <Key>
             <PropertyRef Name="ID_EMP" />
           </Key>
-          <Property Name="ID_EMP" Type="int" Nullable="false" />
+          <Property Name="ID_EMP" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="EMP_RUC" Type="varchar" MaxLength="13" />
           <Property Name="EMP_NOMBRE" Type="varchar" MaxLength="20" />
           <Property Name="EMP_MISION" Type="varchar" MaxLength="1024" />
@@ -44,7 +44,7 @@
             <PropertyRef Name="FAC_COD" />
           </Key>
           <Property Name="FAC_COD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="ID_EMP" Type="int" Nullable="false" />
+          <Property Name="ID_EMP" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="CLI_CEDULA" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="FAC_FECHA" Type="datetime" />
           <Property Name="FAC_ESTADO" Type="varchar" MaxLength="10" />
@@ -70,6 +70,9 @@
           <Property Name="PRD_PRECIO" Type="numeric" Precision="12" Scale="2" />
           <Property Name="PRD_STOCK" Type="int" />
           <Property Name="PRD_ESTADO" Type="varchar" MaxLength="10" />
+          <Property Name="PRD_CATEGORIA" Type="varchar" MaxLength="50" />
+          <Property Name="PRD_NOMBRE" Type="varchar" MaxLength="50" />
+          <Property Name="PRD_PROVEEDOR" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="USUARIO">
           <Key>
@@ -79,6 +82,7 @@
           <Property Name="US_USUARIO" Type="varchar" MaxLength="30" />
           <Property Name="US_PASS" Type="varchar" MaxLength="8" />
           <Property Name="US_ROL" Type="varchar" MaxLength="60" />
+          <Property Name="US_ESTADO" Type="varchar" MaxLength="50" />
         </EntityType>
         <Association Name="FK_CLIENTE_USUARIO">
           <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="1" />
@@ -227,7 +231,7 @@
           <Key>
             <PropertyRef Name="ID_EMP" />
           </Key>
-          <Property Name="ID_EMP" Type="Int32" Nullable="false" />
+          <Property Name="ID_EMP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="EMP_RUC" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
           <Property Name="EMP_NOMBRE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="EMP_MISION" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
@@ -240,7 +244,7 @@
             <PropertyRef Name="FAC_COD" />
           </Key>
           <Property Name="FAC_COD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ID_EMP" Type="Int32" Nullable="false" />
+          <Property Name="ID_EMP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="CLI_CEDULA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="FAC_FECHA" Type="DateTime" Precision="3" />
           <Property Name="FAC_ESTADO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
@@ -270,6 +274,9 @@
           <Property Name="PRD_PRECIO" Type="Decimal" Precision="12" Scale="2" />
           <Property Name="PRD_STOCK" Type="Int32" />
           <Property Name="PRD_ESTADO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="PRD_CATEGORIA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PRD_NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PRD_PROVEEDOR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="DETALLE_FACTURA" Relationship="Self.FK_DETALLE_FACTURA_PRODUCTO" FromRole="PRODUCTO" ToRole="DETALLE_FACTURA" />
           <NavigationProperty Name="IMAGEN" Relationship="Self.FK_IMAGEN_PRODUCTO" FromRole="PRODUCTO" ToRole="IMAGEN" />
         </EntityType>
@@ -281,6 +288,7 @@
           <Property Name="US_USUARIO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="US_PASS" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
           <Property Name="US_ROL" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="US_ESTADO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="CLIENTE" Relationship="Self.FK_CLIENTE_USUARIO" FromRole="USUARIO" ToRole="CLIENTE" />
         </EntityType>
         <Association Name="FK_CLIENTE_USUARIO">
@@ -402,7 +410,7 @@
           <Property Type="String" Name="CLI_DIRECCION" Nullable="true" MaxLength="300" />
         </ComplexType>
         <ComplexType Name="seleccionarEmpresaSP_Result">
-          <Property Type="Int32" Name="ID_EMP" Nullable="false" />
+          <Property Type="String" Name="ID_EMP" Nullable="false" MaxLength="10" />
           <Property Type="String" Name="EMP_RUC" Nullable="true" MaxLength="13" />
           <Property Type="String" Name="EMP_NOMBRE" Nullable="true" MaxLength="20" />
           <Property Type="String" Name="EMP_MISION" Nullable="true" MaxLength="1024" />
@@ -518,6 +526,9 @@
                 <ScalarProperty Name="PRD_PRECIO" ColumnName="PRD_PRECIO" />
                 <ScalarProperty Name="PRD_STOCK" ColumnName="PRD_STOCK" />
                 <ScalarProperty Name="PRD_ESTADO" ColumnName="PRD_ESTADO" />
+                <ScalarProperty Name="PRD_CATEGORIA" ColumnName="PRD_CATEGORIA" />
+                <ScalarProperty Name="PRD_NOMBRE" ColumnName="PRD_NOMBRE" />
+                <ScalarProperty Name="PRD_PROVEEDOR" ColumnName="PRD_PROVEEDOR" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -528,6 +539,7 @@
                 <ScalarProperty Name="US_USUARIO" ColumnName="US_USUARIO" />
                 <ScalarProperty Name="US_PASS" ColumnName="US_PASS" />
                 <ScalarProperty Name="US_ROL" ColumnName="US_ROL" />
+                <ScalarProperty Name="US_ESTADO" ColumnName="US_ESTADO" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -621,7 +633,7 @@
         <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
-        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->

@@ -18,8 +18,6 @@ namespace WebServices
     // [System.Web.Script.Services.ScriptService]
     public class APIDTOProductos : System.Web.Services.WebService
     {
-
-        
         logica_DTOProductos op = new logica_DTOProductos();
 
         [WebMethod]
@@ -28,10 +26,10 @@ namespace WebServices
             return op.MostrarProductos();
         }
 
-        [WebMethod]
+        /*[WebMethod]
         public DTO_Producto MostrarProductoPorId(int id)
         {
             return op.MostrarProductoPorId(id);
-        }
+        }*/
     }
 }

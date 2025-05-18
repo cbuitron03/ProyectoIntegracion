@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Datos;
 using AccesoDatos;
-using System.Runtime.Remoting.Contexts;
+using Datos;
 
 namespace Logica
 {
@@ -45,5 +44,9 @@ namespace Logica
         }
 
         # endregion
+        public bool actualizarEstadoDetalle(int PRD_COD, int FAC_NUM, string Det_Estado)
+        {
+            return op.actualizarEstadoDetalle(PRD_COD, FAC_NUM, Det_Estado);
+        }
     }
 }

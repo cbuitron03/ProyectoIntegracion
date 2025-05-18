@@ -40,5 +40,9 @@ namespace Logica
         }
 
         # endregion
+        public bool actualizarEstadoFactura(int FAC_COD, string FAC_ESTADO)
+        {
+            return op.actualizarEstadoFactura(FAC_COD, FAC_ESTADO);
+        }
     }
 }

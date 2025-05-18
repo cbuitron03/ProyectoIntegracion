@@ -1,9 +1,9 @@
-﻿using AccesoDatos;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AccesoDatos;
 
 namespace Datos
 {
@@ -25,9 +25,17 @@ namespace Datos
 
         public int insertarUsuario(USUARIO usuInsertado)
         {
-            _context.USUARIO.Add(usuInsertado);
-            _context.SaveChanges();
-            return usuInsertado.US_COD;
+            try
+            {
+                _context.USUARIO.Add(usuInsertado);
+                _context.SaveChanges();
+                return usuInsertado.US_COD;
+            }
+            catch (Exception ex)
+            {
+                return -1;
+                throw new Exception("Error al insertar el usuario: " + ex.Message);
+            }
         }
 
         public bool actualizarUsuario(USUARIO usuActualizado)
@@ -64,6 +72,10 @@ namespace Datos
         private USUARIO seleccionarUsuarioPorId(int id)
         {
             return _context.USUARIO.Where(usu => usu.US_COD == id).SingleOrDefault();
+        }
+        public USUARIO autenticarUsuario(string US_USUARIO, string US_PASS)
+        {
+            return _context.USUARIO.FirstOrDefault(u => u.US_USUARIO == US_USUARIO && u.US_PASS == US_PASS);
         }
     }
 }

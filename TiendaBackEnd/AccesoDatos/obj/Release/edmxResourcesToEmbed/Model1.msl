@@ -70,6 +70,9 @@
           <ScalarProperty Name="PRD_PRECIO" ColumnName="PRD_PRECIO" />
           <ScalarProperty Name="PRD_STOCK" ColumnName="PRD_STOCK" />
           <ScalarProperty Name="PRD_ESTADO" ColumnName="PRD_ESTADO" />
+          <ScalarProperty Name="PRD_CATEGORIA" ColumnName="PRD_CATEGORIA" />
+          <ScalarProperty Name="PRD_NOMBRE" ColumnName="PRD_NOMBRE" />
+          <ScalarProperty Name="PRD_PROVEEDOR" ColumnName="PRD_PROVEEDOR" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -80,6 +83,7 @@
           <ScalarProperty Name="US_USUARIO" ColumnName="US_USUARIO" />
           <ScalarProperty Name="US_PASS" ColumnName="US_PASS" />
           <ScalarProperty Name="US_ROL" ColumnName="US_ROL" />
+          <ScalarProperty Name="US_ESTADO" ColumnName="US_ESTADO" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

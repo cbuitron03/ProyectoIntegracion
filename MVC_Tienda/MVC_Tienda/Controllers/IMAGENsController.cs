@@ -12,7 +12,7 @@ namespace MVC_Tienda.Controllers
 {
     public class IMAGENsController : Controller
     {
-        private db17842Entities db = new db17842Entities();
+        private db17842Entities1 db = new db17842Entities1();
 
         // GET: IMAGENs
         public ActionResult Index()
@@ -22,9 +22,9 @@ namespace MVC_Tienda.Controllers
         }
 
         // GET: IMAGENs/Details/5
-        public ActionResult Details(decimal id)
+        public ActionResult Details(int? id)
         {
-            if (id == 0)
+            if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
@@ -44,11 +44,11 @@ namespace MVC_Tienda.Controllers
         }
 
         // POST: IMAGENs/Create
-        // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
-        // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "IMG_ID,PRD_COD,IMG_URL")] IMAGEN iMAGEN)
+        public ActionResult Create([Bind(Include = "IMG_ID,PRD_COD,IMG_URL,IMG_TIPO")] IMAGEN iMAGEN)
         {
             if (ModelState.IsValid)
             {
@@ -62,9 +62,9 @@ namespace MVC_Tienda.Controllers
         }
 
         // GET: IMAGENs/Edit/5
-        public ActionResult Edit(decimal id)
+        public ActionResult Edit(int? id)
         {
-            if (id == 0)
+            if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
@@ -78,11 +78,11 @@ namespace MVC_Tienda.Controllers
         }
 
         // POST: IMAGENs/Edit/5
-        // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
-        // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "IMG_ID,PRD_COD,IMG_URL")] IMAGEN iMAGEN)
+        public ActionResult Edit([Bind(Include = "IMG_ID,PRD_COD,IMG_URL,IMG_TIPO")] IMAGEN iMAGEN)
         {
             if (ModelState.IsValid)
             {
@@ -95,9 +95,9 @@ namespace MVC_Tienda.Controllers
         }
 
         // GET: IMAGENs/Delete/5
-        public ActionResult Delete(decimal id)
+        public ActionResult Delete(int? id)
         {
-            if (id == 0)
+            if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
@@ -112,7 +112,7 @@ namespace MVC_Tienda.Controllers
         // POST: IMAGENs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(decimal id)
+        public ActionResult DeleteConfirmed(int id)
         {
             IMAGEN iMAGEN = db.IMAGEN.Find(id);
             db.IMAGEN.Remove(iMAGEN);

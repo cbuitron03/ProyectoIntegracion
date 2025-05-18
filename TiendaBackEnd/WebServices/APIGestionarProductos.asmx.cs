@@ -39,27 +39,44 @@ namespace WebServices
             return SeleccionarProductos().Where(pro => pro.PRD_COD == id).SingleOrDefault();
         }
 
-        #region metodos de accion 
+        //#region metodos de accion 
 
+        //[WebMethod]
+        //public int insertarProducto(PRODUCTO proInsertado)
+        //{
+        //    return op.insertarProducto(proInsertado);
+        //}
+
+        //[WebMethod]
+        //public bool actualizarProducto(PRODUCTO proActualizado)
+        //{
+        //    return op.actualizarProducto(proActualizado);
+        //}
+
+        //[WebMethod]
+        //public bool eliminarProducto(int id)
+        //{
+        //    return op.eliminarProducto(id);
+        //}
+
+        //#endregion
+        //Crear Producto
         [WebMethod]
-        public int insertarProducto(PRODUCTO proInsertado)
+        public int insertarProducto(string PRD_DESCRIPCION, decimal PRD_PRECIO, int PRD_STOCK, string PRD_ESTADO)
         {
-            return op.insertarProducto(proInsertado);
+            return op.insertarProducto(PRD_DESCRIPCION, PRD_PRECIO, PRD_STOCK, PRD_ESTADO);
         }
-
+        //Actualizar Producto
         [WebMethod]
         public bool actualizarProducto(PRODUCTO proActualizado)
         {
             return op.actualizarProducto(proActualizado);
         }
-
+        //Actualizar Estado Producto
         [WebMethod]
-        public bool eliminarProducto(int id)
+        public bool actualizarEstadoProducto(int PRD_COD, string PRD_ESTADO)
         {
-            return op.eliminarProducto(id);
+            return op.actualizarEstadoProducto(PRD_COD, PRD_ESTADO);
         }
-
-        #endregion
-
     }
 }

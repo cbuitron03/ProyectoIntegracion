@@ -27,7 +27,7 @@
     <Key>
       <PropertyRef Name="ID_EMP" />
     </Key>
-    <Property Name="ID_EMP" Type="int" Nullable="false" />
+    <Property Name="ID_EMP" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="EMP_RUC" Type="varchar" MaxLength="13" />
     <Property Name="EMP_NOMBRE" Type="varchar" MaxLength="20" />
     <Property Name="EMP_MISION" Type="varchar" MaxLength="1024" />
@@ -39,7 +39,7 @@
       <PropertyRef Name="FAC_COD" />
     </Key>
     <Property Name="FAC_COD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ID_EMP" Type="int" Nullable="false" />
+    <Property Name="ID_EMP" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="CLI_CEDULA" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="FAC_FECHA" Type="datetime" />
     <Property Name="FAC_ESTADO" Type="varchar" MaxLength="10" />
@@ -65,6 +65,9 @@
     <Property Name="PRD_PRECIO" Type="numeric" Precision="12" Scale="2" />
     <Property Name="PRD_STOCK" Type="int" />
     <Property Name="PRD_ESTADO" Type="varchar" MaxLength="10" />
+    <Property Name="PRD_CATEGORIA" Type="varchar" MaxLength="50" />
+    <Property Name="PRD_NOMBRE" Type="varchar" MaxLength="50" />
+    <Property Name="PRD_PROVEEDOR" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="USUARIO">
     <Key>
@@ -74,6 +77,7 @@
     <Property Name="US_USUARIO" Type="varchar" MaxLength="30" />
     <Property Name="US_PASS" Type="varchar" MaxLength="8" />
     <Property Name="US_ROL" Type="varchar" MaxLength="60" />
+    <Property Name="US_ESTADO" Type="varchar" MaxLength="50" />
   </EntityType>
   <Association Name="FK_CLIENTE_USUARIO">
     <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="1" />

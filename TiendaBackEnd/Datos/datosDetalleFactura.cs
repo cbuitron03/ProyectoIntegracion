@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AccesoDatos.DTO;
 using AccesoDatos;
 
 namespace Datos
@@ -68,6 +69,23 @@ namespace Datos
         private DETALLE_FACTURA seleccionarDetallePorFactura(int id)
         {
             return _context.DETALLE_FACTURA.Where(pro => pro.FAC_COD == id).SingleOrDefault();
+        }
+        public bool actualizarEstadoDetalle(int PRD_COD, int FAC_NUM, string Det_Estado)
+        {
+            DETALLE_FACTURA detalle_factira = _context.DETALLE_FACTURA
+                .Where(df => df.PRD_COD == PRD_COD && df.FAC_COD == FAC_NUM)
+                .SingleOrDefault();
+
+            if (detalle_factira != null)
+            {
+                detalle_factira.DTF_ESTADO = Det_Estado;
+                _context.SaveChanges();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

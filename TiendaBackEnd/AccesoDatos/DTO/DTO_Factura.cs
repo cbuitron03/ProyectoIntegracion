@@ -10,7 +10,7 @@ namespace AccesoDatos.DTO
     public class DTO_Factura
     {
         public int FAC_COD { get; set; }
-        public int ID_EMP { get; set; }
+        public string ID_EMP { get; set; }
         public string CLI_CEDULA { get; set; }
         public string CLI_NOMBRE { get; set; }
         public string CLI_CORREO { get; set; }

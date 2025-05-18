@@ -19,9 +19,9 @@ namespace Logica
             return op.SeleccionarProductos();
         }
 
-        public List<PRODUCTO> seleccionarProductoPorNombre(string nombre)
+        public PRODUCTO seleccionarProductoPorNombre(string nombre)
         {
-            return SeleccionarProductos().Where(pro=>pro.PRD_DESCRIPCION.Contains(nombre)).ToList();
+            return SeleccionarProductos().Where(pro => pro.PRD_DESCRIPCION.Contains(nombre)).SingleOrDefault();
         }
 
         public PRODUCTO seleccionarProductoPorID(int id)
@@ -31,10 +31,10 @@ namespace Logica
 
         #region metodos de accion 
 
-        public int insertarProducto(PRODUCTO proInsertado)
-        {
-           return op.insertarProducto(proInsertado);
-        }
+        //public int insertarProducto(PRODUCTO proInsertado)
+        //{
+        //   return op.insertarProducto(proInsertado);
+        //}
 
         public bool actualizarProducto(PRODUCTO proActualizado)
         {
@@ -47,5 +47,33 @@ namespace Logica
         }
 
         # endregion
+        public int insertarProducto(string PRD_DESCRIPCION, decimal PRD_PRECIO, int PRD_STOCK, string PRD_ESTADO)
+        {
+            PRODUCTO producto = new PRODUCTO();
+            producto.PRD_DESCRIPCION = PRD_DESCRIPCION;
+            producto.PRD_PRECIO = PRD_PRECIO;
+            producto.PRD_STOCK = PRD_STOCK;
+            producto.PRD_ESTADO = PRD_ESTADO;
+            // Insertar el producto y obtener el ID generado
+            int PRD_COD = op.insertarProducto(producto);
+
+            return PRD_COD;
+        }
+        public bool actualizarEstadoProducto(int PRD_COD, string PRD_ESTADO)
+        {
+            return op.actualizarEstadoProducto(PRD_COD, PRD_ESTADO);
+        }
+        public bool verificarStock(int PRD_COD, int cantidad)
+        {
+            return op.verificarStock(PRD_COD, cantidad);
+        }
+        public float obtenerPrecioUnitario(int id)
+        {
+            return op.obtenerPrecioProducto(id);
+        }
+        public bool disminuirStock(int id, int cantidad)
+        {
+            return op.disminuirStock(id, cantidad);
+        }
     }
 }

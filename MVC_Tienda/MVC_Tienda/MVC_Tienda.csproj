@@ -213,6 +213,7 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\site24360-WebDeploy.pubxml" />
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />
     <Content Include="Scripts\jquery-3.7.1.min.js" />
@@ -248,13 +249,6 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <EntityDeploy Include="Tienda.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Tienda.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Tienda.edmx.diagram">
-      <DependentUpon>Tienda.edmx</DependentUpon>
-    </Content>
     <Content Include="Views\CLIENTEs\Create.cshtml" />
     <Content Include="Views\CLIENTEs\Delete.cshtml" />
     <Content Include="Views\CLIENTEs\Details.cshtml" />
@@ -270,11 +264,6 @@
     <Content Include="Views\EMPRESAs\Details.cshtml" />
     <Content Include="Views\EMPRESAs\Edit.cshtml" />
     <Content Include="Views\EMPRESAs\Index.cshtml" />
-    <Content Include="Views\EMPRESAs1\Create.cshtml" />
-    <Content Include="Views\EMPRESAs1\Delete.cshtml" />
-    <Content Include="Views\EMPRESAs1\Details.cshtml" />
-    <Content Include="Views\EMPRESAs1\Edit.cshtml" />
-    <Content Include="Views\EMPRESAs1\Index.cshtml" />
     <Content Include="Views\FACTURAs\Create.cshtml" />
     <Content Include="Views\FACTURAs\Delete.cshtml" />
     <Content Include="Views\FACTURAs\Details.cshtml" />
@@ -295,6 +284,13 @@
     <Content Include="Views\USUARIOs\Details.cshtml" />
     <Content Include="Views\USUARIOs\Edit.cshtml" />
     <Content Include="Views\USUARIOs\Index.cshtml" />
+    <EntityDeploy Include="Tienda.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Tienda.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Tienda.edmx.diagram">
+      <DependentUpon>Tienda.edmx</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

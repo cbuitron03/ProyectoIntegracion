@@ -1,9 +1,9 @@
-﻿using AccesoDatos;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AccesoDatos;
 
 namespace Datos
 {
@@ -75,14 +75,24 @@ namespace Datos
         }
 
         # endregion
-        private IMAGEN seleccionarImagenPorId(int id)
+        public IMAGEN seleccionarImagenPorId(int id)
         {
             return _context.IMAGEN.Where(pro => pro.IMG_ID == id).SingleOrDefault();
         }
 
-        private IMAGEN seleccionarImagenPorIdProducto(int id)
+        public IMAGEN seleccionarImagenPorIdProducto(int id)
         {
             return _context.IMAGEN.Where(pro => pro.PRD_COD == id).SingleOrDefault();
+        }
+        public List<string> urlporIdProducto(int id)
+        {
+            List<string> urls = new List<string>();
+            var imagenes = _context.IMAGEN.Where(i => i.PRD_COD == id).ToList();
+            foreach (var img in imagenes)
+            {
+                urls.Add(img.IMG_URL);
+            }
+            return urls;
         }
     }
 }

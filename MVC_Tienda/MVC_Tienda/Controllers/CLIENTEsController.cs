@@ -12,7 +12,7 @@ namespace MVC_Tienda.Controllers
 {
     public class CLIENTEsController : Controller
     {
-        private db17842Entities db = new db17842Entities();
+        private db17842Entities1 db = new db17842Entities1();
 
         // GET: CLIENTEs
         public ActionResult Index()
@@ -22,9 +22,9 @@ namespace MVC_Tienda.Controllers
         }
 
         // GET: CLIENTEs/Details/5
-        public ActionResult Details(decimal id)
+        public ActionResult Details(string id)
         {
-            if (id == 0)
+            if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
@@ -44,11 +44,11 @@ namespace MVC_Tienda.Controllers
         }
 
         // POST: CLIENTEs/Create
-        // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
-        // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID_CLIENTE,US_COD,CLI_CEDULA,CLI_NOMBRE,CLI_TELEFONO,CLI_CORREO,CLI_DIRECCION")] CLIENTE cLIENTE)
+        public ActionResult Create([Bind(Include = "CLI_CEDULA,US_COD,CLI_NOMBRE,CLI_TELEFONO,CLI_CORREO,CLI_DIRECCION,CLI_ESTADO")] CLIENTE cLIENTE)
         {
             if (ModelState.IsValid)
             {
@@ -62,9 +62,9 @@ namespace MVC_Tienda.Controllers
         }
 
         // GET: CLIENTEs/Edit/5
-        public ActionResult Edit(decimal id)
+        public ActionResult Edit(string id)
         {
-            if (id == 0)
+            if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
@@ -78,11 +78,11 @@ namespace MVC_Tienda.Controllers
         }
 
         // POST: CLIENTEs/Edit/5
-        // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
-        // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID_CLIENTE,US_COD,CLI_CEDULA,CLI_NOMBRE,CLI_TELEFONO,CLI_CORREO,CLI_DIRECCION")] CLIENTE cLIENTE)
+        public ActionResult Edit([Bind(Include = "CLI_CEDULA,US_COD,CLI_NOMBRE,CLI_TELEFONO,CLI_CORREO,CLI_DIRECCION,CLI_ESTADO")] CLIENTE cLIENTE)
         {
             if (ModelState.IsValid)
             {
@@ -95,9 +95,9 @@ namespace MVC_Tienda.Controllers
         }
 
         // GET: CLIENTEs/Delete/5
-        public ActionResult Delete(decimal id)
+        public ActionResult Delete(string id)
         {
-            if (id == 0)
+            if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
@@ -112,7 +112,7 @@ namespace MVC_Tienda.Controllers
         // POST: CLIENTEs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(decimal id)
+        public ActionResult DeleteConfirmed(string id)
         {
             CLIENTE cLIENTE = db.CLIENTE.Find(id);
             db.CLIENTE.Remove(cLIENTE);
