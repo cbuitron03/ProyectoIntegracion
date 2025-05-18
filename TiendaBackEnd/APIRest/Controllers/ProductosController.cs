@@ -30,9 +30,9 @@ namespace APIRest.Controllers
             return op.seleccionarProductoPorNombre(nombre);
         }
         // POST: api/Productos
-        public int Post(string PRD_DESCRIPCION, decimal PRD_PRECIO, int PRD_STOCK, string PRD_ESTADO)
+        public int Post(string PRD_NOMBRE,string PRD_DESCRIPCION, decimal PRD_PRECIO, int PRD_STOCK, string PRD_ESTADO)
         {
-            return op.insertarProducto(PRD_DESCRIPCION,PRD_PRECIO,PRD_STOCK,PRD_ESTADO);
+            return op.insertarProducto(PRD_NOMBRE, PRD_DESCRIPCION, PRD_PRECIO,PRD_STOCK,PRD_ESTADO);
         }
 
         // PUT: api/Productos/5

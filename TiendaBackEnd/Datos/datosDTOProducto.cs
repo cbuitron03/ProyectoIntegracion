@@ -23,14 +23,14 @@ namespace Datos
                 List<String> tempimg = img.urlporIdProducto(p.PRD_COD);
                 DTO_Producto dto = new DTO_Producto()
                 {
-                    PRD_COD = p.PRD_COD,
-                    PRD_CATEGORIA = p.PRD_CATEGORIA,
-                    PRD_NOMBRE = p.PRD_NOMBRE,
-                    PRD_DESCRIPCION = p.PRD_DESCRIPCION,
-                    PRD_PRECIO = (decimal)p.PRD_PRECIO,
-                    PRD_STOCK = (int)p.PRD_STOCK,
-                    PRD_PROVEEDOR = p.PRD_PROVEEDOR,
-                    IMG_URL = tempimg
+                    idProducto = p.PRD_COD,
+                    prodCategoria = p.PRD_CATEGORIA,
+                    prodNombre = p.PRD_NOMBRE,
+                    prodDescripcion = p.PRD_DESCRIPCION,
+                    prodPrecio = (decimal)p.PRD_PRECIO,
+                    prodStock = (int)p.PRD_STOCK,
+                    prodProveedor = "Ternura Infinita",
+                    prodImg = tempimg
                 };
                 res.Add(dto);
 

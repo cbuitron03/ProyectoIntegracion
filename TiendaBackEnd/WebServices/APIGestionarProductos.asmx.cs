@@ -61,11 +61,11 @@ namespace WebServices
 
         //#endregion
         //Crear Producto
-        [WebMethod]
+        /*[WebMethod]
         public int insertarProducto(string PRD_DESCRIPCION, decimal PRD_PRECIO, int PRD_STOCK, string PRD_ESTADO)
         {
             return op.insertarProducto(PRD_DESCRIPCION, PRD_PRECIO, PRD_STOCK, PRD_ESTADO);
-        }
+        }*/
         //Actualizar Producto
         [WebMethod]
         public bool actualizarProducto(PRODUCTO proActualizado)

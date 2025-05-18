@@ -47,13 +47,16 @@ namespace Logica
         }
 
         # endregion
-        public int insertarProducto(string PRD_DESCRIPCION, decimal PRD_PRECIO, int PRD_STOCK, string PRD_ESTADO)
+        public int insertarProducto(string PRD_NOMBRE, string PRD_DESCRIPCION, decimal PRD_PRECIO, int PRD_STOCK, string PRD_ESTADO)
         {
             PRODUCTO producto = new PRODUCTO();
             producto.PRD_DESCRIPCION = PRD_DESCRIPCION;
             producto.PRD_PRECIO = PRD_PRECIO;
             producto.PRD_STOCK = PRD_STOCK;
             producto.PRD_ESTADO = PRD_ESTADO;
+            producto.PRD_CATEGORIA = "Peluche";
+            producto.PRD_NOMBRE = PRD_NOMBRE;
+            producto.PRD_PROVEEDOR = "Ternura Infinita";
             // Insertar el producto y obtener el ID generado
             int PRD_COD = op.insertarProducto(producto);
 
