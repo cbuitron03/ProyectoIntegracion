@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace APIRest
 {
@@ -10,7 +11,8 @@ namespace APIRest
         public static void Register(HttpConfiguration config)
         {
             // Configuración y servicios de Web API
-
+            // Enable CORS for any domain
+            config.EnableCors(new System.Web.Http.Cors.EnableCorsAttribute("*", "*", "*"));
             // Rutas de Web API
             config.MapHttpAttributeRoutes();
 

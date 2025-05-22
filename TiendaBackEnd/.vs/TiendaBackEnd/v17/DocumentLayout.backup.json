@@ -1,205 +1,217 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\rest\\TiendaBackEnd\\",
+  "WorkspaceRootPath": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|d:\\rest\\tiendabackend\\logica\\dto\\realizarcompradto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|solutionrelative:logica\\dto\\realizarcompradto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{817A29D1-FF2A-404B-89C8-63DFF506D063}|APIRest\\APIRest.csproj|D:\\rest\\TiendaBackEnd\\apirest\\controllers\\integracioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{817A29D1-FF2A-404B-89C8-63DFF506D063}|APIRest\\APIRest.csproj|solutionrelative:apirest\\controllers\\integracioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|D:\\rest\\TiendaBackEnd\\accesodatos\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\accesodatos\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
       "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|D:\\rest\\TiendaBackEnd\\accesodatos\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|D:\\rest\\TiendaBackEnd\\accesodatos\\dto\\carritodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\dto\\carritodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|D:\\rest\\TiendaBackEnd\\accesodatos\\dto\\productocantidaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\dto\\productocantidaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|D:\\rest\\TiendaBackEnd\\accesodatos\\dto\\dto_empresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\dto\\dto_empresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|D:\\rest\\TiendaBackEnd\\accesodatos\\dto\\dto_factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\dto\\dto_factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{817A29D1-FF2A-404B-89C8-63DFF506D063}|APIRest\\APIRest.csproj|D:\\rest\\TiendaBackEnd\\apirest\\controllers\\facturascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{817A29D1-FF2A-404B-89C8-63DFF506D063}|APIRest\\APIRest.csproj|solutionrelative:apirest\\controllers\\facturascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|D:\\rest\\TiendaBackEnd\\accesodatos\\dto\\dto_cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\dto\\dto_cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|D:\\rest\\TiendaBackEnd\\datos\\datosfactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|solutionrelative:datos\\datosfactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|D:\\rest\\TiendaBackEnd\\datos\\datosdtoproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|solutionrelative:datos\\datosdtoproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|D:\\rest\\TiendaBackEnd\\datos\\datosproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|c:\\users\\pagic\\documents\\github\\nueva carpeta\\proyectointegracion\\tiendabackend\\datos\\datosproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|solutionrelative:datos\\datosproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|D:\\rest\\TiendaBackEnd\\logica\\logica-dtoproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|solutionrelative:logica\\logica-dtoproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|D:\\rest\\TiendaBackEnd\\logica\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|solutionrelative:logica\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|D:\\rest\\TiendaBackEnd\\logica\\logica-productos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\logica\\logica-productos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|solutionrelative:logica\\logica-productos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|D:\\rest\\TiendaBackEnd\\datos\\datosdetallefactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|solutionrelative:datos\\datosdetallefactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|D:\\rest\\TiendaBackEnd\\datos\\datoscliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|solutionrelative:datos\\datoscliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|D:\\rest\\TiendaBackEnd\\accesodatos\\dto\\dto_producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\dto\\dto_producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B1F0650-066D-41CF-87FC-2688F578085A}|WebServices\\WebServices.csproj|D:\\rest\\TiendaBackEnd\\webservices\\apidtoproductos.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B1F0650-066D-41CF-87FC-2688F578085A}|WebServices\\WebServices.csproj|solutionrelative:webservices\\apidtoproductos.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|D:\\rest\\TiendaBackEnd\\datos\\datosimagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|solutionrelative:datos\\datosimagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|D:\\rest\\TiendaBackEnd\\logica\\logica-imagenes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|solutionrelative:logica\\logica-imagenes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|D:\\rest\\TiendaBackEnd\\datos\\datosusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|solutionrelative:datos\\datosusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|D:\\rest\\TiendaBackEnd\\datos\\datosdtousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|solutionrelative:datos\\datosdtousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|D:\\rest\\TiendaBackEnd\\datos\\datosdtoimagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|solutionrelative:datos\\datosdtoimagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|D:\\rest\\TiendaBackEnd\\datos\\datosdtodetallefactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|solutionrelative:datos\\datosdtodetallefactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|D:\\rest\\TiendaBackEnd\\accesodatos\\dto\\dto_imagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\dto\\dto_imagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|D:\\rest\\TiendaBackEnd\\accesodatos\\dto\\dto_detalle_factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\dto\\dto_detalle_factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|D:\\rest\\TiendaBackEnd\\logica\\logica-usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|solutionrelative:logica\\logica-usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{817A29D1-FF2A-404B-89C8-63DFF506D063}|APIRest\\APIRest.csproj|D:\\rest\\TiendaBackEnd\\apirest\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{817A29D1-FF2A-404B-89C8-63DFF506D063}|APIRest\\APIRest.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\apirest\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{817A29D1-FF2A-404B-89C8-63DFF506D063}|APIRest\\APIRest.csproj|solutionrelative:apirest\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|D:\\rest\\TiendaBackEnd\\logica\\logica-dtousuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\accesodatos\\model1.context.tt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\model1.context.tt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\accesodatos\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\accesodatos\\model1.tt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\model1.tt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\accesodatos\\dto\\dto_producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\dto\\dto_producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\logica\\dto\\realizarcompradto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|solutionrelative:logica\\dto\\realizarcompradto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{817A29D1-FF2A-404B-89C8-63DFF506D063}|APIRest\\APIRest.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\apirest\\controllers\\integracioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{817A29D1-FF2A-404B-89C8-63DFF506D063}|APIRest\\APIRest.csproj|solutionrelative:apirest\\controllers\\integracioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\accesodatos\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\accesodatos\\dto\\carritodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\dto\\carritodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\accesodatos\\dto\\productocantidaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\dto\\productocantidaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\accesodatos\\dto\\dto_empresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\dto\\dto_empresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\accesodatos\\dto\\dto_factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\dto\\dto_factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{817A29D1-FF2A-404B-89C8-63DFF506D063}|APIRest\\APIRest.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\apirest\\controllers\\facturascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{817A29D1-FF2A-404B-89C8-63DFF506D063}|APIRest\\APIRest.csproj|solutionrelative:apirest\\controllers\\facturascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\accesodatos\\dto\\dto_cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\dto\\dto_cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\datos\\datosfactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|solutionrelative:datos\\datosfactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\datos\\datosdtoproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|solutionrelative:datos\\datosdtoproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\logica\\logica-dtoproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|solutionrelative:logica\\logica-dtoproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\logica\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|solutionrelative:logica\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\datos\\datosdetallefactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|solutionrelative:datos\\datosdetallefactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\datos\\datoscliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|solutionrelative:datos\\datoscliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B1F0650-066D-41CF-87FC-2688F578085A}|WebServices\\WebServices.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\webservices\\apidtoproductos.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B1F0650-066D-41CF-87FC-2688F578085A}|WebServices\\WebServices.csproj|solutionrelative:webservices\\apidtoproductos.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\datos\\datosimagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|solutionrelative:datos\\datosimagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\logica\\logica-imagenes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|solutionrelative:logica\\logica-imagenes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\datos\\datosusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|solutionrelative:datos\\datosusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\datos\\datosdtousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|solutionrelative:datos\\datosdtousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\datos\\datosdtoimagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|solutionrelative:datos\\datosdtoimagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\datos\\datosdtodetallefactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|solutionrelative:datos\\datosdtodetallefactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\accesodatos\\dto\\dto_imagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\dto\\dto_imagen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\accesodatos\\dto\\dto_detalle_factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\dto\\dto_detalle_factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\logica\\logica-usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|solutionrelative:logica\\logica-usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\logica\\logica-dtousuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|solutionrelative:logica\\logica-dtousuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|D:\\rest\\TiendaBackEnd\\logica\\logica-dtoimagenes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\logica\\logica-dtoimagenes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|solutionrelative:logica\\logica-dtoimagenes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|D:\\rest\\TiendaBackEnd\\logica\\logica-dtofactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\logica\\logica-dtofactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|solutionrelative:logica\\logica-dtofactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|D:\\rest\\TiendaBackEnd\\logica\\logica-dtoclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\logica\\logica-dtoclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|solutionrelative:logica\\logica-dtoclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|D:\\rest\\TiendaBackEnd\\datos\\datosdtofactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\datos\\datosdtofactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|solutionrelative:datos\\datosdtofactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|D:\\rest\\TiendaBackEnd\\datos\\datosdtoempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\datos\\datosdtoempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|solutionrelative:datos\\datosdtoempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{817A29D1-FF2A-404B-89C8-63DFF506D063}|APIRest\\APIRest.csproj|D:\\rest\\TiendaBackEnd\\apirest\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{817A29D1-FF2A-404B-89C8-63DFF506D063}|APIRest\\APIRest.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\apirest\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{817A29D1-FF2A-404B-89C8-63DFF506D063}|APIRest\\APIRest.csproj|solutionrelative:apirest\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{817A29D1-FF2A-404B-89C8-63DFF506D063}|APIRest\\APIRest.csproj|D:\\rest\\TiendaBackEnd\\apirest\\controllers\\imagencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{817A29D1-FF2A-404B-89C8-63DFF506D063}|APIRest\\APIRest.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\apirest\\controllers\\imagencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{817A29D1-FF2A-404B-89C8-63DFF506D063}|APIRest\\APIRest.csproj|solutionrelative:apirest\\controllers\\imagencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|D:\\rest\\TiendaBackEnd\\logica\\logica-factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\logica\\logica-factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|solutionrelative:logica\\logica-factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{817A29D1-FF2A-404B-89C8-63DFF506D063}|APIRest\\APIRest.csproj|D:\\rest\\TiendaBackEnd\\apirest\\controllers\\detallefacturacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{817A29D1-FF2A-404B-89C8-63DFF506D063}|APIRest\\APIRest.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\apirest\\controllers\\detallefacturacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{817A29D1-FF2A-404B-89C8-63DFF506D063}|APIRest\\APIRest.csproj|solutionrelative:apirest\\controllers\\detallefacturacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|D:\\rest\\TiendaBackEnd\\logica\\logica-detallefactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\logica\\logica-detallefactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|solutionrelative:logica\\logica-detallefactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{817A29D1-FF2A-404B-89C8-63DFF506D063}|APIRest\\APIRest.csproj|D:\\rest\\TiendaBackEnd\\apirest\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{817A29D1-FF2A-404B-89C8-63DFF506D063}|APIRest\\APIRest.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\apirest\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{817A29D1-FF2A-404B-89C8-63DFF506D063}|APIRest\\APIRest.csproj|solutionrelative:apirest\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|D:\\rest\\TiendaBackEnd\\logica\\logica-clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\logica\\logica-clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|solutionrelative:logica\\logica-clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|D:\\rest\\TiendaBackEnd\\logica\\logica-empresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\logica\\logica-empresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|solutionrelative:logica\\logica-empresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|D:\\rest\\TiendaBackEnd\\logica\\logica-dtodetallefactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\logica\\logica-dtodetallefactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2C65BF20-6FEB-4E43-A8B7-7B6DA65B8157}|Logica\\Logica.csproj|solutionrelative:logica\\logica-dtodetallefactura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|D:\\rest\\TiendaBackEnd\\datos\\datosempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\datos\\datosempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|solutionrelative:datos\\datosempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|D:\\rest\\TiendaBackEnd\\datos\\datosdtocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\datos\\datosdtocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5588758D-2EF2-4C33-9FC3-F0521533E528}|Datos\\Datos.csproj|solutionrelative:datos\\datosdtocliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{817A29D1-FF2A-404B-89C8-63DFF506D063}|APIRest\\APIRest.csproj|D:\\rest\\TiendaBackEnd\\apirest\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{817A29D1-FF2A-404B-89C8-63DFF506D063}|APIRest\\APIRest.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\apirest\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{817A29D1-FF2A-404B-89C8-63DFF506D063}|APIRest\\APIRest.csproj|solutionrelative:apirest\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B1F0650-066D-41CF-87FC-2688F578085A}|WebServices\\WebServices.csproj|D:\\rest\\TiendaBackEnd\\webservices\\apigestionarproductos.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4B1F0650-066D-41CF-87FC-2688F578085A}|WebServices\\WebServices.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\webservices\\apigestionarproductos.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B1F0650-066D-41CF-87FC-2688F578085A}|WebServices\\WebServices.csproj|solutionrelative:webservices\\apigestionarproductos.asmx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|D:\\rest\\TiendaBackEnd\\accesodatos\\dto\\dto_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\accesodatos\\dto\\dto_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{006AFBF6-DC4B-4997-9ADD-3452E51980A5}|AccesoDatos\\AccesoDatos.csproj|solutionrelative:accesodatos\\dto\\dto_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -210,62 +222,108 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Model1.edmx [Diagram1]",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\AccesoDatos\\Model1.edmx",
-              "RelativeDocumentMoniker": "AccesoDatos\\Model1.edmx",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\AccesoDatos\\Model1.edmx [Diagram1]",
-              "RelativeToolTip": "AccesoDatos\\Model1.edmx [Diagram1]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
-              "WhenOpened": "2025-05-18T04:14:33.758Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "App.Config",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\AccesoDatos\\App.Config",
-              "RelativeDocumentMoniker": "AccesoDatos\\App.Config",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\AccesoDatos\\App.Config",
-              "RelativeToolTip": "AccesoDatos\\App.Config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-05-18T04:12:34.88Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DTO_Empresa.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Empresa.cs",
-              "RelativeDocumentMoniker": "AccesoDatos\\DTO\\DTO_Empresa.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Empresa.cs",
-              "RelativeToolTip": "AccesoDatos\\DTO\\DTO_Empresa.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAowAsAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T02:22:59.167Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "productoCantidadDTO.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\AccesoDatos\\DTO\\productoCantidadDTO.cs",
-              "RelativeDocumentMoniker": "AccesoDatos\\DTO\\productoCantidadDTO.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\AccesoDatos\\DTO\\productoCantidadDTO.cs",
-              "RelativeToolTip": "AccesoDatos\\DTO\\productoCantidadDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T03:23:27.023Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "Model1.Context.tt",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\Model1.Context.tt",
+              "RelativeDocumentMoniker": "AccesoDatos\\Model1.Context.tt",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\Model1.Context.tt",
+              "RelativeToolTip": "AccesoDatos\\Model1.Context.tt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-05-18T20:08:50.796Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Model1.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\Model1.edmx",
+              "RelativeDocumentMoniker": "AccesoDatos\\Model1.edmx",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\Model1.edmx [Diagram1]",
+              "RelativeToolTip": "AccesoDatos\\Model1.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2025-05-18T04:14:33.758Z",
+              "EditorCaption": " [Diagram1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductosController.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\APIRest\\Controllers\\ProductosController.cs",
+              "RelativeDocumentMoniker": "APIRest\\Controllers\\ProductosController.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\APIRest\\Controllers\\ProductosController.cs",
+              "RelativeToolTip": "APIRest\\Controllers\\ProductosController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAA1wCIAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T12:39:09.258Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "logica-productos.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-productos.cs",
+              "RelativeDocumentMoniker": "Logica\\logica-productos.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-productos.cs",
+              "RelativeToolTip": "Logica\\logica-productos.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAuwDkAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T02:34:25.77Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "datosProductos.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosProductos.cs",
+              "RelativeDocumentMoniker": "Datos\\datosProductos.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosProductos.cs",
+              "RelativeToolTip": "Datos\\datosProductos.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAmwBkAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T02:30:25.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CLIENTE.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\CLIENTE.cs",
+              "RelativeDocumentMoniker": "AccesoDatos\\CLIENTE.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\CLIENTE.cs",
+              "RelativeToolTip": "AccesoDatos\\CLIENTE.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T20:08:48.148Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Model1.tt",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\Model1.tt",
+              "RelativeDocumentMoniker": "AccesoDatos\\Model1.tt",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\Model1.tt",
+              "RelativeToolTip": "AccesoDatos\\Model1.tt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-05-18T20:08:44.865Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "carritoDTO.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\AccesoDatos\\DTO\\carritoDTO.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\DTO\\carritoDTO.cs",
               "RelativeDocumentMoniker": "AccesoDatos\\DTO\\carritoDTO.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\AccesoDatos\\DTO\\carritoDTO.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\DTO\\carritoDTO.cs",
               "RelativeToolTip": "AccesoDatos\\DTO\\carritoDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -273,24 +331,71 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "realizarCompraDTO.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\Logica\\DTO\\realizarCompraDTO.cs",
-              "RelativeDocumentMoniker": "Logica\\DTO\\realizarCompraDTO.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\Logica\\DTO\\realizarCompraDTO.cs",
-              "RelativeToolTip": "Logica\\DTO\\realizarCompraDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 12,
+              "Title": "productoCantidadDTO.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\DTO\\productoCantidadDTO.cs",
+              "RelativeDocumentMoniker": "AccesoDatos\\DTO\\productoCantidadDTO.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\DTO\\productoCantidadDTO.cs",
+              "RelativeToolTip": "AccesoDatos\\DTO\\productoCantidadDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-17T21:43:25.808Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-18T03:23:27.023Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 13,
+              "Title": "DTO_Empresa.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Empresa.cs",
+              "RelativeDocumentMoniker": "AccesoDatos\\DTO\\DTO_Empresa.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Empresa.cs",
+              "RelativeToolTip": "AccesoDatos\\DTO\\DTO_Empresa.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAowAsAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T02:22:59.167Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "realizarCompraDTO.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\DTO\\realizarCompraDTO.cs",
+              "RelativeDocumentMoniker": "Logica\\DTO\\realizarCompraDTO.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\DTO\\realizarCompraDTO.cs",
+              "RelativeToolTip": "Logica\\DTO\\realizarCompraDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-17T21:43:25.808Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DTO_Producto.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Producto.cs",
+              "RelativeDocumentMoniker": "AccesoDatos\\DTO\\DTO_Producto.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Producto.cs",
+              "RelativeToolTip": "AccesoDatos\\DTO\\DTO_Producto.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAADwvxEAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T02:19:29.486Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "App.Config",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\App.Config",
+              "RelativeDocumentMoniker": "AccesoDatos\\App.Config",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\App.Config",
+              "RelativeToolTip": "AccesoDatos\\App.Config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-05-18T04:12:34.88Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "IntegracionController.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\APIRest\\Controllers\\IntegracionController.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\APIRest\\Controllers\\IntegracionController.cs",
               "RelativeDocumentMoniker": "APIRest\\Controllers\\IntegracionController.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\APIRest\\Controllers\\IntegracionController.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\APIRest\\Controllers\\IntegracionController.cs",
               "RelativeToolTip": "APIRest\\Controllers\\IntegracionController.cs",
               "ViewState": "AgIAAEAAAAAAAAAAAAAvwEsAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -298,11 +403,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 14,
               "Title": "DTO_Factura.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Factura.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Factura.cs",
               "RelativeDocumentMoniker": "AccesoDatos\\DTO\\DTO_Factura.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Factura.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Factura.cs",
               "RelativeToolTip": "AccesoDatos\\DTO\\DTO_Factura.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAowAwAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -310,11 +415,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 15,
               "Title": "FacturasController.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\APIRest\\Controllers\\FacturasController.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\APIRest\\Controllers\\FacturasController.cs",
               "RelativeDocumentMoniker": "APIRest\\Controllers\\FacturasController.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\APIRest\\Controllers\\FacturasController.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\APIRest\\Controllers\\FacturasController.cs",
               "RelativeToolTip": "APIRest\\Controllers\\FacturasController.cs",
               "ViewState": "AgIAABoAAAAAAAAAAAA6wBsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -322,11 +427,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 19,
               "Title": "logica-DTOProductos.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\Logica\\logica-DTOProductos.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-DTOProductos.cs",
               "RelativeDocumentMoniker": "Logica\\logica-DTOProductos.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\Logica\\logica-DTOProductos.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-DTOProductos.cs",
               "RelativeToolTip": "Logica\\logica-DTOProductos.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAUwBoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -334,11 +439,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 16,
               "Title": "DTO_Cliente.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Cliente.cs",
               "RelativeDocumentMoniker": "AccesoDatos\\DTO\\DTO_Cliente.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Cliente.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Cliente.cs",
               "RelativeToolTip": "AccesoDatos\\DTO\\DTO_Cliente.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAkAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -346,11 +451,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 17,
               "Title": "datosFactura.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\Datos\\datosFactura.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosFactura.cs",
               "RelativeDocumentMoniker": "Datos\\datosFactura.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\Datos\\datosFactura.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosFactura.cs",
               "RelativeToolTip": "Datos\\datosFactura.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAA1wBkAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -358,23 +463,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "datosProductos.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\Datos\\datosProductos.cs",
-              "RelativeDocumentMoniker": "Datos\\datosProductos.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\Datos\\datosProductos.cs",
-              "RelativeToolTip": "Datos\\datosProductos.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAUwEAAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T02:30:25.147Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 18,
               "Title": "datosDTOProducto.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\Datos\\datosDTOProducto.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosDTOProducto.cs",
               "RelativeDocumentMoniker": "Datos\\datosDTOProducto.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\Datos\\datosDTOProducto.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosDTOProducto.cs",
               "RelativeToolTip": "Datos\\datosDTOProducto.cs",
               "ViewState": "AgIAABoAAAAAAAAAAAAswC0AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -382,11 +475,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 20,
               "Title": "App.config",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\Logica\\App.config",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\App.config",
               "RelativeDocumentMoniker": "Logica\\App.config",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\Logica\\App.config",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\App.config",
               "RelativeToolTip": "Logica\\App.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
@@ -394,23 +487,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "logica-productos.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\Logica\\logica-productos.cs",
-              "RelativeDocumentMoniker": "Logica\\logica-productos.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\Logica\\logica-productos.cs",
-              "RelativeToolTip": "Logica\\logica-productos.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAkwEEAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T02:34:25.77Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 21,
               "Title": "datosDetalleFactura.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\Datos\\datosDetalleFactura.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosDetalleFactura.cs",
               "RelativeDocumentMoniker": "Datos\\datosDetalleFactura.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\Datos\\datosDetalleFactura.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosDetalleFactura.cs",
               "RelativeToolTip": "Datos\\datosDetalleFactura.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAQwBoAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -418,11 +499,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 22,
               "Title": "datosCliente.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\Datos\\datosCliente.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosCliente.cs",
               "RelativeDocumentMoniker": "Datos\\datosCliente.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\Datos\\datosCliente.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosCliente.cs",
               "RelativeToolTip": "Datos\\datosCliente.cs",
               "ViewState": "AgIAAEUAAAAAAAAAAAAowEcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -430,23 +511,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "DTO_Producto.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Producto.cs",
-              "RelativeDocumentMoniker": "AccesoDatos\\DTO\\DTO_Producto.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Producto.cs",
-              "RelativeToolTip": "AccesoDatos\\DTO\\DTO_Producto.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T02:19:29.486Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
               "Title": "datosImagen.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\Datos\\datosImagen.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosImagen.cs",
               "RelativeDocumentMoniker": "Datos\\datosImagen.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\Datos\\datosImagen.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosImagen.cs",
               "RelativeToolTip": "Datos\\datosImagen.cs",
               "ViewState": "AgIAAEoAAAAAAAAAAAAIwFQAAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -454,11 +523,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 23,
               "Title": "APIDTOProductos.asmx.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\WebServices\\APIDTOProductos.asmx.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\WebServices\\APIDTOProductos.asmx.cs",
               "RelativeDocumentMoniker": "WebServices\\APIDTOProductos.asmx.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\WebServices\\APIDTOProductos.asmx.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\WebServices\\APIDTOProductos.asmx.cs",
               "RelativeToolTip": "WebServices\\APIDTOProductos.asmx.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAvwBwAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -466,11 +535,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 25,
               "Title": "logica-imagenes.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\Logica\\logica-imagenes.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-imagenes.cs",
               "RelativeDocumentMoniker": "Logica\\logica-imagenes.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\Logica\\logica-imagenes.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-imagenes.cs",
               "RelativeToolTip": "Logica\\logica-imagenes.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAAvwC0AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -478,11 +547,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 26,
               "Title": "datosUsuario.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\Datos\\datosUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosUsuario.cs",
               "RelativeDocumentMoniker": "Datos\\datosUsuario.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\Datos\\datosUsuario.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosUsuario.cs",
               "RelativeToolTip": "Datos\\datosUsuario.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAA+wBIAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -490,11 +559,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 27,
               "Title": "datosDTOUsuario.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\Datos\\datosDTOUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosDTOUsuario.cs",
               "RelativeDocumentMoniker": "Datos\\datosDTOUsuario.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\Datos\\datosDTOUsuario.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosDTOUsuario.cs",
               "RelativeToolTip": "Datos\\datosDTOUsuario.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAswCMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -502,11 +571,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 28,
               "Title": "datosDTOImagen.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\Datos\\datosDTOImagen.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosDTOImagen.cs",
               "RelativeDocumentMoniker": "Datos\\datosDTOImagen.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\Datos\\datosDTOImagen.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosDTOImagen.cs",
               "RelativeToolTip": "Datos\\datosDTOImagen.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAA5wCIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -514,11 +583,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 30,
               "Title": "DTO_Imagen.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Imagen.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Imagen.cs",
               "RelativeDocumentMoniker": "AccesoDatos\\DTO\\DTO_Imagen.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Imagen.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Imagen.cs",
               "RelativeToolTip": "AccesoDatos\\DTO\\DTO_Imagen.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -526,11 +595,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 29,
               "Title": "datosDTODetalleFactura.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\Datos\\datosDTODetalleFactura.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosDTODetalleFactura.cs",
               "RelativeDocumentMoniker": "Datos\\datosDTODetalleFactura.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\Datos\\datosDTODetalleFactura.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosDTODetalleFactura.cs",
               "RelativeToolTip": "Datos\\datosDTODetalleFactura.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAswCQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -538,11 +607,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 31,
               "Title": "DTO_Detalle_Factura.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Detalle_Factura.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Detalle_Factura.cs",
               "RelativeDocumentMoniker": "AccesoDatos\\DTO\\DTO_Detalle_Factura.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Detalle_Factura.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Detalle_Factura.cs",
               "RelativeToolTip": "AccesoDatos\\DTO\\DTO_Detalle_Factura.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAowBMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -550,11 +619,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 32,
               "Title": "logica-usuarios.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\Logica\\logica-usuarios.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-usuarios.cs",
               "RelativeDocumentMoniker": "Logica\\logica-usuarios.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\Logica\\logica-usuarios.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-usuarios.cs",
               "RelativeToolTip": "Logica\\logica-usuarios.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -562,23 +631,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "ProductosController.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\APIRest\\Controllers\\ProductosController.cs",
-              "RelativeDocumentMoniker": "APIRest\\Controllers\\ProductosController.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\APIRest\\Controllers\\ProductosController.cs",
-              "RelativeToolTip": "APIRest\\Controllers\\ProductosController.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAxwA0AAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T12:39:09.258Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 34,
               "Title": "logica-DTOImagenes.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\Logica\\logica-DTOImagenes.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-DTOImagenes.cs",
               "RelativeDocumentMoniker": "Logica\\logica-DTOImagenes.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\Logica\\logica-DTOImagenes.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-DTOImagenes.cs",
               "RelativeToolTip": "Logica\\logica-DTOImagenes.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAvwAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -586,11 +643,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 35,
               "Title": "logica-DTOFactura.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\Logica\\logica-DTOFactura.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-DTOFactura.cs",
               "RelativeDocumentMoniker": "Logica\\logica-DTOFactura.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\Logica\\logica-DTOFactura.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-DTOFactura.cs",
               "RelativeToolTip": "Logica\\logica-DTOFactura.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -598,11 +655,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 36,
               "Title": "logica-DTOClientes.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\Logica\\logica-DTOClientes.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-DTOClientes.cs",
               "RelativeDocumentMoniker": "Logica\\logica-DTOClientes.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\Logica\\logica-DTOClientes.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-DTOClientes.cs",
               "RelativeToolTip": "Logica\\logica-DTOClientes.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAEwAwAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -610,11 +667,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 33,
               "Title": "logica-DTOUsuarios.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\Logica\\logica-DTOUsuarios.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-DTOUsuarios.cs",
               "RelativeDocumentMoniker": "Logica\\logica-DTOUsuarios.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\Logica\\logica-DTOUsuarios.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-DTOUsuarios.cs",
               "RelativeToolTip": "Logica\\logica-DTOUsuarios.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -622,11 +679,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 37,
               "Title": "datosDTOFactura.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\Datos\\datosDTOFactura.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosDTOFactura.cs",
               "RelativeDocumentMoniker": "Datos\\datosDTOFactura.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\Datos\\datosDTOFactura.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosDTOFactura.cs",
               "RelativeToolTip": "Datos\\datosDTOFactura.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAswCUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -634,11 +691,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 38,
               "Title": "datosDTOEmpresa.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\Datos\\datosDTOEmpresa.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosDTOEmpresa.cs",
               "RelativeDocumentMoniker": "Datos\\datosDTOEmpresa.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\Datos\\datosDTOEmpresa.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosDTOEmpresa.cs",
               "RelativeToolTip": "Datos\\datosDTOEmpresa.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAswCUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -646,11 +703,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 39,
               "Title": "UsuariosController.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\APIRest\\Controllers\\UsuariosController.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\APIRest\\Controllers\\UsuariosController.cs",
               "RelativeDocumentMoniker": "APIRest\\Controllers\\UsuariosController.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\APIRest\\Controllers\\UsuariosController.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\APIRest\\Controllers\\UsuariosController.cs",
               "RelativeToolTip": "APIRest\\Controllers\\UsuariosController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -658,11 +715,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 40,
               "Title": "ImagenController.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\APIRest\\Controllers\\ImagenController.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\APIRest\\Controllers\\ImagenController.cs",
               "RelativeDocumentMoniker": "APIRest\\Controllers\\ImagenController.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\APIRest\\Controllers\\ImagenController.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\APIRest\\Controllers\\ImagenController.cs",
               "RelativeToolTip": "APIRest\\Controllers\\ImagenController.cs",
               "ViewState": "AgIAABwAAAAAAAAAAAAkwCEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -670,11 +727,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 42,
               "Title": "DetalleFacturaController.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\APIRest\\Controllers\\DetalleFacturaController.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\APIRest\\Controllers\\DetalleFacturaController.cs",
               "RelativeDocumentMoniker": "APIRest\\Controllers\\DetalleFacturaController.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\APIRest\\Controllers\\DetalleFacturaController.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\APIRest\\Controllers\\DetalleFacturaController.cs",
               "RelativeToolTip": "APIRest\\Controllers\\DetalleFacturaController.cs",
               "ViewState": "AgIAACAAAAAAAAAAAAAAwCoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -682,11 +739,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 41,
               "Title": "logica-factura.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\Logica\\logica-factura.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-factura.cs",
               "RelativeDocumentMoniker": "Logica\\logica-factura.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\Logica\\logica-factura.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-factura.cs",
               "RelativeToolTip": "Logica\\logica-factura.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAIwBoAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -694,11 +751,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 44,
               "Title": "ClientesController.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\APIRest\\Controllers\\ClientesController.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\APIRest\\Controllers\\ClientesController.cs",
               "RelativeDocumentMoniker": "APIRest\\Controllers\\ClientesController.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\APIRest\\Controllers\\ClientesController.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\APIRest\\Controllers\\ClientesController.cs",
               "RelativeToolTip": "APIRest\\Controllers\\ClientesController.cs",
               "ViewState": "AgIAACkAAAAAAAAAAAAgwDAAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -706,11 +763,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 43,
               "Title": "logica-detallefactura.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\Logica\\logica-detallefactura.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-detallefactura.cs",
               "RelativeDocumentMoniker": "Logica\\logica-detallefactura.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\Logica\\logica-detallefactura.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-detallefactura.cs",
               "RelativeToolTip": "Logica\\logica-detallefactura.cs",
               "ViewState": "AgIAACUAAAAAAAAAAAAmwDAAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -718,11 +775,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 45,
               "Title": "logica-clientes.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\Logica\\logica-clientes.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-clientes.cs",
               "RelativeDocumentMoniker": "Logica\\logica-clientes.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\Logica\\logica-clientes.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-clientes.cs",
               "RelativeToolTip": "Logica\\logica-clientes.cs",
               "ViewState": "AgIAACMAAAAAAAAAAAAswCkAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -730,11 +787,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 46,
               "Title": "logica-empresa.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\Logica\\logica-empresa.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-empresa.cs",
               "RelativeDocumentMoniker": "Logica\\logica-empresa.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\Logica\\logica-empresa.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-empresa.cs",
               "RelativeToolTip": "Logica\\logica-empresa.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -742,11 +799,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 47,
               "Title": "logica-DTODetalleFactura.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\Logica\\logica-DTODetalleFactura.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-DTODetalleFactura.cs",
               "RelativeDocumentMoniker": "Logica\\logica-DTODetalleFactura.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\Logica\\logica-DTODetalleFactura.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Logica\\logica-DTODetalleFactura.cs",
               "RelativeToolTip": "Logica\\logica-DTODetalleFactura.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAowBkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -754,11 +811,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 48,
               "Title": "datosEmpresa.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\Datos\\datosEmpresa.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosEmpresa.cs",
               "RelativeDocumentMoniker": "Datos\\datosEmpresa.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\Datos\\datosEmpresa.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosEmpresa.cs",
               "RelativeToolTip": "Datos\\datosEmpresa.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAowBkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -766,11 +823,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 49,
               "Title": "datosDTOCliente.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\Datos\\datosDTOCliente.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosDTOCliente.cs",
               "RelativeDocumentMoniker": "Datos\\datosDTOCliente.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\Datos\\datosDTOCliente.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\Datos\\datosDTOCliente.cs",
               "RelativeToolTip": "Datos\\datosDTOCliente.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -778,11 +835,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 50,
               "Title": "Web.config",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\APIRest\\Web.config",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\APIRest\\Web.config",
               "RelativeDocumentMoniker": "APIRest\\Web.config",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\APIRest\\Web.config",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\APIRest\\Web.config",
               "RelativeToolTip": "APIRest\\Web.config",
               "ViewState": "AgIAAAQAAAAAAAAAAAAAABUAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
@@ -791,11 +848,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 51,
               "Title": "APIGestionarProductos.asmx.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\WebServices\\APIGestionarProductos.asmx.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\WebServices\\APIGestionarProductos.asmx.cs",
               "RelativeDocumentMoniker": "WebServices\\APIGestionarProductos.asmx.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\WebServices\\APIGestionarProductos.asmx.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\WebServices\\APIGestionarProductos.asmx.cs",
               "RelativeToolTip": "WebServices\\APIGestionarProductos.asmx.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAAABYAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -803,11 +860,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 52,
               "Title": "DTO_Usuario.cs",
-              "DocumentMoniker": "D:\\rest\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Usuario.cs",
               "RelativeDocumentMoniker": "AccesoDatos\\DTO\\DTO_Usuario.cs",
-              "ToolTip": "D:\\rest\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Usuario.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\AccesoDatos\\DTO\\DTO_Usuario.cs",
               "RelativeToolTip": "AccesoDatos\\DTO\\DTO_Usuario.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
