@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServices", "WebServices\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIRest", "APIRest\APIRest.csproj", "{817A29D1-FF2A-404B-89C8-63DFF506D063}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegracionBanco", "IntegracionBanco\IntegracionBanco.csproj", "{BFFE858B-D67B-EC36-FCB1-A77E004A5B50}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{817A29D1-FF2A-404B-89C8-63DFF506D063}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{817A29D1-FF2A-404B-89C8-63DFF506D063}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{817A29D1-FF2A-404B-89C8-63DFF506D063}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFFE858B-D67B-EC36-FCB1-A77E004A5B50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFFE858B-D67B-EC36-FCB1-A77E004A5B50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFFE858B-D67B-EC36-FCB1-A77E004A5B50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFFE858B-D67B-EC36-FCB1-A77E004A5B50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

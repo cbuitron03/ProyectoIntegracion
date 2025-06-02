@@ -14,7 +14,7 @@ namespace Logica.DTO
         logica_DTOProductos logicaProducto = new logica_DTOProductos();
         logica_productos opProducto = new logica_productos();
 
-        public bool realizarCompra(carritoDTO carrito, string idEmpresa, string direccion, string metodoPago, DTO_Cliente cliente)
+        public int realizarCompra(carritoDTO carrito, string idEmpresa, string direccion, string metodoPago, CLIENTE cliente)
         {
             if (verificarStock(carrito))
             {
@@ -23,7 +23,7 @@ namespace Logica.DTO
                     return crearFactura(carrito, idEmpresa, direccion, metodoPago, cliente);
                 }
             }
-            return false;
+            return -1;
         }
 
         public bool verificarStock(carritoDTO carrito)
@@ -50,26 +50,28 @@ namespace Logica.DTO
             return true;
         }
 
-        public bool crearFactura(carritoDTO carrito, string idEmpresa, string direccion, string metodoPago, DTO_Cliente clienteDTO)
+        public int crearFactura(carritoDTO carrito, string idEmpresa, string direccion, string metodoPago, CLIENTE clientecarrito)
         {
             var datosFac = new datosFactura();
             var datosDet = new datosDetalleFactura();
             var datosCli = new datosCliente();
 
             // Buscar o crear cliente
-            CLIENTE cliente = datosCli.seleccionarClientePorId(clienteDTO.CLI_CEDULA);
+            CLIENTE cliente = datosCli.seleccionarClientePorId(clientecarrito.CLI_CEDULA);
             if (cliente == null)
             {
                 cliente = new CLIENTE
                 {
-                    CLI_CEDULA = clienteDTO.CLI_CEDULA,
-                    CLI_NOMBRE = clienteDTO.CLI_NOMBRE,
-                    CLI_TELEFONO = clienteDTO.CLI_TELEFONO,
-                    CLI_DIRECCION = clienteDTO.CLI_DIRECCION,
-                    CLI_CORREO = clienteDTO.CLI_CORREO,
-                    CLI_ESTADO = "ACTIVO"
+                    CLI_CEDULA = clientecarrito.CLI_CEDULA,
+                    CLI_NOMBRE = clientecarrito.CLI_NOMBRE,
+                    CLI_TELEFONO = clientecarrito.CLI_TELEFONO,
+                    CLI_DIRECCION = clientecarrito.CLI_DIRECCION,
+                    CLI_CORREO = clientecarrito.CLI_CORREO,
+                    CLI_ESTADO = "Activo",
+                    US_COD = 2
                 };
                 cliente.CLI_CEDULA = datosCli.insertarCliente(cliente);
+                Console.WriteLine("Cedula del Insertado: " + cliente.CLI_CEDULA);
             }
 
             // Crear factura
@@ -78,7 +80,7 @@ namespace Logica.DTO
                 CLI_CEDULA = cliente.CLI_CEDULA,
                 ID_EMP = idEmpresa.ToString(),
                 FAC_FECHA = System.DateTime.Now,
-                FAC_ESTADO = "PAGADA"
+                FAC_ESTADO = "Pendiente"
             };
 
             // Calcular totales
@@ -99,6 +101,7 @@ namespace Logica.DTO
 
             // Guardar factura
             int idFactura = datosFac.insertarFactura(factura);
+            Console.WriteLine("Id Factura ingresada: " + idFactura);
 
             // Crear detalle por cada producto
             foreach (var item in carrito.productos)
@@ -110,12 +113,13 @@ namespace Logica.DTO
                     PRD_COD = item.idProducto,
                     DTF_CANTIDAD = item.cantidad,
                     DTF_PRECIO = (decimal)precioUnitario,
-                    DTF_ESTADO = "PAGADO"
+                    DTF_ESTADO = "Pendiente"
                 };
-                datosDet.insertarDetalleFac(detalle);
+                int idDetalle = datosDet.insertarDetalleFac(detalle);
+                Console.WriteLine("Id Detalle Insertado" + idDetalle); 
             }
 
-            return true;
+            return idFactura;
         }
     }
 

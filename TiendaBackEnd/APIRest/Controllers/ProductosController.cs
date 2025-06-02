@@ -1,11 +1,12 @@
-﻿using System;
+﻿using AccesoDatos;
+using Logica;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using AccesoDatos;
-using Logica;
+using static Logica.LogicaRecargar;
 
 namespace APIRest.Controllers
 {
@@ -30,25 +31,33 @@ namespace APIRest.Controllers
             return op.seleccionarProductoPorNombre(nombre);
         }
         // POST: api/Productos
-        public int Post(string PRD_DESCRIPCION, decimal PRD_PRECIO, int PRD_STOCK, string PRD_ESTADO)
+        public int Post(string PRD_NOMBRE,string PRD_DESCRIPCION, decimal PRD_PRECIO, int PRD_STOCK, string PRD_ESTADO)
         {
-            return op.insertarProducto(PRD_DESCRIPCION,PRD_PRECIO,PRD_STOCK,PRD_ESTADO);
+            int res = op.insertarProducto(PRD_NOMBRE, PRD_DESCRIPCION, PRD_PRECIO,PRD_STOCK,PRD_ESTADO);
+            _ = recargar.Todo();
+            return res;
         }
 
         // PUT: api/Productos/5
         public bool Put(PRODUCTO producto)
         {
-            return op.actualizarProducto(producto);
+            bool res = op.actualizarProducto(producto);
+            _ = recargar.Todo();
+            return res;
         }
         public bool Put(int PRD_COD, string PRD_ESTADO)
         {
-            return op.actualizarEstadoProducto(PRD_COD, PRD_ESTADO);
+            bool res = op.actualizarEstadoProducto(PRD_COD, PRD_ESTADO);
+            _ = recargar.Todo();
+            return res;
         }
 
         // DELETE: api/Productos/5
         public bool Delete(int id)
         {
-            return op.actualizarEstadoProducto(id, "Inactivo");
+            bool res = op.actualizarEstadoProducto(id, "Inactivo");
+            _ = recargar.Todo();
+            return res;
         }
     }
 }

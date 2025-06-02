@@ -19,7 +19,7 @@ namespace Logica
 
         public DTO_Producto MostrarProductosPorId(int id)
         {
-            return MostrarProductos().Where(pro => pro.PRD_COD == id).SingleOrDefault();
+            return MostrarProductos().Where(pro => pro.idProducto == id).SingleOrDefault();
         }
         public bool verificarStock(int idProducto, int cantidadSolicitada)
         {

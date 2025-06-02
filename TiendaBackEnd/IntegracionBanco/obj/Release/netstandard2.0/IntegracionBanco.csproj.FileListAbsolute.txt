@@ -1,0 +1,17 @@
+C:\Users\polip\Documents\GitHub\busIntegracion\BusIntegracion\IntegracionBanco\bin\Release\netstandard2.0\IntegracionBanco.deps.json
+C:\Users\polip\Documents\GitHub\busIntegracion\BusIntegracion\IntegracionBanco\bin\Release\netstandard2.0\IntegracionBanco.dll
+C:\Users\polip\Documents\GitHub\busIntegracion\BusIntegracion\IntegracionBanco\bin\Release\netstandard2.0\IntegracionBanco.pdb
+C:\Users\polip\Documents\GitHub\busIntegracion\BusIntegracion\IntegracionBanco\obj\Release\netstandard2.0\IntegracionBanco.csproj.AssemblyReference.cache
+C:\Users\polip\Documents\GitHub\busIntegracion\BusIntegracion\IntegracionBanco\obj\Release\netstandard2.0\IntegracionBanco.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\polip\Documents\GitHub\busIntegracion\BusIntegracion\IntegracionBanco\obj\Release\netstandard2.0\IntegracionBanco.csproj.CoreCompileInputs.cache
+C:\Users\polip\Documents\GitHub\busIntegracion\BusIntegracion\IntegracionBanco\obj\Release\netstandard2.0\IntegracionBanco.sourcelink.json
+C:\Users\polip\Documents\GitHub\busIntegracion\BusIntegracion\IntegracionBanco\obj\Release\netstandard2.0\IntegracionBanco.dll
+C:\Users\polip\Documents\GitHub\busIntegracion\BusIntegracion\IntegracionBanco\obj\Release\netstandard2.0\IntegracionBanco.pdb
+D:\rest\TiendaBackEnd\IntegracionBanco\bin\Release\netstandard2.0\IntegracionBanco.deps.json
+D:\rest\TiendaBackEnd\IntegracionBanco\bin\Release\netstandard2.0\IntegracionBanco.dll
+D:\rest\TiendaBackEnd\IntegracionBanco\bin\Release\netstandard2.0\IntegracionBanco.pdb
+D:\rest\TiendaBackEnd\IntegracionBanco\obj\Release\netstandard2.0\IntegracionBanco.csproj.AssemblyReference.cache
+D:\rest\TiendaBackEnd\IntegracionBanco\obj\Release\netstandard2.0\IntegracionBanco.GeneratedMSBuildEditorConfig.editorconfig
+D:\rest\TiendaBackEnd\IntegracionBanco\obj\Release\netstandard2.0\IntegracionBanco.csproj.CoreCompileInputs.cache
+D:\rest\TiendaBackEnd\IntegracionBanco\obj\Release\netstandard2.0\IntegracionBanco.dll
+D:\rest\TiendaBackEnd\IntegracionBanco\obj\Release\netstandard2.0\IntegracionBanco.pdb

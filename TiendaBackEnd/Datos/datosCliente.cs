@@ -34,6 +34,7 @@ namespace Datos
             catch (Exception ex)
             {
                 return ex.Message;
+                throw new Exception("Error al insertar el usuario: " + ex.Message);
             }
         }
 
@@ -48,6 +49,7 @@ namespace Datos
                 cli.CLI_CORREO = cliActualizado.CLI_CORREO;
                 cli.CLI_DIRECCION = cliActualizado.CLI_DIRECCION;
                 cli.CLI_ESTADO = cliActualizado.CLI_ESTADO;
+                cli.US_COD = cliActualizado.US_COD;
                 _context.SaveChanges();
                 return true;
 

@@ -1,0 +1,9 @@
+C:\Users\polip\Documents\GitHub\tienda_libros_back\LibrosBack\IntegracionBanco\obj\Release\IntegracionBanco.csproj.AssemblyReference.cache
+C:\Users\polip\Documents\GitHub\tienda_libros_back\LibrosBack\IntegracionBanco\obj\Release\IntegracionBanco.csproj.CoreCompileInputs.cache
+C:\Users\polip\Documents\GitHub\tienda_libros_back\LibrosBack\IntegracionBanco\bin\Release\IntegracionBanco.dll
+C:\Users\polip\Documents\GitHub\tienda_libros_back\LibrosBack\IntegracionBanco\bin\Release\IntegracionBanco.pdb
+C:\Users\polip\Documents\GitHub\tienda_libros_back\LibrosBack\IntegracionBanco\bin\Release\Newtonsoft.Json.dll
+C:\Users\polip\Documents\GitHub\tienda_libros_back\LibrosBack\IntegracionBanco\bin\Release\Newtonsoft.Json.xml
+C:\Users\polip\Documents\GitHub\tienda_libros_back\LibrosBack\IntegracionBanco\obj\Release\Integrac.0E50E753.Up2Date
+C:\Users\polip\Documents\GitHub\tienda_libros_back\LibrosBack\IntegracionBanco\obj\Release\IntegracionBanco.dll
+C:\Users\polip\Documents\GitHub\tienda_libros_back\LibrosBack\IntegracionBanco\obj\Release\IntegracionBanco.pdb

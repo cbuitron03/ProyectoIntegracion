@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -62,22 +63,29 @@ namespace Logica
                 usu.US_USUARIO = US_USUARIO;
                 usu.US_PASS = US_PASS;
                 usu.US_ROL = US_ROL;
-                CLIENTE cli = new CLIENTE();
-                cli.CLI_CEDULA = CLI_CEDULA;
-                cli.US_COD = US_COD;
-                cli.CLI_NOMBRE = CLI_NOMBRE;
-                cli.CLI_TELEFONO = CLI_TELEFONO;
-                cli.CLI_CORREO = CLI_CORREO;
-                cli.CLI_DIRECCION = CLI_DIRECCION;
-                cli.CLI_ESTADO = CLI_ESTADO;
-
-                if (op.insertarUsuario(usu) > 0 && op2.insertarCliente(cli) != "")
-                    return true;
+                usu.US_ESTADO = "Activo";
+                int temp = op.insertarUsuario(usu);
+                if (temp > 0)
+                {
+                    CLIENTE cli = new CLIENTE();
+                    cli.CLI_CEDULA = CLI_CEDULA;
+                    cli.US_COD = temp;
+                    cli.CLI_NOMBRE = CLI_NOMBRE;
+                    cli.CLI_TELEFONO = CLI_TELEFONO;
+                    cli.CLI_CORREO = CLI_CORREO;
+                    cli.CLI_DIRECCION = CLI_DIRECCION;
+                    cli.CLI_ESTADO = CLI_ESTADO;
+                    if (op2.insertarCliente(cli) != "")
+                        return true;
+                    else
+                        return false;
+                }
                 else
                     return false;
             }
             catch (Exception ex)
             {
+                Console.WriteLine("Error al registrar usuario y cliente: " + ex.Message);
                 return false;
             }
         }

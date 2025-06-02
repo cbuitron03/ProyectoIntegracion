@@ -9,6 +9,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using static Logica.LogicaRecargar;
 
 namespace APIRest.Controllers
 {
@@ -18,6 +19,7 @@ namespace APIRest.Controllers
         logica_productos prod = new logica_productos();
         logica_DTOProductos prodDTO = new logica_DTOProductos();
         private readonly realizarCompraDTO opCompra = new realizarCompraDTO();
+        logica_factura factura = new logica_factura();
 
         [System.Web.Http.HttpGet]
         [System.Web.Http.Route("productos")]
@@ -40,7 +42,7 @@ namespace APIRest.Controllers
         //Compra
         [System.Web.Http.HttpPost]
         [System.Web.Http.Route("compra")]
-        public bool PostRealizarCompra()
+        public int PostRealizarCompra()
         {
             try
             {
@@ -49,13 +51,15 @@ namespace APIRest.Controllers
                 JObject jsonObject = JObject.Parse(jsonContent);
 
                 // Crear el objeto clienteDTO
-                DTO_Cliente cliente = new DTO_Cliente
+                CLIENTE cliente = new CLIENTE
                 {
                     CLI_CEDULA = (string)jsonObject["cliente"]["cliCedula"],
-                    CLI_NOMBRE = (string)jsonObject["cliente"]["cliNombre"] + jsonObject["cliente"]["cliApellido"],
+                    CLI_NOMBRE = (string)jsonObject["cliente"]["cliNombre"] + " "+ jsonObject["cliente"]["cliApellido"],
                     CLI_DIRECCION = (string)jsonObject["direccion"],
                     CLI_TELEFONO = (string)jsonObject["cliente"]["cliTelefono"],
-                    CLI_CORREO = ""
+                    CLI_CORREO = "",
+                    CLI_ESTADO = "Activo",
+                    US_COD = 2
                 };
 
                 // Crear la lista de productos para el carritoDTO
@@ -68,12 +72,35 @@ namespace APIRest.Controllers
                 };
 
                 // Obtener los otros parámetros
-                int idEmpresa = 1;
+                string idEmpresa = "T009";
                 string direccion = (string)jsonObject["direccion"];
                 string metodoPago = (string)jsonObject["metodoPago"];
 
                 // Llamar a la lógica de negocio
-                return opCompra.realizarCompra(carrito, idEmpresa.ToString(), direccion, metodoPago, cliente);
+                int res = opCompra.realizarCompra(carrito, idEmpresa, direccion, metodoPago, cliente);
+                _ = recargar.Todo();
+                return res;
+            }
+            catch (Exception ex)
+            {
+                // Loguea el error para depuración
+                return -1; // Indica que hubo un error al procesar la solicitud
+            }
+        }
+        //Confirmarcompra
+        [System.Web.Http.HttpPost]
+        [System.Web.Http.Route("confirmarCompra")]
+        public bool PostconfirmarCompra()
+        {
+            try
+            {
+                // Leer el JSON del cuerpo de la solicitud
+                string jsonContent = Request.Content.ReadAsStringAsync().Result;
+                JObject jsonObject = JObject.Parse(jsonContent);
+                int idFactura = (int)jsonObject["idFactura"];
+                bool res = factura.actualizarEstadoFactura(idFactura, "Pagada");
+                _ = recargar.Todo();
+                return res;
             }
             catch (Exception ex)
             {

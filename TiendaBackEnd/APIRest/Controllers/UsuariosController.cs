@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Web.Http;
 using AccesoDatos;
 using Logica;
+using Microsoft.Ajax.Utilities;
 
 namespace APIRest.Controllers
 {
@@ -18,20 +19,43 @@ namespace APIRest.Controllers
         {
             return op.SeleccionarUsuarios();
         }
-        public USUARIO autenticarUsuario(string US_USUARIO, string US_PASS)
-        {
-            return op.autenticarUsuario(US_USUARIO, US_PASS);
-        }
         // GET: api/Usuarios/5
         public USUARIO Get(string usuario)
         {
             return op.seleccionarUsuarioPorUsuario(usuario);
         }
-
-        // POST: api/Usuarios
-        public int Post(USUARIO usuInsertado)
+        [System.Web.Http.HttpGet]
+        [System.Web.Http.Route("api/autenticarUsuario")]
+        public bool autenticarUsuario(string US_USUARIO, string US_PASS)
         {
-            return op.insertarUsuario(usuInsertado);
+            if (op.autenticarUsuario(US_USUARIO, US_PASS) != null)
+                return true;
+            else
+                return false;
+        }
+        // POST: api/Usuarios
+        public bool Post(
+            string CLI_CEDULA,
+            int US_COD,
+            string CLI_NOMBRE,
+            string CLI_TELEFONO,
+            string CLI_CORREO,
+            string CLI_DIRECCION,
+            string CLI_ESTADO,
+            string US_USUARIO,
+            string US_PASS,
+            string US_ROL)
+        {
+            return op.registrarUsuarioCliente(CLI_CEDULA,
+            US_COD,
+            CLI_NOMBRE,
+            CLI_TELEFONO,
+            CLI_CORREO,
+            CLI_DIRECCION,
+            CLI_ESTADO,
+            US_USUARIO,
+            US_PASS,
+            US_ROL);
         }
 
         // PUT: api/Usuarios/5

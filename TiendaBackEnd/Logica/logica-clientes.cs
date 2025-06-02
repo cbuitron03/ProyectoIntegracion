@@ -49,5 +49,6 @@ namespace Logica
         {
             return op.actualizarEstadoCliente(CLI_CEDULA, CLI_ESTADO);
         }
+
     }
 }

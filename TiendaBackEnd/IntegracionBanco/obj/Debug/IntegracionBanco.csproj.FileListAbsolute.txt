@@ -1,0 +1,9 @@
+C:\Users\polip\Documents\GitHub\busIntegracion\BusIntegracion\IntegracionBanco\bin\Debug\IntegracionBanco.dll
+C:\Users\polip\Documents\GitHub\busIntegracion\BusIntegracion\IntegracionBanco\bin\Debug\IntegracionBanco.pdb
+C:\Users\polip\Documents\GitHub\busIntegracion\BusIntegracion\IntegracionBanco\bin\Debug\Newtonsoft.Json.dll
+C:\Users\polip\Documents\GitHub\busIntegracion\BusIntegracion\IntegracionBanco\bin\Debug\Newtonsoft.Json.xml
+C:\Users\polip\Documents\GitHub\busIntegracion\BusIntegracion\IntegracionBanco\obj\Debug\IntegracionBanco.csproj.AssemblyReference.cache
+C:\Users\polip\Documents\GitHub\busIntegracion\BusIntegracion\IntegracionBanco\obj\Debug\IntegracionBanco.csproj.CoreCompileInputs.cache
+C:\Users\polip\Documents\GitHub\busIntegracion\BusIntegracion\IntegracionBanco\obj\Debug\Integrac.0E50E753.Up2Date
+C:\Users\polip\Documents\GitHub\busIntegracion\BusIntegracion\IntegracionBanco\obj\Debug\IntegracionBanco.dll
+C:\Users\polip\Documents\GitHub\busIntegracion\BusIntegracion\IntegracionBanco\obj\Debug\IntegracionBanco.pdb

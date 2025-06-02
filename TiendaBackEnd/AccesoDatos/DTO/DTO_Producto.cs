@@ -8,13 +8,13 @@ namespace AccesoDatos
 {
     public class DTO_Producto
     {
-        public int PRD_COD { get; set; }
-        public string PRD_CATEGORIA { get; set; }
-        public string PRD_NOMBRE { get; set; }
-        public string PRD_DESCRIPCION { get; set; }
-        public Nullable<decimal> PRD_PRECIO { get; set; }
-        public Nullable<int> PRD_STOCK { get; set; }
-        public string PRD_PROVEEDOR { get; set; }
-        public List<string> IMG_URL { get; set; }
+        public int idProducto { get; set; }
+        public string prodCategoria { get; set; }
+        public string prodNombre { get; set; }
+        public string prodDescripcion { get; set; }
+        public Nullable<decimal> prodPrecio { get; set; }
+        public Nullable<int> prodStock { get; set; }
+        public string prodProveedor { get; set; }
+        public List<string> prodImg { get; set; }
     }
 }
