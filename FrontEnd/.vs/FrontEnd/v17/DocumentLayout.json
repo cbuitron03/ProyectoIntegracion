@@ -3,44 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\FrontEnd\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|c:\\users\\pagic\\documents\\github\\nueva carpeta\\proyectointegracion\\frontend\\frontend\\views\\productos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\views\\productos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|c:\\users\\pagic\\documents\\github\\nueva carpeta\\proyectointegracion\\frontend\\frontend\\views\\gesusuarios\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\views\\gesusuarios\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\FrontEnd\\frontend\\models\\productos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\models\\productos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\FrontEnd\\frontend\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\FrontEnd\\frontend\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\FrontEnd\\frontend\\views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\views\\home\\contact.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\FrontEnd\\frontend\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\FrontEnd\\frontend\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\FrontEnd\\frontend\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\FrontEnd\\frontend\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\FrontEnd\\frontend\\views\\clientes\\cuenta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\views\\clientes\\cuenta.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\FrontEnd\\frontend\\controllers\\gesusuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\controllers\\gesusuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,124 +26,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Contact.cshtml",
-              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Views\\Home\\Contact.cshtml",
-              "RelativeDocumentMoniker": "FrontEnd\\Views\\Home\\Contact.cshtml",
-              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Views\\Home\\Contact.cshtml",
-              "RelativeToolTip": "FrontEnd\\Views\\Home\\Contact.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-22T18:17:46.672Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "FrontEnd\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "FrontEnd\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAABcAAAAAAAAAAAAgwCgAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-29T14:22:38.618Z"
+              "DocumentIndex": 1,
+              "Title": "GesUsuariosController.cs",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Controllers\\GesUsuariosController.cs",
+              "RelativeDocumentMoniker": "FrontEnd\\Controllers\\GesUsuariosController.cs",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Controllers\\GesUsuariosController.cs",
+              "RelativeToolTip": "FrontEnd\\Controllers\\GesUsuariosController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T00:10:06.985Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Views\\Productos\\Index.cshtml",
-              "RelativeDocumentMoniker": "FrontEnd\\Views\\Productos\\Index.cshtml",
-              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Views\\Productos\\Index.cshtml",
-              "RelativeToolTip": "FrontEnd\\Views\\Productos\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAsAAAAAAAAAA==",
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Views\\GesUsuarios\\Details.cshtml",
+              "RelativeDocumentMoniker": "FrontEnd\\Views\\GesUsuarios\\Details.cshtml",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Views\\GesUsuarios\\Details.cshtml",
+              "RelativeToolTip": "FrontEnd\\Views\\GesUsuarios\\Details.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-30T00:53:49.448Z",
+              "WhenOpened": "2025-06-03T00:03:33.196Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProductosController.cs",
-              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Controllers\\ProductosController.cs",
-              "RelativeDocumentMoniker": "FrontEnd\\Controllers\\ProductosController.cs",
-              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Controllers\\ProductosController.cs",
-              "RelativeToolTip": "FrontEnd\\Controllers\\ProductosController.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAUwC0AAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T00:05:32.893Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Productos.cs",
-              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Models\\Productos.cs",
-              "RelativeDocumentMoniker": "FrontEnd\\Models\\Productos.cs",
-              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Models\\Productos.cs",
-              "RelativeToolTip": "FrontEnd\\Models\\Productos.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA0wBQAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T02:02:36.009Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "FrontEnd\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "FrontEnd\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAADgAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-30T01:35:38.435Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "About.cshtml",
-              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Views\\Home\\About.cshtml",
-              "RelativeDocumentMoniker": "FrontEnd\\Views\\Home\\About.cshtml",
-              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Views\\Home\\About.cshtml",
-              "RelativeToolTip": "FrontEnd\\Views\\Home\\About.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-30T00:00:51.774Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "FrontEnd\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "FrontEnd\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T03:21:21.325Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ClientesController.cs",
-              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Controllers\\ClientesController.cs",
-              "RelativeDocumentMoniker": "FrontEnd\\Controllers\\ClientesController.cs",
-              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Controllers\\ClientesController.cs",
-              "RelativeToolTip": "FrontEnd\\Controllers\\ClientesController.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T03:21:27.303Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Cuenta.cshtml",
-              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Views\\Clientes\\Cuenta.cshtml",
-              "RelativeDocumentMoniker": "FrontEnd\\Views\\Clientes\\Cuenta.cshtml",
-              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Views\\Clientes\\Cuenta.cshtml",
-              "RelativeToolTip": "FrontEnd\\Views\\Clientes\\Cuenta.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAgwEQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-30T01:54:52.251Z"
             }
           ]
         }

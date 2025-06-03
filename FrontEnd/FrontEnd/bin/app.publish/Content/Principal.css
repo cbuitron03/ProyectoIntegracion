@@ -1,0 +1,261 @@
+﻿/* Estilos globales para body y fondo */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #fce4ec, #f8bbd0);
+    /* Añadido para que no tape la navbar fija */
+    padding-top: 56px; /* altura aprox de navbar */
+}
+
+/* Navbar fija arriba */
+.navbar {
+    background-color: #e91e63 !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030; /* para que quede encima de otros elementos */
+}
+
+.navbar-brand, .nav-link {
+    color: #fff !important;
+    font-weight: bold;
+}
+
+    .nav-link:hover {
+        color: #ffe4ec !important;
+    }
+
+.nav-user {
+    color: #fff !important;
+    margin-left: 1rem;
+}
+
+.nav-link.logout {
+    color: #ffcccc !important;
+    font-weight: bold;
+}
+
+    .nav-link.logout:hover {
+        color: #fff0f0 !important;
+    }
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #888;
+}
+
+/* Badge contador en carrito dentro de navbar */
+.cart-icon {
+    position: relative;
+    font-size: 1.5rem;
+    user-select: none;
+}
+
+.cart-badge {
+    position: absolute;
+    top: 0;
+    right: -6px;
+    background-color: #1bc7d8;
+    color: white;
+    padding: 2px 7px;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    font-weight: bold;
+    display: none; /* Oculto por defecto */
+    pointer-events: none;
+}
+
+/* Contenedor de productos */
+.productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    padding: 2rem;
+}
+
+/* Tarjeta de producto */
+.producto-card {
+    width: 300px;
+    background: #fffafc;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .producto-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+
+.producto-nombre {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #d63384;
+    margin-bottom: 0.8rem;
+    min-height: 2.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.producto-descripcion {
+    font-size: 1.1rem;
+    color: #444;
+    margin: 1rem 0 1.5rem;
+    min-height: 3.6rem;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.producto-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Carousel */
+.carousel-inner {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-image: none;
+    width: 2rem;
+    height: 2rem;
+    background-color: black; /* Fondo negro para simular flecha */
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+}
+
+.carousel-control-next-icon {
+    transform: rotate(180deg);
+}
+
+/* Controles del carrito */
+.cart-controls {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.qty-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.qty-label {
+    font-weight: 600;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.qty-input {
+    width: 60px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 0.2rem;
+}
+
+/* Precio */
+.precio {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #28a745;
+    margin-top: 0.3rem;
+}
+
+/* Botones */
+.btn-outline-pink {
+    color: #e91e63;
+    border-color: #e91e63;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 140px;
+}
+
+.btn-outline-pink:hover {
+    color: #fff;
+    background-color: #e91e63;
+    border-color: #e91e63;
+}
+
+.btn-primary {
+    background-color: #e91e63;
+    border-color: #e91e63;
+}
+
+ .btn-primary:hover {
+     background-color: #d81b60;
+     border-color: #d81b60;
+ }
+
+.btn-outline-secondary:hover {
+    background-color: #fce4ec;
+    color: #e91e63;
+    border-color: #e91e63;
+}
+
+/* Tarjetas generales */
+.card {
+    background-color: #fff;
+    border: none;
+    border-radius: 1rem;
+}
+
+/* Form controls */
+.form-control {
+    border-radius: 0.75rem;
+}
+
+/* Título principal */
+.titulo-productos {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #d63384;
+    margin: 2rem 0 1rem;
+}
+
+/* Botón pink personalizado */
+.btn-pink {
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-pink:hover {
+        background-color: #c2185b;
+        color: white;
+    }

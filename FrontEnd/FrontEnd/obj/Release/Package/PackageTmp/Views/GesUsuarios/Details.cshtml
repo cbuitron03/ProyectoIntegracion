@@ -1,0 +1,64 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutGestion.cshtml";
+    ViewBag.Title = "Detalles del Usuario";
+    var usuario = ViewBag.Usuario; // Este valor se pasa desde el controlador
+}
+
+<h2>Detalles del Usuario</h2>
+<link rel="stylesheet" href="~/Content/Gestion.css">
+
+<div id="detalleUsuario" class="mt-4">
+    <h4>Usuarios</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Código</dt>
+        <dd id="detalle-cod">Cargando...</dd>
+
+        <dt>Usuario (Cédula)</dt>
+        <dd id="detalle-usuario">Cargando...</dd>
+
+        <dt>Contraseña</dt>
+        <dd id="detalle-pass">Cargando...</dd>
+
+        <dt>Rol</dt>
+        <dd id="detalle-rol">Cargando...</dd>
+    </dl>
+</div>
+
+<p class="mt-4">
+    <a id="btn-editar" class="btn btn-warning">Editar</a>
+    <a href="@Url.Action("Index", "GesUsuarios")" class="btn btn-secondary">Volver a la lista</a>
+</p>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        const usuario = '@usuario';
+
+        if (!usuario) {
+            alert("No se proporcionó el usuario.");
+            return;
+        }
+
+        $.ajax({
+            url: 'https://backendternurainfinita.runasp.net/api/Usuarios?usuario=' + encodeURIComponent(usuario),
+            method: 'GET',
+            success: function (usuario) {
+                if (usuario && usuario.US_USUARIO) {
+                    $('#detalle-cod').text(usuario.US_COD);
+                    $('#detalle-usuario').text(usuario.US_USUARIO);
+                    $('#detalle-pass').text(usuario.US_PASS);
+                    $('#detalle-rol').text(usuario.US_ROL);
+
+                    $('#btn-editar').attr('href', '/GesUsuarios/Edit?usuario=' + usuario.US_USUARIO);
+                } else {
+                    alert('Usuario no encontrado.');
+                }
+            },
+            error: function (xhr) {
+                alert('Error al obtener los detalles del usuario: ' + xhr.statusText);
+            }
+        });
+    });
+</script>

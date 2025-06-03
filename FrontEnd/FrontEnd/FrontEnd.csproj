@@ -147,11 +147,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\APIDTOProductos\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="Connected Services\APIDTOUsuarios\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -187,16 +182,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\ClientesController.cs" />
-    <Compile Include="Controllers\DetalleFacturaController.cs" />
-    <Compile Include="Controllers\EmpresaController.cs" />
-    <Compile Include="Controllers\FacturasController.cs" />
+    <Compile Include="Controllers\Carrito1Controller.cs" />
+    <Compile Include="Controllers\GestionController.cs" />
+    <Compile Include="Controllers\GesUsuariosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ProductosController.cs" />
-    <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Carrito1.cs" />
+    <Compile Include="Models\Clientes.cs" />
+    <Compile Include="Models\Detalle_Factura.cs" />
+    <Compile Include="Models\Factura.cs" />
+    <Compile Include="Models\Login.cs" />
+    <Compile Include="Models\Imagen.cs" />
     <Compile Include="Models\Productos.cs" />
     <Compile Include="Models\Usuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -269,24 +269,9 @@
     <Content Include="Connected Services\APIDTOImagenes\FrontEnd.APIDTOImagenes.MostrarImagenPorIdResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Connected Services\APIDTOProductos\configuration91.svcinfo" />
-    <None Include="Connected Services\APIDTOProductos\configuration.svcinfo" />
     <None Include="Connected Services\APIDTOImagenes\configuration91.svcinfo" />
     <None Include="Connected Services\APIDTOImagenes\configuration.svcinfo" />
     <None Include="Connected Services\APIDTOImagenes\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <Content Include="Connected Services\APIDTOProductos\FrontEnd.APIDTOProductos.DTO_Producto.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\APIDTOProductos\FrontEnd.APIDTOProductos.MostrarProductoPorIdResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\APIDTOProductos\FrontEnd.APIDTOProductos.MostrarProductosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Connected Services\APIDTOProductos\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -457,6 +442,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\Gestion.css" />
+    <Content Include="Content\Principal.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -470,7 +457,6 @@
     <None Include="Connected Services\APIDTODetalleFactura\APIDTODetalleFactura.wsdl" />
     <None Include="Connected Services\APIDTOEmpresa\APIDTOEmpresa.wsdl" />
     <None Include="Connected Services\APIDTOFacturas\APIDTOFacturas.wsdl" />
-    <None Include="Connected Services\APIDTOProductos\APIDTOProductos.wsdl" />
     <None Include="Connected Services\APIDTOUsuarios\APIDTOUsuarios.wsdl" />
     <None Include="Connected Services\APIGestionarClientes\APIGestionarClientes.wsdl" />
     <None Include="Connected Services\APIGestionarDetalleFactura\APIGestionarDetalleFactura.wsdl" />
@@ -478,7 +464,7 @@
     <None Include="Connected Services\APIGestionarProductos\APIGestionarProductos.wsdl" />
     <None Include="Connected Services\APIGestionarUsuarios\APIGestionarUsuarios.wsdl" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
-    <Content Include="Scripts\Funciones.js" />
+    <Content Include="Scripts\Formulario.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
     <Content Include="Scripts\jquery-3.7.0.slim.js" />
@@ -489,6 +475,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <None Include="Views\Shared\_LayoutGestion.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -504,15 +491,23 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Productos\Index.cshtml" />
-    <Content Include="Views\Clientes\Cuenta.cshtml" />
+    <Content Include="Views\Login\InicioSesion.cshtml" />
+    <Content Include="Views\Login\Cuenta.cshtml" />
+    <Content Include="Views\Carrito1\Index.cshtml" />
+    <Content Include="Views\Gestion\Index.cshtml" />
+    <Content Include="Views\GesUsuarios\Create.cshtml" />
+    <Content Include="Views\GesUsuarios\Delete.cshtml" />
+    <Content Include="Views\GesUsuarios\Details.cshtml" />
+    <Content Include="Views\GesUsuarios\Edit.cshtml" />
+    <Content Include="Views\GesUsuarios\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutGes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Images\" />
-    <Folder Include="Views\DetalleFactura\" />
-    <Folder Include="Views\Empresa\" />
-    <Folder Include="Views\Facturas\" />
-    <Folder Include="Views\Usuarios\" />
+    <Folder Include="Views\GesClientes\" />
+    <Folder Include="Views\GesFacturas\" />
+    <Folder Include="Views\GesProductos\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
@@ -550,7 +545,6 @@
     <WCFMetadataStorage Include="Connected Services\APIDTOEmpresa\" />
     <WCFMetadataStorage Include="Connected Services\APIDTOFacturas\" />
     <WCFMetadataStorage Include="Connected Services\APIDTOImagenes\" />
-    <WCFMetadataStorage Include="Connected Services\APIDTOProductos\" />
     <WCFMetadataStorage Include="Connected Services\APIDTOUsuarios\" />
     <WCFMetadataStorage Include="Connected Services\APIGestionarClientes\" />
     <WCFMetadataStorage Include="Connected Services\APIGestionarDetalleFactura\" />

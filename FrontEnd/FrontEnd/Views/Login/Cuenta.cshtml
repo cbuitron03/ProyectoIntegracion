@@ -1,0 +1,69 @@
+﻿@{
+    ViewBag.Title = "Cuenta";
+}
+
+<div class="container mt-5" style="max-width: 550px;">
+    <div class="text-center mb-4">
+        <img src="https://res.cloudinary.com/dvmxzzsj2/image/upload/v1746092699/Imagen_de_WhatsApp_2025-05-01_a_las_04.43.53_d579ddc9_qlpice.jpg" alt="Ternura Infinita" style="width: 90px;" />
+        <h2 class="mt-3" style="color: #e91e63; font-weight: bold;">Crea tu Cuenta</h2>
+        <p class="text-muted">Completa el formulario para registrarte</p>
+    </div>
+
+    <div class="card shadow-lg p-4 rounded-4">
+        <form id="registroForm">
+            <div class="form-group mb-3">
+                <label for="CLI_CEDULA">Cédula</label>
+                <input type="text" name="CLI_CEDULA" class="form-control form-control-lg" required />
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="CLI_NOMBRE">Nombre completo</label>
+                <input type="text" name="CLI_NOMBRE" class="form-control form-control-lg" required />
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="CLI_TELEFONO">Teléfono</label>
+                <input type="tel" name="CLI_TELEFONO" class="form-control form-control-lg" required />
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="CLI_CORREO">Correo electrónico</label>
+                <input type="email" name="CLI_CORREO" class="form-control form-control-lg" required />
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="CLI_DIRECCION">Dirección</label>
+                <textarea name="CLI_DIRECCION" class="form-control form-control-lg" rows="2" required></textarea>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="CLI_CLAVE">Contraseña</label>
+                <input type="password" name="CLI_CLAVE" class="form-control form-control-lg" required />
+            </div>
+
+            <div class="form-group mb-4">
+                <label for="ConfirmarClave">Confirmar contraseña</label>
+                <input type="password" name="ConfirmarClave" class="form-control form-control-lg" required />
+            </div>
+
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary btn-lg">Registrarse</button>
+            </div>
+        </form>
+
+        <hr class="my-4" />
+        <p class="text-center text-muted">¿Ya tienes una cuenta?</p>
+        <div class="d-grid">
+            <a href="@Url.Action("InicioSesion", "Login")" class="btn btn-outline-secondary btn-lg">Iniciar Sesión</a>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="~/Content/Principal.css">
+
+@section scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/Scripts/Formulario.js"></script>
+}
+
+

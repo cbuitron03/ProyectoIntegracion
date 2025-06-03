@@ -1,0 +1,88 @@
+﻿@model IEnumerable<FrontEnd.Models.Usuarios>
+
+@{
+    Layout = "~/Views/Shared/_LayoutGestion.cshtml";
+    ViewBag.Title = "Usuarios";
+}
+
+<h2>Usuarios</h2>
+<link rel="stylesheet" href="~/Content/Gestion.css">
+
+<p>
+    <button class="btn btn-primary" onclick="crearUsuario()">Crear Nuevo</button>
+</p>
+
+<table class="table" id="tablaUsuarios">
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Usuario</th>
+            <th>Contraseña</th>
+            <th>Rol</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Aquí se cargan los datos vía jQuery -->
+    </tbody>
+</table>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        cargarUsuarios();
+    });
+
+    function cargarUsuarios() {
+        $.ajax({
+            url: 'https://backendternurainfinita.runasp.net/api/Usuarios',
+            method: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                const tbody = $('#tablaUsuarios tbody');
+                tbody.empty();
+
+                data.forEach(function (usuario) {
+                    let fila = `
+                        <tr>
+                            <td>${usuario.US_COD}</td>
+                            <td>${usuario.US_USUARIO}</td>
+                            <td>${usuario.US_PASS}</td>
+                            <td>${usuario.US_ROL}</td>
+                            <td>${usuario.US_ESTADO ?? 'N/A'}</td>
+                            <td>
+                                <button class="btn btn-info" onclick="verUsuario(${usuario.US_COD})">Ver</button>
+                                <button class="btn btn-warning" onclick="editarUsuario(${usuario.US_COD})">Editar</button>
+                                <button class="btn btn-danger" onclick="eliminarUsuario(${usuario.US_COD})">Eliminar</button>
+                            </td>
+                        </tr>`;
+                    tbody.append(fila);
+                });
+            },
+            error: function (error) {
+                alert('Error al obtener los usuarios');
+                console.log(error);
+            }
+        });
+    }
+
+    function verUsuario(id) {
+        window.location.href = `/GesUsuarios/Details/${id}`;
+    }
+
+    function editarUsuario(id) {
+        window.location.href = `/GesUsuarios/Edit/${id}`;
+    }
+
+    function eliminarUsuario(id) {
+        if (confirm("¿Estás seguro de eliminar al usuario con ID " + id + "?")) {
+            window.location.href = `/GesUsuarios/Delete/${id}`;
+        }
+    }
+
+    function crearUsuario() {
+        window.location.href = `/GesUsuarios/Create`;
+    }
+</script>

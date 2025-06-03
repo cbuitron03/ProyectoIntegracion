@@ -1,0 +1,260 @@
+﻿/* Estilos globales para body y fondo */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #e0f7fa, #b2ebf2);
+    padding-top: 56px;
+}
+
+/* Navbar fija */
+.navbar {
+    background-color: #1bc7d8 !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+}
+
+.navbar-brand, .nav-link {
+    color: #fff !important;
+    font-weight: bold;
+}
+
+    .nav-link:hover {
+        color: #d2faff !important;
+    }
+
+.nav-user {
+    color: #fff !important;
+    margin-left: 1rem;
+}
+
+.nav-link.logout {
+    color: #c1f4f8 !important;
+    font-weight: bold;
+}
+
+    .nav-link.logout:hover {
+        color: #f0feff !important;
+    }
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #666;
+}
+
+/* Badge carrito */
+.cart-icon {
+    position: relative;
+    font-size: 1.5rem;
+    user-select: none;
+}
+
+.cart-badge {
+    position: absolute;
+    top: 0;
+    right: -6px;
+    background-color: #1bc7d8;
+    color: white;
+    padding: 2px 7px;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    font-weight: bold;
+    display: none;
+    pointer-events: none;
+}
+
+/* Contenedor productos */
+.productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    padding: 2rem;
+}
+
+/* Tarjeta producto */
+.producto-card {
+    width: 300px;
+    background: #f2fefe;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .producto-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+
+.producto-nombre {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #007d8a;
+    margin-bottom: 0.8rem;
+    min-height: 2.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.producto-descripcion {
+    font-size: 1.1rem;
+    color: #444;
+    margin: 1rem 0 1.5rem;
+    min-height: 3.6rem;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.producto-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Carousel */
+.carousel-inner {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-image: none;
+    width: 2rem;
+    height: 2rem;
+    background-color: black;
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+}
+
+.carousel-control-next-icon {
+    transform: rotate(180deg);
+}
+
+/* Controles carrito */
+.cart-controls {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.qty-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.qty-label {
+    font-weight: 600;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.qty-input {
+    width: 60px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 0.2rem;
+}
+
+/* Precio */
+.precio {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #28a745;
+    margin-top: 0.3rem;
+}
+
+/* Botones */
+.btn-outline-turquoise {
+    color: #1bc7d8;
+    border-color: #1bc7d8;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 140px;
+}
+
+    .btn-outline-turquoise:hover {
+        color: #fff;
+        background-color: #1bc7d8;
+        border-color: #1bc7d8;
+    }
+
+.btn-primary {
+    background-color: #1bc7d8;
+    border-color: #1bc7d8;
+}
+
+    .btn-primary:hover {
+        background-color: #149ba7;
+        border-color: #149ba7;
+    }
+
+.btn-outline-secondary:hover {
+    background-color: #e0f7fa;
+    color: #1bc7d8;
+    border-color: #1bc7d8;
+}
+
+/* Tarjetas */
+.card {
+    background-color: #fff;
+    border: none;
+    border-radius: 1rem;
+}
+
+/* Form */
+.form-control {
+    border-radius: 0.75rem;
+}
+
+/* Título */
+.titulo-productos {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #007d8a;
+    margin: 2rem 0 1rem;
+}
+
+/* Botón personalizado */
+.btn-turquoise {
+    background-color: #1bc7d8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-turquoise:hover {
+        background-color: #149ba7;
+        color: white;
+    }

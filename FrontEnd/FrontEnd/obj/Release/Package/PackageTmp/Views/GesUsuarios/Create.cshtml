@@ -1,0 +1,105 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutGestion.cshtml";
+    ViewBag.Title = "Crear Usuario";
+}
+
+<h2>Crear Usuario</h2>
+<link rel="stylesheet" href="~/Content/Gestion.css">
+
+<form id="formCrearUsuario" novalidate>
+    <div class="form-group mb-3">
+        <label for="US_USUARIO">Cédula (Usuario)</label>
+        <input type="text" id="US_USUARIO" name="US_USUARIO" class="form-control" required pattern="^\d{10,11}$" />
+        <div class="invalid-feedback">Ingrese una cédula válida (10 o 11 dígitos).</div>
+    </div>
+
+    <div class="form-group mb-3">
+        <label for="US_PASS">Contraseña</label>
+        <input type="password" id="US_PASS" name="US_PASS" class="form-control" required minlength="4" />
+        <div class="invalid-feedback">La contraseña es requerida (mínimo 4 caracteres).</div>
+    </div>
+
+    <div class="form-group mb-3">
+        <label for="US_ROL">Rol</label>
+        <select id="US_ROL" name="US_ROL" class="form-control" required>
+            <option value="">-- Seleccione un rol --</option>
+            <option value="cliente">Cliente</option>
+            <option value="administrador">Administrador</option>
+        </select>
+        <div class="invalid-feedback">Seleccione un rol.</div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Crear</button>
+    <a href="@Url.Action("Index", "GesUsuarios")" class="btn btn-secondary">Volver</a>
+</form>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+$(document).ready(function() {
+    const form = $('#formCrearUsuario');
+
+    form.on('submit', function(event) {
+        event.preventDefault();
+
+        form.find('input, select').removeClass('is-invalid');
+
+        let valid = true;
+
+        const usuario = $('#US_USUARIO').val().trim();
+        const pass = $('#US_PASS').val().trim();
+        const rol = $('#US_ROL').val();
+
+        if (!/^\d{10,11}$/.test(usuario)) {
+            $('#US_USUARIO').addClass('is-invalid');
+            valid = false;
+        }
+
+        if (pass.length < 4) {
+            $('#US_PASS').addClass('is-invalid');
+            valid = false;
+        }
+
+        if (!rol) {
+            $('#US_ROL').addClass('is-invalid');
+            valid = false;
+        }
+
+        if (!valid) return;
+
+        // Construimos el query string con todos los parámetros, vacíos o con valor
+        const params = {
+            CLI_CEDULA: "",
+            US_COD: 0,
+            CLI_NOMBRE: "",
+            CLI_TELEFONO: "",
+            CLI_CORREO: "",
+            CLI_DIRECCION: "",
+            CLI_ESTADO: "",
+            US_USUARIO: usuario,
+            US_PASS: pass,
+            US_ROL: rol
+        };
+
+        const url = 'https://backendternurainfinita.runasp.net/api/Usuarios?' + $.param(params);
+
+        $.ajax({
+            url: url,
+            method: 'POST',
+            data: null,  // no enviamos body, solo query params
+            success: function(response) {
+                if (response === true || response === "true") {
+                    alert('Usuario creado correctamente.');
+                    window.location.href = '@Url.Action("Index", "GesUsuarios")';
+                } else {
+                    alert('No se pudo crear el usuario. Verifique los datos.');
+                }
+            },
+            error: function(xhr) {
+                alert('Error al crear usuario: ' + xhr.responseText);
+            }
+        });
+    });
+});
+</script>
+1
