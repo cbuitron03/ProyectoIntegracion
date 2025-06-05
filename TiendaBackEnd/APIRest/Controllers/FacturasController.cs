@@ -23,6 +23,10 @@ namespace APIRest.Controllers
         {
             return op.seleccionarFacturaPorID(id);
         }
+        public List<FACTURA> Get(string cedula)
+        {
+            return op.seleccionarFacturaPorCedula(cedula);
+        }
         // POST: api/Facturas
         public int Post(FACTURA proInsertado)
         {

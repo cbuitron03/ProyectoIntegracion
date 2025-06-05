@@ -16,6 +16,10 @@ namespace Logica
         {
             return op.SeleccionarFacturas();
         }
+        public List<FACTURA> seleccionarFacturaPorCedula(string cedula)
+        {
+            return op.seleccionarFacturaPorCedula(cedula);
+        }
 
         public FACTURA seleccionarFacturaPorID(int codigo)
         {

@@ -63,9 +63,13 @@ namespace Datos
         }
 
         # endregion
-        private FACTURA seleccionarFacturaPorId(int codigo)
+        public FACTURA seleccionarFacturaPorId(int codigo)
         {
             return _context.FACTURA.Where(pro => pro.FAC_COD == codigo).SingleOrDefault();
+        }
+        public List<FACTURA> seleccionarFacturaPorCedula(string cedula)
+        {
+            return _context.FACTURA.Where(pro => pro.CLI_CEDULA == cedula).ToList();
         }
         public bool actualizarEstadoFactura(int FAC_COD, string FAC_ESTADO)
         {

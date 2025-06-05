@@ -39,9 +39,9 @@ namespace APIRest.Controllers
         }
 
         // PUT: api/Productos/5
-        public bool Put(PRODUCTO producto)
+        public bool Put(int PRD_COD, string PRD_NOMBRE, string PRD_DESCRIPCION, decimal PRD_PRECIO, int PRD_STOCK, string PRD_ESTADO)
         {
-            bool res = op.actualizarProducto(producto);
+            bool res = op.actualizarProducto(PRD_COD, PRD_NOMBRE, PRD_DESCRIPCION, PRD_PRECIO, PRD_STOCK, PRD_ESTADO);
             _ = recargar.Todo();
             return res;
         }

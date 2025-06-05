@@ -24,7 +24,7 @@ namespace Datos
                 DTO_Producto dto = new DTO_Producto()
                 {
                     idProducto = p.PRD_COD,
-                    prodCategoria = p.PRD_CATEGORIA,
+                    prodCategoria = "Peluches",
                     prodNombre = p.PRD_NOMBRE,
                     prodDescripcion = p.PRD_DESCRIPCION,
                     prodPrecio = (decimal)p.PRD_PRECIO,

@@ -30,15 +30,18 @@ namespace Datos
             return proInsertado.PRD_COD;
         }
 
-        public bool actualizarProducto(PRODUCTO proActualizado)
+        public bool actualizarProducto(int PRD_COD, string PRD_NOMBRE, string PRD_DESCRIPCION, decimal PRD_PRECIO, int PRD_STOCK, string PRD_ESTADO)
         {
-            PRODUCTO pro = seleccionarProductoPorId(proActualizado.PRD_COD);
+            PRODUCTO pro = seleccionarProductoPorId(PRD_COD);
             if (pro != null)
             {
-                pro.PRD_DESCRIPCION = proActualizado.PRD_DESCRIPCION;
-                pro.PRD_PRECIO = proActualizado.PRD_PRECIO;
-                pro.PRD_STOCK = proActualizado.PRD_STOCK;
-                pro.PRD_ESTADO = proActualizado.PRD_ESTADO;
+                pro.PRD_DESCRIPCION = PRD_DESCRIPCION;
+                pro.PRD_PRECIO = PRD_PRECIO;
+                pro.PRD_STOCK = PRD_STOCK;
+                pro.PRD_ESTADO = PRD_ESTADO;
+                pro.PRD_NOMBRE = PRD_NOMBRE;
+                pro.PRD_CATEGORIA = "Peluches";
+                pro.PRD_PROVEEDOR = "Ternura Infinita";
                 _context.SaveChanges();
                 return true;
 

@@ -65,8 +65,9 @@ namespace APIRest.Controllers
         }
 
         // DELETE: api/Usuarios/5
-        public void Delete(int id)
+        public bool Delete(string usuario)
         {
+            return op.eliminarUsuario(usuario);
         }
     }
 }

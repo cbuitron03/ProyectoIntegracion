@@ -37,9 +37,9 @@ namespace Logica
             return op.actualizarUsuario(usuActualizado);
         }
 
-        public bool eliminarUsuario(int id)
+        public bool eliminarUsuario(string usuario)
         {
-            return op.eliminarUsuario(id);
+            return op.eliminarUsuario(usuario);
         }
 
         //# endregion

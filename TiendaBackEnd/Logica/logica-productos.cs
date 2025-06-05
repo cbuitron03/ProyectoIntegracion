@@ -36,9 +36,9 @@ namespace Logica
         //   return op.insertarProducto(proInsertado);
         //}
 
-        public bool actualizarProducto(PRODUCTO proActualizado)
+        public bool actualizarProducto(int PRD_COD, string PRD_NOMBRE, string PRD_DESCRIPCION, decimal PRD_PRECIO, int PRD_STOCK, string PRD_ESTADO)
         {
-            return op.actualizarProducto(proActualizado);
+            return op.actualizarProducto(PRD_COD, PRD_NOMBRE, PRD_DESCRIPCION, PRD_PRECIO, PRD_STOCK, PRD_ESTADO);
         }
 
         public bool eliminarProducto(int id)
@@ -54,7 +54,7 @@ namespace Logica
             producto.PRD_PRECIO = PRD_PRECIO;
             producto.PRD_STOCK = PRD_STOCK;
             producto.PRD_ESTADO = PRD_ESTADO;
-            producto.PRD_CATEGORIA = "Peluche";
+            producto.PRD_CATEGORIA = "Peluches";
             producto.PRD_NOMBRE = PRD_NOMBRE;
             producto.PRD_PROVEEDOR = "Ternura Infinita";
             // Insertar el producto y obtener el ID generado

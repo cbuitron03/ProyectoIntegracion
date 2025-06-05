@@ -46,9 +46,26 @@ namespace Datos
                 usu.US_USUARIO = usuActualizado.US_USUARIO;
                 usu.US_PASS = usuActualizado.US_PASS;
                 usu.US_ROL = usuActualizado.US_ROL;
+                usu.US_ESTADO = usuActualizado.US_ESTADO;
                 _context.SaveChanges();
                 return true;
 
+            }
+            else
+                return false;
+        }
+        public bool eliminarUsuario(string usuario)
+        {
+            List<USUARIO> usu = seleccionarUsuarioPorNombreUsuario(usuario);
+            if (usu != null)
+            {
+                foreach (USUARIO u in usu)
+                {
+                    u.US_PASS = "1n4ct1v0";
+                    u.US_ESTADO = "Inactivo";
+                    _context.SaveChanges();
+                }
+                return true;
             }
             else
                 return false;
@@ -72,6 +89,10 @@ namespace Datos
         private USUARIO seleccionarUsuarioPorId(int id)
         {
             return _context.USUARIO.Where(usu => usu.US_COD == id).SingleOrDefault();
+        }
+        private List<USUARIO> seleccionarUsuarioPorNombreUsuario(string usuario)
+        {
+            return _context.USUARIO.Where(usu => usu.US_USUARIO == usuario).ToList();
         }
         public USUARIO autenticarUsuario(string US_USUARIO, string US_PASS)
         {
