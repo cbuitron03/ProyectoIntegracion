@@ -1,0 +1,174 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutGestion.cshtml";
+    ViewBag.Title = "Crear Producto";
+}
+
+<h2 class="mb-4 text-center">Crear Producto</h2>
+
+<link rel="stylesheet" href="~/Content/Gestion.css">
+
+<div class="container d-flex justify-content-center">
+    <form id="formCrearProducto" novalidate style="max-width: 700px; width: 100%;">
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" id="nombre" class="form-control form-control-sm" required>
+            <div class="invalid-feedback">El nombre debe tener al menos 3 caracteres.</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="descripcion" class="form-label">Descripción</label>
+            <textarea id="descripcion" rows="3" class="form-control form-control-sm" required></textarea>
+            <div class="invalid-feedback">La descripción debe tener al menos 5 caracteres.</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="precio" class="form-label">Precio</label>
+            <input type="number" step="0.01" min="0.01" id="precio" class="form-control form-control-sm" required>
+            <div class="invalid-feedback">Ingrese un precio mayor a 0.</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="stock" class="form-label">Stock</label>
+            <input type="number" min="0" id="stock" class="form-control form-control-sm" required>
+            <div class="invalid-feedback">El stock no puede ser negativo.</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="estado" class="form-label">Estado</label>
+            <select id="estado" class="form-select form-select-sm" required>
+                <option value="">-- Seleccione estado --</option>
+                <option value="Activo">Activo</option>
+                <option value="Inactivo">Inactivo</option>
+            </select>
+            <div class="invalid-feedback">Seleccione un estado.</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="imagenes" class="form-label">URLs de Imágenes (una por línea)</label>
+            <textarea id="imagenes" rows="4" class="form-control form-control-sm" placeholder="https://img1.jpg\nhttps://img2.jpg"></textarea>
+            <div class="invalid-feedback">Ingrese URLs válidas que empiecen con http o https.</div>
+        </div>
+
+        <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-success btn-sm" id="btnGuardar">Guardar</button>
+            <a href="@Url.Action("Index", "GesProductos")" class="btn btn-secondary btn-sm">Cancelar</a>
+        </div>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $('#formCrearProducto').on('submit', function (e) {
+        e.preventDefault();
+
+        let valido = true;
+
+        // Limpia errores anteriores
+        $('input, textarea, select').removeClass('is-invalid');
+
+        const nombre = $('#nombre').val().trim();
+        const descripcion = $('#descripcion').val().trim();
+        const precio = parseFloat($('#precio').val());
+        const stock = parseInt($('#stock').val(), 10);
+        const estado = $('#estado').val();
+        const imagenes = $('#imagenes').val().split('\n').map(img => img.trim()).filter(img => img !== '');
+
+        // Validación
+        if (!nombre || nombre.length < 3) {
+            $('#nombre').addClass('is-invalid');
+            valido = false;
+        }
+
+        if (!descripcion || descripcion.length < 5) {
+            $('#descripcion').addClass('is-invalid');
+            valido = false;
+        }
+
+        if (isNaN(precio) || precio <= 0) {
+            $('#precio').addClass('is-invalid');
+            valido = false;
+        }
+
+        if (isNaN(stock) || stock < 0) {
+            $('#stock').addClass('is-invalid');
+            valido = false;
+        }
+
+        if (!estado) {
+            $('#estado').addClass('is-invalid');
+            valido = false;
+        }
+
+        const urlRegex = /^https?:\/\/.+/i;
+        for (let i = 0; i < imagenes.length; i++) {
+            if (!urlRegex.test(imagenes[i])) {
+                $('#imagenes').addClass('is-invalid');
+                valido = false;
+                break;
+            }
+        }
+
+        if (!valido) {
+            alert("Por favor corrija los campos marcados.");
+            return;
+        }
+
+        const btn = $('#btnGuardar');
+        btn.prop('disabled', true).text('Guardando...');
+
+        const urlProducto = `https://backendternurainfinita.runasp.net/api/Productos` +
+            `?PRD_NOMBRE=${encodeURIComponent(nombre)}` +
+            `&PRD_DESCRIPCION=${encodeURIComponent(descripcion)}` +
+            `&PRD_PRECIO=${encodeURIComponent(precio)}` +
+            `&PRD_STOCK=${encodeURIComponent(stock)}` +
+            `&PRD_ESTADO=${encodeURIComponent(estado)}`;
+
+        // Crear producto
+        $.ajax({
+            url: urlProducto,
+            method: 'POST',
+            success: function (prdCod) {
+                if (!prdCod || isNaN(prdCod)) {
+                    alert("Error: No se recibió un código de producto válido.");
+                    btn.prop('disabled', false).text('Guardar');
+                    return;
+                }
+
+                // Crear imágenes si existen
+                if (imagenes.length > 0) {
+                    let creadas = 0;
+                    imagenes.forEach((url) => {
+                        const urlImg = `https://backendternurainfinita.runasp.net/api/Imagen` +
+                            `?PRD_COD=${prdCod}` +
+                            `&IMG_URL=${encodeURIComponent(url)}` +
+                            `&IMG_TIPO=Principal`;
+
+                        $.ajax({
+                            url: urlImg,
+                            method: 'POST',
+                            success: function () {
+                                creadas++;
+                                if (creadas === imagenes.length) {
+                                    alert("Producto e imágenes creadas correctamente.");
+                                    window.location.href = '@Url.Action("Index", "GesProductos")';
+                                }
+                            },
+                            error: function () {
+                                alert("Error al subir una de las imágenes.");
+                                btn.prop('disabled', false).text('Guardar');
+                            }
+                        });
+                    });
+                } else {
+                    alert("Producto creado correctamente (sin imágenes).");
+                    window.location.href = '@Url.Action("Index", "GesProductos")';
+                }
+            },
+            error: function (xhr) {
+                alert("Error al crear el producto: " + (xhr.responseText || "Error desconocido"));
+                btn.prop('disabled', false).text('Guardar');
+            }
+        });
+    });
+</script>

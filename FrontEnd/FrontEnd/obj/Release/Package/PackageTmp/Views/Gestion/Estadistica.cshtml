@@ -1,0 +1,225 @@
+﻿
+@{
+    ViewBag.Title = "Estadistica";
+}
+
+<link rel="stylesheet" href="~/Content/Gestion.css">
+
+
+<style>
+    h2 {
+        color: #333;
+    }
+
+    .card {
+        background-color: white;
+        padding: 20px;
+        margin-bottom: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    #clientesChart, #productosChart {
+        max-width: 400px;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    .producto-info {
+        flex: 1;
+        min-width: 250px;
+    }
+
+    .producto-grafico {
+        max-width: 400px;
+    }
+</style>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="@Url.Action("Index", "Gestion")">Panel de Gestión</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("Index", "Home")">Cerrar sesión</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="card">
+    <h2>📦 Producto Más Comprado y Productos Más Vendidos</h2>
+    <div class="flex-container">
+        <div class="producto-info">
+            <p><strong>Producto:</strong> <span id="producto-nombre">Cargando...</span></p>
+            <p><strong>Cantidad Vendida:</strong> <span id="producto-cantidad">Cargando...</span></p>
+            <p><strong>Total Vendido:</strong> <span id="producto-total">Cargando...</span></p>
+        </div>
+        <div class="producto-grafico">
+            <canvas id="productosChart"></canvas>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <h2>👤 Clientes con Más Compras</h2>
+    <canvas id="clientesChart"></canvas>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3 mt-5">
+    <p class="mb-0">&copy; @DateTime.Now.Year AdminDB. Todos los derechos reservados.</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    $(document).ready(function () {
+        // Producto más comprado
+        $.getJSON('https://backendternurainfinita.runasp.net/api/DetalleFactura', function (data) {
+            let productos = {};
+
+            data.forEach(item => {
+                if (item.DTF_ESTADO !== 'Anulado') {
+                    let codigo = item.PRD_COD;
+                    if (!productos[codigo]) {
+                        productos[codigo] = {
+                            cantidad: 0,
+                            total: 0
+                        };
+                    }
+
+                    productos[codigo].cantidad += item.DTF_CANTIDAD;
+                    productos[codigo].total += item.DTF_CANTIDAD * item.DTF_PRECIO;
+                }
+            });
+
+            let productoMasComprado = Object.keys(productos).reduce((a, b) =>
+                productos[a].cantidad > productos[b].cantidad ? a : b
+            );
+
+            $.getJSON(`https://backendternurainfinita.runasp.net/api/Productos/${productoMasComprado}`, function (producto) {
+                $('#producto-nombre').text(producto.PRD_NOMBRE);
+            });
+
+            $('#producto-cantidad').text(productos[productoMasComprado].cantidad);
+            $('#producto-total').text(`$${productos[productoMasComprado].total.toFixed(2)}`);
+        }).fail(function () {
+            alert("Error al cargar los datos del producto más comprado.");
+        });
+
+        // Clientes con más compras
+        $.getJSON('https://backendternurainfinita.runasp.net/api/Facturas', function (data) {
+            let clientes = {};
+
+            data.forEach(factura => {
+                if (factura.FAC_ESTADO !== 'Anulado') {
+                    let cliente = factura.CLI_CEDULA;
+                    if (!clientes[cliente]) {
+                        clientes[cliente] = 0;
+                    }
+                    clientes[cliente] += factura.FAC_TOTAL;
+                }
+            });
+
+            let topClientes = Object.entries(clientes)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 5);
+
+            let labels = topClientes.map(c => c[0]);
+            let montos = topClientes.map(c => c[1]);
+
+            const ctx = document.getElementById('clientesChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Total Comprado ($)',
+                        data: montos,
+                        backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }).fail(function () {
+            alert("Error al cargar los datos de clientes.");
+        });
+
+        // Productos más vendidos
+        $.getJSON('https://backendternurainfinita.runasp.net/api/DetalleFactura', function (data) {
+            let productos = {};
+
+            data.forEach(item => {
+                if (item.DTF_ESTADO !== 'Anulado') {
+                    let codigo = item.PRD_COD;
+                    if (!productos[codigo]) {
+                        productos[codigo] = 0;
+                    }
+                    productos[codigo] += item.DTF_CANTIDAD;
+                }
+            });
+
+            let labels = [];
+            let cantidades = [];
+            let colores = [];
+
+            let requests = Object.keys(productos).map(codigo => {
+                return $.getJSON(`https://backendternurainfinita.runasp.net/api/Productos/${codigo}`, function (producto) {
+                    labels.push(producto.PRD_NOMBRE);
+                    cantidades.push(productos[codigo]);
+                    colores.push(`hsl(${Math.random() * 360}, 70%, 60%)`);
+                });
+            });
+
+            $.when(...requests).done(function () {
+                const ctx = document.getElementById('productosChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'pie',
+                    data: {
+                        labels: labels,
+                        datasets: [{
+                            label: 'Cantidad Vendida',
+                            data: cantidades,
+                            backgroundColor: colores,
+                            borderColor: colores.map(c => c.replace(')', ', 0.2)').replace('hsl', 'rgba')),
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                            },
+                            title: {
+                                display: true,
+                                text: 'Distribución de Productos Vendidos'
+                            }
+                        }
+                    }
+                });
+            });
+        }).fail(function () {
+            alert("Error al cargar los datos de productos.");
+        });
+    });</script>

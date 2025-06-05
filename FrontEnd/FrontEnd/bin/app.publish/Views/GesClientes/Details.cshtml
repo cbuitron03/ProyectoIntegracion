@@ -1,0 +1,175 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutGestion.cshtml";
+    ViewBag.Title = "Detalle de Cliente";
+    var cedula = ViewBag.Cedula;
+}
+
+<h2 class="mb-4 text-center">Detalle del Cliente</h2>
+
+<div class="container">
+
+    <div class="card mb-4">
+        <div class="card-header bg-primary text-white">Información del Cliente</div>
+        <div class="card-body" id="infoCliente">Cargando...</div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header bg-secondary text-white">Usuario Asociado</div>
+        <div class="card-body" id="infoUsuario">Cargando...</div>
+    </div>
+
+    <div class="card">
+        <div class="card-header bg-dark text-white">Facturas</div>
+        <div class="card-body" id="infoFacturas">Cargando...</div>
+    </div>
+
+</div>
+
+
+<!-- Bootstrap & jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(function () {
+        // Pasar cedula de forma segura desde Razor a JS
+        const cedula = @Html.Raw(Json.Encode(ViewBag.Cedula));
+
+        // 1. Cargar cliente
+        $.getJSON(`https://backendternurainfinita.runasp.net/api/Clientes?cedula=${encodeURIComponent(cedula)}`, function (cliente) {
+            if (!cliente) return $('#infoCliente').html('<div class="text-danger">Cliente no encontrado.</div>');
+
+            const html = `
+                <p><strong>Cédula:</strong> ${cliente.CLI_CEDULA}</p>
+                <p><strong>Nombre:</strong> ${cliente.CLI_NOMBRE}</p>
+                <p><strong>Teléfono:</strong> ${cliente.CLI_TELEFONO}</p>
+                <p><strong>Correo:</strong> ${cliente.CLI_CORREO}</p>
+                <p><strong>Dirección:</strong> ${cliente.CLI_DIRECCION}</p>
+                <p><strong>Estado:</strong> ${cliente.CLI_ESTADO}</p>
+            `;
+            $('#infoCliente').html(html);
+        });
+
+        // 2. Cargar usuario
+        $.getJSON(`https://backendternurainfinita.runasp.net/api/Usuarios?usuario=${encodeURIComponent(cedula)}`, function (usuario) {
+            if (!usuario) return $('#infoUsuario').html('<div class="text-danger">Usuario no encontrado.</div>');
+
+            const html = `
+                <p><strong>Usuario:</strong> ${usuario.US_USUARIO}</p>
+                <p><strong>Rol:</strong> ${usuario.US_ROL}</p>
+                <p><strong>Estado:</strong> ${usuario.US_ESTADO}</p>
+            `;
+            $('#infoUsuario').html(html);
+        });
+
+        // 3. Cargar facturas
+        $.getJSON(`https://backendternurainfinita.runasp.net/api/Facturas?cedula=${encodeURIComponent(cedula)}`, function (facturas) {
+            if (!facturas || facturas.length === 0)
+                return $('#infoFacturas').html('<div>No hay facturas para este cliente.</div>');
+
+            let html = `<div class="accordion" id="accordionFacturas">`;
+
+            facturas.forEach((factura) => {
+                const collapseId = `collapse${factura.FAC_COD}`;
+
+                html += `
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading${factura.FAC_COD}">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#${collapseId}">
+                            Factura #${factura.FAC_COD} - ${new Date(factura.FAC_FECHA).toLocaleDateString('es-EC')}
+                        </button>
+                    </h2>
+                    <div id="${collapseId}" class="accordion-collapse collapse" data-bs-parent="#accordionFacturas">
+                        <div class="accordion-body">
+                            <p><strong>Total:</strong> $${factura.FAC_TOTAL.toFixed(2)}</p>
+                            <div id="detalleFactura${factura.FAC_COD}">Cargando detalles...</div>
+                        </div>
+                    </div>
+                </div>
+                `;
+            });
+
+            html += `</div>`;
+            $('#infoFacturas').html(html);
+
+            // Ahora que el HTML está en el DOM, llamamos a cargar los detalles de cada factura
+            facturas.forEach((factura) => {
+                cargarDetalleFactura(factura.FAC_COD);
+            });
+        });
+
+        function cargarDetalleFactura(facCod) {
+            const contenedor = $(`#detalleFactura${facCod}`);
+            contenedor.html('<div class="text-center text-muted">Cargando detalles...</div>');
+
+            $.ajax({
+                url: `https://backendternurainfinita.runasp.net/api/DetalleFactura/${facCod}`,
+                method: 'GET',
+                dataType: 'json',
+                success: function (detalles) {
+                    if (!detalles || detalles.length === 0) {
+                        contenedor.html('<div class="text-muted">No hay productos en esta factura.</div>');
+                        return;
+                    }
+
+                    let tabla = `
+                    <table class="table table-sm table-bordered">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Producto</th>
+                                <th>Cantidad</th>
+                                <th>Precio</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody id="detalleCuerpo${facCod}"></tbody>
+                    </table>
+                    `;
+
+                    contenedor.html(tabla);
+
+                    detalles.forEach(function (detalle) {
+                        const productoId = detalle.PRD_COD;
+                        const cantidad = detalle.DTF_CANTIDAD;
+                        const precio = detalle.DTF_PRECIO;
+                        const estado = detalle.DTF_ESTADO;
+
+                        // Obtener nombre del producto
+                        $.ajax({
+                            url: `https://backendternurainfinita.runasp.net/api/Productos/${productoId}`,
+                            method: 'GET',
+                            dataType: 'json',
+                            success: function (producto) {
+                                const nombreProducto = producto.PRD_NOMBRE || `Producto ${productoId}`;
+                                const row = `
+                                    <tr>
+                                        <td>${nombreProducto}</td>
+                                        <td>${cantidad}</td>
+                                        <td>$${precio.toFixed(2)}</td>
+                                        <td>${estado}</td>
+                                    </tr>
+                                `;
+                                $(`#detalleCuerpo${facCod}`).append(row);
+                            },
+                            error: function (xhr, status, error) {
+                                console.error("Error al obtener los detalles:", status, error);
+                                const row = `
+                                    <tr>
+                                        <td>Error al obtener producto #${productoId}</td>
+                                        <td>${cantidad}</td>
+                                        <td>$${precio.toFixed(2)}</td>
+                                        <td>${estado}</td>
+                                    </tr>
+                                `;
+                                $(`#detalleCuerpo${facCod}`).append(row);
+                            }
+                        });
+                    });
+                },
+                error: function () {
+                    contenedor.html('<div class="text-danger">Error al cargar los detalles de la factura.</div>');
+                }
+            });
+        }
+    });
+</script>
+

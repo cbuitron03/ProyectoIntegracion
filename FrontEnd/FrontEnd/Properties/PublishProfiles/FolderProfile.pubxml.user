@@ -4,8 +4,8 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project>
   <PropertyGroup>
-    <_PublishTargetUrl>C:\Users\pagic\Documents\GitHub\Nueva carpeta\ProyectoIntegracion\FrontEnd\FrontEnd\bin\app.publish\</_PublishTargetUrl>
-    <History>True|2025-06-03T00:25:16.6672970Z||;</History>
+    <_PublishTargetUrl>C:\Users\pagic\Documents\GitHub\Proyectos\ProyectoIntegracion\FrontEnd\FrontEnd\bin\app.publish\</_PublishTargetUrl>
+    <History>True|2025-06-04T23:54:09.7537152Z||;True|2025-06-02T19:25:16.6672970-05:00||;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
@@ -37,10 +37,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>04/29/2025 15:42:31</publishTime>
     </File>
     <File Include="bin/FrontEnd.dll">
-      <publishTime>06/02/2025 19:25:15</publishTime>
+      <publishTime>06/04/2025 18:54:07</publishTime>
     </File>
     <File Include="bin/FrontEnd.pdb">
-      <publishTime>06/02/2025 19:25:15</publishTime>
+      <publishTime>06/04/2025 18:54:07</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>04/29/2025 15:42:31</publishTime>
@@ -469,7 +469,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>04/29/2025 15:42:31</publishTime>
     </File>
     <File Include="Content/Gestion.css">
-      <publishTime>06/01/2025 15:09:51</publishTime>
+      <publishTime>06/03/2025 10:21:25</publishTime>
     </File>
     <File Include="Content/Principal.css">
       <publishTime>06/01/2025 14:33:59</publishTime>
@@ -556,13 +556,49 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>04/29/2025 15:42:31</publishTime>
     </File>
     <File Include="Views/Carrito1/Index.cshtml">
-      <publishTime>06/02/2025 10:54:42</publishTime>
+      <publishTime>06/03/2025 19:26:16</publishTime>
+    </File>
+    <File Include="Views/Estadisticas/Index.cshtml">
+      <publishTime>06/03/2025 21:32:21</publishTime>
+    </File>
+    <File Include="Views/GesClientes/Create.cshtml">
+      <publishTime>06/02/2025 23:57:21</publishTime>
+    </File>
+    <File Include="Views/GesClientes/Details.cshtml">
+      <publishTime>06/04/2025 11:13:57</publishTime>
+    </File>
+    <File Include="Views/GesClientes/Edit.cshtml">
+      <publishTime>06/03/2025 08:35:37</publishTime>
+    </File>
+    <File Include="Views/GesClientes/Index.cshtml">
+      <publishTime>06/03/2025 08:40:22</publishTime>
+    </File>
+    <File Include="Views/GesFacturas/Details.cshtml">
+      <publishTime>06/03/2025 22:10:56</publishTime>
+    </File>
+    <File Include="Views/GesFacturas/Edit.cshtml">
+      <publishTime>06/04/2025 09:18:08</publishTime>
+    </File>
+    <File Include="Views/GesFacturas/Index.cshtml">
+      <publishTime>06/03/2025 17:58:10</publishTime>
+    </File>
+    <File Include="Views/GesProductos/Create.cshtml">
+      <publishTime>06/03/2025 09:54:46</publishTime>
+    </File>
+    <File Include="Views/GesProductos/Details.cshtml">
+      <publishTime>06/03/2025 10:22:20</publishTime>
+    </File>
+    <File Include="Views/GesProductos/Edit.cshtml">
+      <publishTime>06/04/2025 11:17:30</publishTime>
+    </File>
+    <File Include="Views/GesProductos/Index.cshtml">
+      <publishTime>06/03/2025 17:34:42</publishTime>
     </File>
     <File Include="Views/Gestion/Index.cshtml">
       <publishTime>06/02/2025 11:36:06</publishTime>
     </File>
     <File Include="Views/GesUsuarios/Create.cshtml">
-      <publishTime>06/02/2025 19:03:41</publishTime>
+      <publishTime>06/02/2025 23:12:00</publishTime>
     </File>
     <File Include="Views/GesUsuarios/Delete.cshtml">
       <publishTime>06/02/2025 11:41:31</publishTime>
@@ -571,10 +607,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>06/02/2025 19:20:50</publishTime>
     </File>
     <File Include="Views/GesUsuarios/Edit.cshtml">
-      <publishTime>06/02/2025 11:41:32</publishTime>
+      <publishTime>06/02/2025 23:09:45</publishTime>
     </File>
     <File Include="Views/GesUsuarios/Index.cshtml">
-      <publishTime>06/02/2025 11:39:33</publishTime>
+      <publishTime>06/04/2025 10:18:26</publishTime>
     </File>
     <File Include="Views/Home/About.cshtml">
       <publishTime>05/17/2025 23:25:34</publishTime>
@@ -610,7 +646,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>04/29/2025 15:42:31</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>06/02/2025 19:25:15</publishTime>
+      <publishTime>06/04/2025 18:54:08</publishTime>
     </File>
   </ItemGroup>
 </Project>

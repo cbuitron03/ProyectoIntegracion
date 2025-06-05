@@ -183,6 +183,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Controllers\Carrito1Controller.cs" />
+    <Compile Include="Controllers\GesClientesController.cs" />
+    <Compile Include="Controllers\GesFacturasController.cs" />
+    <Compile Include="Controllers\GesProductosController.cs" />
     <Compile Include="Controllers\GestionController.cs" />
     <Compile Include="Controllers\GesUsuariosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -463,6 +466,8 @@
     <None Include="Connected Services\APIGestionarFacturas\APIGestionarFacturas.wsdl" />
     <None Include="Connected Services\APIGestionarProductos\APIGestionarProductos.wsdl" />
     <None Include="Connected Services\APIGestionarUsuarios\APIGestionarUsuarios.wsdl" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\site24361-WebDeploy.pubxml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\Formulario.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
@@ -475,7 +480,18 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <None Include="Views\Shared\_LayoutGestion.cshtml" />
+    <Content Include="Views\GesClientes\Index.cshtml" />
+    <Content Include="Views\GesClientes\Edit.cshtml" />
+    <Content Include="Views\GesClientes\Create.cshtml" />
+    <Content Include="Views\GesClientes\Details.cshtml" />
+    <Content Include="Views\GesProductos\Index.cshtml" />
+    <Content Include="Views\GesProductos\Create.cshtml" />
+    <Content Include="Views\GesProductos\Edit.cshtml" />
+    <Content Include="Views\GesProductos\Details.cshtml" />
+    <Content Include="Views\GesFacturas\Index.cshtml" />
+    <Content Include="Views\GesFacturas\Edit.cshtml" />
+    <Content Include="Views\GesFacturas\Details.cshtml" />
+    <Content Include="Views\Gestion\Estadistica.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -496,18 +512,12 @@
     <Content Include="Views\Carrito1\Index.cshtml" />
     <Content Include="Views\Gestion\Index.cshtml" />
     <Content Include="Views\GesUsuarios\Create.cshtml" />
-    <Content Include="Views\GesUsuarios\Delete.cshtml" />
-    <Content Include="Views\GesUsuarios\Details.cshtml" />
     <Content Include="Views\GesUsuarios\Edit.cshtml" />
     <Content Include="Views\GesUsuarios\Index.cshtml" />
-    <Content Include="Views\Shared\_LayoutGes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Images\" />
-    <Folder Include="Views\GesClientes\" />
-    <Folder Include="Views\GesFacturas\" />
-    <Folder Include="Views\GesProductos\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

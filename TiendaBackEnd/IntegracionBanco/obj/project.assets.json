@@ -342,11 +342,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\IntegracionBanco\\IntegracionBanco.csproj",
+      "projectUniqueName": "C:\\Users\\pagic\\Documents\\GitHub\\Proyectos\\ProyectoIntegracion\\TiendaBackEnd\\IntegracionBanco\\IntegracionBanco.csproj",
       "projectName": "IntegracionBanco",
-      "projectPath": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\IntegracionBanco\\IntegracionBanco.csproj",
+      "projectPath": "C:\\Users\\pagic\\Documents\\GitHub\\Proyectos\\ProyectoIntegracion\\TiendaBackEnd\\IntegracionBanco\\IntegracionBanco.csproj",
       "packagesPath": "C:\\Users\\pagic\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pagic\\Documents\\GitHub\\Nueva carpeta\\ProyectoIntegracion\\TiendaBackEnd\\IntegracionBanco\\obj\\",
+      "outputPath": "C:\\Users\\pagic\\Documents\\GitHub\\Proyectos\\ProyectoIntegracion\\TiendaBackEnd\\IntegracionBanco\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

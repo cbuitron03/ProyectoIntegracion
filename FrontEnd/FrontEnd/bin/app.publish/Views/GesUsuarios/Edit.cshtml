@@ -1,61 +1,130 @@
-﻿@model FrontEnd.Models.Usuarios
-
-@{
+﻿@{
     Layout = "~/Views/Shared/_LayoutGestion.cshtml";
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Editar Usuario";
+    var usuarioCedula = ViewBag.Usuario;
 }
 
-<h2>Edit</h2>
+<h2 class="mb-4 text-center">Editar Usuario</h2>
+
 <link rel="stylesheet" href="~/Content/Gestion.css">
 
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>Usuarios</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.US_COD, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.US_COD, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.US_COD, "", new { @class = "text-danger" })
-            </div>
+<div class="container d-flex justify-content-center">
+    <form id="formEditarUsuario" novalidate style="max-width: 420px; width: 100%;">
+        <div class="mb-3">
+            <label for="US_COD" class="form-label">Código</label>
+            <input type="number" id="US_COD" name="US_COD" class="form-control form-control-sm" readonly>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.US_USUARIO, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.US_USUARIO, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.US_USUARIO, "", new { @class = "text-danger" })
-            </div>
+        <div class="mb-3">
+            <label for="US_USUARIO" class="form-label">Cédula (Usuario)</label>
+            <input type="text" id="US_USUARIO" name="US_USUARIO" class="form-control form-control-sm">
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.US_PASS, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.US_PASS, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.US_PASS, "", new { @class = "text-danger" })
-            </div>
+        <div class="mb-3">
+            <label for="US_PASS" class="form-label">Contraseña</label>
+            <input type="text" id="US_PASS" name="US_PASS" class="form-control form-control-sm" required minlength="4" placeholder="Mínimo 4 caracteres">
+            <div class="invalid-feedback">La contraseña es requerida (mínimo 4 caracteres).</div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.US_ROL, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.US_ROL, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.US_ROL, "", new { @class = "text-danger" })
-            </div>
+        <div class="mb-3">
+            <label for="US_ROL" class="form-label">Rol</label>
+            <select id="US_ROL" name="US_ROL" class="form-select form-select-sm" required>
+                <option value="" disabled>-- Seleccione un rol --</option>
+                <option value="cliente">Cliente</option>
+                <option value="administrador">Administrador</option>
+            </select>
+            <div class="invalid-feedback">Seleccione un rol.</div>
         </div>
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
-            </div>
+        <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-success btn-sm" id="btnGuardar">Guardar Cambios</button>
+            <a href="@Url.Action("Index", "GesUsuarios")" class="btn btn-secondary btn-sm">Cancelar</a>
         </div>
-    </div>
-}
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
+    </form>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(function () {
+        const usuarioCedula = '@usuarioCedula';
+
+        // Cargar datos
+        $.ajax({
+            url: `https://backendternurainfinita.runasp.net/api/Usuarios?usuario=${encodeURIComponent(usuarioCedula)}`,
+            method: 'GET',
+            success: function (usuario) {
+                $('#US_COD').val(usuario.US_COD);
+                $('#US_USUARIO').val(usuario.US_USUARIO);
+                $('#US_PASS').val(usuario.US_PASS);
+                $('#US_ROL').val(usuario.US_ROL);
+
+                const estado = (usuario.US_ESTADO || '').toLowerCase();
+                if (estado === "activo" || estado === "inactivo") {
+                    $('#US_ESTADO').val(estado);
+                } else {
+                    $('#US_ESTADO').append(`<option selected>${usuario.US_ESTADO}</option>`);
+                }
+            },
+            error: function () {
+                alert("Error al cargar los datos del usuario.");
+            }
+        });
+
+        // Enviar cambios
+        $('#formEditarUsuario').on('submit', function (e) {
+            e.preventDefault();
+
+            const passInput = $('#US_PASS');
+            const rolInput = $('#US_ROL');
+            let valid = true;
+
+            passInput.removeClass('is-invalid');
+            rolInput.removeClass('is-invalid');
+
+            if (!passInput.val() || passInput.val().length < 4) {
+                passInput.addClass('is-invalid');
+                valid = false;
+            }
+
+            if (!rolInput.val()) {
+                rolInput.addClass('is-invalid');
+                valid = false;
+            }
+
+            if (!valid) return;
+
+            const btnGuardar = $('#btnGuardar');
+            btnGuardar.prop('disabled', true).text('Guardando...');
+
+            const datos = {
+                US_COD: parseInt($('#US_COD').val()),
+                US_USUARIO: $('#US_USUARIO').val().trim(),
+                US_PASS: passInput.val().trim(),
+                US_ROL: rolInput.val(),
+                US_ESTADO: $('#US_ESTADO').val(), // Aunque esté deshabilitado, lo enviamos
+                CLIENTE: []
+            };
+
+            $.ajax({
+                url: 'https://backendternurainfinita.runasp.net/api/Usuarios',
+                method: 'PUT',
+                contentType: 'application/json',
+                data: JSON.stringify(datos),
+                success: function (res) {
+                    if (res === true || res === "true") {
+                        alert("Usuario actualizado correctamente.");
+                        window.location.href = '@Url.Action("Index", "GesUsuarios")';
+                    } else {
+                        alert("No se pudo actualizar el usuario.");
+                        btnGuardar.prop('disabled', false).text('Guardar Cambios');
+                    }
+                },
+                error: function (xhr) {
+                    alert("Error al actualizar usuario: " + xhr.responseText);
+                    btnGuardar.prop('disabled', false).text('Guardar Cambios');
+                }
+            });
+        });
+    });
+</script>

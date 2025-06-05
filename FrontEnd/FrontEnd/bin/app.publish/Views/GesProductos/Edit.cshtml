@@ -1,0 +1,195 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutGestion.cshtml";
+    ViewBag.Title = "Editar Producto";
+}
+
+<h2 class="mb-4 text-center">Editar Producto</h2>
+
+<link rel="stylesheet" href="~/Content/Gestion.css">
+
+<div class="container" style="max-width: 700px;">
+    <form id="formEditarProducto">
+        <div class="mb-3">
+            <label for="prdNombre" class="form-label">Nombre</label>
+            <input type="text" id="prdNombre" name="PRD_NOMBRE" class="form-control" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="prdDescripcion" class="form-label">Descripción</label>
+            <textarea id="prdDescripcion" name="PRD_DESCRIPCION" class="form-control" rows="3" required></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label for="prdPrecio" class="form-label">Precio</label>
+            <input type="number" id="prdPrecio" name="PRD_PRECIO" class="form-control" min="0" step="0.01" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="prdStock" class="form-label">Stock</label>
+            <input type="number" id="prdStock" name="PRD_STOCK" class="form-control" min="0" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="prdEstado" class="form-label">Estado</label>
+            <select id="prdEstado" name="PRD_ESTADO" class="form-select" required>
+                <option value="Activo">Activo</option>
+                <option value="Inactivo">Inactivo</option>
+            </select>
+        </div>
+
+        <hr />
+
+        <h5>Imágenes</h5>
+        <div id="imagenesContainer">
+            <!-- Inputs para imágenes con IMG_ID oculto -->
+        </div>
+        <button type="button" id="btnAgregarImagen" class="btn btn-sm btn-outline-primary mb-3">Agregar Imagen</button>
+
+        <div>
+            <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+            <a href="@Url.Action("Index", "GesProductos")" class="btn btn-secondary ms-2">Cancelar</a>
+        </div>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(function () {
+        const id = @Html.Raw(Json.Encode(ViewBag.ProductoId));
+
+        // Cargar datos del producto
+        $.ajax({
+            url: `https://backendternurainfinita.runasp.net/api/integracion/productos/${id}`,
+            method: 'GET',
+            success: function (producto) {
+                $('#prdNombre').val(producto.prodNombre);
+                $('#prdDescripcion').val(producto.prodDescripcion);
+                $('#prdPrecio').val(producto.prodPrecio);
+                $('#prdStock').val(producto.prodStock);
+                $('#prdEstado').val(producto.prodEstado || "Activo");
+
+                cargarImagenes(producto.prodImg || []);
+            },
+            error: function () {
+                alert("Error al cargar datos del producto.");
+            }
+        });
+
+        // Función para mostrar inputs para imágenes con IMG_ID y URL
+        function cargarImagenes(imgUrls) {
+            const cont = $('#imagenesContainer');
+            cont.empty();
+
+            if (imgUrls.length === 0) {
+                agregarInputImagen();
+            } else {
+                imgUrls.forEach(function (url) {
+                    cont.append(crearInputImagen(url));
+                });
+            }
+        }
+
+        // crea input para URL (sin IMG_ID porque no hay)
+        function crearInputImagen(valor = '') {
+            return `<div class="mb-2 d-flex align-items-center">
+                <input type="url" class="form-control imagen-url" placeholder="URL de imagen" value="${valor}" required />
+                <button type="button" class="btn btn-danger btn-sm ms-2 btnEliminarImagen">Eliminar</button>
+            </div>`;
+        }
+
+        // Agregar nuevo input (nuevo = sin IMG_ID)
+        $('#btnAgregarImagen').click(function () {
+            $('#imagenesContainer').append(crearInputImagen());
+        });
+
+        // Eliminar input de imagen
+        $(document).on('click', '.btnEliminarImagen', function () {
+            $(this).parent().remove();
+        });
+
+        // Submit para guardar cambios con PUT vía query string
+        $('#formEditarProducto').submit(function (e) {
+            e.preventDefault();
+
+            // Obtener valores del formulario
+            const prdCod = id;
+            const prdNombre = encodeURIComponent($('#prdNombre').val());
+            const prdDescripcion = encodeURIComponent($('#prdDescripcion').val());
+            const prdPrecio = parseFloat($('#prdPrecio').val());
+            const prdStock = parseInt($('#prdStock').val());
+            const prdEstado = encodeURIComponent($('#prdEstado').val());
+
+            // Construir URL con parámetros en query string
+            const urlPUT = `https://backendternurainfinita.runasp.net/api/Productos?PRD_COD=${prdCod}&PRD_NOMBRE=${prdNombre}&PRD_DESCRIPCION=${prdDescripcion}&PRD_PRECIO=${prdPrecio}&PRD_STOCK=${prdStock}&PRD_ESTADO=${prdEstado}`;
+
+            // Llamar PUT sin body, solo con la URL
+            $.ajax({
+                url: urlPUT,
+                method: 'PUT',
+                success: function () {
+                    // Luego actualizar imágenes
+                    actualizarImagenes(prdCod);
+                },
+                error: function () {
+                    alert("Error al actualizar el producto.");
+                }
+            });
+        });
+
+        function actualizarImagenes(productoId) {
+            const imagenesParaActualizar = [];
+
+            $('#imagenesContainer > div').each(function () {
+                const imgId = $(this).find('.imagen-id').val();
+                const url = $(this).find('.imagen-url').val().trim();
+
+                if (!url) {
+                    return;
+                }
+
+                if (imgId) {
+                    imagenesParaActualizar.push({
+                        IMG_ID: parseInt(imgId),
+                        PRD_COD: productoId,
+                        IMG_URL: url,
+                        IMG_TIPO: null,
+                        PRODUCTO: null
+                    });
+                } else {
+                    console.warn("Imagen nueva sin IMG_ID no será enviada. Implementar POST si es necesario.");
+                }
+            });
+
+            if (imagenesParaActualizar.length === 0) {
+                alert("Producto actualizado correctamente.");
+                window.location.href = '@Url.Action("Index", "GesProductos")';
+                return;
+            }
+
+            let promesas = [];
+            imagenesParaActualizar.forEach(img => {
+                promesas.push(
+                    $.ajax({
+                        url: 'https://backendternurainfinita.runasp.net/api/Imagen',
+                        method: 'PUT',
+                        contentType: 'application/json',
+                        data: JSON.stringify(img)
+                    })
+                );
+            });
+
+            $.when.apply($, promesas).done(function () {
+                alert("Producto e imágenes actualizadas correctamente.");
+                window.location.href = '@Url.Action("Index", "GesProductos")';
+            }).fail(function () {
+                alert("Error al actualizar las imágenes.");
+            });
+        }
+
+        // Función para agregar un input imagen nuevo (cuando no hay imágenes)
+        function agregarInputImagen() {
+            $('#imagenesContainer').append(crearInputImagen());
+        }
+    });
+</script>

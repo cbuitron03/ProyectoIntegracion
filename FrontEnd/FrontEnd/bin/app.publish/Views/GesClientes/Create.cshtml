@@ -1,0 +1,164 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutGestion.cshtml";
+    ViewBag.Title = "Crear Cliente y Usuario";
+}
+
+<h2 class="mb-4 text-center">Crear Cliente y Usuario</h2>
+
+<div class="container">
+    <form id="formCrearClienteUsuario" novalidate class="needs-validation">
+        <div class="row">
+            <!-- Columna Cliente -->
+            <div class="col-md-6">
+                <h5 class="mb-3">Datos del Cliente</h5>
+
+                <div class="mb-3">
+                    <label for="CLI_CEDULA" class="form-label">Cédula</label>
+                    <input type="text" id="CLI_CEDULA" name="CLI_CEDULA" class="form-control form-control-sm"
+                           required pattern="^\d{10,11}$" placeholder="Ej: 1001234567">
+                    <div class="invalid-feedback">Ingrese una cédula válida.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="CLI_NOMBRE" class="form-label">Nombre</label>
+                    <input type="text" id="CLI_NOMBRE" name="CLI_NOMBRE" class="form-control form-control-sm"
+                           required placeholder="Ej: Juan Pérez">
+                    <div class="invalid-feedback">Nombre obligatorio.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="CLI_TELEFONO" class="form-label">Teléfono</label>
+                    <input type="text" id="CLI_TELEFONO" name="CLI_TELEFONO" class="form-control form-control-sm"
+                           required pattern="^\d{7,10}$" placeholder="Ej: 0987654321">
+                    <div class="invalid-feedback">Ingrese un número válido.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="CLI_CORREO" class="form-label">Correo</label>
+                    <input type="email" id="CLI_CORREO" name="CLI_CORREO" class="form-control form-control-sm"
+                           required placeholder="Ej: correo@dominio.com">
+                    <div class="invalid-feedback">Ingrese un correo válido.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="CLI_DIRECCION" class="form-label">Dirección</label>
+                    <input type="text" id="CLI_DIRECCION" name="CLI_DIRECCION" class="form-control form-control-sm"
+                           required placeholder="Ej: Av. Siempre Viva 123">
+                    <div class="invalid-feedback">Ingrese una dirección.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="CLI_ESTADO" class="form-label">Estado</label>
+                    <select id="CLI_ESTADO" name="CLI_ESTADO" class="form-select form-select-sm" required>
+                        <option value="" selected disabled>-- Seleccione estado --</option>
+                        <option value="Activo">Activo</option>
+                        <option value="Inactivo">Inactivo</option>
+                    </select>
+                    <div class="invalid-feedback">Seleccione un estado.</div>
+                </div>
+            </div>
+
+            <!-- Columna Usuario -->
+            <div class="col-md-6">
+                <h5 class="mb-3">Datos del Usuario</h5>
+
+                <div class="mb-3">
+                    <label for="US_USUARIO" class="form-label">Usuario (Cédula)</label>
+                    <input type="text" id="US_USUARIO" name="US_USUARIO" class="form-control form-control-sm"
+                           readonly placeholder="Se autocompleta con la cédula del cliente">
+                </div>
+
+                <div class="mb-3">
+                    <label for="US_PASS" class="form-label">Contraseña</label>
+                    <input type="password" id="US_PASS" name="US_PASS" class="form-control form-control-sm"
+                           required minlength="4" placeholder="Mínimo 4 caracteres">
+                    <div class="invalid-feedback">Contraseña requerida (mínimo 4 caracteres).</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="US_ROL" class="form-label">Rol</label>
+                    <select id="US_ROL" name="US_ROL" class="form-select form-select-sm" required>
+                        <option value="" selected disabled>-- Seleccione un rol --</option>
+                        <option value="cliente">Cliente</option>
+                        <option value="administrador">Administrador</option>
+                    </select>
+                    <div class="invalid-feedback">Seleccione un rol.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botones -->
+        <div class="d-flex justify-content-between mt-4">
+            <button type="submit" class="btn btn-success btn-sm" id="btnSubmit">
+                <span id="btnText">Crear</span>
+                <span id="btnSpinner" class="spinner-border spinner-border-sm ms-2 d-none" role="status" aria-hidden="true"></span>
+            </button>
+            <a href="@Url.Action("Index", "GesClientes")" class="btn btn-secondary btn-sm">Volver</a>
+        </div>
+    </form>
+</div>
+
+<!-- jQuery y lógica -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+$(function () {
+    const form = $('#formCrearClienteUsuario');
+    const btnSubmit = $('#btnSubmit');
+    const btnSpinner = $('#btnSpinner');
+
+    form.on('submit', function (event) {
+        event.preventDefault();
+
+        form.addClass('was-validated');
+        if (!form[0].checkValidity()) return;
+
+        const params = {
+            CLI_CEDULA: $('#CLI_CEDULA').val().trim(),
+            US_COD: 0,
+            CLI_NOMBRE: $('#CLI_NOMBRE').val().trim(),
+            CLI_TELEFONO: $('#CLI_TELEFONO').val().trim(),
+            CLI_CORREO: $('#CLI_CORREO').val().trim(),
+            CLI_DIRECCION: $('#CLI_DIRECCION').val().trim(),
+            CLI_ESTADO: $('#CLI_ESTADO').val(),
+            US_USUARIO: $('#US_USUARIO').val().trim(),
+            US_PASS: $('#US_PASS').val().trim(),
+            US_ROL: $('#US_ROL').val()
+        };
+
+        btnSubmit.prop('disabled', true);
+        btnSpinner.removeClass('d-none');
+
+        const url = 'https://backendternurainfinita.runasp.net/api/Usuarios?' + $.param(params);
+
+        $.ajax({
+            url: url,
+            method: 'POST',
+            data: null,
+            success: function (response) {
+                if (response === true || response === "true") {
+                    alert('Cliente y usuario creados correctamente.');
+                    window.location.href = '@Url.Action("Index", "GesClientes")';
+                } else {
+                    alert('No se pudo crear. Verifique los datos.');
+                }
+            },
+            error: function (xhr) {
+                alert('Error al crear: ' + xhr.responseText);
+            },
+            complete: function () {
+                btnSubmit.prop('disabled', false);
+                btnSpinner.addClass('d-none');
+            }
+        });
+    });
+
+    // Copiar automáticamente cédula del cliente al usuario (readonly)
+    $('#CLI_CEDULA').on('input', function () {
+        const cedula = $(this).val().trim();
+        $('#US_USUARIO').val(cedula);
+    });
+
+});
+</script>
+

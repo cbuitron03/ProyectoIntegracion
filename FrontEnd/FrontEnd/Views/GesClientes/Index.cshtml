@@ -1,0 +1,160 @@
+﻿@model IEnumerable<FrontEnd.Models.Clientes>
+
+@{
+    ViewBag.Title = "Clientes";
+}
+
+<link rel="stylesheet" href="~/Content/Gestion.css">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="@Url.Action("Index", "Gestion")">Panel de Gestión</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("Index", "Home")">Cerrar sesión</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container mt-4">
+    <h2 class="mb-4">Clientes</h2>
+
+    <div class="d-flex justify-content-between mb-3">
+        <button class="btn btn-primary" onclick="crearCliente()">
+            <i class="bi bi-plus-circle"></i> Crear Nuevo
+        </button>
+
+        <input type="text" id="searchInput" class="form-control w-25" placeholder="Buscar cliente..." onkeyup="filtrarTabla()">
+    </div>
+
+    <div id="spinner" class="text-center my-4" style="display:none;">
+        <div class="spinner-border text-primary" role="status"></div>
+    </div>
+
+    <div id="errorMsg" class="alert alert-danger d-none" role="alert">
+        Error al obtener los clientes. Intente más tarde.
+    </div>
+
+    <table class="table table-striped table-hover align-middle" id="tablaClientes">
+        <thead class="table-dark">
+            <tr>
+                <th>Cédula</th>
+                <th>Nombre</th>
+                <th>Teléfono</th>
+                <th>Correo</th>
+                <th>Dirección</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Datos cargados vía jQuery -->
+        </tbody>
+    </table>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3 mt-5">
+    <p class="mb-0">&copy; @DateTime.Now.Year AdminDB. Todos los derechos reservados.</p>
+</footer>
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        cargarClientes();
+    });
+
+    function cargarClientes() {
+        $('#spinner').show();
+        $('#errorMsg').addClass('d-none');
+
+        $.ajax({
+            url: 'https://backendternurainfinita.runasp.net/api/Clientes',
+            method: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                $('#spinner').hide();
+                const tbody = $('#tablaClientes tbody');
+                tbody.empty();
+
+                if (!data || data.length === 0) {
+                    tbody.append('<tr><td colspan="7" class="text-center">No se encontraron clientes.</td></tr>');
+                    return;
+                }
+
+                data.forEach(function (cliente) {
+                    let fila = `
+                    <tr>
+                        <td>${cliente.CLI_CEDULA}</td>
+                        <td>${cliente.CLI_NOMBRE}</td>
+                        <td>${cliente.CLI_TELEFONO}</td>
+                        <td>${cliente.CLI_CORREO}</td>
+                        <td>${cliente.CLI_DIRECCION}</td>
+                        <td>${cliente.CLI_ESTADO ?? 'N/A'}</td>
+                        <td>
+                            <button class="btn btn-info btn-sm me-1" title="Detalles" onclick="verDetalles('${cliente.CLI_CEDULA}')">
+                                <i class="bi bi-eye"></i>
+                            </button>
+                            <button class="btn btn-warning btn-sm me-1" title="Editar" onclick="editarCliente('${cliente.CLI_CEDULA}')">
+                                <i class="bi bi-pencil"></i>
+                            </button>
+                            <button class="btn btn-danger btn-sm" title="Eliminar" onclick="eliminarCliente('${cliente.CLI_CEDULA}')">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </td>
+
+                    </tr>`;
+                    tbody.append(fila);
+                });
+            },
+            error: function () {
+                $('#spinner').hide();
+                $('#errorMsg').removeClass('d-none');
+            }
+        });
+    }
+
+    function crearCliente() {
+        window.location.href = '/GesClientes/Create';
+    }
+
+    function verDetalles(cedula) {
+        window.location.href = `/GesClientes/Details?cedula=${encodeURIComponent(cedula)}`;
+    }
+
+    function editarCliente(cedula) {
+        window.location.href = `/GesClientes/Edit?cedula=${encodeURIComponent(cedula)}`;
+    }
+
+    function eliminarCliente(cedula) {
+        if (confirm(`¿Estás seguro de desactivar al cliente con cédula ${cedula}?`)) {
+            $.ajax({
+                url: `https://backendternurainfinita.runasp.net/api/Clientes?cedula=${encodeURIComponent(cedula)}`,
+                method: 'DELETE',
+                contentType: 'application/json',
+                success: function () {
+                    alert("Cliente desactivado correctamente.");
+                    cargarClientes(); // refrescar la tabla
+                },
+                error: function (xhr) {
+                    alert("Error al desactivar el cliente: " + (xhr.responseText || "Error desconocido"));
+                }
+            });
+        }
+    }
+
+    function filtrarTabla() {
+        const filtro = $('#searchInput').val().toLowerCase();
+        $('#tablaClientes tbody tr').filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(filtro) > -1);
+        });
+    }</script>

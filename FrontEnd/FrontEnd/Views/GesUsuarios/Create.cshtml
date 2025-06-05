@@ -1,105 +1,155 @@
 ﻿@{
-    Layout = "~/Views/Shared/_LayoutGestion.cshtml";
     ViewBag.Title = "Crear Usuario";
 }
 
-<h2>Crear Usuario</h2>
 <link rel="stylesheet" href="~/Content/Gestion.css">
 
-<form id="formCrearUsuario" novalidate>
-    <div class="form-group mb-3">
-        <label for="US_USUARIO">Cédula (Usuario)</label>
-        <input type="text" id="US_USUARIO" name="US_USUARIO" class="form-control" required pattern="^\d{10,11}$" />
-        <div class="invalid-feedback">Ingrese una cédula válida (10 o 11 dígitos).</div>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="@Url.Action("Index", "Gestion")">Panel de Gestión</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("Index", "Home")">Cerrar sesión</a>
+                </li>
+            </ul>
+        </div>
     </div>
+</nav>
+<h2 class="mb-4 text-center">Crear Usuario</h2>
 
-    <div class="form-group mb-3">
-        <label for="US_PASS">Contraseña</label>
-        <input type="password" id="US_PASS" name="US_PASS" class="form-control" required minlength="4" />
-        <div class="invalid-feedback">La contraseña es requerida (mínimo 4 caracteres).</div>
-    </div>
+<div class="container d-flex justify-content-center">
+    <form id="formCrearUsuario" novalidate style="max-width: 420px; width: 100%;" class="needs-validation">
+        <div class="mb-3">
+            <label for="US_USUARIO" class="form-label">Cédula (Usuario)</label>
+            <input type="text" id="US_USUARIO" name="US_USUARIO" class="form-control form-control-sm"
+                   required pattern="^\d{10,11}$" placeholder="Ingrese cédula (10 o 11 dígitos)">
+            <div class="invalid-feedback">
+                Ingrese una cédula válida (10 u 11 dígitos).
+            </div>
+        </div>
 
-    <div class="form-group mb-3">
-        <label for="US_ROL">Rol</label>
-        <select id="US_ROL" name="US_ROL" class="form-control" required>
-            <option value="">-- Seleccione un rol --</option>
-            <option value="cliente">Cliente</option>
-            <option value="administrador">Administrador</option>
-        </select>
-        <div class="invalid-feedback">Seleccione un rol.</div>
-    </div>
+        <div class="mb-3">
+            <label for="US_PASS" class="form-label">Contraseña</label>
+            <input type="password" id="US_PASS" name="US_PASS" class="form-control form-control-sm"
+                   required minlength="4" placeholder="Mínimo 4 caracteres">
+            <div class="invalid-feedback">
+                La contraseña es requerida (mínimo 4 caracteres).
+            </div>
+        </div>
 
-    <button type="submit" class="btn btn-primary">Crear</button>
-    <a href="@Url.Action("Index", "GesUsuarios")" class="btn btn-secondary">Volver</a>
-</form>
+        <div class="mb-4">
+            <label for="US_ROL" class="form-label">Rol</label>
+            <select id="US_ROL" name="US_ROL" class="form-select form-select-sm" required>
+                <option value="" selected disabled>-- Seleccione un rol --</option>
+                <option value="cliente">Cliente</option>
+                <option value="administrador">Administrador</option>
+            </select>
+            <div class="invalid-feedback">
+                Seleccione un rol.
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-primary btn-sm" id="btnSubmit">
+                <span id="btnText">Crear</span>
+                <span id="btnSpinner" class="spinner-border spinner-border-sm ms-2 d-none" role="status" aria-hidden="true"></span>
+            </button>
+            <a href="@Url.Action("Index", "GesUsuarios")" class="btn btn-secondary btn-sm">Volver</a>
+        </div>
+    </form>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3 mt-5">
+    <p class="mb-0">&copy; @DateTime.Now.Year AdminDB. Todos los derechos reservados.</p>
+</footer>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script>
-$(document).ready(function() {
-    const form = $('#formCrearUsuario');
+    $(function () {
+        const form = $('#formCrearUsuario');
+        const btnSubmit = $('#btnSubmit');
+        const btnText = $('#btnText');
+        const btnSpinner = $('#btnSpinner');
 
-    form.on('submit', function(event) {
-        event.preventDefault();
+        form.on('submit', function (event) {
+            event.preventDefault();
 
-        form.find('input, select').removeClass('is-invalid');
+            form.addClass('was-validated');
+            if (!form[0].checkValidity()) return;
 
-        let valid = true;
+            const usuario = $('#US_USUARIO').val().trim();
+            const pass = $('#US_PASS').val().trim();
+            const rol = $('#US_ROL').val();
 
-        const usuario = $('#US_USUARIO').val().trim();
-        const pass = $('#US_PASS').val().trim();
-        const rol = $('#US_ROL').val();
-
-        if (!/^\d{10,11}$/.test(usuario)) {
-            $('#US_USUARIO').addClass('is-invalid');
-            valid = false;
-        }
-
-        if (pass.length < 4) {
-            $('#US_PASS').addClass('is-invalid');
-            valid = false;
-        }
-
-        if (!rol) {
-            $('#US_ROL').addClass('is-invalid');
-            valid = false;
-        }
-
-        if (!valid) return;
-
-        // Construimos el query string con todos los parámetros, vacíos o con valor
-        const params = {
-            CLI_CEDULA: "",
-            US_COD: 0,
-            CLI_NOMBRE: "",
-            CLI_TELEFONO: "",
-            CLI_CORREO: "",
-            CLI_DIRECCION: "",
-            CLI_ESTADO: "",
-            US_USUARIO: usuario,
-            US_PASS: pass,
-            US_ROL: rol
-        };
-
-        const url = 'https://backendternurainfinita.runasp.net/api/Usuarios?' + $.param(params);
-
-        $.ajax({
-            url: url,
-            method: 'POST',
-            data: null,  // no enviamos body, solo query params
-            success: function(response) {
-                if (response === true || response === "true") {
-                    alert('Usuario creado correctamente.');
-                    window.location.href = '@Url.Action("Index", "GesUsuarios")';
-                } else {
-                    alert('No se pudo crear el usuario. Verifique los datos.');
-                }
-            },
-            error: function(xhr) {
-                alert('Error al crear usuario: ' + xhr.responseText);
+            if (!/^\d{10,11}$/.test(usuario)) {
+                $('#US_USUARIO')[0].setCustomValidity('Invalid');
+                form[0].reportValidity();
+                return;
+            } else {
+                $('#US_USUARIO')[0].setCustomValidity('');
             }
+
+            if (pass.length < 4) {
+                $('#US_PASS')[0].setCustomValidity('Invalid');
+                form[0].reportValidity();
+                return;
+            } else {
+                $('#US_PASS')[0].setCustomValidity('');
+            }
+
+            if (!rol) {
+                $('#US_ROL')[0].setCustomValidity('Invalid');
+                form[0].reportValidity();
+                return;
+            } else {
+                $('#US_ROL')[0].setCustomValidity('');
+            }
+
+            btnSubmit.prop('disabled', true);
+            btnSpinner.removeClass('d-none');
+
+            const params = {
+                CLI_CEDULA: "",
+                US_COD: 0,
+                CLI_NOMBRE: "",
+                CLI_TELEFONO: "",
+                CLI_CORREO: "",
+                CLI_DIRECCION: "",
+                CLI_ESTADO: "",
+                US_USUARIO: usuario,
+                US_PASS: pass,
+                US_ROL: rol
+            };
+
+            const url = 'https://backendternurainfinita.runasp.net/api/Usuarios?' + $.param(params);
+
+            $.ajax({
+                url: url,
+                method: 'POST',
+                data: null,
+                success: function (response) {
+                    if (response === true || response === "true") {
+                        alert('Usuario creado correctamente.');
+                        window.location.href = '@Url.Action("Index", "GesUsuarios")';
+                    } else {
+                        alert('No se pudo crear el usuario. Verifique los datos.');
+                    }
+                },
+                error: function (xhr) {
+                    alert('Error al crear usuario: ' + xhr.responseText);
+                },
+                complete: function () {
+                    btnSubmit.prop('disabled', false);
+                    btnSpinner.addClass('d-none');
+                }
+            });
         });
     });
-});
 </script>
-1

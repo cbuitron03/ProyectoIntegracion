@@ -14,6 +14,11 @@ namespace FrontEnd.Controllers
             return View();
         }
 
+        public ActionResult Estadistica()
+        {
+            return View();
+        }
+
         // GET: Gestion/Details/5
         public ActionResult Details(int id)
         {

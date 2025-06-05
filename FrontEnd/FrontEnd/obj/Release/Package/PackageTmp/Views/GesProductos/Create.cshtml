@@ -1,0 +1,233 @@
+﻿@{
+    ViewBag.Title = "Crear Producto";
+}
+
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="@Url.Action("Index", "Gestion")">Panel de Gestión</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("Index", "Home")">Cerrar sesión</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<h2 class="mb-4 text-center">Crear Producto</h2>
+
+<link rel="stylesheet" href="~/Content/Gestion.css">
+
+<div class="container d-flex justify-content-center">
+    <form id="formCrearProducto" novalidate style="max-width: 700px; width: 100%;">
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" id="nombre" class="form-control form-control-sm" required>
+            <div class="invalid-feedback">El nombre debe tener al menos 3 caracteres.</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="descripcion" class="form-label">Descripción</label>
+            <textarea id="descripcion" rows="3" class="form-control form-control-sm" required></textarea>
+            <div class="invalid-feedback">La descripción debe tener al menos 5 caracteres.</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="precio" class="form-label">Precio</label>
+            <input type="number" step="0.01" min="0.01" id="precio" class="form-control form-control-sm" required>
+            <div class="invalid-feedback">Ingrese un precio mayor a 0.</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="stock" class="form-label">Stock</label>
+            <input type="number" min="0" id="stock" class="form-control form-control-sm" required>
+            <div class="invalid-feedback">El stock no puede ser negativo.</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="estado" class="form-label">Estado</label>
+            <select id="estado" class="form-select form-select-sm" required>
+                <option value="">-- Seleccione estado --</option>
+                <option value="Activo">Activo</option>
+                <option value="Inactivo">Inactivo</option>
+            </select>
+            <div class="invalid-feedback">Seleccione un estado.</div>
+        </div>
+
+        <hr />
+        <h5>Imágenes</h5>
+        <div id="imagenesContainer">
+            <!-- Se añadirán dinámicamente inputs aquí -->
+        </div>
+        <button type="button" id="btnAgregarImagen" class="btn btn-sm btn-outline-primary mb-3">Agregar Imagen</button>
+
+
+        <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-success btn-sm" id="btnGuardar">Guardar</button>
+            <a href="@Url.Action("Index", "GesProductos")" class="btn btn-secondary btn-sm">Cancelar</a>
+        </div>
+    </form>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3 mt-5">
+    <p class="mb-0">&copy; @DateTime.Now.Year AdminDB. Todos los derechos reservados.</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    // Función para crear un input de imagen
+    function crearInputImagen(valor = '') {
+        return `<div class="mb-2 d-flex align-items-center">
+            <input type="url" class="form-control form-control-sm imagen-url" placeholder="URL de imagen" value="${valor}" required />
+            <button type="button" class="btn btn-danger btn-sm ms-2 btnEliminarImagen">Eliminar</button>
+        </div>`;
+    }
+
+    // Al cargar la página, añade un input de imagen por defecto
+    $(document).ready(function () {
+        $('#imagenesContainer').append(crearInputImagen());
+
+        // Botón para agregar nuevos inputs de imagen
+        $('#btnAgregarImagen').click(function () {
+            $('#imagenesContainer').append(crearInputImagen());
+        });
+
+        // Botón para eliminar un input de imagen
+        $(document).on('click', '.btnEliminarImagen', function () {
+            $(this).parent().remove();
+        });
+
+        // Envío del formulario
+        $('#formCrearProducto').on('submit', function (e) {
+            e.preventDefault();
+
+            let valido = true;
+
+            // Limpiar errores anteriores
+            $('input, textarea, select').removeClass('is-invalid');
+
+            const nombre = $('#nombre').val().trim();
+            const descripcion = $('#descripcion').val().trim();
+            const precio = parseFloat($('#precio').val());
+            const stock = parseInt($('#stock').val(), 10);
+            const estado = $('#estado').val();
+
+            // Validación general
+            if (!nombre || nombre.length < 3) {
+                $('#nombre').addClass('is-invalid');
+                valido = false;
+            }
+
+            if (!descripcion || descripcion.length < 5) {
+                $('#descripcion').addClass('is-invalid');
+                valido = false;
+            }
+
+            if (isNaN(precio) || precio <= 0) {
+                $('#precio').addClass('is-invalid');
+                valido = false;
+            }
+
+            if (isNaN(stock) || stock < 0) {
+                $('#stock').addClass('is-invalid');
+                valido = false;
+            }
+
+            if (!estado) {
+                $('#estado').addClass('is-invalid');
+                valido = false;
+            }
+
+            // Validación de imágenes
+            const imagenes = [];
+            let imagenesValidas = true;
+            const urlRegex = /^https?:\/\/.+/i;
+
+            $('#imagenesContainer .imagen-url').each(function () {
+                const url = $(this).val().trim();
+                if (url) {
+                    if (urlRegex.test(url)) {
+                        imagenes.push(url);
+                    } else {
+                        $(this).addClass('is-invalid');
+                        imagenesValidas = false;
+                    }
+                }
+            });
+
+            if (!imagenesValidas) {
+                valido = false;
+            }
+
+            if (!valido) {
+                alert("Por favor corrija los campos marcados.");
+                return;
+            }
+
+            // Botón de guardar en estado cargando
+            const btn = $('#btnGuardar');
+            btn.prop('disabled', true).text('Guardando...');
+
+            // Crear el producto
+            const urlProducto = `https://backendternurainfinita.runasp.net/api/Productos` +
+                `?PRD_NOMBRE=${encodeURIComponent(nombre)}` +
+                `&PRD_DESCRIPCION=${encodeURIComponent(descripcion)}` +
+                `&PRD_PRECIO=${encodeURIComponent(precio)}` +
+                `&PRD_STOCK=${encodeURIComponent(stock)}` +
+                `&PRD_ESTADO=${encodeURIComponent(estado)}`;
+
+            $.ajax({
+                url: urlProducto,
+                method: 'POST',
+                success: function (prdCod) {
+                    if (!prdCod || isNaN(prdCod)) {
+                        alert("Error: No se recibió un código de producto válido.");
+                        btn.prop('disabled', false).text('Guardar');
+                        return;
+                    }
+
+                    // Si hay imágenes, hacer POST de cada una
+                    if (imagenes.length > 0) {
+                        let creadas = 0;
+                        imagenes.forEach((url) => {
+                            const urlImg = `https://backendternurainfinita.runasp.net/api/Imagen` +
+                                `?PRD_COD=${prdCod}` +
+                                `&IMG_URL=${encodeURIComponent(url)}` +
+                                `&IMG_TIPO=Principal`;
+
+                            $.ajax({
+                                url: urlImg,
+                                method: 'POST',
+                                success: function () {
+                                    creadas++;
+                                    if (creadas === imagenes.length) {
+                                        alert("Producto e imágenes creadas correctamente.");
+                                        window.location.href = '@Url.Action("Index", "GesProductos")';
+                                    }
+                                },
+                                error: function () {
+                                    alert("Error al subir una de las imágenes.");
+                                    btn.prop('disabled', false).text('Guardar');
+                                }
+                            });
+                        });
+                    } else {
+                        alert("Producto creado correctamente (sin imágenes).");
+                        window.location.href = '@Url.Action("Index", "GesProductos")';
+                    }
+                },
+                error: function (xhr) {
+                    alert("Error al crear el producto: " + (xhr.responseText || "Error desconocido"));
+                    btn.prop('disabled', false).text('Guardar');
+                }
+            });
+        });
+    });
+</script>

@@ -1,0 +1,345 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutGestion.cshtml";
+    ViewBag.Title = "Editar Facturas";
+    var idFactura = ViewBag.FacturaId;
+}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+<style>
+    .invoice-box {
+        background: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .invoice-header {
+        border-bottom: 1px solid #eaeaea;
+        margin-bottom: 20px;
+    }
+
+    .invoice-title {
+        font-size: 28px;
+        font-weight: 700;
+    }
+
+    .invoice-subtitle {
+        color: #888;
+    }
+
+    .table th, .table td {
+        vertical-align: middle;
+    }
+</style>
+
+<div class="container mt-5">
+    <div class="invoice-box">
+        <div id="spinner" class="text-center my-4" style="display:none;">
+            <div class="spinner-border text-primary" role="status"></div>
+        </div>
+
+        <div id="errorMsg" class="alert alert-danger d-none" role="alert">
+            Error al obtener los detalles de la factura. Intente más tarde.
+        </div>
+
+        <div id="facturaDetalles" class="d-none">
+            <div class="invoice-header d-flex justify-content-between align-items-center">
+                <div>
+                    <div class="invoice-title">Factura #<span id="facCodigo"></span></div>
+                    <div class="invoice-subtitle">
+                        Fecha:
+                        <input type="datetime-local" id="facFecha" class="form-control" />
+                    </div>
+                    <div class="invoice-subtitle">
+                        Estado:
+                        <select id="facEstado" class="form-select">
+                            <option value="Pendiente">Pendiente</option>
+                            <option value="Pagada">Pagada</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+
+            <h5 class="mt-4">Datos del Cliente</h5>
+            <ul class="list-group mb-4">
+                <li class="list-group-item">
+                    <strong>Cédula:</strong>
+                    <input type="text" id="clienteCedula" class="form-control" />
+                </li>
+                <li class="list-group-item">
+                    <strong>Nombre:</strong>
+                    <input type="text" id="clienteNombre" class="form-control" />
+                </li>
+                <li class="list-group-item">
+                    <strong>Correo:</strong>
+                    <input type="email" id="clienteCorreo" class="form-control" />
+                </li>
+                <li class="list-group-item">
+                    <strong>Teléfono:</strong>
+                    <input type="text" id="clienteTelefono" class="form-control" />
+                </li>
+                <li class="list-group-item">
+                    <strong>Dirección:</strong>
+                    <input type="text" id="clienteDireccion" class="form-control" />
+                </li>
+            </ul>
+
+            <!-- Campo oculto para US_COD -->
+            <input type="hidden" id="US_COD_HIDDEN" />
+
+            <h5>Detalle de Productos</h5>
+            <table class="table table-striped" id="tablaDetalles">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody id="detalleBody"></tbody>
+            </table>
+
+            <div class="text-end">
+                <p><strong>Subtotal:</strong> $<span id="facSubtotal"></span></p>
+                <p><strong>IVA:</strong> $<span id="facIva"></span></p>
+                <p><strong>Total:</strong> $<span id="facTotal" class="text-success fs-5"></span></p>
+            </div>
+
+            <button class="btn btn-secondary mt-3" onclick="volverAtras()">Volver</button>
+            <button class="btn btn-primary mt-3" onclick="guardarCambios()">Guardar Cambios</button>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    function calcularTotal() {
+        const subtotal = parseFloat($('#facSubtotal').text()) || 0;
+        const iva = parseFloat($('#facIva').text()) || 0;
+        const total = (subtotal + iva).toFixed(2);
+        $('#facTotal').text(total);
+    }
+
+    function recalcularMontos() {
+        let subtotal = 0;
+        $('#tablaDetalles tbody tr').each(function () {
+            const cantidad = parseInt($(this).find('.cantidad').val()) || 0;
+            const precio = parseFloat($(this).find('td:nth-child(3)').text().replace('$', '')) || 0;
+            subtotal += cantidad * precio;
+        });
+        const iva = subtotal * 0.12;
+        $('#facSubtotal').text(subtotal.toFixed(2));
+        $('#facIva').text(iva.toFixed(2));
+        calcularTotal();
+    }
+
+    $(document).ready(function () {
+        $('#tablaDetalles').on('input', '.cantidad', function () {
+            recalcularMontos();
+        });
+
+        const id = '@idFactura';
+        $('#spinner').show();
+
+        $.ajax({
+            url: `https://backendternurainfinita.runasp.net/api/Facturas/${id}`,
+            method: 'GET',
+            dataType: 'json',
+            success: function (factura) {
+                $('#facCodigo').text(factura.FAC_COD);
+                $('#clienteCedula').val(factura.CLI_CEDULA);
+                $('#facFecha').val(new Date(factura.FAC_FECHA).toISOString().slice(0, 16));
+                $('#facEstado').val(factura.FAC_ESTADO);
+                $('#facSubtotal').text(factura.FAC_SUBTOTAL.toFixed(2));
+                $('#facIva').text(factura.FAC_IVA.toFixed(2));
+                $('#facTotal').text(factura.FAC_TOTAL.toFixed(2));
+
+                obtenerCliente(factura.CLI_CEDULA);
+                cargarDetalles(id);
+            },
+            error: function () {
+                $('#spinner').hide();
+                $('#errorMsg').removeClass('d-none');
+            }
+        });
+    });
+
+    function obtenerCliente(cedula) {
+        $.ajax({
+            url: `https://backendternurainfinita.runasp.net/api/Clientes?cedula=${cedula}`,
+            method: 'GET',
+            dataType: 'json',
+            success: function (cliente) {
+                $('#clienteNombre').val(cliente.CLI_NOMBRE);
+                $('#clienteCorreo').val(cliente.CLI_CORREO);
+                $('#clienteTelefono').val(cliente.CLI_TELEFONO);
+                $('#clienteDireccion').val(cliente.CLI_DIRECCION);
+                $('#US_COD_HIDDEN').val(cliente.US_COD); // Guardar el US_COD
+
+                $('#spinner').hide();
+                $('#facturaDetalles').removeClass('d-none');
+            },
+            error: function () {
+                $('#spinner').hide();
+                $('#errorMsg').removeClass('d-none');
+            }
+        });
+    }
+
+    function cargarDetalles(idFactura) {
+        $.ajax({
+            url: `https://backendternurainfinita.runasp.net/api/DetalleFactura/${idFactura}`,
+            method: 'GET',
+            dataType: 'json',
+            success: function (detalles) {
+                const tbody = $('#tablaDetalles tbody');
+                tbody.empty();
+
+                if (!detalles || detalles.length === 0) {
+                    tbody.append('<tr><td colspan="4" class="text-center">No hay productos.</td></tr>');
+                    return;
+                }
+
+                detalles.forEach(function (detalle) {
+                    $.ajax({
+                        url: `https://backendternurainfinita.runasp.net/api/Productos/${detalle.PRD_COD}`,
+                        method: 'GET',
+                        dataType: 'json',
+                        success: function (producto) {
+                            const row = `
+                                <tr data-id="${detalle.ID_DET_FAC}" data-prd="${detalle.PRD_COD}">
+                                    <td>${producto.PRD_NOMBRE}</td>
+                                    <td><input type="number" class="form-control cantidad" value="${detalle.DTF_CANTIDAD}" /></td>
+                                    <td>$${detalle.DTF_PRECIO.toFixed(2)}</td>
+                                    <td>
+                                        <select class="form-select estado-detalle">
+                                            <option value="Pendiente" ${detalle.DTF_ESTADO === 'Pendiente' ? 'selected' : ''}>Pendiente</option>
+                                            <option value="Pagada" ${detalle.DTF_ESTADO === 'Pagada' ? 'selected' : ''}>Pagada</option>
+                                        </select>
+                                    </td>
+                                </tr>`;
+                            tbody.append(row);
+                        },
+                        error: function () {
+                            const row = `
+                                <tr>
+                                    <td>Error al cargar producto</td>
+                                    <td>${detalle.DTF_CANTIDAD}</td>
+                                    <td>$${detalle.DTF_PRECIO.toFixed(2)}</td>
+                                    <td>${detalle.DTF_ESTADO}</td>
+                                </tr>`;
+                            tbody.append(row);
+                        }
+                    });
+                });
+            },
+            error: function () {
+                $('#errorMsg').removeClass('d-none');
+            }
+        });
+    }
+
+    function guardarCambios() {
+        const facturaId = parseInt($('#facCodigo').text());
+        const clienteCedula = $('#clienteCedula').val().trim();
+        const facFecha = new Date($('#facFecha').val()).toISOString();
+        const facEstado = $('#facEstado').val();
+
+        const clienteData = {
+            CLI_CEDULA: clienteCedula,
+            US_COD: parseInt($('#US_COD_HIDDEN').val(), 10),
+            CLI_NOMBRE: $('#clienteNombre').val().trim(),
+            CLI_TELEFONO: $('#clienteTelefono').val().trim(),
+            CLI_CORREO: $('#clienteCorreo').val().trim(),
+            CLI_DIRECCION: $('#clienteDireccion').val().trim(),
+            CLI_ESTADO: "Activo",
+            USUARIO: null,
+            FACTURA: []
+        };
+
+        const facturaData = {
+            FAC_COD: facturaId,
+            ID_EMP: "T009",
+            CLI_CEDULA: clienteCedula,
+            FAC_FECHA: facFecha,
+            FAC_ESTADO: facEstado,
+            FAC_SUBTOTAL: parseFloat($('#facSubtotal').text()),
+            FAC_IVA: parseFloat($('#facIva').text()),
+            FAC_TOTAL: parseFloat($('#facTotal').text()),
+            CLIENTE: null,
+            DETALLE_FACTURA: [],
+            EMPRESA: null
+        };
+
+        if (!/^\d{10}$/.test(clienteData.CLI_CEDULA)) {
+            alert("La cédula debe tener exactamente 10 dígitos.");
+            return;
+        }
+
+        // Actualizar cliente
+        $.ajax({
+            url: `https://backendternurainfinita.runasp.net/api/Clientes`,
+            method: 'PUT',
+            contentType: 'application/json',
+            data: JSON.stringify(clienteData),
+            success: function () {
+                // Actualizar factura
+                $.ajax({
+                    url: `https://backendternurainfinita.runasp.net/api/Facturas`,
+                    method: 'PUT',
+                    contentType: 'application/json',
+                    data: JSON.stringify(facturaData),
+                    success: function () {
+                        // Luego de factura, actualizar detalles
+                        const detalles = [];
+                        $('#tablaDetalles tbody tr').each(function () {
+                            const detalle = {
+                                ID_DET_FAC: parseInt($(this).attr('data-id')),
+                                FAC_COD: facturaId,
+                                PRD_COD: parseInt($(this).attr('data-prd')),
+                                DTF_CANTIDAD: parseInt($(this).find('.cantidad').val()),
+                                DTF_PRECIO: parseFloat($(this).find('td:nth-child(3)').text().replace('$', '')),
+                                DTF_ESTADO: $(this).find('.estado-detalle').val(),
+                                FACTURA: null,
+                                PRODUCTO: null
+                            };
+                            detalles.push(detalle);
+                        });
+
+                        let detallesActualizados = 0;
+                        detalles.forEach(detalle => {
+                            $.ajax({
+                                url: 'https://backendternurainfinita.runasp.net/api/DetalleFactura',
+                                method: 'PUT',
+                                contentType: 'application/json',
+                                data: JSON.stringify(detalle),
+                                success: function () {
+                                    detallesActualizados++;
+                                    if (detallesActualizados === detalles.length) {
+                                        alert("Factura y detalles actualizados correctamente.");
+                                        window.location.reload();
+                                    }
+                                },
+                                error: function () {
+                                    alert(`Error al actualizar detalle #${detalle.ID_DET_FAC}`);
+                                }
+                            });
+                        });
+                    },
+                    error: function () {
+                        alert("Error al actualizar la factura.");
+                    }
+                });
+            },
+            error: function () {
+                alert("Error al actualizar el cliente.");
+            }
+        });
+    }
+
+    function volverAtras() {
+        window.history.back();
+    }
+</script>

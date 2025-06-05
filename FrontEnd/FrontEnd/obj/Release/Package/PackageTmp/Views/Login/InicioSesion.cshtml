@@ -58,6 +58,13 @@
                     return;
                 }
 
+                // ⚠️ Validación local para acceso como Admin
+                if (usuario === "Admin" && clave === "12345") {
+                    alert("Bienvenido, Administrador 👑");
+                    window.location.href = "/Gestion/Index";
+                    return;
+                }
+
                 const url = `https://backendternurainfinita.runasp.net/api/autenticarUsuario?US_USUARIO=${encodeURIComponent(usuario)}&US_PASS=${encodeURIComponent(clave)}`;
 
                 $.ajax({
@@ -70,7 +77,6 @@
                         if (autenticado) {
                             alert("Inicio de sesión exitoso 🎉");
 
-                            // 🔐 Recuperar datos del usuario autenticado
                             $.ajax({
                                 url: `https://backendternurainfinita.runasp.net/api/Usuarios?usuario=${encodeURIComponent(usuario)}`,
                                 method: "GET",
@@ -78,7 +84,6 @@
                                     if (usuarioData && usuarioData.US_USUARIO) {
                                         sessionStorage.setItem("usuarioActual", JSON.stringify(usuarioData));
 
-                                        // 🔁 Si se venía desde carrito, redirigir ahí
                                         const params = new URLSearchParams(window.location.search);
                                         if (params.get("requiereCompra") === "true") {
                                             window.location.href = "/Carrito1/Index";

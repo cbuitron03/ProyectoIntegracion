@@ -14,20 +14,6 @@ namespace FrontEnd.Controllers
             return View();
         }
 
-        // GET: GesUsuarios/Details/5
-        public ActionResult Details(string usuario)
-        {
-            if (string.IsNullOrEmpty(usuario))
-            {
-                return RedirectToAction("Index");
-            }
-
-            ViewBag.Usuario = usuario;
-            return View();
-        }
-
-
-
         // GET: GesUsuarios/Create
         public ActionResult Create()
         {
@@ -51,32 +37,17 @@ namespace FrontEnd.Controllers
         }
 
         // GET: GesUsuarios/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(string usuario)
         {
-            return View();
-        }
-
-        // POST: GesUsuarios/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
+            if (string.IsNullOrEmpty(usuario))
             {
-                // TODO: Add update logic here
-
                 return RedirectToAction("Index");
             }
-            catch
-            {
-                return View();
-            }
-        }
 
-        // GET: GesUsuarios/Delete/5
-        public ActionResult Delete(int id)
-        {
+            ViewBag.Usuario = usuario;
             return View();
         }
+
 
         // POST: GesUsuarios/Delete/5
         [HttpPost]

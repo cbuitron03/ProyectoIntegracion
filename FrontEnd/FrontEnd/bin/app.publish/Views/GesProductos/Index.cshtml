@@ -1,0 +1,133 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutGestion.cshtml";
+    ViewBag.Title = "Productos";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4">Productos</h2>
+
+    <div class="d-flex justify-content-between mb-3">
+        <button class="btn btn-primary" onclick="crearProducto()">
+            <i class="bi bi-plus-circle"></i> Crear Nuevo
+        </button>
+
+        <input type="text" id="searchInput" class="form-control w-25" placeholder="Buscar producto..." onkeyup="filtrarTabla()">
+    </div>
+
+    <div id="spinner" class="text-center my-4" style="display:none;">
+        <div class="spinner-border text-primary" role="status"></div>
+    </div>
+
+    <div id="errorMsg" class="alert alert-danger d-none" role="alert">
+        Error al obtener los productos. Intente más tarde.
+    </div>
+
+    <table class="table table-striped table-hover align-middle" id="tablaProductos">
+        <thead class="table-dark">
+            <tr>
+                <th>Código</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Stock</th>
+                <th>Categoría</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Productos cargados por jQuery -->
+        </tbody>
+    </table>
+</div>
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>$(document).ready(function () {
+        cargarProductos();
+    });
+
+    function cargarProductos() {
+        $('#spinner').show();
+        $('#errorMsg').addClass('d-none');
+
+        $.ajax({
+            url: 'https://backendternurainfinita.runasp.net/api/integracion/productos',
+            method: 'GET',
+            dataType: 'json',
+            success: function (productos) {
+                $('#spinner').hide();
+                const tbody = $('#tablaProductos tbody');
+                tbody.empty();
+
+                if (!productos || productos.length === 0) {
+                    tbody.append('<tr><td colspan="6" class="text-center">No se encontraron productos.</td></tr>');
+                    return;
+                }
+
+                productos.forEach(function (producto) {
+                    const fila = `
+                    <tr>
+                        <td>${producto.idProducto}</td>
+                        <td>${producto.prodNombre}</td>
+                        <td>$${parseFloat(producto.prodPrecio).toFixed(2)}</td>
+                        <td>${producto.prodStock}</td>
+                        <td>${producto.prodCategoria}</td>
+                        <td>
+                            <button class="btn btn-info btn-sm me-1" title="Detalles" onclick="verDetalles(${producto.idProducto})">
+                                <i class="bi bi-eye"></i>
+                            </button>
+                            <button class="btn btn-warning btn-sm me-1" title="Editar" onclick="editarProducto(${producto.idProducto})">
+                                <i class="bi bi-pencil"></i>
+                            </button>
+                            <button class="btn btn-danger btn-sm" title="Desactivar" onclick="desactivarProducto(${producto.idProducto})">
+                                <i class="bi bi-x-circle"></i>
+                            </button>
+                        </td>
+                    </tr>`;
+                    tbody.append(fila);
+                });
+
+            },
+            error: function () {
+                $('#spinner').hide();
+                $('#errorMsg').removeClass('d-none');
+            }
+        });
+    }
+
+    function crearProducto() {
+        window.location.href = '/GesProductos/Create';
+    }
+
+    function verDetalles(idProducto) {
+        window.location.href = `/GesProductos/Details/${idProducto}`;
+    }
+
+    function editarProducto(codigo) {
+        window.location.href = `/GesProductos/Edit/${codigo}`;
+    }
+
+    function desactivarProducto(codigo) {
+        if (confirm(`¿Está seguro de desactivar el producto con código ${codigo}?`)) {
+            $.ajax({
+                url: `https://backendternurainfinita.runasp.net/api/Productos/${codigo}`,
+                method: 'DELETE',
+                success: function () {
+                    alert("Producto desactivado correctamente.");
+                    cargarProductos(); // recargar la lista para reflejar el cambio
+                },
+                error: function (xhr) {
+                    alert("Error al desactivar el producto: " + (xhr.responseText || "Error desconocido."));
+                }
+            });
+        }
+    }
+
+
+    function filtrarTabla() {
+        const filtro = $('#searchInput').val().toLowerCase();
+        $('#tablaProductos tbody tr').filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(filtro) > -1);
+        });
+    }</script>

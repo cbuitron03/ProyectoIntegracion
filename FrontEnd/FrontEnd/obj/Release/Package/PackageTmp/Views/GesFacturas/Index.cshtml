@@ -1,0 +1,188 @@
+﻿@{
+    ViewBag.Title = "Gestión de Facturas";
+}
+
+<link rel="stylesheet" href="~/Content/Gestion.css">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="@Url.Action("Index", "Gestion")">Panel de Gestión</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("Index", "Home")">Cerrar sesión</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container mt-4">
+    <h2 class="mb-4">Gestión de Facturas</h2>
+
+    <div class="d-flex justify-content-end mb-3">
+        <input type="text" id="searchInput" class="form-control w-25" placeholder="Buscar por cliente o estado..." onkeyup="filtrarTabla()">
+    </div>
+
+    <div id="spinner" class="text-center my-4" style="display:none;">
+        <div class="spinner-border text-primary" role="status"></div>
+    </div>
+
+    <div id="errorMsg" class="alert alert-danger d-none" role="alert">
+        Error al obtener las facturas. Intente más tarde.
+    </div>
+
+    <table class="table table-bordered table-striped table-hover align-middle" id="tablaFacturas">
+        <thead class="table-dark text-center">
+            <tr>
+                <th>Código</th>
+                <th>Cliente</th>
+                <th>Fecha</th>
+                <th>Estado</th>
+                <th>Total</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Facturas cargadas dinámicamente -->
+        </tbody>
+    </table>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3 mt-5">
+    <p class="mb-0">&copy; @DateTime.Now.Year AdminDB. Todos los derechos reservados.</p>
+</footer>
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        cargarFacturas();
+    });
+
+    function cargarFacturas() {
+        $('#spinner').show();
+        $('#errorMsg').addClass('d-none');
+
+        $.ajax({
+            url: 'https://backendternurainfinita.runasp.net/api/Facturas',
+            method: 'GET',
+            dataType: 'json',
+            success: function (facturas) {
+                $('#spinner').hide();
+                const tbody = $('#tablaFacturas tbody');
+                tbody.empty();
+
+                if (!facturas || facturas.length === 0) {
+                    tbody.append('<tr><td colspan="6" class="text-center">No se encontraron facturas.</td></tr>');
+                    return;
+                }
+
+                facturas.forEach(function (fac) {
+                    const fecha = new Date(fac.FAC_FECHA).toLocaleString('es-EC');
+                    const estadoClase = fac.FAC_ESTADO === 'ANULADA' ? 'text-danger fw-bold' : '';
+
+                    const fila = `
+                        <tr>
+                            <td class="text-center">${fac.FAC_COD}</td>
+                            <td>${fac.CLI_CEDULA}</td>
+                            <td>${fecha}</td>
+                            <td class="${estadoClase}">${fac.FAC_ESTADO}</td>
+                            <td class="text-end fw-bold">$${fac.FAC_TOTAL.toFixed(2)}</td>
+                            <td class="text-center">
+                                <button class="btn btn-info btn-sm me-1" title="Ver Detalles" onclick="verFactura(${fac.FAC_COD})">
+                                    <i class="bi bi-eye"></i>
+                                </button>
+                                <button class="btn btn-warning btn-sm me-1" title="Editar" onclick="editarFactura(${fac.FAC_COD})">
+                                    <i class="bi bi-pencil"></i>
+                                </button>
+                                <button class="btn btn-danger btn-sm" title="Anular" onclick="eliminarFactura(${fac.FAC_COD})">
+                                    <i class="bi bi-x-circle"></i>
+                                </button>
+                            </td>
+                        </tr>`;
+                    tbody.append(fila);
+                });
+            },
+            error: function () {
+                $('#spinner').hide();
+                $('#errorMsg').removeClass('d-none');
+            }
+        });
+    }
+
+    function verFactura(id) {
+        window.location.href = `/GesFacturas/Details/${id}`;
+    }
+
+    function editarFactura(id) {
+        window.location.href = `/GesFacturas/Edit/${id}`;
+    }
+
+    function eliminarFactura(facId) {
+        if (confirm(`¿Está seguro de anular la factura ${facId}?`)) {
+            // Cambiar estado de la factura a 'ANULADA'
+            $.ajax({
+                url: `https://backendternurainfinita.runasp.net/api/Facturas?FAC_COD=${facId}&FAC_ESTADO=ANULADA`,
+                method: 'DELETE',
+                success: function () {
+                    obtenerYEliminarDetalles(facId);
+                },
+                error: function () {
+                    alert('Error al anular la factura.');
+                }
+            });
+        }
+    }
+
+    function obtenerYEliminarDetalles(facId) {
+        $.ajax({
+            url: `https://backendternurainfinita.runasp.net/api/Facturas/${facId}`,
+            method: 'GET',
+            success: function (factura) {
+                const detalles = factura.DETALLE_FACTURA || [];
+
+                if (detalles.length === 0) {
+                    alert('Factura anulada correctamente (sin detalles asociados).');
+                    cargarFacturas();
+                    return;
+                }
+
+                const promesas = [];
+
+                detalles.forEach(function (detalle) {
+                    promesas.push(
+                        $.ajax({
+                            url: `https://backendternurainfinita.runasp.net/api/DetalleFactura?prd_cod=${detalle.PRD_COD}&fac_num=${facId}`,
+                            method: 'DELETE'
+                        })
+                    );
+                });
+
+                $.when.apply($, promesas).done(function () {
+                    alert('Factura anulada y detalles eliminados correctamente.');
+                    cargarFacturas();
+                }).fail(function () {
+                    alert('Factura anulada, pero hubo errores al eliminar los detalles.');
+                    cargarFacturas();
+                });
+            },
+            error: function () {
+                alert('Factura anulada, pero no se pudieron recuperar los detalles.');
+                cargarFacturas();
+            }
+        });
+    }
+
+    function filtrarTabla() {
+        const filtro = $('#searchInput').val().toLowerCase();
+        $('#tablaFacturas tbody tr').filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(filtro) > -1);
+        });
+    }
+</script>

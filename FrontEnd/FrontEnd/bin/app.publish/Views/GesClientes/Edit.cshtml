@@ -1,0 +1,146 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutGestion.cshtml";
+    ViewBag.Title = "Editar Cliente";
+    var cedula = ViewBag.Cedula;
+}
+
+<h2 class="mb-4 text-center">Editar Cliente</h2>
+
+<link rel="stylesheet" href="~/Content/Gestion.css">
+
+<div class="container d-flex justify-content-center">
+    <form id="formEditarCliente" novalidate style="max-width: 480px; width: 100%;">
+        <div class="mb-3">
+            <label for="CLI_CEDULA" class="form-label">Cédula</label>
+            <input type="text" id="CLI_CEDULA" name="CLI_CEDULA" class="form-control form-control-sm" required maxlength="10">
+            <div class="invalid-feedback">Ingrese una cédula válida (10 dígitos numéricos).</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="US_COD" class="form-label">Código de Usuario</label>
+            <input type="text" id="US_COD" class="form-control form-control-sm" readonly>
+            <input type="hidden" id="US_COD_HIDDEN" name="US_COD"> <!-- este se usará para enviar -->
+        </div>
+
+        <div class="mb-3">
+            <label for="CLI_NOMBRE" class="form-label">Nombre</label>
+            <input type="text" id="CLI_NOMBRE" name="CLI_NOMBRE" class="form-control form-control-sm" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="CLI_TELEFONO" class="form-label">Teléfono</label>
+            <input type="text" id="CLI_TELEFONO" name="CLI_TELEFONO" class="form-control form-control-sm">
+        </div>
+
+        <div class="mb-3">
+            <label for="CLI_CORREO" class="form-label">Correo</label>
+            <input type="email" id="CLI_CORREO" name="CLI_CORREO" class="form-control form-control-sm">
+        </div>
+
+        <div class="mb-3">
+            <label for="CLI_DIRECCION" class="form-label">Dirección</label>
+            <input type="text" id="CLI_DIRECCION" name="CLI_DIRECCION" class="form-control form-control-sm">
+        </div>
+
+        <div class="mb-3">
+            <label for="CLI_ESTADO" class="form-label">Estado</label>
+            <select id="CLI_ESTADO" name="CLI_ESTADO" class="form-select form-select-sm" required>
+                <option value="">-- Seleccione estado --</option>
+                <option value="Activo">Activo</option>
+                <option value="Inactivo">Inactivo</option>
+            </select>
+            <div class="invalid-feedback">Seleccione un estado válido.</div>
+        </div>
+
+        <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-success btn-sm" id="btnGuardar">Guardar Cambios</button>
+            <a href="@Url.Action("Index", "GesClientes")" class="btn btn-secondary btn-sm">Cancelar</a>
+        </div>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(function () {
+        const cedula = '@cedula';
+
+        // Cargar datos del cliente
+        $.ajax({
+            url: `https://backendternurainfinita.runasp.net/api/Clientes?cedula=${encodeURIComponent(cedula)}`,
+            method: 'GET',
+            success: function (cliente) {
+                if (cliente) {
+                    $('#CLI_CEDULA').val(cliente.CLI_CEDULA || '');
+                    $('#US_COD').val(cliente.US_COD || '');
+                    $('#US_COD_HIDDEN').val(cliente.US_COD || '');
+                    $('#CLI_NOMBRE').val(cliente.CLI_NOMBRE || '');
+                    $('#CLI_TELEFONO').val(cliente.CLI_TELEFONO || '');
+                    $('#CLI_CORREO').val(cliente.CLI_CORREO || '');
+                    $('#CLI_DIRECCION').val(cliente.CLI_DIRECCION || '');
+                    $('#CLI_ESTADO').val(cliente.CLI_ESTADO || '');
+                } else {
+                    alert("Cliente no encontrado.");
+                }
+            },
+            error: function () {
+                alert("Error al cargar los datos del cliente.");
+            }
+        });
+
+
+        // Guardar cambios
+        $('#formEditarCliente').on('submit', function (e) {
+            e.preventDefault();
+
+            const clienteData = {
+                CLI_CEDULA: $('#CLI_CEDULA').val().trim(),
+                US_COD: parseInt($('#US_COD_HIDDEN').val(), 10),
+                CLI_NOMBRE: $('#CLI_NOMBRE').val().trim(),
+                CLI_TELEFONO: $('#CLI_TELEFONO').val().trim(),
+                CLI_CORREO: $('#CLI_CORREO').val().trim(),
+                CLI_DIRECCION: $('#CLI_DIRECCION').val().trim(),
+                CLI_ESTADO: $('#CLI_ESTADO').val(),
+                USUARIO: null,
+                FACTURA: []
+            };
+
+            const cedulaInput = $('#CLI_CEDULA');
+            const cedulaValor = clienteData.CLI_CEDULA;
+
+            // Validación: solo 10 dígitos numéricos
+            const cedulaValida = /^\d{10}$/.test(cedulaValor);
+
+            if (!cedulaValida) {
+                cedulaInput.addClass('is-invalid');
+                return;
+            } else {
+                cedulaInput.removeClass('is-invalid');
+            }
+
+            if (!clienteData.CLI_NOMBRE || !clienteData.US_COD || !clienteData.CLI_ESTADO) {
+                alert("Complete todos los campos obligatorios.");
+                return;
+            }
+
+
+            const btn = $('#btnGuardar');
+            btn.prop('disabled', true).text('Guardando...');
+
+            $.ajax({
+                url: `https://backendternurainfinita.runasp.net/api/Clientes`,
+                method: 'PUT',
+                contentType: 'application/json',
+                data: JSON.stringify(clienteData),
+                success: function () {
+                    alert("Cliente actualizado correctamente.");
+                    window.location.href = '@Url.Action("Index", "GesClientes")';
+                },
+                error: function (xhr) {
+                    alert("Error al actualizar el cliente: " + (xhr.responseText || "Error desconocido"));
+                    btn.prop('disabled', false).text('Guardar Cambios');
+                }
+            });
+        });
+    });
+</script>
