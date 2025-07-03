@@ -3,8 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\pagic\\Documents\\GitHub\\Proyectos\\ProyectoIntegracion\\FrontEnd\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|c:\\users\\pagic\\documents\\github\\proyectos\\proyectointegracion\\frontend\\frontend\\content\\gestion.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\content\\gestion.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|c:\\users\\pagic\\documents\\github\\proyectos\\proyectointegracion\\frontend\\frontend\\views\\gesusuarios\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\views\\gesusuarios\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|c:\\users\\pagic\\documents\\github\\proyectos\\proyectointegracion\\frontend\\frontend\\views\\gesusuarios\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\views\\gesusuarios\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|c:\\users\\pagic\\documents\\github\\proyectos\\proyectointegracion\\frontend\\frontend\\views\\gesusuarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\views\\gesusuarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|c:\\users\\pagic\\documents\\github\\proyectos\\proyectointegracion\\frontend\\frontend\\views\\gesclientes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\views\\gesclientes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|c:\\users\\pagic\\documents\\github\\proyectos\\proyectointegracion\\frontend\\frontend\\views\\gesclientes\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\views\\gesclientes\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|c:\\users\\pagic\\documents\\github\\proyectos\\proyectointegracion\\frontend\\frontend\\views\\gesclientes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\views\\gesclientes\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|c:\\users\\pagic\\documents\\github\\proyectos\\proyectointegracion\\frontend\\frontend\\views\\gesclientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -18,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,28 +46,93 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Proyectos\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Views\\GesUsuarios\\Edit.cshtml",
+              "RelativeDocumentMoniker": "FrontEnd\\Views\\GesUsuarios\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Proyectos\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Views\\GesUsuarios\\Edit.cshtml",
+              "RelativeToolTip": "FrontEnd\\Views\\GesUsuarios\\Edit.cshtml",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAmwJcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-03T05:14:15.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Proyectos\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Views\\GesUsuarios\\Create.cshtml",
+              "RelativeDocumentMoniker": "FrontEnd\\Views\\GesUsuarios\\Create.cshtml",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Proyectos\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Views\\GesUsuarios\\Create.cshtml",
+              "RelativeToolTip": "FrontEnd\\Views\\GesUsuarios\\Create.cshtml",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAmwJgAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-03T05:11:40.649Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Proyectos\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Views\\GesUsuarios\\Index.cshtml",
+              "RelativeDocumentMoniker": "FrontEnd\\Views\\GesUsuarios\\Index.cshtml",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Proyectos\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Views\\GesUsuarios\\Index.cshtml",
+              "RelativeToolTip": "FrontEnd\\Views\\GesUsuarios\\Index.cshtml",
+              "ViewState": "AgIAAJIAAAAAAAAAAAAmwKgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-03T05:05:37.854Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Proyectos\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Views\\GesClientes\\Edit.cshtml",
+              "RelativeDocumentMoniker": "FrontEnd\\Views\\GesClientes\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Proyectos\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Views\\GesClientes\\Edit.cshtml",
+              "RelativeToolTip": "FrontEnd\\Views\\GesClientes\\Edit.cshtml",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAowKYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-03T04:55:52.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Proyectos\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Views\\GesClientes\\Details.cshtml",
+              "RelativeDocumentMoniker": "FrontEnd\\Views\\GesClientes\\Details.cshtml",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Proyectos\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Views\\GesClientes\\Details.cshtml",
+              "RelativeToolTip": "FrontEnd\\Views\\GesClientes\\Details.cshtml",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAmwKwAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-03T04:48:43.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Proyectos\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Views\\GesClientes\\Create.cshtml",
+              "RelativeDocumentMoniker": "FrontEnd\\Views\\GesClientes\\Create.cshtml",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Proyectos\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Views\\GesClientes\\Create.cshtml",
+              "RelativeToolTip": "FrontEnd\\Views\\GesClientes\\Create.cshtml",
+              "ViewState": "AgIAAKMAAAAAAAAAAAAowLkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-03T04:45:36.225Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Proyectos\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Views\\GesClientes\\Index.cshtml",
               "RelativeDocumentMoniker": "FrontEnd\\Views\\GesClientes\\Index.cshtml",
               "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Proyectos\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Views\\GesClientes\\Index.cshtml",
               "RelativeToolTip": "FrontEnd\\Views\\GesClientes\\Index.cshtml",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAWwCoAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAkwKAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-05T03:20:44.466Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Gestion.css",
-              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Proyectos\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Content\\Gestion.css",
-              "RelativeDocumentMoniker": "FrontEnd\\Content\\Gestion.css",
-              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Proyectos\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Content\\Gestion.css",
-              "RelativeToolTip": "FrontEnd\\Content\\Gestion.css",
-              "ViewState": "AgIAAHkAAAAAAAAAAAAmwIwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-06-05T03:18:23.365Z",
+              "WhenOpened": "2025-07-03T04:43:17.047Z",
               "EditorCaption": ""
             }
           ]

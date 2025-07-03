@@ -1,8 +1,8 @@
 <script>
   import { onMount } from 'svelte';
-  import { page } from '$app/stores'; // para reactivo al path, si quieres
+  import { page } from '$app/stores';
+  import "../app.css";
 
-  // Variables para usuario y carrito
   let usuarioNombre = '';
   let mostrarCerrarSesion = false;
   let mostrarNavLogin = true;
@@ -15,17 +15,12 @@
   }
 
   onMount(() => {
-    // Leer datos del usuario desde sessionStorage
     const usuarioJSON = sessionStorage.getItem("usuarioActual");
     if (usuarioJSON) {
       const usuarioObj = JSON.parse(usuarioJSON);
       usuarioNombre = usuarioObj.US_NOMBRE || usuarioObj.US_USUARIO || usuarioObj.US_CEDULA || "Usuario";
       mostrarCerrarSesion = true;
       mostrarNavLogin = false;
-    } else {
-      usuarioNombre = '';
-      mostrarCerrarSesion = false;
-      mostrarNavLogin = true;
     }
 
     actualizarContadorCarrito();
@@ -33,81 +28,125 @@
 
   function cerrarSesion() {
     sessionStorage.clear();
-    location.href = "/Login/InicioSesion"; // O la ruta que uses en SvelteKit
+    location.href = "/inicio-sesion";
   }
 </script>
 
-<style>
-  /* Aquí agrega o importa tus estilos */
-  nav.navbar {
-    background-color: #e91e63;
-    color: white;
-    padding: 1rem;
-  }
-  nav.navbar a.nav-link {
-    color: white;
-    text-decoration: none;
-    margin-right: 1rem;
-  }
-  nav.navbar a.nav-link:hover {
-    text-decoration: underline;
-  }
-  .cart-badge {
-    background: #c2185b;
-    color: white;
-    border-radius: 50%;
-    padding: 0.2rem 0.6rem;
-    font-size: 0.8rem;
-    vertical-align: top;
-    margin-left: 0.2rem;
-  }
-  footer {
-    margin-top: 2rem;
-    text-align: center;
-    color: #666;
-  }
-</style>
-
 <nav class="navbar">
-  <div class="container" style="display: flex; align-items: center; justify-content: space-between;">
-    <a href="/" class="navbar-brand" style="font-weight: bold; font-size: 1.5rem; color: white;">Ternura Infinita</a>
-    
-    <div class="navbar-collapse" style="display: flex; align-items: center;">
-      <ul class="navbar-nav" style="display: flex; list-style: none; padding: 0; margin: 0;">
-        <li class="nav-item"><a href="/" class="nav-link">Inicio</a></li>
-        <li class="nav-item"><a href="/about" class="nav-link">Sobre Nosotros</a></li>
-        <li class="nav-item"><a href="/productos" class="nav-link">Productos</a></li>
-        {#if mostrarNavLogin}
-          <li class="nav-item" id="navLogin"><a href="/login/iniciosesion" class="nav-link">Iniciar Sesión</a></li>
-        {/if}
-      </ul>
-
-      <ul class="navbar-nav" style="display: flex; list-style: none; padding: 0; margin: 0; margin-left: 2rem; align-items: center;">
-        {#if usuarioNombre}
-          <li class="nav-item nav-user" style="color: white; margin-right: 1rem;">👤 {usuarioNombre}</li>
-        {/if}
-        {#if mostrarCerrarSesion}
-          <li class="nav-item">
-            <a href="#" on:click|preventDefault={cerrarSesion} class="nav-link logout" style="color: white;">Cerrar sesión</a>
-          </li>
-        {/if}
-        <li class="nav-item">
-          <a href="/carrito1" class="nav-link cart-icon" title="Ver carrito" style="color: white; position: relative;">
-            🛒
-            {#if cantidadCarrito > 0}
-              <span class="cart-badge">{cantidadCarrito}</span>
-            {/if}
-          </a>
-        </li>
-      </ul>
-    </div>
+  <div class="container">
+    <h1 class="logo">Ternura Infinita</h1>
+    <ul class="nav-links">
+      <li><a href="/home" class="nav-link">Inicio</a></li>
+      <li><a href="/sobre-nosotros" class="nav-link">Sobre Nosotros</a></li>
+      <li><a href="/productos" class="nav-link">Productos</a></li>
+      {#if mostrarNavLogin}
+        <li><a href="/inicio-sesion" class="nav-link">Iniciar Sesión</a></li>
+      {/if}
+      {#if mostrarCerrarSesion}
+        <li class="nav-usuario">👤 {usuarioNombre}</li>
+        <li><button class="cerrar-btn" on:click={cerrarSesion}>Cerrar Sesión</button></li>
+      {/if}
+      <li class="carrito">
+        <a href="/carrito" class="nav-link">🛒 {cantidadCarrito}</a>
+      </li>
+    </ul>
   </div>
 </nav>
 
-<div class="container body-content" style="margin-top: 1rem;">
+<main class="contenido-principal">
   <slot />
-  <hr />
-  <footer>
-    <p>© {new Date().getFullYear()} - Ternura Infinita. Todos los derechos reservados.</p>
-  </footer>
-</div>
+</main>
+
+<footer class="footer">
+  © 2025 - Ternura Infinita. Todos los derechos reservados.
+</footer>
+
+<style>
+  :global(body) {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fde0e6;
+    color: #333;
+  }
+
+  .navbar {
+    background-color: #e91e63;
+    color: white;
+    padding: 1rem 0;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+  }
+
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+
+  .cerrar-btn {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .cerrar-btn:hover {
+    background-color: white;
+    color: #e91e63;
+  }
+
+  .contenido-principal {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+
+  .footer {
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 2rem 0;
+    color: #555;
+  }
+
+  .carrito {
+    font-size: 1.2rem;
+    color: white;
+  }
+
+  .nav-usuario {
+    color: white;
+    font-weight: bold;
+  }
+</style>

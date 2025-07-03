@@ -1,0 +1,140 @@
+/* Fondo body */
+body {
+    background: linear-gradient(to right, #a0d8ef, #3ac1d4);
+    color: #1a1a1a;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #17a2b8 !important; /* turquesa un poco más oscuro */
+}
+
+.navbar-brand, .nav-link {
+    color: #ffffff !important;
+}
+
+    .nav-link:hover {
+        color: #c7f0f7 !important;
+    }
+
+/* Badge carrito */
+.cart-badge {
+    background-color: #17a2b8; /* mismo tono que navbar */
+    color: #fff;
+}
+
+/* Producto card */
+.producto-card {
+    background: #e1f5f8;
+    box-shadow: 0 6px 12px rgba(23, 162, 184, 0.3);
+}
+
+    .producto-card:hover {
+        box-shadow: 0 10px 20px rgba(23, 162, 184, 0.5);
+    }
+
+/* Nombre producto */
+.producto-nombre {
+    color: #0d6efd; /* azul más vivo */
+}
+
+/* Precio */
+.precio {
+    color: #198754; /* verde bootstrap para buen contraste */
+}
+
+/* Botones */
+.btn-outline-turquoise {
+    color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+    .btn-outline-turquoise:hover {
+        background-color: #17a2b8;
+        color: white;
+    }
+
+.btn-primary {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+    .btn-primary:hover {
+        background-color: #117a8b;
+        border-color: #117a8b;
+    }
+
+/* Título */
+.titulo-productos {
+    color: #0d6efd;
+}
+
+/* Cards galería */
+#detalleProducto {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    padding: 30px;
+}
+
+#infoProducto p {
+    font-size: 1.05rem;
+    margin-bottom: 0.6rem;
+}
+
+#infoProducto strong {
+    color: #333;
+}
+
+#galeriaImagenes .card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+    #galeriaImagenes .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+        z-index: 5;
+    }
+
+#galeriaImagenes img {
+    border-radius: 12px;
+    object-fit: cover;
+    height: 180px;
+    width: 100%;
+}
+
+.btn-volver {
+    display: block;
+    max-width: 150px;
+    margin: 0 auto;
+}
+
+/* Estilos personalizados para la tabla de clientes */
+#tablaClientes {
+    background-color: #ffffff !important;
+    color: #1a1a1a !important;
+    border-collapse: collapse !important;
+    width: 100%;
+    border: 2px solid #000000 !important;
+}
+
+    #tablaClientes th,
+    #tablaClientes td {
+        background-color: #ffffff !important;
+        color: #1a1a1a !important;
+        border: 1px solid #000000 !important;
+        padding: 10px !important;
+        text-align: left !important;
+    }
+
+    /* Opcional: encabezado oscuro adaptado */
+    #tablaClientes thead.table-dark th {
+        background-color: #000000 !important;
+        color: #ffffff !important;
+    }

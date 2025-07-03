@@ -3,11 +3,27 @@
   "WorkspaceRootPath": "C:\\Users\\pagic\\Documents\\GitHub\\Proyectos\\ProyectoIntegracion\\FrontEnd\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|c:\\users\\pagic\\documents\\github\\proyectos\\proyectointegracion\\frontend\\frontend\\content\\gestion.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|c:\\users\\pagic\\documents\\github\\proyectos\\proyectointegracion\\frontend\\frontend\\content\\principal.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\content\\principal.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|c:\\users\\pagic\\documents\\github\\proyectos\\proyectointegracion\\frontend\\frontend\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\views\\home\\about.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|c:\\users\\pagic\\documents\\github\\proyectos\\proyectointegracion\\frontend\\frontend\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Proyectos\\ProyectoIntegracion\\FrontEnd\\frontend\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Proyectos\\ProyectoIntegracion\\FrontEnd\\frontend\\content\\gestion.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\content\\gestion.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|c:\\users\\pagic\\documents\\github\\proyectos\\proyectointegracion\\frontend\\frontend\\views\\gesclientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|C:\\Users\\pagic\\Documents\\GitHub\\Proyectos\\ProyectoIntegracion\\FrontEnd\\frontend\\views\\gesclientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1F489466-AC24-400D-B0E3-18C4C11CBA23}|FrontEnd\\FrontEnd.csproj|solutionrelative:frontend\\views\\gesclientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -27,6 +43,57 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "About.cshtml",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Proyectos\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Views\\Home\\About.cshtml",
+              "RelativeDocumentMoniker": "FrontEnd\\Views\\Home\\About.cshtml",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Proyectos\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Views\\Home\\About.cshtml",
+              "RelativeToolTip": "FrontEnd\\Views\\Home\\About.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-02T20:52:03.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Principal.css",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Proyectos\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Content\\Principal.css",
+              "RelativeDocumentMoniker": "FrontEnd\\Content\\Principal.css",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Proyectos\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Content\\Principal.css",
+              "RelativeToolTip": "FrontEnd\\Content\\Principal.css",
+              "ViewState": "AgIAAO8AAAAAAAAAAAAmwAUBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-07-02T20:39:56.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Proyectos\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "FrontEnd\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Proyectos\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "FrontEnd\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAowG4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-18T01:54:21.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Proyectos\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "FrontEnd\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\pagic\\Documents\\GitHub\\Proyectos\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "FrontEnd\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAmwDUAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-18T01:38:24.456Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Proyectos\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Views\\GesClientes\\Index.cshtml",
               "RelativeDocumentMoniker": "FrontEnd\\Views\\GesClientes\\Index.cshtml",
@@ -34,12 +101,11 @@
               "RelativeToolTip": "FrontEnd\\Views\\GesClientes\\Index.cshtml",
               "ViewState": "AgIAAB8AAAAAAAAAAAAWwCoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-05T03:20:44.466Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-05T03:20:44.466Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Gestion.css",
               "DocumentMoniker": "C:\\Users\\pagic\\Documents\\GitHub\\Proyectos\\ProyectoIntegracion\\FrontEnd\\FrontEnd\\Content\\Gestion.css",
               "RelativeDocumentMoniker": "FrontEnd\\Content\\Gestion.css",
@@ -47,8 +113,7 @@
               "RelativeToolTip": "FrontEnd\\Content\\Gestion.css",
               "ViewState": "AgIAAHkAAAAAAAAAAAAmwIwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-06-05T03:18:23.365Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-05T03:18:23.365Z"
             }
           ]
         }
