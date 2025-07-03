@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [sveltekit()],
   server: {
     host: true, // permite conexiones externas
-    allowedHosts: ['https://front-svelte.onrender.com'] // ← añade tu dominio aquí
+    allowedHosts: ['front-svelte.onrender.com'] // ← añade tu dominio aquí
   }
 });
