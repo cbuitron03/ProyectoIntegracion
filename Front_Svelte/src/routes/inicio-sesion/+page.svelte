@@ -15,7 +15,7 @@
 
     if (usuario === 'Admin' && clave === '12345') {
       alert('Bienvenido, Administrador 👑');
-      goto('/gestion');
+      window.location.href = 'https://ternurainfinita.runasp.net/Gestion/Index';
       return;
     }
 
